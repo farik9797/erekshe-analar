@@ -32,7 +32,7 @@ export const CharitySection: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none mb-16">
           {SOCIAL_PROJECTS.map((project) => {
             const isCompleted = project.status === 'completed';
             const progress = project.targetAmount
@@ -42,7 +42,7 @@ export const CharitySection: React.FC = () => {
             return (
               <div
                 key={project.id}
-                className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between"
+                className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between flex-shrink-0 w-[85vw] max-w-[400px] sm:w-auto sm:max-w-none snap-center sm:snap-none"
               >
                 {/* Project Image */}
                 <div className="relative h-56 bg-slate-100">

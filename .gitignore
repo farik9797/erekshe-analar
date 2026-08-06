@@ -1,0 +1,7 @@
+
+# secrets — never commit
+password.md
+
+# dependencies & build output
+node_modules/
+dist/

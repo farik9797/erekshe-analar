@@ -6,23 +6,12 @@ import { HelpCircle, Search, ChevronDown, ChevronUp } from 'lucide-react';
 export const FaqSection: React.FC = () => {
   const { lang, t } = useAccessibility();
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<string>('all');
   const [openFaqId, setOpenFaqId] = useState<string | null>(FAQS[0].id);
 
-  const categories = [
-    { id: 'all', label: t.faqFilterAll },
-    { id: 'general', label: t.faqFilterGeneral },
-    { id: 'documents', label: t.faqFilterDocs },
-    { id: 'rehabilitation', label: t.faqFilterRehab },
-    { id: 'umay', label: t.faqFilterUmay }
-  ];
-
   const filteredFaqs = FAQS.filter((faq) => {
-    const matchesCat = activeCategory === 'all' || faq.category === activeCategory;
     const qText = faq.question[lang].toLowerCase();
     const aText = faq.answer[lang].toLowerCase();
-    const matchesQuery = qText.includes(searchQuery.toLowerCase()) || aText.includes(searchQuery.toLowerCase());
-    return matchesCat && matchesQuery;
+    return qText.includes(searchQuery.toLowerCase()) || aText.includes(searchQuery.toLowerCase());
   });
 
   return (
@@ -39,34 +28,16 @@ export const FaqSection: React.FC = () => {
           </h2>
         </div>
 
-        {/* Search Bar & Category Filters */}
-        <div className="flex flex-col gap-4 mb-8">
-          <div className="relative">
-            <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={t.faqSearchPlaceholder}
-              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
-            />
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition ${
-                  activeCategory === cat.id
-                    ? 'bg-emerald-600 text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
+        {/* Search Bar */}
+        <div className="relative mb-8">
+          <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder={t.faqSearchPlaceholder}
+            className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition"
+          />
         </div>
 
         {/* Accordion FAQ Items */}

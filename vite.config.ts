@@ -3,8 +3,10 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-export default defineConfig(() => {
+export default defineConfig(({command}) => {
   return {
+    // На GitHub Pages сайт живёт в подпапке /erekshe-analar/, в dev — на корне.
+    base: command === 'build' ? '/erekshe-analar/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

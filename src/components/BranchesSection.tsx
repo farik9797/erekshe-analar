@@ -37,14 +37,14 @@ export const BranchesSection: React.FC = () => {
         </div>
 
         {/* Branch Selector Tabs */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 md:grid-cols-4 sm:overflow-visible sm:pb-0 scrollbar-none mb-8">
           {BRANCHES.map((b) => {
             const isSelected = b.id === selectedBranchId;
             return (
               <button
                 key={b.id}
                 onClick={() => setSelectedBranchId(b.id)}
-                className={`p-4 rounded-2xl text-left transition border shadow-2xs flex flex-col justify-between ${
+                className={`flex-shrink-0 w-[65vw] max-w-[240px] sm:w-auto sm:max-w-none snap-center sm:snap-none p-4 rounded-2xl text-left transition border shadow-2xs flex flex-col justify-between ${
                   isSelected
                     ? 'bg-emerald-700 text-white border-emerald-600 shadow-md shadow-emerald-700/20'
                     : 'bg-white text-slate-800 hover:bg-slate-100 border-slate-200'
@@ -96,8 +96,8 @@ export const BranchesSection: React.FC = () => {
             </div>
 
             {/* Address, Phone, Working Hours List */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100">
                 <MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -109,7 +109,7 @@ export const BranchesSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100">
                 <Clock className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -121,7 +121,7 @@ export const BranchesSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100">
                 <Phone className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -136,7 +136,7 @@ export const BranchesSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100">
                 <MessageCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">

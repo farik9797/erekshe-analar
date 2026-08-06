@@ -14,11 +14,6 @@ interface AccessibilityContextType {
   setFontSize: (size: FontSizeLevel) => void;
   hideImages: boolean;
   setHideImages: React.Dispatch<React.SetStateAction<boolean>>;
-  speechEnabled: boolean;
-  setSpeechEnabled: React.Dispatch<React.SetStateAction<boolean>>;
-  speakText: (text: string) => void;
-  stopSpeech: () => void;
-  isSpeaking: boolean;
 
   // Modals state
   isEnrollModalOpen: boolean;
@@ -44,8 +39,6 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
   const [contrastMode, setContrastMode] = useState<HighContrastMode>('normal');
   const [fontSize, setFontSize] = useState<FontSizeLevel>('normal');
   const [hideImages, setHideImages] = useState<boolean>(false);
-  const [speechEnabled, setSpeechEnabled] = useState<boolean>(false);
-  const [isSpeaking, setIsSpeaking] = useState<boolean>(false);
 
   // Modals
   const [isEnrollModalOpen, setIsEnrollModalOpen] = useState(false);
@@ -75,25 +68,6 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
       root.classList.add('text-size-xlarge');
     }
   }, [contrastMode, fontSize]);
-
-  const speakText = (text: string) => {
-    if (!('speechSynthesis' in window)) return;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = lang === 'kk' ? 'kk-KZ' : 'ru-RU';
-    utterance.rate = 0.95;
-    utterance.onstart = () => setIsSpeaking(true);
-    utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => setIsSpeaking(false);
-    window.speechSynthesis.speak(utterance);
-  };
-
-  const stopSpeech = () => {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      setIsSpeaking(false);
-    }
-  };
 
   const openEnrollModal = (branchId?: string, serviceId?: string) => {
     setPreselectedBranch(branchId || '');
@@ -125,11 +99,6 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
         setFontSize,
         hideImages,
         setHideImages,
-        speechEnabled,
-        setSpeechEnabled,
-        speakText,
-        stopSpeech,
-        isSpeaking,
 
         isEnrollModalOpen,
         openEnrollModal,

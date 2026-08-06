@@ -43,7 +43,6 @@ export const translations = {
     contrastYellow: 'Желтo-черная',
     contrastBlue: 'Сине-голубая',
     hideImagesLabel: 'Скрыть изображения:',
-    speechLabel: 'Озвучивание текста (Web Speech):',
 
     // Hero Section
     heroBadge: 'Бесплатные специальные социальные услуги',
@@ -324,7 +323,6 @@ export const translations = {
     contrastYellow: 'Сары-қара',
     contrastBlue: 'Көк-ашық көк',
     hideImagesLabel: 'Суреттерді жасыру:',
-    speechLabel: 'Мәтінді дауыстап оқу (Web Speech):',
 
     // Hero Section
     heroBadge: 'Тегін арнайы әлеуметтік қызметтер',

@@ -9,7 +9,6 @@ export interface AccessibilitySettings {
   contrastMode: HighContrastMode;
   fontSize: FontSizeLevel;
   hideImages: boolean;
-  speechEnabled: boolean;
 }
 
 export interface Branch {

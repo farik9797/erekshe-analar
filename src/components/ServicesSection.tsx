@@ -79,7 +79,7 @@ export const ServicesSection: React.FC = () => {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition shadow-2xs ${
+              className={`w-[calc(50%-0.25rem)] sm:w-auto px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition shadow-2xs ${
                 activeCategory === cat.id
                   ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
@@ -93,7 +93,7 @@ export const ServicesSection: React.FC = () => {
         {/* Services Grid with FadeIn */}
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible sm:pb-0 scrollbar-none"
         >
           <AnimatePresence mode="popLayout">
             {filteredServices.map((service, index) => (
@@ -104,7 +104,7 @@ export const ServicesSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.35, delay: index * 0.04 }}
-                className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-200 flex flex-col overflow-hidden group"
+                className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-200 flex flex-col overflow-hidden group flex-shrink-0 w-[85vw] max-w-[340px] sm:w-auto sm:max-w-none snap-center sm:snap-none"
               >
                 {/* Image Banner */}
                 <div

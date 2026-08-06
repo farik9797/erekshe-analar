@@ -16,9 +16,9 @@ export const Footer: React.FC = () => {
     <footer className="bg-emerald-950 text-emerald-100 pt-16 pb-8 border-t border-emerald-900">
       <div className="max-w-7xl mx-auto px-4">
         {/* Top Footer Grid */}
-        <div className="flex flex-wrap lg:flex-nowrap justify-between gap-8 pb-12 border-b border-emerald-900/80">
+        <div className="flex flex-wrap xl:flex-nowrap justify-between gap-8 pb-12 border-b border-emerald-900/80">
           {/* Col 1: Foundation Info */}
-          <div className="w-full lg:w-[300px] lg:max-w-[300px] flex flex-col gap-4 flex-shrink-0">
+          <div className="w-full xl:w-[300px] xl:max-w-[300px] flex flex-col gap-4 flex-shrink-0">
             <Link to="/" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-2xl bg-white p-0.5 flex items-center justify-center overflow-hidden shadow-sm">
                 <img src={logoImg} alt="EREKSHE ANALAR Logo" className="w-full h-full object-contain" />
@@ -116,7 +116,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 4: 4 Branches List */}
-          <div className="w-full lg:w-[400px] lg:max-w-[400px] flex flex-col gap-3 flex-shrink-0">
+          <div className="w-full xl:w-[400px] xl:max-w-[400px] flex flex-col gap-3 flex-shrink-0">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-1">
               {t.branchesTitle} (Астана)
             </h4>
