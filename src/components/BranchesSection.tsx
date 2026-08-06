@@ -44,7 +44,7 @@ export const BranchesSection: React.FC = () => {
               <button
                 key={b.id}
                 onClick={() => setSelectedBranchId(b.id)}
-                className={`flex-shrink-0 w-[65vw] max-w-[240px] sm:w-auto sm:max-w-none snap-center sm:snap-none p-4 rounded-2xl text-left transition border shadow-2xs flex flex-col justify-between ${
+                className={`flex-shrink-0 w-full sm:w-auto sm:max-w-none snap-center sm:snap-none p-4 rounded-2xl text-center sm:text-left transition border shadow-2xs flex flex-col justify-center sm:justify-between items-center sm:items-start ${
                   isSelected
                     ? 'bg-emerald-700 text-white border-emerald-600 shadow-md shadow-emerald-700/20'
                     : 'bg-white text-slate-800 hover:bg-slate-100 border-slate-200'
