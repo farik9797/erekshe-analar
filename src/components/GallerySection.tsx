@@ -31,7 +31,7 @@ export const GallerySection: React.FC = () => {
             <Camera className="w-4 h-4 text-emerald-600" />
             <span>{t.galleryBadge}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.galleryTitle}
           </h2>
         </div>

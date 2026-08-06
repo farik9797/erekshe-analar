@@ -23,7 +23,7 @@ export const ContactSection: React.FC = () => {
             <Phone className="w-4 h-4 text-emerald-600" />
             <span>{t.contactBadge}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.contactTitle}
           </h2>
         </div>
@@ -31,7 +31,7 @@ export const ContactSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Headquarters Contact Cards */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
+            <div className="bg-slate-900 text-white p-4 sm:p-8 rounded-3xl shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none" />
 
               <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">
@@ -112,7 +112,7 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Right Column: Interactive Consultation Card */}
-          <div className="lg:col-span-7 bg-slate-50 p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between gap-6">
+          <div className="lg:col-span-7 bg-slate-50 p-4 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between gap-6">
             <div>
               <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase">
                 Запись на консультацию

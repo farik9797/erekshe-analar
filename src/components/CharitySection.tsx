@@ -23,7 +23,7 @@ export const CharitySection: React.FC = () => {
             <Heart className="w-4 h-4 text-emerald-600 fill-emerald-500" />
             <span>{t.charityBadge}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.charityTitle}
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-3">
@@ -118,7 +118,7 @@ export const CharitySection: React.FC = () => {
         </div>
 
         {/* Transparency & Bank Requisites Teaser */}
-        <div className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div className="bg-white rounded-3xl border border-slate-200 p-4 sm:p-8 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-8 flex flex-col gap-3">
             <div className="flex items-center gap-2 text-emerald-700 font-bold text-xs uppercase tracking-wider">
               <ShieldCheck className="w-4 h-4" />

@@ -37,7 +37,7 @@ export const RehabProcess: React.FC = () => {
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
             <span>{t.stepsBadge}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.stepsTitle}
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-3">
@@ -77,7 +77,7 @@ export const RehabProcess: React.FC = () => {
         </div>
 
         {/* Bottom CTA Banner */}
-        <div className="mt-12 text-center bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-12 text-center bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-4 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-left max-w-2xl">
             <h3 className="text-xl font-bold">Готовы сделать первый шаг к реабилитации?</h3>
             <p className="text-xs sm:text-sm text-emerald-100 mt-1">

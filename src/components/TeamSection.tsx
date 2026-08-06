@@ -38,7 +38,7 @@ export const TeamSection: React.FC = () => {
             <Users className="w-4 h-4 text-emerald-600" />
             <span>{t.teamBadge}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.teamTitle}
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-3">
@@ -47,7 +47,7 @@ export const TeamSection: React.FC = () => {
         </div>
 
         {/* Director Spotlight Box */}
-        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 text-white rounded-3xl p-8 md:p-12 mb-16 shadow-2xl relative overflow-hidden">
+        <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 text-white rounded-3xl p-4 sm:p-8 md:p-12 mb-16 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">

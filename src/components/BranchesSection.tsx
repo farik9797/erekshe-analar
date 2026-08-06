@@ -28,7 +28,7 @@ export const BranchesSection: React.FC = () => {
             <Building2 className="w-4 h-4 text-emerald-600" />
             <span>{t.branchesBadge}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.branchesTitle}
           </h2>
           <p className="text-slate-600 text-sm sm:text-base mt-3">

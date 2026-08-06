@@ -14,7 +14,7 @@ export const AboutPage: React.FC = () => {
       {/* Page Header Banner */}
       <FadeIn>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-gradient-to-r from-emerald-800 via-teal-800 to-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+          <div className="bg-gradient-to-r from-emerald-800 via-teal-800 to-slate-900 text-white rounded-3xl p-4 sm:p-8 md:p-12 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full filter blur-3xl pointer-events-none"></div>
             <div className="relative z-10 max-w-3xl">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-400/30 mb-4">
@@ -51,7 +51,7 @@ export const AboutPage: React.FC = () => {
       {/* Extended Structure & Statistics */}
       <FadeIn>
         <section className="max-w-7xl mx-auto px-4">
-          <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-slate-100">
+          <div className="bg-white rounded-3xl p-4 sm:p-8 md:p-10 shadow-sm border border-slate-100">
             <div className="text-center max-w-2xl mx-auto mb-10">
               <h2 className="text-2xl md:text-3xl font-extrabold text-slate-900 mb-3">
                 {lang === 'ru' ? 'Ключевые показатели работы фонда' : 'Қор жұмысының негізгі көрсеткіштері'}

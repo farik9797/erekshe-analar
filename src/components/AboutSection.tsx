@@ -37,7 +37,7 @@ export const AboutSection: React.FC = () => {
             <Heart className="w-4 h-4 text-emerald-600 fill-emerald-500" />
             <span>{t.aboutBadge}</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             {t.aboutTitle}
           </h2>
           <div className="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full" />
@@ -119,7 +119,7 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Center "UMAY" Spotlight Block */}
-        <div id="umay" className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-100/80 rounded-3xl p-8 md:p-12 border border-amber-200/80 shadow-md relative overflow-hidden">
+        <div id="umay" className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-100/80 rounded-3xl p-4 sm:p-8 md:p-12 border border-amber-200/80 shadow-md relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-amber-200/30 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
