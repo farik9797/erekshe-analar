@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Font Size Scaling */
+  html.text-size-large {
+    font-size: 18px;
+  }
+  html.text-size-xlarge {
+    font-size: 20px;
+  }
+
+  /* High Contrast Mode Styles */
+  html.contrast-dark {
+    filter: invert(1) hue-rotate(180deg);
+    background-color: #000 !important;
+  }
+  html.contrast-dark img,
+  html.contrast-dark video {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  html.contrast-yellow body {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+  }
+  html.contrast-yellow a,
+  html.contrast-yellow button,
+  html.contrast-yellow h1,
+  html.contrast-yellow h2,
+  html.contrast-yellow h3,
+  html.contrast-yellow p,
+  html.contrast-yellow span {
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+  }
+
+  html.contrast-blue body {
+    background-color: #e0f2fe !important;
+    color: #0369a1 !important;
+  }
+  html.contrast-blue a,
+  html.contrast-blue button,
+  html.contrast-blue h1,
+  html.contrast-blue h2,
+  html.contrast-blue h3,
+  html.contrast-blue p,
+  html.contrast-blue span {
+    color: #0284c7 !important;
+  }
+}
+
+/* Smooth scroll & layout improvements */
+html {
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
+

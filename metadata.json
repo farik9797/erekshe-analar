@@ -1,0 +1,6 @@
+{
+  "name": "EREKSHE ANALAR - Реабилитационный фонд",
+  "description": "Официальный сайт общественного фонда EREKSHE ANALAR: комплексная бесплатная реабилитация, социальная адаптация детей с особыми образовательными потребностями и поддержка семей в г. Астана.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
