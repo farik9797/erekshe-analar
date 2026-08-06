@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
           {/* Left: History & Mission Content */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            <div className="bg-slate-50 p-6 md:p-8 rounded-3xl border border-slate-100 shadow-xs">
+            <div className="bg-slate-50 p-6 md:p-4 rounded-3xl border border-slate-100 shadow-xs">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold">
                   <BookOpen className="w-5 h-5" />
@@ -59,7 +59,7 @@ export const AboutSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-6 md:p-8 rounded-3xl shadow-lg shadow-emerald-700/20">
+            <div className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white p-6 md:p-4 rounded-3xl shadow-lg shadow-emerald-700/20">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-xl bg-white/20 text-white flex items-center justify-center font-bold">
                   <Target className="w-5 h-5" />
@@ -119,7 +119,7 @@ export const AboutSection: React.FC = () => {
         </div>
 
         {/* Center "UMAY" Spotlight Block */}
-        <div id="umay" className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-100/80 rounded-3xl p-4 sm:p-8 md:p-12 border border-amber-200/80 shadow-md relative overflow-hidden">
+        <div id="umay" className="bg-gradient-to-r from-amber-50 via-orange-50 to-amber-100/80 rounded-3xl p-4 md:p-12 border border-amber-200/80 shadow-md relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-amber-200/30 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">

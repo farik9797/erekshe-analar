@@ -76,7 +76,7 @@ export const BranchesSection: React.FC = () => {
         </div>
 
         {/* Selected Branch Detail Spotlight */}
-        <div className="bg-white rounded-3xl border border-slate-200 p-6 md:p-8 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 md:p-4 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Branch Info Column */}
           <div className="lg:col-span-7 flex flex-col gap-6">
             <div>

@@ -109,7 +109,7 @@ export const NewsSection: React.FC = () => {
       {/* News Modal Reader */}
       {selectedNewsModal && (
         <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto animate-fadeIn">
-          <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl relative my-8">
+          <div className="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-4 shadow-2xl relative my-8">
             <button
               onClick={() => setSelectedNewsModal(null)}
               className="absolute top-4 right-4 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition"
