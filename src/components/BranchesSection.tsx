@@ -97,7 +97,7 @@ export const BranchesSection: React.FC = () => {
 
             {/* Address, Phone, Working Hours List */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100">
+              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 py-5 px-2.5 rounded-2xl border border-slate-100">
                 <MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -109,7 +109,7 @@ export const BranchesSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100">
+              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 py-5 px-2.5 rounded-2xl border border-slate-100">
                 <Clock className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -121,7 +121,7 @@ export const BranchesSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100">
+              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 py-5 px-2.5 rounded-2xl border border-slate-100">
                 <Phone className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -136,7 +136,7 @@ export const BranchesSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100">
+              <div className="flex items-start gap-2 sm:gap-3 bg-slate-50 py-5 px-2.5 rounded-2xl border border-slate-100">
                 <MessageCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
