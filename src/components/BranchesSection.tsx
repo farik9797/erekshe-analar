@@ -90,7 +90,7 @@ export const BranchesSection: React.FC = () => {
                   {activeBranch.district[lang]}
                 </span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              <h3 className="text-[1.4rem] sm:text-3xl font-extrabold text-slate-900">
                 {activeBranch.name[lang]}
               </h3>
             </div>
