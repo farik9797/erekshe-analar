@@ -1,0 +1,67 @@
+/*
+Theme Name: EREKSHE ANALAR
+Theme URI: https://farik9797.github.io/erekshe-analar/
+Author: EREKSHE ANALAR
+Description: Тема общественного фонда EREKSHE ANALAR — комплексная реабилитация детей с особыми образовательными потребностями и поддержка семей в г. Астана. Порт React-сайта на WordPress + ACF Pro.
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain: erekshe
+*/
+
+/* Базовые стили (перенесены из src/index.css) */
+html {
+  scroll-behavior: smooth;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #16a34a; }
+
+/* Скрытый скроллбар для мобильных слайдеров (класс scrollbar-none) */
+.scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* ==== Версия для слабовидящих ==== */
+/* Размер шрифта */
+html.text-size-large { font-size: 18px; }
+html.text-size-xlarge { font-size: 20px; }
+
+/* Контрастные режимы */
+html.contrast-dark { filter: invert(1) hue-rotate(180deg); background-color: #000 !important; }
+html.contrast-dark img,
+html.contrast-dark video { filter: invert(1) hue-rotate(180deg); }
+
+html.contrast-yellow body { background-color: #000000 !important; color: #ffff00 !important; }
+html.contrast-yellow a,
+html.contrast-yellow button,
+html.contrast-yellow h1,
+html.contrast-yellow h2,
+html.contrast-yellow h3,
+html.contrast-yellow p,
+html.contrast-yellow span { color: #ffff00 !important; border-color: #ffff00 !important; }
+
+html.contrast-blue body { background-color: #e0f2fe !important; color: #0369a1 !important; }
+html.contrast-blue a,
+html.contrast-blue button,
+html.contrast-blue h1,
+html.contrast-blue h2,
+html.contrast-blue h3,
+html.contrast-blue p,
+html.contrast-blue span { color: #0284c7 !important; }
+
+/* Скрытие изображений (режим доступности) */
+html.hide-images img { visibility: hidden !important; }
+
+/* Плавное появление секций (замена FadeIn) */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.is-visible { opacity: 1; transform: none; }
