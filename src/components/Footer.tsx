@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/services" className="hover:text-amber-300 transition flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  {lang === 'ru' ? 'Логопед и Логомассаж' : 'Логопед және Логомассаж'}
+                  {lang === 'ru' ? 'Логопед и логопедический массаж' : 'Логопед және Логомассаж'}
                 </Link>
               </li>
               <li>

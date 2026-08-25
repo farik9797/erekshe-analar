@@ -20,7 +20,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'd_footerBranches' => 'Наши филиалы (Астана)',
             'd_rightsReserved' => 'Все права защищены.',
             'd_toTop'          => 'Наверх',
-            'd_svcLogoped'     => 'Логопед и Логомассаж',
+            'd_svcLogoped'     => 'Логопед и логопедический массаж',
             'd_svcDefectolog'  => 'Дефектолог и Олигофренопедагог',
             'd_svcPsychologist' => 'Детский Психолог и Сенсорная комната',
             'd_svcAfk'         => 'АФК / ЛФК и Адаптивное плавание',
