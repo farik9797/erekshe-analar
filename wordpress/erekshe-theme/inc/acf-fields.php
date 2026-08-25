@@ -39,7 +39,7 @@ function erekshe_register_acf() {
         ef_text('opt_phone', 'phone', 'Телефон', '+7 (7172) 70-80-90'),
         ef_text('opt_email', 'email', 'Email', 'info@ereksheanalar.kz'),
         ef_text('opt_city', 'city', 'Город', 'г. Астана'),
-        ef_text('opt_hours', 'work_hours', 'Часы работы', 'Пн - Пт: 09:00 - 18:00'),
+        ef_text('opt_hours', 'work_hours', 'Часы работы', 'Пн - Пт: 08:30 - 18:00'),
         ef_url('opt_wa', 'whatsapp_url', 'WhatsApp URL', 'https://wa.me/77084251212'),
         ef_text('opt_wanum', 'whatsapp_num', 'WhatsApp номер', '+7 (708) 425-12-12'),
         ef_url('opt_insta', 'instagram_url', 'Instagram URL', 'https://instagram.com/erekshe_analar'),
@@ -194,7 +194,7 @@ function erekshe_register_acf() {
         [
             ef_text('cnt_org', 'contact_org', 'Организация', 'ОФ «EREKSHE ANALAR»'),
             ef_text('cnt_addr', 'contact_address', 'Адрес головного центра', 'г. Астана, ул. Аманат, 12/1'),
-            ef_text('cnt_hours', 'contact_hours', 'График работы', 'Пн - Пт: 09:00 - 18:00'),
+            ef_text('cnt_hours', 'contact_hours', 'График работы', 'Пн - Пт: 08:30 - 18:00'),
         ]
     ), 'location' => ef_loc_tpl('page-contacts.php')]);
 }
