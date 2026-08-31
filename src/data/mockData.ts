@@ -824,3 +824,26 @@ export const PARTNERS = [
     desc: { ru: 'Инклюзивный спорт и адаптация', kk: 'Инклюзивті спорт және бейімдеу' }
   }
 ];
+
+export const TEAM_ROSTER = [
+  { group: 'logoped', name: 'Тенилбаева Галия Кенжеевна', education: 'Высшее / Магистр', branch: 'Акын Сара 37', note: '' },
+  { group: 'logoped', name: 'Баенова Айгуль Мусаевна', education: 'Высшее / Магистр', branch: 'Сарыарка 48', note: '' },
+  { group: 'defectolog', name: 'Еркін Ақерке Мұхитдінқызы', education: 'Высшее / Магистр', branch: 'Аманат 12/1', note: '' },
+  { group: 'defectolog', name: 'Төлеген Айдана Дәрісқызы', education: 'Высшее / Бакалавр', branch: 'Сарыарка 48', note: '' },
+  { group: 'defectolog', name: 'Мадени Алмагул', education: 'Высшее / Бакалавр', branch: 'Аманат 12/1', note: '' },
+  { group: 'psycholog', name: 'Махметова Қарлығаш Аманкуловна', education: 'Высшее / Бакалавр', branch: 'Аманат 12/1', note: '' },
+  { group: 'psycholog', name: 'Мұсылмаңқұлова Сезім Қуатқызы', education: 'Высшее / Бакалавр', branch: 'Аманат 12/1', note: '' },
+  { group: 'psycholog', name: 'Куспекова Алия Какеновна', education: 'Высшее / Бакалавр', branch: 'Аманат 12/1', note: '' },
+  { group: 'psycholog', name: 'Айтжанова Фарида Женисовна', education: 'Высшее / Бакалавр', branch: 'Акын Сара 37', note: '' },
+  { group: 'afk', name: 'Тоқтарханов Асылан Бауыржанұлы', education: 'Среднее', branch: 'Сарыарка 48', note: '' },
+  { group: 'afk', name: 'Наурызова Жансая Болатбекқызы', education: 'Среднее', branch: 'Аманат 12/1', note: '' },
+  { group: 'afk', name: 'Уалиханова Жансая Оразәліқызы', education: 'Среднее', branch: 'Аманат 12/1', note: '' },
+  { group: 'afk', name: 'Әбілқайыров Ернар Нұрболатұлы', education: 'Среднее', branch: 'Сарыарка 48', note: '' },
+  { group: 'afk', name: 'Байсалдина Самал Абаевна', education: 'Среднее', branch: 'Акын Сара 37', note: '' },
+  { group: 'pool', name: 'Қажығали Ақжол', education: 'Среднее', branch: 'Аманат 12/1', note: '' },
+  { group: 'social', name: 'Баяндинова Алия Жетписбаевна', education: 'Высшее / Бакалавр', branch: 'Аманат 12/1', note: '' },
+  { group: 'social', name: 'Каймолдина Арайлым Кажимуратовна', education: 'Высшее / Бакалавр', branch: 'Сарыарка 48', note: '' },
+  { group: 'social', name: 'Бейсенгалиева Агнат Бухарбаевна', education: 'Среднее', branch: 'Акын Сара 37', note: '' },
+  { group: 'nurse', name: 'Копбосын Дана Копбосынқызы', education: 'Среднее', branch: 'Аманат 12/1', note: 'Общий массаж, соляная комната' },
+  { group: 'nurse', name: 'Жуматова Гульзипа Шохановна', education: 'Среднее', branch: 'Аманат 12/1', note: 'Общий массаж, соляная комната' },
+];

@@ -1,5 +1,6 @@
 import React from 'react';
-import { TeamSection } from '../components/TeamSection';
+import { TeamRoster } from '../components/TeamRoster';
+import { TEAM_ROSTER } from '../data/mockData';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { FadeIn } from '../components/FadeIn';
 import { Users, Award, Sparkles } from 'lucide-react';
@@ -14,7 +15,7 @@ export const TeamPage: React.FC = () => {
           <div className="bg-gradient-to-r from-emerald-900 via-slate-900 to-teal-900 text-white rounded-3xl p-4 md:p-12 shadow-xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-400/30 mb-4">
               <Users className="w-4 h-4" />
-              {lang === 'ru' ? '45+ квалифицированных специалистов' : '45+ білікті маман'}
+              {lang === 'ru' ? `${TEAM_ROSTER.length} специалистов` : `${TEAM_ROSTER.length} маман`}
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mb-4">
               {t.teamTitle}
@@ -34,7 +35,7 @@ export const TeamPage: React.FC = () => {
       </FadeIn>
 
       <FadeIn>
-        <TeamSection />
+        <TeamRoster />
       </FadeIn>
     </div>
   );
