@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { TEAM_ROSTER } from '../data/mockData';
-import { MapPin } from 'lucide-react';
+import { MapPin, Users } from 'lucide-react';
 
 const ORDER = ['logoped', 'defectolog', 'psycholog', 'afk', 'pool', 'social', 'nurse'] as const;
 
@@ -16,8 +16,8 @@ const LABELS: Record<string, { ru: string; kk: string }> = {
 };
 const EDU = { ru: 'Образование', kk: 'Білімі' } as const;
 
-export const TeamRoster: React.FC = () => {
-  const { lang } = useAccessibility();
+export const TeamRoster: React.FC<{ withHeading?: boolean }> = ({ withHeading = false }) => {
+  const { lang, t } = useAccessibility();
   const L: 'ru' | 'kk' = lang === 'ru' ? 'ru' : 'kk';
 
   const grouped: Record<string, typeof TEAM_ROSTER> = {};
@@ -25,7 +25,7 @@ export const TeamRoster: React.FC = () => {
     (grouped[p.group] ||= []).push(p);
   }
 
-  return (
+  const groups = (
     <div className="max-w-7xl mx-auto px-4 space-y-10">
       {ORDER.filter((g) => grouped[g]?.length).map((g) => (
         <div key={g}>
@@ -55,5 +55,23 @@ export const TeamRoster: React.FC = () => {
         </div>
       ))}
     </div>
+  );
+
+  if (!withHeading) return groups;
+
+  return (
+    <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-100">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
+            <Users className="w-4 h-4 text-emerald-600" />
+            <span>{TEAM_ROSTER.length} {L === 'ru' ? 'специалистов' : 'маман'}</span>
+          </div>
+          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">{t.teamTitle}</h2>
+          <p className="text-slate-600 text-sm sm:text-base mt-3">{t.teamDesc}</p>
+        </div>
+      </div>
+      {groups}
+    </section>
   );
 };

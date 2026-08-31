@@ -4,7 +4,7 @@ import { AboutSection } from '../components/AboutSection';
 import { ServicesSection } from '../components/ServicesSection';
 import { RehabProcess } from '../components/RehabProcess';
 import { BranchesSection } from '../components/BranchesSection';
-import { TeamSection } from '../components/TeamSection';
+import { TeamRoster } from '../components/TeamRoster';
 import { CharitySection } from '../components/CharitySection';
 import { NewsSection } from '../components/NewsSection';
 import { ReviewsSection } from '../components/ReviewsSection';
@@ -30,7 +30,7 @@ export const HomePage: React.FC = () => {
         <BranchesSection />
       </FadeIn>
       <FadeIn>
-        <TeamSection />
+        <TeamRoster withHeading />
       </FadeIn>
       <FadeIn>
         <CharitySection />
