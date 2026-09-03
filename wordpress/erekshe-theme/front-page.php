@@ -61,7 +61,7 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
       </div>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-      <?php foreach ([['1200+',erekshe_t('a_statChildrenRehab')],['4',erekshe_t('a_statBranchesAstana')],['45+',erekshe_t('a_statSpecialists')],['100%',erekshe_t('a_statFree')]] as $s): ?>
+      <?php foreach ([['1200+',erekshe_t('a_statChildrenRehab')],['4',erekshe_t('a_statBranchesAstana')],['20',erekshe_t('a_statSpecialists')],['100%',erekshe_t('a_statFree')]] as $s): ?>
         <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-xs hover:border-emerald-200 transition">
           <p class="text-2xl sm:text-3xl font-extrabold text-emerald-700 tracking-tight"><?php echo esc_html($s[0]); ?></p>
           <p class="text-xs text-slate-600 font-medium mt-1"><?php echo esc_html($s[1]); ?></p>

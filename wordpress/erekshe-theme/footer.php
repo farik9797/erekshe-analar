@@ -6,12 +6,13 @@ $email  = erekshe_opt('email', 'info@ereksheanalar.kz');
 $nav    = erekshe_nav_items();
 $services = [
   ['url' => 'services', 'key' => 'd_svcLogoped'],
-  ['url' => 'services', 'key' => 'd_svcDefectolog'],
   ['url' => 'services', 'key' => 'd_svcPsychologist'],
+  ['url' => 'services', 'key' => 'd_svcDefectolog'],
   ['url' => 'services', 'key' => 'd_svcAfk'],
-  ['url' => 'services', 'key' => 'd_svcMusic'],
+  ['url' => 'services', 'key' => 'd_svcPhysio'],
+  ['url' => 'services', 'key' => 'd_svcMassage'],
   ['url' => 'services', 'key' => 'd_svcHydro'],
-  ['url' => 'umay',     'key' => 'd_svcUmay'],
+  ['url' => 'services', 'key' => 'd_svcSocial'],
 ];
 ?>
 </main>

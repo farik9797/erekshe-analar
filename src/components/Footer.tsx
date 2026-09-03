@@ -70,48 +70,23 @@ export const Footer: React.FC = () => {
               {lang === 'ru' ? 'Наши услуги' : 'Біздің қызметтер'}
             </h4>
             <ul className="flex flex-col gap-2 text-xs font-medium text-emerald-200/80">
-              <li>
-                <Link to="/services" className="hover:text-amber-300 transition flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  {lang === 'ru' ? 'Логопед и логопедический массаж' : 'Логопед және Логомассаж'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-amber-300 transition flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  {lang === 'ru' ? 'Дефектолог и Олигофренопедагог' : 'Дефектолог және Олигофренопедагог'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-amber-300 transition flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  {lang === 'ru' ? 'Детский Психолог и Сенсорная комната' : 'Балалар психологы және Сенсорлық бөлме'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-amber-300 transition flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  {lang === 'ru' ? 'АФК / ЛФК и Адаптивное плавание' : 'АДШ / ЕДШ және Адаптивті жүзу'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-amber-300 transition flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  {lang === 'ru' ? 'Музыкальная терапия и Арт-терапия' : 'Музыкалық терапия және Арт-терапия'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-amber-300 transition flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                  {lang === 'ru' ? 'Гидротерапия и Соляная шахта' : 'Гидротерапия және Тұз бөлмесі'}
-                </Link>
-              </li>
-              <li>
-                <Link to="/umay" className="hover:text-amber-300 transition flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                  {lang === 'ru' ? 'Центр поддержки матерей UMAY' : 'UMAY аналарды қолдау орталығы'}
-                </Link>
-              </li>
+              {[
+                { ru: 'Логопедическая коррекция и развитие речи', kk: 'Логопедиялық түзету және сөйлеуді дамыту' },
+                { ru: 'Психологическая коррекция и развитие', kk: 'Психологиялық түзету және дамыту' },
+                { ru: 'Дефектологическая коррекция и развитие', kk: 'Дефектологиялық түзету және дамыту' },
+                { ru: 'ЛФК / АФК', kk: 'ЕФК / ЕАФК' },
+                { ru: 'Физиотерапия', kk: 'Физиотерапия' },
+                { ru: 'Массаж', kk: 'Массаж' },
+                { ru: 'Гидротерапия и водные процедуры', kk: 'Гидротерапия және су процедуралары' },
+                { ru: 'Социально-бытовая адаптация', kk: 'Әлеуметтік-тұрмыстық бейімделу' },
+              ].map((s, i) => (
+                <li key={i}>
+                  <Link to="/services" className="hover:text-amber-300 transition flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    {lang === 'ru' ? s.ru : s.kk}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
