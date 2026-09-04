@@ -76,7 +76,7 @@ export const ServicesSection: React.FC = () => {
 
         {/* Category Filters */}
         <div className="relative mb-8">
-          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 -mx-4 pl-4 pr-16 sm:mx-0 sm:pl-0 sm:pr-16">
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 -mx-4 pl-4 pr-20 sm:mx-0 sm:pl-0 sm:pr-20">
             {categories.map((cat) => (
               <button
                 key={cat.id}
@@ -92,7 +92,7 @@ export const ServicesSection: React.FC = () => {
             ))}
           </div>
           {/* Подсказка: строку фильтров можно листать */}
-          <div className="pointer-events-none absolute top-0 bottom-2 right-0 flex items-center gap-1 pl-10 pr-0.5 bg-gradient-to-l from-slate-50 via-slate-50/95 to-transparent">
+          <div className="pointer-events-none absolute top-0 bottom-2 right-0 flex items-center gap-1 pl-6 pr-0.5 bg-gradient-to-l from-slate-50 via-slate-50/95 to-transparent">
             <ChevronRight className="w-5 h-5 text-emerald-500 animate-pulse" />
           </div>
         </div>
