@@ -76,7 +76,7 @@ export const ServicesSection: React.FC = () => {
 
         {/* Category Filters */}
         <div className="relative mb-8">
-          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 -mx-4 pl-4 pr-16 sm:mx-0 sm:pl-0 sm:pr-16">
             {categories.map((cat) => (
               <button
                 key={cat.id}

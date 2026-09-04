@@ -14,6 +14,7 @@ $services = erekshe_get_rows('services', erekshe_services());
         <?php foreach ($cats as $i => $c): ?>
           <button type="button" data-svc-filter="<?php echo esc_attr($c[0]); ?>" class="whitespace-nowrap flex-shrink-0 px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold transition shadow-2xs <?php echo $i === 0 ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'; ?>"><?php echo esc_html($c[1]); ?></button>
         <?php endforeach; ?>
+        <span class="flex-shrink-0" style="width:4rem" aria-hidden="true"></span>
       </div>
       <!-- Подсказка: строку фильтров можно листать -->
       <div class="pointer-events-none absolute top-0 bottom-2 right-0 flex items-center gap-1 pl-10 pr-0.5 bg-gradient-to-l from-slate-50 via-slate-50/95 to-transparent">
