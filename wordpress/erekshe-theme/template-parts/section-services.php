@@ -9,10 +9,16 @@ $services = erekshe_get_rows('services', erekshe_services());
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('servicesTitle', 'Комплексный спектр реабилитационных и коррекционных услуг')); ?></h2>
       <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('servicesDesc', 'Все занятия проводят сертифицированные специалисты.')); ?></p>
     </div>
-    <div class="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 mb-8 -mx-4 px-4 sm:mx-0 sm:px-0" data-svc-filters>
-      <?php foreach ($cats as $i => $c): ?>
-        <button type="button" data-svc-filter="<?php echo esc_attr($c[0]); ?>" class="whitespace-nowrap flex-shrink-0 px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold transition shadow-2xs <?php echo $i === 0 ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'; ?>"><?php echo esc_html($c[1]); ?></button>
-      <?php endforeach; ?>
+    <div class="relative mb-8">
+      <div class="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 -mx-4 px-4 sm:mx-0 sm:px-0" data-svc-filters>
+        <?php foreach ($cats as $i => $c): ?>
+          <button type="button" data-svc-filter="<?php echo esc_attr($c[0]); ?>" class="whitespace-nowrap flex-shrink-0 px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold transition shadow-2xs <?php echo $i === 0 ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'; ?>"><?php echo esc_html($c[1]); ?></button>
+        <?php endforeach; ?>
+      </div>
+      <!-- Подсказка: строку фильтров можно листать -->
+      <div class="pointer-events-none absolute top-0 bottom-2 right-0 flex items-center gap-1 pl-10 pr-0.5 bg-gradient-to-l from-slate-50 via-slate-50/95 to-transparent">
+        <?php echo erekshe_icon('ChevronRight', 'w-5 h-5 text-emerald-500 animate-pulse'); ?>
+      </div>
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6" data-svc-grid>
       <?php foreach ($services as $i => $s): ?>

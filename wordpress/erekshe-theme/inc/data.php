@@ -1558,6 +1558,13 @@ function erekshe_team_roster() {
                 'note' => ''
             ],
             [
+                'group' => 'logoped',
+                'name' => 'Сейдахметова Рабига Абдрахимовна',
+                'education' => '',
+                'branch' => '',
+                'note' => ''
+            ],
+            [
                 'group' => 'defectolog',
                 'name' => 'Еркін Ақерке Мұхитдінқызы',
                 'education' => 'Высшее / Магистр',
@@ -1697,6 +1704,13 @@ function erekshe_team_roster() {
                 'name' => 'Баенова Айгуль Мусаевна',
                 'education' => 'Высшее / Магистр',
                 'branch' => 'Сарыарка 48',
+                'note' => ''
+            ],
+            [
+                'group' => 'logoped',
+                'name' => 'Сейдахметова Рабига Абдрахимовна',
+                'education' => '',
+                'branch' => '',
                 'note' => ''
             ],
             [

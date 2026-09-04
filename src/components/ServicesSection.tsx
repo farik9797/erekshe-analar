@@ -75,20 +75,26 @@ export const ServicesSection: React.FC = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
-          {categories.map((cat) => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
-              className={`whitespace-nowrap flex-shrink-0 px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold transition shadow-2xs ${
-                activeCategory === cat.id
-                  ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
-                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+        <div className="relative mb-8">
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 -mx-4 px-4 sm:mx-0 sm:px-0">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`whitespace-nowrap flex-shrink-0 px-3.5 py-2 rounded-full text-xs sm:text-sm font-bold transition shadow-2xs ${
+                  activeCategory === cat.id
+                    ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
+                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </div>
+          {/* Подсказка: строку фильтров можно листать */}
+          <div className="pointer-events-none absolute top-0 bottom-2 right-0 flex items-center gap-1 pl-10 pr-0.5 bg-gradient-to-l from-slate-50 via-slate-50/95 to-transparent">
+            <ChevronRight className="w-5 h-5 text-emerald-500 animate-pulse" />
+          </div>
         </div>
 
         {/* Services Grid with FadeIn */}

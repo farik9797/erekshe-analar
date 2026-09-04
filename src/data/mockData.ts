@@ -854,6 +854,7 @@ export const PARTNERS = [
 export const TEAM_ROSTER = [
   { group: 'logoped', name: 'Тенилбаева Галия Кенжеевна', education: 'Высшее / Магистр', branch: 'Акын Сара 37', note: '' },
   { group: 'logoped', name: 'Баенова Айгуль Мусаевна', education: 'Высшее / Магистр', branch: 'Сарыарка 48', note: '' },
+  { group: 'logoped', name: 'Сейдахметова Рабига Абдрахимовна', education: '', branch: '', note: '' },
   { group: 'defectolog', name: 'Еркін Ақерке Мұхитдінқызы', education: 'Высшее / Магистр', branch: 'Аманат 12/1', note: '' },
   { group: 'defectolog', name: 'Төлеген Айдана Дәрісқызы', education: 'Высшее / Бакалавр', branch: 'Сарыарка 48', note: '' },
   { group: 'defectolog', name: 'Мадени Алмагул', education: 'Высшее / Бакалавр', branch: 'Аманат 12/1', note: '' },

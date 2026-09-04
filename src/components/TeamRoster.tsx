@@ -43,11 +43,13 @@ export const TeamRoster: React.FC<{ withHeading?: boolean }> = ({ withHeading = 
                 <div className="min-w-0">
                   <p className="font-bold text-slate-900 text-sm leading-snug">{p.name}</p>
                   {p.note && <p className="text-[11px] text-emerald-700 font-semibold mt-0.5">{p.note}</p>}
-                  <p className="text-xs text-slate-500 mt-1">{EDU[L]}: {p.education}</p>
-                  <p className="text-[11px] text-slate-500 mt-1 flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-emerald-600 flex-shrink-0" />
-                    <span className="truncate">{p.branch}</span>
-                  </p>
+                  {p.education && <p className="text-xs text-slate-500 mt-1">{EDU[L]}: {p.education}</p>}
+                  {p.branch && (
+                    <p className="text-[11px] text-slate-500 mt-1 flex items-center gap-1">
+                      <MapPin className="w-3 h-3 text-emerald-600 flex-shrink-0" />
+                      <span className="truncate">{p.branch}</span>
+                    </p>
+                  )}
                 </div>
               </div>
             ))}

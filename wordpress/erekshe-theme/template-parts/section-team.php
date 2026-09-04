@@ -26,8 +26,8 @@ foreach ($roster as $p) { $grouped[$p['group']][] = $p; }
               <div class="min-w-0">
                 <p class="font-bold text-slate-900 text-sm leading-snug"><?php echo esc_html($p['name']); ?></p>
                 <?php if (!empty($p['note'])): ?><p class="text-[11px] text-emerald-700 font-semibold mt-0.5"><?php echo esc_html($p['note']); ?></p><?php endif; ?>
-                <p class="text-xs text-slate-500 mt-1"><?php echo esc_html(erekshe_t('team_eduLabel')); ?>: <?php echo esc_html($p['education']); ?></p>
-                <p class="text-[11px] text-slate-500 mt-1 flex items-center gap-1"><?php echo erekshe_icon('MapPin', 'w-3 h-3 text-emerald-600 flex-shrink-0'); ?><span class="truncate"><?php echo esc_html($p['branch']); ?></span></p>
+                <?php if (!empty($p['education'])): ?><p class="text-xs text-slate-500 mt-1"><?php echo esc_html(erekshe_t('team_eduLabel')); ?>: <?php echo esc_html($p['education']); ?></p><?php endif; ?>
+                <?php if (!empty($p['branch'])): ?><p class="text-[11px] text-slate-500 mt-1 flex items-center gap-1"><?php echo erekshe_icon('MapPin', 'w-3 h-3 text-emerald-600 flex-shrink-0'); ?><span class="truncate"><?php echo esc_html($p['branch']); ?></span></p><?php endif; ?>
               </div>
             </div>
           <?php endforeach; ?>
