@@ -31,6 +31,7 @@ export const ServicesSection: React.FC = () => {
     { id: 'correction', label: t.filterCorrection },
     { id: 'physical', label: t.filterPhysical },
     { id: 'water', label: t.filterWater },
+    { id: 'medical', label: t.filterMedical },
     { id: 'social', label: t.filterSocial },
     { id: 'parents', label: t.filterParents }
   ];

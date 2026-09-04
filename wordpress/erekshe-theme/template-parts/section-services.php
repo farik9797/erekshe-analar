@@ -1,5 +1,5 @@
 <?php if (!defined('ABSPATH')) exit;
-$cats = [['all',erekshe_t('filterAll')],['correction',erekshe_t('filterCorrection')],['physical',erekshe_t('filterPhysical')],['water',erekshe_t('filterWater')],['social',erekshe_t('filterSocial')],['parents',erekshe_t('filterParents')]];
+$cats = [['all',erekshe_t('filterAll')],['correction',erekshe_t('filterCorrection')],['physical',erekshe_t('filterPhysical')],['water',erekshe_t('filterWater')],['medical',erekshe_t('filterMedical')],['social',erekshe_t('filterSocial')],['parents',erekshe_t('filterParents')]];
 $services = erekshe_get_rows('services', erekshe_services());
 ?>
 <section id="services" class="fade-in py-16 md:py-24 bg-slate-50 border-b border-slate-100">
