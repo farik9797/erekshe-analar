@@ -31,7 +31,7 @@ export interface ServiceItem {
   shortDesc: { ru: string; kk: string };
   fullDesc: { ru: string; kk: string };
   iconName: string;
-  category: 'correction' | 'physical' | 'water' | 'social' | 'parents';
+  category: 'correction' | 'physical' | 'water' | 'medical' | 'social' | 'parents';
   indications: { ru: string[]; kk: string[] };
   results: { ru: string[]; kk: string[] };
   duration: { ru: string; kk: string };

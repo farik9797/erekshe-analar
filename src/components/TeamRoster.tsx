@@ -17,7 +17,7 @@ const LABELS: Record<string, { ru: string; kk: string }> = {
 const EDU = { ru: 'Образование', kk: 'Білімі' } as const;
 
 // Русское склонение: 1→специалист, 2-4→специалиста, 5+/11-14→специалистов
-const pluralRu = (n: number, one: string, few: string, many: string): string => {
+export const pluralRu = (n: number, one: string, few: string, many: string): string => {
   const m10 = n % 10;
   const m100 = n % 100;
   if (m10 === 1 && m100 !== 11) return one;
