@@ -1560,8 +1560,8 @@ function erekshe_team_roster() {
             [
                 'group' => 'logoped',
                 'name' => 'Сейдахметова Рабига Абдрахимовна',
-                'education' => '',
-                'branch' => '',
+                'education' => 'Высшее / бакалавр',
+                'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
@@ -1709,8 +1709,8 @@ function erekshe_team_roster() {
             [
                 'group' => 'logoped',
                 'name' => 'Сейдахметова Рабига Абдрахимовна',
-                'education' => '',
-                'branch' => '',
+                'education' => 'Высшее / бакалавр',
+                'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
