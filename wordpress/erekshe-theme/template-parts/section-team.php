@@ -3,11 +3,21 @@ $roster = erekshe_get_rows('team_roster', erekshe_team_roster());
 $order  = ['logoped','defectolog','psycholog','afk','pool','social','nurse'];
 $grouped = [];
 foreach ($roster as $p) { $grouped[$p['group']][] = $p; }
+// Русское склонение слова «специалист» по количеству; казахский «маман» не склоняется
+$roster_n = count($roster);
+if (erekshe_lang() === 'ru') {
+  $m10 = $roster_n % 10; $m100 = $roster_n % 100;
+  if ($m10 === 1 && $m100 !== 11)                               $spec_word = 'специалист';
+  elseif ($m10 >= 2 && $m10 <= 4 && ($m100 < 12 || $m100 > 14)) $spec_word = 'специалиста';
+  else                                                          $spec_word = 'специалистов';
+} else {
+  $spec_word = 'маман';
+}
 ?>
 <section class="fade-in py-16 md:py-24 bg-slate-50 border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-14">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Users', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(count($roster)); ?> <?php echo esc_html(erekshe_t('c_TeamBadgeSpecialists', 'специалистов')); ?></span></div>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Users', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html($roster_n); ?> <?php echo esc_html($spec_word); ?></span></div>
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('teamTitle', 'Руководство и междисциплинарная команда фонда')); ?></h2>
       <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('teamDesc', 'Логопеды, дефектологи, психологи, инструкторы АФК/ЛФК, педагоги и заботливый младший персонал.')); ?></p>
     </div>

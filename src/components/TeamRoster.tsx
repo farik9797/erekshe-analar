@@ -16,6 +16,15 @@ const LABELS: Record<string, { ru: string; kk: string }> = {
 };
 const EDU = { ru: 'Образование', kk: 'Білімі' } as const;
 
+// Русское склонение: 1→специалист, 2-4→специалиста, 5+/11-14→специалистов
+const pluralRu = (n: number, one: string, few: string, many: string): string => {
+  const m10 = n % 10;
+  const m100 = n % 100;
+  if (m10 === 1 && m100 !== 11) return one;
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+  return many;
+};
+
 export const TeamRoster: React.FC<{ withHeading?: boolean }> = ({ withHeading = false }) => {
   const { lang, t } = useAccessibility();
   const L: 'ru' | 'kk' = lang === 'ru' ? 'ru' : 'kk';
@@ -67,7 +76,7 @@ export const TeamRoster: React.FC<{ withHeading?: boolean }> = ({ withHeading = 
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
             <Users className="w-4 h-4 text-emerald-600" />
-            <span>{TEAM_ROSTER.length} {L === 'ru' ? 'специалистов' : 'маман'}</span>
+            <span>{TEAM_ROSTER.length} {L === 'ru' ? pluralRu(TEAM_ROSTER.length, 'специалист', 'специалиста', 'специалистов') : 'маман'}</span>
           </div>
           <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">{t.teamTitle}</h2>
           <p className="text-slate-600 text-sm sm:text-base mt-3">{t.teamDesc}</p>
