@@ -41,7 +41,7 @@ export const DonationModal: React.FC = () => {
             <QrCode className="w-20 h-20 text-white bg-white/20 p-2 rounded-2xl backdrop-blur-sm" />
             <div>
               <p className="text-xs font-bold uppercase tracking-wider text-amber-100">{t.donationQrNote}</p>
-              <p className="text-lg font-extrabold text-white mt-0.5">ОФ «EREKSHE ANALAR»</p>
+              <p className="text-lg font-extrabold text-white mt-0.5">{t.donationOrgName}</p>
             </div>
           </div>
 

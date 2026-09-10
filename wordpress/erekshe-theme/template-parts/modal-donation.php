@@ -11,12 +11,12 @@
       <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl p-6 text-center text-white mb-6">
         <div class="w-24 h-24 mx-auto bg-white/20 rounded-2xl flex items-center justify-center mb-4"><?php echo erekshe_icon('QrCode', 'w-14 h-14'); ?></div>
         <p class="text-xs font-bold uppercase tracking-wider mb-1"><?php echo esc_html(erekshe_t('d_donationQr')); ?></p>
-        <p class="text-lg font-extrabold">ОФ «EREKSHE ANALAR»</p>
+        <p class="text-lg font-extrabold"><?php echo esc_html(erekshe_t('donationOrgName')); ?></p>
       </div>
       <div class="bg-slate-50 rounded-2xl p-5 border border-slate-100">
         <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3"><?php echo esc_html(erekshe_t('d_donationDetails')); ?></p>
         <div class="flex flex-col gap-3 text-sm">
-          <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationOrg')); ?></span><span class="font-bold text-slate-900">ОФ «EREKSHE ANALAR»</span></div>
+          <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationOrg')); ?></span><span class="font-bold text-slate-900"><?php echo esc_html(erekshe_t('donationOrgName')); ?></span></div>
           <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationBin')); ?></span><span class="font-bold text-slate-900">210840012345</span></div>
           <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500">IBAN (KZT):</span><span class="font-bold text-slate-900">KZ889261801123456789</span></div>
           <div class="flex items-center gap-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationBank')); ?></span><span class="font-bold text-slate-900">АО «Kaspi Bank» / АО «Halyk Bank»</span></div>

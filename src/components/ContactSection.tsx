@@ -38,7 +38,7 @@ export const ContactSection: React.FC = () => {
                 {t.contactHeadquarters}
               </span>
               <h3 className="text-2xl font-extrabold text-white mt-1 mb-6">
-                ОФ «EREKSHE ANALAR»
+                {t.donationOrgName}
               </h3>
 
               <div className="flex flex-col gap-5 text-sm font-medium">
