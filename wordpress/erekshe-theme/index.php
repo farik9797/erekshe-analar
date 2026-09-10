@@ -8,7 +8,7 @@ get_header(); ?>
       <div class="text-slate-700 leading-relaxed"><?php the_content(); ?></div>
     </article>
   <?php endwhile; else: ?>
-    <p class="text-slate-600">Записи не найдены.</p>
+    <p class="text-slate-600"><?php echo esc_html(erekshe_lang() === 'kk' ? 'Жазбалар табылмады.' : 'Записи не найдены.'); ?></p>
   <?php endif; ?>
 </div>
 <?php get_footer();
