@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { DOCUMENTS } from '../data/mockData';
 import {
@@ -56,17 +57,27 @@ export const DocumentsSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-2 pt-2 border-t border-slate-200/60">
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      alert(`Просмотр документа "${doc.title[lang]}"`);
-                    }}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 bg-white hover:bg-slate-200 transition border border-slate-200"
-                  >
-                    <Eye className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>{t.btnViewDoc}</span>
-                  </a>
+                  {doc.id === 'doc-3' ? (
+                    <Link
+                      to="/rules"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 bg-white hover:bg-slate-200 transition border border-slate-200 cursor-pointer"
+                    >
+                      <Eye className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>{t.btnViewDoc}</span>
+                    </Link>
+                  ) : (
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        alert(`Просмотр документа "${doc.title[lang]}"`);
+                      }}
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 bg-white hover:bg-slate-200 transition border border-slate-200 cursor-pointer"
+                    >
+                      <Eye className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>{t.btnViewDoc}</span>
+                    </a>
+                  )}
 
                   <a
                     href="#"

@@ -16,6 +16,7 @@ import { TeamPage } from './pages/TeamPage';
 import { UmayPage } from './pages/UmayPage';
 import { CharityPage } from './pages/CharityPage';
 import { DocumentsPage } from './pages/DocumentsPage';
+import { RulesPage } from './pages/RulesPage';
 import { NewsPage } from './pages/NewsPage';
 import { FaqReviewsPage } from './pages/FaqReviewsPage';
 import { ContactsPage } from './pages/ContactsPage';
@@ -42,6 +43,7 @@ export function AppContent() {
           <Route path="/umay" element={<UmayPage />} />
           <Route path="/charity" element={<CharityPage />} />
           <Route path="/documents" element={<DocumentsPage />} />
+          <Route path="/rules" element={<RulesPage />} />
           <Route path="/news" element={<NewsPage />} />
           <Route path="/reviews-faq" element={<FaqReviewsPage />} />
           <Route path="/contacts" element={<ContactsPage />} />

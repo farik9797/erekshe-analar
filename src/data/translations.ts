@@ -197,6 +197,16 @@ export const translations = {
     btnDownloadDoc: 'Скачать (PDF)',
     btnViewDoc: 'Просмотреть',
 
+    // Rules page (Правила внутреннего распорядка)
+    rulesBadge: 'Информация для родителей',
+    rulesTitle: 'Правила внутреннего распорядка',
+    rulesDesc: 'Порядок пребывания детей, права и обязанности родителей, безопасность и организация занятий в центрах Общественного фонда «Erekshe Analar».',
+    rulesFoundation: 'Общественный фонд «Erekshe Analar»',
+    rulesExpandAll: 'Развернуть всё',
+    rulesCollapseAll: 'Свернуть всё',
+    rulesBackToDocs: 'Ко всем документам',
+    rulesSectionsLabel: 'разделов',
+
     // News Section
     newsBadge: 'События фонда',
     newsTitle: 'Новости, акции и полезные статьи',
@@ -475,6 +485,16 @@ export const translations = {
     documentsDesc: 'Біз Қазақстан Республикасының заңнамасына және мемлекеттік стандарттарға қатаң сәйкестікте жұмыс істейміз.',
     btnDownloadDoc: 'Жүктеп алу (PDF)',
     btnViewDoc: 'Карау',
+
+    // Rules page (Ішкі тәртіп қағидалары)
+    rulesBadge: 'Ата-аналарға арналған ақпарат',
+    rulesTitle: 'Ішкі тәртіп қағидалары',
+    rulesDesc: '«Erekshe Analar» қоғамдық қорының орталықтарында балалардың болу тәртібі, ата-аналардың құқықтары мен міндеттері, қауіпсіздік және сабақтарды ұйымдастыру.',
+    rulesFoundation: '«Erekshe Analar» қоғамдық қоры',
+    rulesExpandAll: 'Барлығын ашу',
+    rulesCollapseAll: 'Барлығын жию',
+    rulesBackToDocs: 'Барлық құжаттарға',
+    rulesSectionsLabel: 'бөлім',
 
     // News
     newsBadge: 'Қор оқиғалары',
