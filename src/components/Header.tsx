@@ -68,7 +68,7 @@ export const Header: React.FC = () => {
           <div className="flex flex-wrap items-center gap-4 w-full justify-between sm:w-auto sm:justify-normal">
             <Link to="/branches" className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold transition">
               <MapPin className="w-3.5 h-3.5" />
-              {t.astanaCity} (4 филиала)
+              {t.astanaCity} ({t.branchesCountShort})
             </Link>
             <span className="hidden md:flex items-center gap-1.5 text-slate-400">
               <Clock className="w-3.5 h-3.5 text-slate-400" />

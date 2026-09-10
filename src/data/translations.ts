@@ -28,6 +28,7 @@ export const translations = {
     btnWhatsapp: 'Написать в WhatsApp',
     workingHours: 'Пн - Пт: 08:30 - 18:00',
     astanaCity: 'г. Астана',
+    branchesCountShort: '4 филиала',
     visuallyImpairedVersion: 'Версия для слабовидящих',
     normalVersion: 'Обычная версия',
     
@@ -319,6 +320,7 @@ export const translations = {
     btnWhatsapp: 'WhatsApp-қа жазу',
     workingHours: 'Дүйсенбі - Жұма: 08:30 - 18:00',
     astanaCity: 'Астана қ.',
+    branchesCountShort: '4 филиал',
     visuallyImpairedVersion: 'Нашар көретіндерге арналған нұсқа',
     normalVersion: 'Кәдімгі нұсқа',
 
