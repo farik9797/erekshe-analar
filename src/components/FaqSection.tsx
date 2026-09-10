@@ -72,7 +72,7 @@ export const FaqSection: React.FC = () => {
 
           {filteredFaqs.length === 0 && (
             <p className="text-center text-slate-500 py-8 text-sm">
-              Вопросов по данному запросу не найдено.
+              {t.faqNoResults}
             </p>
           )}
         </div>

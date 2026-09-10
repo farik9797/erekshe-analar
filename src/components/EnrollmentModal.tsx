@@ -47,7 +47,7 @@ export const EnrollmentModal: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!parentName || !phone) {
-      alert('Пожалуйста, укажите имя и номер телефона.');
+      alert(t.enrollValidation);
       return;
     }
 
@@ -105,7 +105,7 @@ export const EnrollmentModal: React.FC = () => {
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-bold mb-2">
                 <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Запись в центры EREKSHE ANALAR</span>
+                <span>{t.enrollModalTitle}</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">{t.formTitle}</h3>
               <p className="text-xs text-slate-500 mt-1">{t.formSubtitle}</p>
@@ -122,7 +122,7 @@ export const EnrollmentModal: React.FC = () => {
                   required
                   value={parentName}
                   onChange={(e) => setParentName(e.target.value)}
-                  placeholder="ФИО родителя"
+                  placeholder={t.enrollPhParentName}
                   className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
               </div>
@@ -165,7 +165,7 @@ export const EnrollmentModal: React.FC = () => {
                   type="text"
                   value={childName}
                   onChange={(e) => setChildName(e.target.value)}
-                  placeholder="Имя ребенка"
+                  placeholder={t.enrollPhChildName}
                   className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
               </div>
@@ -178,7 +178,7 @@ export const EnrollmentModal: React.FC = () => {
                   type="text"
                   value={childAge}
                   onChange={(e) => setChildAge(e.target.value)}
-                  placeholder="Например: 5 лет"
+                  placeholder={t.enrollPhChildAge}
                   className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
               </div>
@@ -239,7 +239,7 @@ export const EnrollmentModal: React.FC = () => {
                 rows={2}
                 value={diagnosisNotes}
                 onChange={(e) => setDiagnosisNotes(e.target.value)}
-                placeholder="Краткие особенности или диагноз ребенка..."
+                placeholder={t.enrollPhNotes}
                 className="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>

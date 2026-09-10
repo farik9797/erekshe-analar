@@ -85,8 +85,8 @@ export const CharitySection: React.FC = () => {
                   {project.targetAmount && (
                     <div className="flex flex-col gap-2">
                       <div className="flex items-center justify-between text-xs font-bold text-slate-700">
-                        <span>Собрано: {(project.currentAmount || 0).toLocaleString()} ₸</span>
-                        <span>Цель: {project.targetAmount.toLocaleString()} ₸</span>
+                        <span>{t.charityRaised} {(project.currentAmount || 0).toLocaleString()} ₸</span>
+                        <span>{t.charityGoal} {project.targetAmount.toLocaleString()} ₸</span>
                       </div>
                       <div className="w-full h-3 bg-slate-100 rounded-full overflow-hidden border border-slate-200">
                         <div
@@ -122,7 +122,7 @@ export const CharitySection: React.FC = () => {
           <div className="md:col-span-8 flex flex-col gap-3">
             <div className="flex items-center gap-2 text-emerald-700 font-bold text-xs uppercase tracking-wider">
               <ShieldCheck className="w-4 h-4" />
-              <span>Прозрачность и отчетность</span>
+              <span>{t.charityTransparency}</span>
             </div>
             <h3 className="text-2xl font-extrabold text-slate-900">
               {lang === 'ru' ? 'Как вы можете помочь фонду?' : 'Қорға қалай көмектесе аласыз?'}
@@ -140,7 +140,7 @@ export const CharitySection: React.FC = () => {
               className="px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-950 bg-amber-400 hover:bg-amber-300 transition shadow-lg flex items-center gap-2"
             >
               <QrCode className="w-4 h-4" />
-              <span>Реквизиты и QR-код</span>
+              <span>{t.charityRequisites}</span>
             </button>
           </div>
         </div>

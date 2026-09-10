@@ -179,7 +179,7 @@ export const BranchesSection: React.FC = () => {
                 className="flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-md shadow-emerald-600/20"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Записаться в этот филиал</span>
+                <span>{t.branchEnroll}</span>
               </button>
 
               <a
@@ -221,7 +221,7 @@ export const BranchesSection: React.FC = () => {
                   </div>
                   <div className="text-left">
                     <p className="text-xs font-bold text-slate-900">{activeBranch.address[lang]}</p>
-                    <p className="text-[10px] text-slate-500">г. Астана</p>
+                    <p className="text-[10px] text-slate-500">{t.astanaCity}</p>
                   </div>
                 </div>
               </div>

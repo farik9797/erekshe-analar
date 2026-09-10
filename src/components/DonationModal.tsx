@@ -50,7 +50,7 @@ export const DonationModal: React.FC = () => {
             <p className="font-bold text-slate-900 uppercase tracking-wider">{t.donationBankTitle}</p>
 
             <div className="flex items-center justify-between py-1.5 border-b border-slate-200">
-              <span className="text-slate-500 font-medium">Организация:</span>
+              <span className="text-slate-500 font-medium">{t.donationOrg}</span>
               <span className="font-bold text-slate-900">{t.donationOrgName}</span>
             </div>
 
@@ -93,7 +93,7 @@ export const DonationModal: React.FC = () => {
 
           <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
             <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-            <span>Все отчеты о расходовании публикуются в разделе «Документы».</span>
+            <span>{t.donationReports}</span>
           </div>
 
           <button

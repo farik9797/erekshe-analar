@@ -86,7 +86,7 @@ export const ServiceDetailModal: React.FC = () => {
           {service.equipment && (
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
-                Используемое оборудование
+                {t.svcModalEquipment}
               </h4>
               <p className="text-xs text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
                 {service.equipment[lang]}
@@ -110,7 +110,7 @@ export const ServiceDetailModal: React.FC = () => {
               }}
               className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-md shadow-emerald-600/20"
             >
-              Записаться на этот курс
+              {t.svcModalEnroll}
             </button>
           </div>
         </div>

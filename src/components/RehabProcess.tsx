@@ -79,9 +79,9 @@ export const RehabProcess: React.FC = () => {
         {/* Bottom CTA Banner */}
         <div className="mt-12 text-center bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-4 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="text-left max-w-2xl">
-            <h3 className="text-xl font-bold">Готовы сделать первый шаг к реабилитации?</h3>
+            <h3 className="text-xl font-bold">{t.rehabCtaTitle}</h3>
             <p className="text-xs sm:text-sm text-emerald-100 mt-1">
-              Оставьте заявку, и наш экспертный методист свяжется с вами для первично бесплатных консультаций.
+              {t.rehabCtaDesc}
             </p>
           </div>
           <button

@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
                 className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-900/80 hover:bg-emerald-800 text-emerald-100 border border-emerald-700 transition cursor-pointer"
               >
                 <Eye className="w-4 h-4 text-amber-400" />
-                <span>{isImpairedMode ? 'Обычный режим' : 'Версия для слабовидящих'}</span>
+                <span>{isImpairedMode ? t.normalMode : t.visuallyImpairedVersion}</span>
               </button>
             </div>
           </div>
@@ -118,7 +118,7 @@ export const Footer: React.FC = () => {
               onClick={scrollToTop}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-900 hover:bg-emerald-800 text-emerald-100 border border-emerald-800 transition cursor-pointer"
             >
-              <span>Наверх</span>
+              <span>{t.footerToTop}</span>
               <ArrowUp className="w-3.5 h-3.5" />
             </button>
           </div>

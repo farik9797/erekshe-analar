@@ -45,15 +45,15 @@ export const ContactSection: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs text-slate-400 uppercase font-bold">Адрес головного центра:</p>
-                    <p className="text-white font-bold mt-0.5">г. Астана, ул. Аманат, 12/1</p>
+                    <p className="text-xs text-slate-400 uppercase font-bold">{t.contactAddressLabel}</p>
+                    <p className="text-white font-bold mt-0.5">{t.contactHeadAddress}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs text-slate-400 uppercase font-bold">График работы:</p>
+                    <p className="text-xs text-slate-400 uppercase font-bold">{t.contactHoursLabel}</p>
                     <p className="text-white font-bold mt-0.5">{t.workingHours}</p>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ export const ContactSection: React.FC = () => {
                 <div className="flex items-start gap-3">
                   <MessageCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs text-slate-400 uppercase font-bold">WhatsApp филиалов:</p>
+                    <p className="text-xs text-slate-400 uppercase font-bold">{t.contactWhatsappLabel}</p>
                     <a
                       href="https://wa.me/77084251212"
                       target="_blank"
@@ -115,7 +115,7 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-7 bg-slate-50 p-4 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between gap-6">
             <div>
               <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase">
-                Запись на консультацию
+                {t.contactConsultTitle}
               </span>
               <h3 className="text-2xl font-extrabold text-slate-900 mt-3">
                 {t.formTitle}
@@ -131,10 +131,10 @@ export const ContactSection: React.FC = () => {
               </div>
               <div>
                 <p className="font-bold text-slate-900 text-sm">
-                  Бесплатные специальные социальные услуги в Астане
+                  {t.contactFreeServices}
                 </p>
                 <p className="text-xs text-slate-500 mt-1">
-                  Нажмите кнопку ниже, чтобы открыть интерактивную форму записи с выбором филиала и удобного времени.
+                  {t.contactFormHint}
                 </p>
               </div>
               <button
@@ -142,7 +142,7 @@ export const ContactSection: React.FC = () => {
                 className="w-full py-3.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2"
               >
                 <Send className="w-4 h-4" />
-                <span>Заполнить анкус записи</span>
+                <span>{t.contactFillForm}</span>
               </button>
             </div>
           </div>

@@ -70,7 +70,7 @@ export const DocumentsSection: React.FC = () => {
                       href="#"
                       onClick={(e) => {
                         e.preventDefault();
-                        alert(`Просмотр документа "${doc.title[lang]}"`);
+                        alert(`${t.docViewAlert}: "${doc.title[lang]}"`);
                       }}
                       className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 bg-white hover:bg-slate-200 transition border border-slate-200 cursor-pointer"
                     >
@@ -83,7 +83,7 @@ export const DocumentsSection: React.FC = () => {
                     href="#"
                     onClick={(e) => {
                       e.preventDefault();
-                      alert(`Загрузка файла: ${doc.title[lang]} (${doc.fileSize})`);
+                      alert(`${t.docDownloadAlert}: ${doc.title[lang]} (${doc.fileSize})`);
                     }}
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-emerald-800 bg-emerald-100/80 hover:bg-emerald-200 transition"
                   >

@@ -92,7 +92,7 @@ export const Hero: React.FC = () => {
               {!hideImages ? (
                 <img
                   src={heroImg}
-                  alt="Занятия в центре EREKSHE ANALAR"
+                  alt={t.heroImgAlt}
                   className="w-full h-[260px] sm:h-[360px] md:h-[420px] object-cover"
                 />
               ) : (
@@ -110,8 +110,8 @@ export const Hero: React.FC = () => {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-slate-900">г. Астана</p>
-                    <p className="text-[11px] text-slate-500 font-medium">4 филиала социальной защиты</p>
+                    <p className="text-xs font-bold text-slate-900">{t.astanaCity}</p>
+                    <p className="text-[11px] text-slate-500 font-medium">{t.heroBranchesSocial}</p>
                   </div>
                 </div>
                 <a

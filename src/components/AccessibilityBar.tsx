@@ -48,7 +48,7 @@ export const AccessibilityBar: React.FC = () => {
             <button
               onClick={decreaseFont}
               disabled={fontIdx === 0}
-              aria-label="Уменьшить размер шрифта"
+              aria-label={t.a11yDecreaseFont}
               className="px-2.5 py-1 rounded font-bold leading-none text-emerald-100 transition hover:bg-emerald-600 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-emerald-100"
             >
               <span className="text-xs">A</span>&#8722;
@@ -57,7 +57,7 @@ export const AccessibilityBar: React.FC = () => {
             <button
               onClick={increaseFont}
               disabled={fontIdx === FONT_LEVELS.length - 1}
-              aria-label="Увеличить размер шрифта"
+              aria-label={t.a11yIncreaseFont}
               className="px-2.5 py-1 rounded font-bold leading-none text-emerald-100 transition hover:bg-emerald-600 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-emerald-100"
             >
               <span className="text-base">A</span>+
@@ -85,7 +85,7 @@ export const AccessibilityBar: React.FC = () => {
                 contrastMode === 'contrast-dark' ? 'bg-black text-white font-bold border-white' : 'bg-black text-white border-emerald-700'
               }`}
             >
-              АА (Черный)
+              {t.contrastDarkShort}
             </button>
             <button
               onClick={() => setContrastMode('contrast-yellow')}
@@ -94,7 +94,7 @@ export const AccessibilityBar: React.FC = () => {
                 contrastMode === 'contrast-yellow' ? 'bg-black text-yellow-300 font-bold border-yellow-300' : 'bg-black text-yellow-400 border-emerald-700'
               }`}
             >
-              АА (Сары)
+              {t.contrastYellowShort}
             </button>
             <button
               onClick={() => setContrastMode('contrast-blue')}
@@ -103,7 +103,7 @@ export const AccessibilityBar: React.FC = () => {
                 contrastMode === 'contrast-blue' ? 'bg-sky-100 text-sky-900 font-bold border-sky-400' : 'bg-sky-900 text-sky-200 border-emerald-700'
               }`}
             >
-              АА (Көк)
+              {t.contrastBlueShort}
             </button>
           </div>
         </div>
@@ -124,7 +124,7 @@ export const AccessibilityBar: React.FC = () => {
           <button
             onClick={() => setIsImpairedMode(false)}
             className="p-1 rounded-full bg-emerald-800 text-emerald-200 hover:text-white hover:bg-emerald-700 transition ml-2"
-            title="Закрыть панель доступности"
+            title={t.a11yClosePanel}
           >
             <X className="w-5 h-5" />
           </button>

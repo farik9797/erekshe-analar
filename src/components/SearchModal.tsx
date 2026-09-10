@@ -76,14 +76,14 @@ export const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => 
   if (!isOpen) return null;
 
   const popularQueries = [
-    { label: 'Логопед', query: 'логопед' },
-    { label: 'Бассейн', query: 'бассейн' },
+    { label: t.searchChipLogoped, query: 'логопед' },
+    { label: t.searchChipPool, query: 'бассейн' },
     { label: 'Сарыарка', query: 'сарыарка' },
-    { label: 'Галокамера', query: 'галокамера' },
-    { label: 'ПМПК / Документы', query: 'ПМПК' },
-    { label: 'ЛФК и АФК', query: 'ЛФК' },
-    { label: 'Центр UMAY', query: 'UMAY' },
-    { label: 'Дефектолог', query: 'дефектолог' }
+    { label: t.searchChipGalo, query: 'галокамера' },
+    { label: t.searchChipPmpk, query: 'ПМПК' },
+    { label: t.searchChipLfk, query: 'ЛФК' },
+    { label: t.searchChipUmay, query: 'UMAY' },
+    { label: t.searchChipDefectolog, query: 'дефектолог' }
   ];
 
   // Perform search across all entities
