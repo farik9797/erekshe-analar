@@ -160,3 +160,29 @@
 ## Открытые вопросы
 - Точный смысл слова «дублировать» (см. Следующие шаги).
 - Нужен ли GEMINI_API_KEY (.env.local) — для фич на @google/genai (поиск/чат). Для статики не требуется.
+
+---
+
+## Страница «Правила внутреннего распорядка» (/rules) — добавлено
+
+Источник: `Правила внутреннего порядка (1).docx` (RU) + `...каз.docx` (KZ) — официальные правила фонда, 15 разделов. Лист ознакомления (для очной подписи) на сайт НЕ выносится.
+
+**React (задеплоено на GitHub Pages):**
+- `src/data/rules.ts` — двуязычный датасет `RULES` (15 разделов, 70 пунктов, буллеты). RU почищен от артефактов исходника (дубли 2.4/2.5, сбитая нумерация 1.5/1.6, разбитый 2.1).
+- `src/pages/RulesPage.tsx` — hero (в стиле /documents) + аккордеон, «Развернуть/Свернуть всё», back-ссылка.
+- `src/App.tsx` — маршрут `/rules`.
+- `src/data/translations.ts` — строки `rules*` (RU+KK).
+- `src/components/DocumentsSection.tsx` — у карточки `doc-3` кнопка «Просмотр» ведёт `<Link to="/rules">`.
+- Заодно: `ServiceItem.category` += `'medical'` (закрыт tsc-error).
+
+**WordPress (тема готова; НЕ протестировано вживую — LocalWP был выключен):**
+- `inc/rules-data.php` — `erekshe_rules()` (сгенерирован из rules.ts; регенерация: `node scratchpad/gen-rules.js`).
+- `inc/i18n-extra-r.php` — строки `rules*` (RU+KK).
+- `template-parts/section-rules.php` — hero + аккордеон (data-rule*, data-rules-expand).
+- `page-rules.php` — Template Name «EREKSHE — Правила внутреннего распорядка».
+- `assets/js/main.js` — обработчики аккордеона + «развернуть/свернуть всё».
+- `template-parts/section-documents.php` — карточка `doc-3` → `erekshe_nav_url('rules')`, иконка Eye.
+- `inc/icons.php` — добавлена lucide-иконка `ArrowLeft`.
+- `functions.php` — подключён `inc/rules-data.php`.
+
+**ОСТАВШИЙСЯ ШАГ в WordPress (когда поднят LocalWP):** создать Страницу со слагом `rules`, шаблон «EREKSHE — Правила внутреннего распорядка», + перевод Polylang на KK (слаг `/kk/rules`). До создания страницы ссылки на `/rules` в WP будут вести на 404.

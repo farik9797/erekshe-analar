@@ -6,8 +6,11 @@
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('documentsTitle', 'Уставные документы и прозрачная отчётность')); ?></h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <?php foreach (erekshe_get_rows('documents', erekshe_documents()) as $d): ?>
-        <a href="<?php echo esc_url($d['fileUrl']); ?>" class="bg-slate-50 rounded-2xl p-5 border border-slate-200/70 hover:border-emerald-300 hover:bg-emerald-50/40 transition flex items-center justify-between gap-4 group">
+      <?php foreach (erekshe_get_rows('documents', erekshe_documents()) as $d):
+        $is_rules = (($d['id'] ?? '') === 'doc-3');
+        $doc_href = $is_rules ? erekshe_nav_url('rules') : $d['fileUrl'];
+      ?>
+        <a href="<?php echo esc_url($doc_href); ?>" class="bg-slate-50 rounded-2xl p-5 border border-slate-200/70 hover:border-emerald-300 hover:bg-emerald-50/40 transition flex items-center justify-between gap-4 group">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0"><?php echo erekshe_icon('FileText', 'w-6 h-6'); ?></div>
             <div>
@@ -16,7 +19,7 @@
               <p class="text-xs text-slate-500 mt-1"><?php echo esc_html($d['fileSize']); ?> · <?php echo esc_html($d['date']); ?></p>
             </div>
           </div>
-          <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition"><?php echo erekshe_icon('Download', 'w-4 h-4'); ?></div>
+          <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition"><?php echo erekshe_icon($is_rules ? 'Eye' : 'Download', 'w-4 h-4'); ?></div>
         </a>
       <?php endforeach; ?>
     </div>

@@ -92,6 +92,43 @@
       });
     });
 
+    /* ---------- Правила: аккордеон разделов ---------- */
+    $$('[data-rule-toggle]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = btn.closest('[data-rule]');
+        var body = $('[data-rule-body]', item);
+        var chev = btn.querySelector('svg');
+        if (!body) return;
+        var willOpen = body.classList.contains('hidden');
+        body.classList.toggle('hidden', !willOpen);
+        body.classList.toggle('flex', willOpen);
+        if (chev) chev.style.transform = willOpen ? 'rotate(180deg)' : '';
+      });
+    });
+
+    /* ---------- Правила: развернуть/свернуть всё ---------- */
+    $$('[data-rules-expand]').forEach(function (btn) {
+      var wrap = $('[data-rules]');
+      if (!wrap) return;
+      btn.addEventListener('click', function () {
+        var bodies = $$('[data-rule-body]', wrap);
+        var anyClosed = bodies.some(function (b) { return b.classList.contains('hidden'); });
+        bodies.forEach(function (b) {
+          b.classList.toggle('hidden', !anyClosed);
+          b.classList.toggle('flex', anyClosed);
+        });
+        $$('[data-rule-toggle] svg', wrap).forEach(function (sv) {
+          sv.style.transform = anyClosed ? 'rotate(180deg)' : '';
+        });
+        var label = $('[data-rules-expand-label]', btn);
+        if (label) label.textContent = anyClosed
+          ? wrap.getAttribute('data-label-collapse')
+          : wrap.getAttribute('data-label-expand');
+        var icon = btn.querySelector('svg');
+        if (icon) icon.style.transform = anyClosed ? 'rotate(180deg)' : '';
+      });
+    });
+
     /* ---------- Переключение филиалов ---------- */
     $$('[data-branch-btn]').forEach(function (btn) {
       btn.addEventListener('click', function () {

@@ -12,6 +12,7 @@ define('EREKSHE_URI', get_template_directory_uri());
 require_once EREKSHE_DIR . '/inc/icons.php';
 require_once EREKSHE_DIR . '/inc/nav.php';
 require_once EREKSHE_DIR . '/inc/data.php';
+require_once EREKSHE_DIR . '/inc/rules-data.php';
 require_once EREKSHE_DIR . '/inc/strings.php';
 require_once EREKSHE_DIR . '/inc/acf-fields.php';
 
