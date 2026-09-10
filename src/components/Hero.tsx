@@ -73,15 +73,15 @@ export const Hero: React.FC = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200/60 justify-items-center lg:justify-items-start">
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>100% Бесплатно</span>
+                <span>{t.heroPillFree}</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>Индивидуальная ИПР</span>
+                <span>{t.heroPillIpar}</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>Поддержка матерей</span>
+                <span>{t.heroPillMothers}</span>
               </div>
             </div>
           </div>
