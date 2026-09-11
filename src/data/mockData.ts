@@ -852,9 +852,9 @@ export const PARTNERS = [
 ];
 
 export const TEAM_ROSTER = [
-  { group: 'admin', name: 'Шалиева Маржан Каппасовна', education: 'Высшее / бакалавр', branch: '', note: 'Заместитель директора' },
-  { group: 'admin', name: 'Молдабекова Айгуль Сагиндыковна', education: 'Высшее / бакалавр', branch: '', note: 'Методист' },
-  { group: 'admin', name: 'Куттыбекова Сезим Жұманқызы', education: 'Высшее / бакалавр', branch: '', note: 'Менеджер' },
+  { group: 'admin', name: 'Шалиева Маржан Каппасовна', education: 'Высшее / бакалавр', branch: '', note: { ru: 'Заместитель директора', kk: 'Директордың орынбасары' } },
+  { group: 'admin', name: 'Молдабекова Айгуль Сагиндыковна', education: 'Высшее / бакалавр', branch: '', note: { ru: 'Методист', kk: 'Әдіскер' } },
+  { group: 'admin', name: 'Куттыбекова Сезим Жұманқызы', education: 'Высшее / бакалавр', branch: '', note: { ru: 'Менеджер', kk: 'Менеджер' } },
   { group: 'logoped', name: 'Тенилбаева Галия Кенжеевна', education: 'Высшее / Магистр', branch: 'Акын Сара 37', note: '' },
   { group: 'logoped', name: 'Баенова Айгуль Мусаевна', education: 'Высшее / Магистр', branch: 'Сарыарка 48', note: '' },
   { group: 'logoped', name: 'Сейдахметова Рабига Абдрахимовна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: '' },
@@ -874,6 +874,6 @@ export const TEAM_ROSTER = [
   { group: 'social', name: 'Баяндинова Алия Жетписбаевна', education: 'Высшее / Бакалавр', branch: 'Аманат 12/1', note: '' },
   { group: 'social', name: 'Каймолдина Арайлым Кажимуратовна', education: 'Высшее / Бакалавр', branch: 'Сарыарка 48', note: '' },
   { group: 'social', name: 'Бейсенгалиева Агнат Бухарбаевна', education: 'Среднее', branch: 'Акын Сара 37', note: '' },
-  { group: 'nurse', name: 'Копбосын Дана Копбосынқызы', education: 'Среднее', branch: 'Аманат 12/1', note: 'Общий массаж, соляная комната' },
-  { group: 'nurse', name: 'Жуматова Гульзипа Шохановна', education: 'Среднее', branch: 'Аманат 12/1', note: 'Общий массаж, соляная комната' },
+  { group: 'nurse', name: 'Копбосын Дана Копбосынқызы', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Общий массаж, соляная комната', kk: 'Жалпы массаж, тұзды бөлме' } },
+  { group: 'nurse', name: 'Жуматова Гульзипа Шохановна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Общий массаж, соляная комната', kk: 'Жалпы массаж, тұзды бөлме' } },
 ];
