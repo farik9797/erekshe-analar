@@ -852,6 +852,9 @@ export const PARTNERS = [
 ];
 
 export const TEAM_ROSTER = [
+  { group: 'admin', name: 'Шалиева Маржан Каппасовна', education: 'Высшее / бакалавр', branch: '', note: 'Заместитель директора' },
+  { group: 'admin', name: 'Молдабекова Айгуль Сагиндыковна', education: 'Высшее / бакалавр', branch: '', note: 'Методист' },
+  { group: 'admin', name: 'Куттыбекова Сезим Жұманқызы', education: 'Высшее / бакалавр', branch: '', note: 'Менеджер' },
   { group: 'logoped', name: 'Тенилбаева Галия Кенжеевна', education: 'Высшее / Магистр', branch: 'Акын Сара 37', note: '' },
   { group: 'logoped', name: 'Баенова Айгуль Мусаевна', education: 'Высшее / Магистр', branch: 'Сарыарка 48', note: '' },
   { group: 'logoped', name: 'Сейдахметова Рабига Абдрахимовна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: '' },

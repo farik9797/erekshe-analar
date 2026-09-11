@@ -4,6 +4,7 @@ if (!defined('ABSPATH')) exit;
 add_filter('erekshe_tr_extra', function ($arr, $L) {
     $m = [
         'ru' => [
+            'team_grp_admin'      => 'Администрация',
             'team_grp_logoped'    => 'Логопеды',
             'team_grp_defectolog' => 'Дефектологи',
             'team_grp_psycholog'  => 'Психологи',
@@ -14,6 +15,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'team_eduLabel'       => 'Образование',
         ],
         'kk' => [
+            'team_grp_admin'      => 'Әкімшілік',
             'team_grp_logoped'    => 'Логопедтер',
             'team_grp_defectolog' => 'Дефектологтар',
             'team_grp_psycholog'  => 'Психологтар',

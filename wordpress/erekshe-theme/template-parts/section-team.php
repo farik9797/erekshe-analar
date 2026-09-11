@@ -1,6 +1,6 @@
 <?php if (!defined('ABSPATH')) exit;
 $roster = erekshe_get_rows('team_roster', erekshe_team_roster());
-$order  = ['logoped','defectolog','psycholog','afk','pool','social','nurse'];
+$order  = ['admin','logoped','defectolog','psycholog','afk','pool','social','nurse'];
 $grouped = [];
 foreach ($roster as $p) { $grouped[$p['group']][] = $p; }
 // Русское склонение слова «специалист» по количеству; казахский «маман» не склоняется

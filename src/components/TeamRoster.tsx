@@ -3,9 +3,10 @@ import { useAccessibility } from '../context/AccessibilityContext';
 import { TEAM_ROSTER } from '../data/mockData';
 import { MapPin, Users } from 'lucide-react';
 
-const ORDER = ['logoped', 'defectolog', 'psycholog', 'afk', 'pool', 'social', 'nurse'] as const;
+const ORDER = ['admin', 'logoped', 'defectolog', 'psycholog', 'afk', 'pool', 'social', 'nurse'] as const;
 
 const LABELS: Record<string, { ru: string; kk: string }> = {
+  admin: { ru: 'Администрация', kk: 'Әкімшілік' },
   logoped: { ru: 'Логопеды', kk: 'Логопедтер' },
   defectolog: { ru: 'Дефектологи', kk: 'Дефектологтар' },
   psycholog: { ru: 'Психологи', kk: 'Психологтар' },
