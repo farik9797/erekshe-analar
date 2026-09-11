@@ -539,7 +539,7 @@ export const translations = {
     documentsTitle: 'Ресми құжаттар мен есептер',
     documentsDesc: 'Біз Қазақстан Республикасының заңнамасына және мемлекеттік стандарттарға қатаң сәйкестікте жұмыс істейміз.',
     btnDownloadDoc: 'Жүктеп алу (PDF)',
-    btnViewDoc: 'Карау',
+    btnViewDoc: 'Қарау',
 
     // Rules page (Ішкі тәртіп қағидалары)
     rulesBadge: 'Ата-аналарға арналған ақпарат',
