@@ -27,12 +27,12 @@ export const PartnersSection: React.FC = () => {
               key={idx}
               className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs hover:border-emerald-300 hover:shadow-md transition flex flex-col items-center text-center justify-center gap-3"
             >
-              <div className="h-16 flex items-center justify-center">
+              <div className="h-24 flex items-center justify-center">
                 <img
                   src={partner.logo}
                   alt={partner.name}
                   loading="lazy"
-                  className="max-h-16 max-w-[80%] w-auto object-contain"
+                  className="max-h-24 max-w-[90%] w-auto object-contain"
                 />
               </div>
               <p className="text-[11px] text-slate-500 font-medium leading-snug">{partner.desc[lang]}</p>
