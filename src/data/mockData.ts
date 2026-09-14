@@ -10,6 +10,7 @@ import qazaqstanLogo from '../assets/images/partners/qazaqstan.png';
 export const BRANCHES: Branch[] = [
   {
     id: 'amanat',
+    map2gis: 'https://2gis.kz/astana/search/%D0%90%D0%BC%D0%B0%D0%BD%D0%B0%D1%82%2012%2F1',
     name: {
       ru: 'Головной центр «EREKSHE ANALAR» (Аманат)',
       kk: '«EREKSHE ANALAR» Бас орталығы (Аманат)'
@@ -38,6 +39,7 @@ export const BRANCHES: Branch[] = [
   },
   {
     id: 'saryarka',
+    map2gis: 'https://2gis.kz/astana/search/%D0%A1%D0%B0%D1%80%D1%8B%D0%B0%D1%80%D0%BA%D0%B0%2048',
     name: {
       ru: 'Филиал «Сарыарка»',
       kk: '«Сарыарқа» филиалы'
@@ -65,6 +67,7 @@ export const BRANCHES: Branch[] = [
   },
   {
     id: 'akyn_sara',
+    map2gis: 'https://2gis.kz/astana/search/%D0%90%D0%BA%D1%8B%D0%BD%20%D0%A1%D0%B0%D1%80%D0%B0%2037',
     name: {
       ru: 'Филиал «Акын Сара»',
       kk: '«Ақын Сара» филиалы'
@@ -92,6 +95,7 @@ export const BRANCHES: Branch[] = [
   },
   {
     id: 'tulebaeva',
+    map2gis: 'https://2gis.kz/astana/search/%D0%A2%D1%83%D0%BB%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%205',
     name: {
       ru: 'Филиал «Тулебаева»',
       kk: '«Төлебаев» филиалы'

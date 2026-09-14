@@ -97,13 +97,22 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               {BRANCHES.map((b) => (
-                <Link key={b.id} to="/branches" className="bg-emerald-900/60 p-3 rounded-xl border border-emerald-800/80 hover:border-amber-400 transition group">
+                <a
+                  key={b.id}
+                  href={b.map2gis}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-emerald-900/60 p-3 rounded-xl border border-emerald-800/80 hover:border-amber-400 transition group"
+                >
                   <p className="font-bold text-white group-hover:text-amber-300 transition">{b.name[lang]}</p>
                   <p className="text-[11px] text-emerald-200/70 mt-1 flex items-center gap-1">
                     <MapPin className="w-3 h-3 text-emerald-400 flex-shrink-0" />
                     <span>{b.address[lang]}</span>
                   </p>
-                </Link>
+                  <span className="text-[10px] text-amber-300/80 mt-1.5 inline-flex items-center gap-1 font-semibold">
+                    <MapPin className="w-3 h-3" /> 2GIS
+                  </span>
+                </a>
               ))}
             </div>
           </div>

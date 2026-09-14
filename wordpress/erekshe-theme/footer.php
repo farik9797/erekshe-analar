@@ -63,12 +63,13 @@ $services = [
         <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-1"><?php echo esc_html(erekshe_t('d_footerBranches')); ?></h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
           <?php foreach (erekshe_branches() as $b): ?>
-            <a href="<?php echo esc_url(erekshe_nav_url('branches')); ?>" class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-800/80 hover:border-amber-400 transition group">
+            <a href="<?php echo esc_url($b['map2gis']); ?>" target="_blank" rel="noopener noreferrer" class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-800/80 hover:border-amber-400 transition group">
               <p class="font-bold text-white group-hover:text-amber-300 transition"><?php echo esc_html($b['name']); ?></p>
               <p class="text-[11px] text-emerald-200/70 mt-1 flex items-center gap-1">
                 <?php echo erekshe_icon('MapPin', 'w-3 h-3 text-emerald-400 flex-shrink-0'); ?>
                 <span><?php echo esc_html($b['address']); ?></span>
               </p>
+              <span class="text-[10px] text-amber-300/80 mt-1.5 inline-flex items-center gap-1 font-semibold"><?php echo erekshe_icon('MapPin', 'w-3 h-3'); ?> 2GIS</span>
             </a>
           <?php endforeach; ?>
         </div>

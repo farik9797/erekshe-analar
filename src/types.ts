@@ -22,6 +22,7 @@ export interface Branch {
   features: { ru: string[]; kk: string[] };
   image: string;
   mapCoordinates: { lat: number; lng: number };
+  map2gis?: string;
   isHeadquarters?: boolean;
 }
 
