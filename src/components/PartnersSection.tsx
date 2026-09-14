@@ -25,13 +25,17 @@ export const PartnersSection: React.FC = () => {
           {PARTNERS.map((partner, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs hover:border-emerald-300 transition flex flex-col items-center text-center justify-center gap-2"
+              className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs hover:border-emerald-300 hover:shadow-md transition flex flex-col items-center text-center justify-center gap-3"
             >
-              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 font-extrabold text-xs flex items-center justify-center tracking-tight uppercase">
-                {partner.logoText.slice(0, 6)}
+              <div className="h-16 flex items-center justify-center">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  loading="lazy"
+                  className="max-h-16 max-w-[80%] w-auto object-contain"
+                />
               </div>
-              <h4 className="font-bold text-slate-900 text-xs sm:text-sm mt-2">{partner.name}</h4>
-              <p className="text-[11px] text-slate-500 font-medium">{partner.desc[lang]}</p>
+              <p className="text-[11px] text-slate-500 font-medium leading-snug">{partner.desc[lang]}</p>
             </div>
           ))}
         </div>

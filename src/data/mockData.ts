@@ -2,6 +2,10 @@ import { Branch, ServiceItem, Specialist, NewsItem, ReviewItem, FaqItem, Documen
 import defectologImg from '../assets/images/defectologist_session_1785993068052.jpg';
 import familyPhotoImg from '../assets/images/regenerated_image_1785993681411.webp';
 import aboutPhotoImg from '../assets/images/regenerated_image_1785993218212.webp';
+import unicefLogo from '../assets/images/partners/unicef.png';
+import specialLogo from '../assets/images/partners/special.png';
+import akimatLogo from '../assets/images/partners/akimat.png';
+import qazaqstanLogo from '../assets/images/partners/qazaqstan.png';
 
 export const BRANCHES: Branch[] = [
   {
@@ -809,22 +813,22 @@ export const GALLERY_ITEMS: GalleryItem[] = [
 export const PARTNERS = [
   {
     name: 'UNICEF Kazakhstan',
-    logoText: 'UNICEF',
+    logo: unicefLogo,
     desc: { ru: 'Детский фонд ООН в Казахстане', kk: 'Қазақстандағы БҰҰ Балалар қоры' }
   },
   {
     name: 'Фонд «Қазақстан халқына»',
-    logoText: 'ҚАЗАҚСТАН ХАЛҚЫНА',
+    logo: qazaqstanLogo,
     desc: { ru: 'Общественный социальный фонд РК', kk: 'ҚР Қоғамдық әлеуметтік қоры' }
   },
   {
     name: 'Акимат города Астана',
-    logoText: 'АКИМАТ АСТАНА',
+    logo: akimatLogo,
     desc: { ru: 'Управление занятости и соц. защиты', kk: 'Жұмыспен қамту және әлеуметтік қорғау басқармасы' }
   },
   {
     name: 'Special Olympics Kazakhstan',
-    logoText: 'SPECIAL OLYMPICS',
+    logo: specialLogo,
     desc: { ru: 'Инклюзивный спорт и адаптация', kk: 'Инклюзивті спорт және бейімдеу' }
   }
 ];

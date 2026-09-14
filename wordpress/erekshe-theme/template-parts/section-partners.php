@@ -7,9 +7,11 @@
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       <?php foreach (erekshe_partners() as $p): ?>
-        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs hover:border-emerald-300 transition flex flex-col items-center text-center justify-center gap-2">
-          <p class="font-extrabold text-emerald-800 text-sm"><?php echo esc_html($p['logoText']); ?></p>
-          <p class="text-[11px] text-slate-500"><?php echo esc_html($p['desc']); ?></p>
+        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs hover:border-emerald-300 transition flex flex-col items-center text-center justify-center gap-3">
+          <div class="flex items-center justify-center" style="height:4rem">
+            <img src="<?php echo esc_url(EREKSHE_URI . '/assets/images/partners/' . $p['logo']); ?>" alt="<?php echo esc_attr($p['name']); ?>" loading="lazy" style="max-height:4rem;max-width:80%;width:auto;object-fit:contain" />
+          </div>
+          <p class="text-[11px] text-slate-500 leading-snug"><?php echo esc_html($p['desc']); ?></p>
         </div>
       <?php endforeach; ?>
     </div>

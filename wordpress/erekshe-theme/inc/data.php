@@ -1462,44 +1462,44 @@ function erekshe_partners() {
         'ru' => [
             [
                 'name' => 'UNICEF Kazakhstan',
-                'logoText' => 'UNICEF',
+                'logo' => 'unicef.png',
                 'desc' => 'Детский фонд ООН в Казахстане'
             ],
             [
                 'name' => 'Фонд «Қазақстан халқына»',
-                'logoText' => 'ҚАЗАҚСТАН ХАЛҚЫНА',
+                'logo' => 'qazaqstan.png',
                 'desc' => 'Общественный социальный фонд РК'
             ],
             [
                 'name' => 'Акимат города Астана',
-                'logoText' => 'АКИМАТ АСТАНА',
+                'logo' => 'akimat.png',
                 'desc' => 'Управление занятости и соц. защиты'
             ],
             [
                 'name' => 'Special Olympics Kazakhstan',
-                'logoText' => 'SPECIAL OLYMPICS',
+                'logo' => 'special.png',
                 'desc' => 'Инклюзивный спорт и адаптация'
             ]
         ],
         'kk' => [
             [
                 'name' => 'UNICEF Kazakhstan',
-                'logoText' => 'UNICEF',
+                'logo' => 'unicef.png',
                 'desc' => 'Қазақстандағы БҰҰ Балалар қоры'
             ],
             [
                 'name' => 'Фонд «Қазақстан халқына»',
-                'logoText' => 'ҚАЗАҚСТАН ХАЛҚЫНА',
+                'logo' => 'qazaqstan.png',
                 'desc' => 'ҚР Қоғамдық әлеуметтік қоры'
             ],
             [
                 'name' => 'Акимат города Астана',
-                'logoText' => 'АКИМАТ АСТАНА',
+                'logo' => 'akimat.png',
                 'desc' => 'Жұмыспен қамту және әлеуметтік қорғау басқармасы'
             ],
             [
                 'name' => 'Special Olympics Kazakhstan',
-                'logoText' => 'SPECIAL OLYMPICS',
+                'logo' => 'special.png',
                 'desc' => 'Инклюзивті спорт және бейімдеу'
             ]
         ],
