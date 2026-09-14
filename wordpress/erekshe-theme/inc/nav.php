@@ -16,6 +16,7 @@ function erekshe_nav_items() {
         ['slug' => 'team',        'key' => 'navTeam'],
         ['slug' => 'umay',        'key' => 'navUmay'],
         ['slug' => 'charity',     'key' => 'navCharity'],
+        ['slug' => 'documents',   'key' => 'navDocuments'],
         ['slug' => 'news',        'key' => 'navNews'],
         ['slug' => 'reviews-faq', 'key' => 'navReviews'],
         ['slug' => 'contacts',    'key' => 'navContacts'],
