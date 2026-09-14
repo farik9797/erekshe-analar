@@ -4,7 +4,6 @@ import { useAccessibility } from '../context/AccessibilityContext';
 import { DOCUMENTS } from '../data/mockData';
 import {
   FileCheck,
-  Download,
   Eye,
   FileText,
   ShieldCheck
@@ -78,18 +77,6 @@ export const DocumentsSection: React.FC = () => {
                       <span>{t.btnViewDoc}</span>
                     </a>
                   )}
-
-                  <a
-                    href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      alert(`${t.docDownloadAlert}: ${doc.title[lang]} (${doc.fileSize})`);
-                    }}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-emerald-800 bg-emerald-100/80 hover:bg-emerald-200 transition"
-                  >
-                    <Download className="w-3.5 h-3.5" />
-                    <span>{t.btnDownloadDoc}</span>
-                  </a>
                 </div>
               </div>
             </div>

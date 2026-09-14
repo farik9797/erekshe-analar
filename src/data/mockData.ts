@@ -709,17 +709,6 @@ export const NEWS: NewsItem[] = [
 
 export const DOCUMENTS: DocumentItem[] = [
   {
-    id: 'doc-1',
-    title: {
-      ru: 'Устав Общественного Фонда «EREKSHE ANALAR»',
-      kk: '«EREKSHE ANALAR» Қоғамдық Қорының Жарғысы'
-    },
-    category: { ru: 'Учредительные документы', kk: 'Құрылтай құжаттары' },
-    fileSize: '2.4 MB',
-    date: '2024',
-    fileUrl: '#'
-  },
-  {
     id: 'doc-2',
     title: {
       ru: 'Государственный стандарт оказания специальных социальных услуг детям с ООП',
@@ -739,17 +728,6 @@ export const DOCUMENTS: DocumentItem[] = [
     category: { ru: 'Информация для родителей', kk: 'Ата-аналарға арналған ақпарат' },
     fileSize: '950 KB',
     date: '2026',
-    fileUrl: '#'
-  },
-  {
-    id: 'doc-4',
-    title: {
-      ru: 'Годовой финансовый и социальный отчет фонда за 2025 год',
-      kk: 'Қордың 2025 жылғы жылдық қаржылық және әлеуметтік есебі'
-    },
-    category: { ru: 'Отчетность и прозрачность', kk: 'Есептілік пен ашықтық' },
-    fileSize: '4.1 MB',
-    date: '2025',
     fileUrl: '#'
   }
 ];

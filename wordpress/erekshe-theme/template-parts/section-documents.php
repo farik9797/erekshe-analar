@@ -19,7 +19,7 @@
               <p class="text-xs text-slate-500 mt-1"><?php echo esc_html($d['fileSize']); ?> · <?php echo esc_html($d['date']); ?></p>
             </div>
           </div>
-          <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition"><?php echo erekshe_icon($is_rules ? 'Eye' : 'Download', 'w-4 h-4'); ?></div>
+          <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 text-emerald-600 flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition"><?php echo erekshe_icon('Eye', 'w-4 h-4'); ?></div>
         </a>
       <?php endforeach; ?>
     </div>
