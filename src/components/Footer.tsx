@@ -58,7 +58,6 @@ export const Footer: React.FC = () => {
               <li><Link to="/team" className="hover:text-amber-300 transition">{t.navTeam}</Link></li>
               <li><Link to="/umay" className="hover:text-amber-300 transition">{t.navUmay}</Link></li>
               <li><Link to="/charity" className="hover:text-amber-300 transition">{t.navCharity}</Link></li>
-              <li><Link to="/documents" className="hover:text-amber-300 transition">{t.navDocuments}</Link></li>
               <li><Link to="/news" className="hover:text-amber-300 transition">{t.navNews}</Link></li>
               <li><Link to="/contacts" className="hover:text-amber-300 transition">{t.navContacts}</Link></li>
             </ul>

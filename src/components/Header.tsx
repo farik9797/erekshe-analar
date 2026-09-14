@@ -53,7 +53,6 @@ export const Header: React.FC = () => {
     { to: '/team', label: t.navTeam },
     { to: '/umay', label: t.navUmay },
     { to: '/charity', label: t.navCharity },
-    { to: '/documents', label: t.navDocuments },
     { to: '/news', label: t.navNews },
     { to: '/reviews-faq', label: t.navReviews },
     { to: '/contacts', label: t.navContacts }
