@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
           {/* Col 2: Navigation Links */}
           <div className="w-full sm:w-auto flex flex-col gap-3 flex-shrink-0">
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-1">
-              {lang === 'ru' ? 'Навигация' : 'Навигация'}
+              {lang === 'ru' ? 'Навигация' : 'Мәзір'}
             </h4>
             <ul className="flex flex-col gap-2 text-xs font-medium text-emerald-200/80">
               <li><Link to="/" className="hover:text-amber-300 transition">{lang === 'ru' ? 'Главная' : 'Басты бет'}</Link></li>
