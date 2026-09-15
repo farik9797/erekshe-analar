@@ -11,7 +11,7 @@ function erekshe_branches() {
         'ru' => [
             [
                 'id' => 'amanat',
-                'map2gis' => 'https://2gis.kz/astana/search/%D0%90%D0%BC%D0%B0%D0%BD%D0%B0%D1%82%2012%2F1',
+                'map2gis' => 'https://2gis.kz/astana/geo/9570784863330099/71.478557,51.143137',
                 'name' => 'Головной центр «EREKSHE ANALAR» (Аманат)',
                 'address' => 'г. Астана, ул. Аманат, 12/1',
                 'district' => 'Район Алматы / Левый берег',
@@ -34,7 +34,7 @@ function erekshe_branches() {
             ],
             [
                 'id' => 'saryarka',
-                'map2gis' => 'https://2gis.kz/astana/search/%D0%A1%D0%B0%D1%80%D1%8B%D0%B0%D1%80%D0%BA%D0%B0%2048',
+                'map2gis' => 'https://2gis.kz/astana/geo/9570784863340905/71.406540,51.177896',
                 'name' => 'Филиал «Сарыарка»',
                 'address' => 'г. Астана, пр. Сарыарка, 48',
                 'district' => 'Правый берег, район Сарыарка',
@@ -55,7 +55,7 @@ function erekshe_branches() {
             ],
             [
                 'id' => 'akyn_sara',
-                'map2gis' => 'https://2gis.kz/astana/search/%D0%90%D0%BA%D1%8B%D0%BD%20%D0%A1%D0%B0%D1%80%D0%B0%2037',
+                'map2gis' => 'https://2gis.kz/astana/geo/9570784863347531/71.399326,51.145876',
                 'name' => 'Филиал «Акын Сара»',
                 'address' => 'г. Астана, ул. Акын Сара, 37',
                 'district' => 'Район Есиль / Заречный',
@@ -99,7 +99,7 @@ function erekshe_branches() {
         'kk' => [
             [
                 'id' => 'amanat',
-                'map2gis' => 'https://2gis.kz/astana/search/%D0%90%D0%BC%D0%B0%D0%BD%D0%B0%D1%82%2012%2F1',
+                'map2gis' => 'https://2gis.kz/astana/geo/9570784863330099/71.478557,51.143137',
                 'name' => '«EREKSHE ANALAR» Бас орталығы (Аманат)',
                 'address' => 'Астана қ., Аманат көш., 12/1',
                 'district' => 'Алматы ауданы / Сол жағалау',
@@ -122,7 +122,7 @@ function erekshe_branches() {
             ],
             [
                 'id' => 'saryarka',
-                'map2gis' => 'https://2gis.kz/astana/search/%D0%A1%D0%B0%D1%80%D1%8B%D0%B0%D1%80%D0%BA%D0%B0%2048',
+                'map2gis' => 'https://2gis.kz/astana/geo/9570784863340905/71.406540,51.177896',
                 'name' => '«Сарыарқа» филиалы',
                 'address' => 'Астана қ., Сарыарқа даңғылы, 48',
                 'district' => 'Оң жағалау, Сарыарқа ауданы',
@@ -143,7 +143,7 @@ function erekshe_branches() {
             ],
             [
                 'id' => 'akyn_sara',
-                'map2gis' => 'https://2gis.kz/astana/search/%D0%90%D0%BA%D1%8B%D0%BD%20%D0%A1%D0%B0%D1%80%D0%B0%2037',
+                'map2gis' => 'https://2gis.kz/astana/geo/9570784863347531/71.399326,51.145876',
                 'name' => '«Ақын Сара» филиалы',
                 'address' => 'Астана қ., Ақын Сара көш., 37',
                 'district' => 'Есіл ауданы / Заречный',
