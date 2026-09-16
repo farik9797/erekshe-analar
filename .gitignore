@@ -5,3 +5,6 @@ password.md
 # dependencies & build output
 node_modules/
 dist/
+
+# firecrawl local cache
+.firecrawl/

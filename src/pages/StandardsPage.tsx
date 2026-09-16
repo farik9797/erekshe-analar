@@ -42,7 +42,7 @@ export const StandardsPage: React.FC = () => {
             <p className="text-slate-200 text-sm md:text-lg leading-relaxed max-w-2xl mb-3">
               {t.standardsDesc}
             </p>
-            <p className="text-emerald-200/80 text-xs font-medium">{STANDARDS_SOURCE}</p>
+            <p className="text-emerald-200/80 text-xs font-medium">{STANDARDS_SOURCE[lang]}</p>
           </div>
         </div>
       </FadeIn>
@@ -82,7 +82,7 @@ export const StandardsPage: React.FC = () => {
                       <FileCheck className="w-4 h-4" />
                     </span>
                     <h2 className="flex-1 text-sm sm:text-base font-bold text-slate-900 leading-snug">
-                      {section.title}
+                      {section.title[lang]}
                     </h2>
                     <ChevronDown
                       className={`w-5 h-5 text-emerald-600 flex-shrink-0 transition-transform duration-200 ${
@@ -97,14 +97,14 @@ export const StandardsPage: React.FC = () => {
                         <div key={j} className="text-sm text-slate-700 leading-relaxed">
                           <p>
                             {c.n && <span className="font-bold text-emerald-700">{c.n}. </span>}
-                            {c.text}
+                            {c.text[lang]}
                           </p>
                           {c.bullets && (
                             <ul className="mt-2 flex flex-col gap-1.5 pl-1">
                               {c.bullets.map((b, k) => (
                                 <li key={k} className="flex items-start gap-2">
                                   <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
-                                  <span>{b}</span>
+                                  <span>{b[lang]}</span>
                                 </li>
                               ))}
                             </ul>
