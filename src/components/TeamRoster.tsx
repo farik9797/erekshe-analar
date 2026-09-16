@@ -3,7 +3,7 @@ import { useAccessibility } from '../context/AccessibilityContext';
 import { TEAM_ROSTER } from '../data/mockData';
 import { MapPin, Users } from 'lucide-react';
 
-const ORDER = ['admin', 'logoped', 'defectolog', 'psycholog', 'afk', 'pool', 'social', 'nurse'] as const;
+const ORDER = ['admin', 'logoped', 'defectolog', 'psycholog', 'afk', 'pool', 'vospitatel', 'vospitatel_asst', 'nanny', 'social', 'nurse'] as const;
 
 const LABELS: Record<string, { ru: string; kk: string }> = {
   admin: { ru: 'Администрация', kk: 'Әкімшілік' },
@@ -12,6 +12,9 @@ const LABELS: Record<string, { ru: string; kk: string }> = {
   psycholog: { ru: 'Психологи', kk: 'Психологтар' },
   afk: { ru: 'Инструкторы АФК', kk: 'ЕАФК нұсқаушылары' },
   pool: { ru: 'Инструктор по бассейну', kk: 'Бассейн нұсқаушысы' },
+  vospitatel: { ru: 'Воспитатели', kk: 'Тәрбиешілер' },
+  vospitatel_asst: { ru: 'Помощники воспитателя', kk: 'Тәрбиеші көмекшілері' },
+  nanny: { ru: 'Нянечки', kk: 'Күтушілер' },
   social: { ru: 'Социальные работники', kk: 'Әлеуметтік қызметкерлер' },
   nurse: { ru: 'Медицинские сёстры', kk: 'Медбикелер' },
 };
