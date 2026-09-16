@@ -9,6 +9,12 @@ import {
   ShieldCheck
 } from 'lucide-react';
 
+// Документы, у которых «Просмотр» открывает читаемую страницу на сайте
+const DOC_PAGE: Record<string, string> = {
+  'doc-3': '/rules',
+  'doc-5': '/standards',
+};
+
 export const DocumentsSection: React.FC = () => {
   const { lang, t } = useAccessibility();
 
@@ -56,9 +62,9 @@ export const DocumentsSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-2 pt-2 border-t border-slate-200/60">
-                  {doc.id === 'doc-3' ? (
+                  {DOC_PAGE[doc.id] ? (
                     <Link
-                      to="/rules"
+                      to={DOC_PAGE[doc.id]}
                       className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-slate-700 bg-white hover:bg-slate-200 transition border border-slate-200 cursor-pointer"
                     >
                       <Eye className="w-3.5 h-3.5 text-emerald-600" />

@@ -6,9 +6,11 @@
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('documentsTitle', 'Уставные документы и прозрачная отчётность')); ?></h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <?php foreach (erekshe_get_rows('documents', erekshe_documents()) as $d):
-        $is_rules = (($d['id'] ?? '') === 'doc-3');
-        $doc_href = $is_rules ? erekshe_nav_url('rules') : $d['fileUrl'];
+      <?php
+      $doc_pages = ['doc-3' => 'rules', 'doc-5' => 'standards'];
+      foreach (erekshe_get_rows('documents', erekshe_documents()) as $d):
+        $slug = $doc_pages[$d['id'] ?? ''] ?? '';
+        $doc_href = $slug ? erekshe_nav_url($slug) : $d['fileUrl'];
       ?>
         <a href="<?php echo esc_url($doc_href); ?>" class="bg-slate-50 rounded-2xl p-5 border border-slate-200/70 hover:border-emerald-300 hover:bg-emerald-50/40 transition flex items-center justify-between gap-4 group">
           <div class="flex items-center gap-4">
