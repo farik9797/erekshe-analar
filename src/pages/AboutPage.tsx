@@ -7,7 +7,12 @@ import { FadeIn } from '../components/FadeIn';
 import { ShieldCheck, Target, Heart, Award, Users, Building2, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const AboutPage: React.FC = () => {
-  const { lang, t, openEnrollModal } = useAccessibility();
+  const { lang, t } = useAccessibility();
+  const whatsappHref = `https://wa.me/77053089733?text=${encodeURIComponent(
+    lang === 'ru'
+      ? 'Здравствуйте! Хочу записаться на консультацию в фонд EREKSHE ANALAR.'
+      : 'Сәлеметсіз бе! EREKSHE ANALAR қорына кеңеске жазылғым келеді.'
+  )}`;
 
   return (
     <div className="bg-slate-50 min-h-screen py-10 space-y-12">
@@ -30,13 +35,15 @@ export const AboutPage: React.FC = () => {
                   : 'Біз ерекше білім беру қажеттіліктері бар балаларға күтім жасауды және олардың аналарына жан-жақты психологиялық, әлеуметтік қолдауды біріктіреміз.'}
               </p>
               <div className="flex flex-wrap items-center gap-4">
-                <button
-                  onClick={() => openEnrollModal()}
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-emerald-500/30 flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>{t.btnEnroll}</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
