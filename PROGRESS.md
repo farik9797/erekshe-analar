@@ -193,3 +193,10 @@
 - WP: `erekshe_standards()` теперь отдаёт датасет по `erekshe_lang()` (ru/kk); шаблон `section-standards.php` не менялся — читает готовые строки.
 - Проверено на проде (мобайл, ҚАЗ): все заголовки/пункты/услуги на казахском, утечки русского нет; 169 li (136 услуг + категории + приложения).
 - Коммиты: main `e00783d`, gh-pages `467923a`, бандл `index-DKDvhKS3.js`.
+
+## /about WhatsApp-кнопка + 32 специалиста (готово, задеплоено)
+- `src/pages/AboutPage.tsx`: кнопка баннера «Записаться на консультацию» из `<button onClick=openEnrollModal>` → `<a href="https://wa.me/77053089733?text=...">` (target=_blank, rel=noopener; префилл-текст RU/KK). `openEnrollModal` убран из деструктуризации.
+- `src/data/translations.ts` + WP `inc/strings.php`: `heroStatTeam` 20 → 32 (обе локали). Метки без изменений.
+- WP-баннер /about использует общий `page-banner.php` (кнопка на нескольких страницах) — WhatsApp там НЕ трогал, чтобы не менять другие страницы. Число 20→32 в WP синхронизировано.
+- Проверено на проде: /about кнопка → wa.me/77053089733; главная hero = «32 квалифицированных специалистов».
+- Коммиты: main `5bf447a`, gh-pages `b735261`, бандл `index-DgoY8Pk_.js`.
