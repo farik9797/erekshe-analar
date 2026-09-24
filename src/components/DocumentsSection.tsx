@@ -12,7 +12,6 @@ import {
 // Документы, у которых «Просмотр» открывает читаемую страницу на сайте
 const DOC_PAGE: Record<string, string> = {
   'doc-3': '/rules',
-  'doc-5': '/standards',
 };
 
 export const DocumentsSection: React.FC = () => {

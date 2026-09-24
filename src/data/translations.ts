@@ -211,11 +211,6 @@ export const translations = {
     rulesBackToDocs: 'Ко всем документам',
     rulesSectionsLabel: 'разделов',
 
-    // Standards page (Стандарт полустационара)
-    standardsBadge: 'Государственный стандарт',
-    standardsTitle: 'Стандарт специальных социальных услуг (полустационар)',
-    standardsDesc: 'Требования к качеству, объёму и условиям предоставления специальных социальных услуг в организациях полустационарного типа.',
-
     // News Section
     newsBadge: 'События фонда',
     newsTitle: 'Новости, акции и полезные статьи',
@@ -555,11 +550,6 @@ export const translations = {
     rulesCollapseAll: 'Барлығын жию',
     rulesBackToDocs: 'Барлық құжаттарға',
     rulesSectionsLabel: 'бөлім',
-
-    // Standards page (Жартылай стационар стандарты)
-    standardsBadge: 'Мемлекеттік стандарт',
-    standardsTitle: 'Арнайы әлеуметтік қызметтер стандарты (жартылай стационар)',
-    standardsDesc: 'Жартылай стационар типті ұйымдарда арнайы әлеуметтік қызметтерді көрсету сапасына, көлеміне және шарттарына қойылатын талаптар.',
 
     // News
     newsBadge: 'Қор оқиғалары',
