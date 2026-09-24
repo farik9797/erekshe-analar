@@ -95,7 +95,7 @@ export const AboutPage: React.FC = () => {
                 <div className="w-12 h-12 bg-blue-600 text-white rounded-2xl mx-auto flex items-center justify-center font-bold mb-3 shadow-md">
                   <Award className="w-6 h-6" />
                 </div>
-                <div className="text-3xl font-black text-blue-900 mb-1">45+</div>
+                <div className="text-3xl font-black text-blue-900 mb-1">32</div>
                 <div className="text-xs font-semibold text-blue-800">
                   {lang === 'ru' ? 'Сертифицированных врачей и педагогов' : 'Сертификатталған дәрігерлер мен педагогтар'}
                 </div>
