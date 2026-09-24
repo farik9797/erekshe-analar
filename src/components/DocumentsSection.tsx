@@ -14,25 +14,35 @@ const DOC_PAGE: Record<string, string> = {
   'doc-3': '/rules',
 };
 
-export const DocumentsSection: React.FC = () => {
+interface DocumentsSectionProps {
+  /** Скрыть шапку секции — на /documents тот же заголовок уже выводит баннер страницы */
+  hideHeader?: boolean;
+}
+
+export const DocumentsSection: React.FC<DocumentsSectionProps> = ({ hideHeader = false }) => {
   const { lang, t } = useAccessibility();
 
   return (
-    <section id="documents" className="py-16 md:py-24 bg-white border-b border-slate-100">
+    <section
+      id="documents"
+      className={`${hideHeader ? 'pt-8 pb-16 md:pt-10 md:pb-24' : 'py-16 md:py-24'} bg-white border-b border-slate-100`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
-            <span>{t.documentsBadge}</span>
+        {!hideHeader && (
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+              <span>{t.documentsBadge}</span>
+            </div>
+            <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              {t.documentsTitle}
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base mt-3">
+              {t.documentsDesc}
+            </p>
           </div>
-          <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            {t.documentsTitle}
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-3">
-            {t.documentsDesc}
-          </p>
-        </div>
+        )}
 
         {/* Documents Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

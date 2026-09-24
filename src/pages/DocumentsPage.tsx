@@ -28,7 +28,7 @@ export const DocumentsPage: React.FC = () => {
       </FadeIn>
 
       <FadeIn>
-        <DocumentsSection />
+        <DocumentsSection hideHeader />
       </FadeIn>
       <FadeIn>
         <PartnersSection />

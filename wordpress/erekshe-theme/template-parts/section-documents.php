@@ -1,10 +1,16 @@
-<?php if (!defined('ABSPATH')) exit; ?>
-<section id="documents" class="fade-in py-16 md:py-24 bg-white border-b border-slate-100">
+<?php if (!defined('ABSPATH')) exit;
+// На странице «Документы» тот же заголовок уже выводит баннер — шапку секции скрываем,
+// чтобы он не дублировался. На /about и /charity шапка нужна.
+$hide_header = !empty($args['hide_header']);
+?>
+<section id="documents" class="fade-in py-16 md:py-24 bg-white border-b border-slate-100"<?php echo $hide_header ? ' style="padding-top:2rem"' : ''; ?>>
   <div class="max-w-7xl mx-auto px-4">
+    <?php if (!$hide_header): ?>
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('FileText', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('c_DocumentsBadge')); ?></span></div>
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('documentsTitle', 'Уставные документы и прозрачная отчётность')); ?></h2>
     </div>
+    <?php endif; ?>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <?php
       $doc_pages = ['doc-3' => 'rules'];
