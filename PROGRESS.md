@@ -200,3 +200,15 @@
 - WP-баннер /about использует общий `page-banner.php` (кнопка на нескольких страницах) — WhatsApp там НЕ трогал, чтобы не менять другие страницы. Число 20→32 в WP синхронизировано.
 - Проверено на проде: /about кнопка → wa.me/77053089733; главная hero = «32 квалифицированных специалистов».
 - Коммиты: main `5bf447a`, gh-pages `b735261`, бандл `index-DgoY8Pk_.js`.
+
+## Стандарт полустационара УДАЛЁН с сайта (по запросу заказчика)
+Решение: в разделе «Документы» оставлены **только Правила внутреннего распорядка**; стандарт оказания услуг убран целиком.
+- Удалены файлы: `src/pages/StandardsPage.tsx`, `src/data/standards.ts`, WP `page-standards.php`,
+  `template-parts/section-standards.php`, `inc/standards-data.php`.
+- Убраны: маршрут `/standards` и импорт в `App.tsx`; `doc-5` из `DOCUMENTS` (React) и `erekshe_documents()` (WP, оба датасета);
+  маппинг `doc-5 → standards` в `DocumentsSection.tsx` и `section-documents.php`; ключи `standards*` из `translations.ts` и `i18n-extra-r.php`;
+  `require` в `functions.php`.
+- Бандл похудел 783 КБ → 707 КБ.
+- Проверено на проде: /documents показывает только карточку «Правила…» → `/rules`; `/standards` уводит на главную (нет маршрута).
+- **Восстановление:** весь стандарт вместе с казахским переводом лежит в истории git — коммит `e00783d` (до удаления `750e22e`).
+- Коммиты: main `750e22e`, gh-pages `fd98728`, бандл `index-DJAYA55C.js`.
