@@ -1,7 +1,7 @@
 <?php if (!defined('ABSPATH')) exit;
 $phone = erekshe_opt('phone', '+7 (7172) 70-80-90');
 $email = erekshe_opt('email', 'info@ereksheanalar.kz');
-$wa_num = erekshe_opt('whatsapp_num', '+7 (708) 425-12-12');
+$wa_num = erekshe_opt('whatsapp_num', '+7 (705) 308-97-33');
 $org = erekshe_field('contact_org', erekshe_t('donationOrgName'));
 $addr = erekshe_field('contact_address', erekshe_t('c_ContactAddress'));
 $hours = erekshe_field('contact_hours', erekshe_t('workingHours'));

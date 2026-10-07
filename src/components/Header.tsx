@@ -123,7 +123,7 @@ export const Header: React.FC = () => {
             {/* Social Media Links */}
             <div className="order-2 sm:order-3 flex items-center gap-1.5 sm:ml-1">
               <a
-                href="https://wa.me/77084251212"
+                href="https://wa.me/77053089733"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-6 h-6 rounded-lg bg-transparent hover:opacity-90 transition-all duration-200 flex items-center justify-center hover:scale-110 cursor-pointer overflow-hidden"

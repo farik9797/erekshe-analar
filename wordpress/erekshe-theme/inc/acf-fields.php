@@ -40,8 +40,8 @@ function erekshe_register_acf() {
         ef_text('opt_email', 'email', 'Email', 'info@ereksheanalar.kz'),
         ef_text('opt_city', 'city', 'Город', 'г. Астана'),
         ef_text('opt_hours', 'work_hours', 'Часы работы', 'Пн - Пт: 08:30 - 18:00'),
-        ef_url('opt_wa', 'whatsapp_url', 'WhatsApp URL', 'https://wa.me/77084251212'),
-        ef_text('opt_wanum', 'whatsapp_num', 'WhatsApp номер', '+7 (708) 425-12-12'),
+        ef_url('opt_wa', 'whatsapp_url', 'WhatsApp URL', 'https://wa.me/77053089733'),
+        ef_text('opt_wanum', 'whatsapp_num', 'WhatsApp номер', '+7 (705) 308-97-33'),
         ef_url('opt_insta', 'instagram_url', 'Instagram URL', 'https://instagram.com/erekshe_analar'),
     ], 'location' => [[['param' => 'options_page', 'operator' => '==', 'value' => 'erekshe-settings']]]]);
 
@@ -59,7 +59,7 @@ function erekshe_register_acf() {
 
     /* ===== О фонде ===== */
     acf_add_local_field_group(['key' => 'group_erekshe_about', 'title' => 'Страница «О фонде»', 'fields' => array_merge(
-        ef_banner('about', 'О фонде «EREKSHE ANALAR»', 'Мы объединяем заботу о детях с особыми образовательными потребностями и всестороннюю поддержку матерей.', 'Общественный фонд'),
+        ef_banner('about', 'О фонде «EREKSHE ANALAR»', 'Общественный фонд «Erekshe Analar» оказывает комплексную поддержку детям с особыми потребностями и их семьям.', 'Общественный фонд'),
         [
             ef_text('about_htitle', 'history_title', 'История: заголовок', 'История фонда'),
             ef_textarea('about_htext', 'history_text', 'История: текст', 'Название «EREKSHE ANALAR» появилось не случайно...'),
@@ -71,7 +71,7 @@ function erekshe_register_acf() {
 
     /* ===== Услуги (Repeater — Pro) ===== */
     acf_add_local_field_group(['key' => 'group_erekshe_services', 'title' => 'Страница «Услуги»', 'fields' => array_merge(
-        ef_banner('svc', 'Комплексный спектр реабилитационных и коррекционных услуг', 'Все занятия проводят сертифицированные специалисты.', 'Каталог услуг'),
+        ef_banner('svc', 'Комплексный спектр реабилитационных и коррекционных услуг', 'Получите информацию о программе реабилитации, услугах специалистов, расписании и динамике развития ребёнка.', 'Каталог услуг'),
         [ ef_repeater('svc_items', 'services', 'Услуги', [
             ef_text('svc_title', 'title', 'Название', ''),
             ef_textarea('svc_desc', 'shortDesc', 'Краткое описание', ''),

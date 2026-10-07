@@ -73,12 +73,12 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <p className="text-xs text-slate-400 uppercase font-bold">{t.contactWhatsappLabel}</p>
                     <a
-                      href="https://wa.me/77084251212"
+                      href="https://wa.me/77053089733"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-emerald-300 font-bold hover:underline block mt-0.5"
                     >
-                      +7 (708) 425-12-12
+                      +7 (705) 308-97-33
                     </a>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
-import { X, HeartHandshake, QrCode, ShieldCheck, Copy, Check } from 'lucide-react';
+import { X, HeartHandshake, ShieldCheck, Copy, Check } from 'lucide-react';
 
 export const DonationModal: React.FC = () => {
   const { lang, t, isDonationModalOpen, closeDonationModal } = useAccessibility();
@@ -36,15 +36,6 @@ export const DonationModal: React.FC = () => {
             <p className="text-xs text-slate-500 mt-1">{t.donationSubtitle}</p>
           </div>
 
-          {/* Kaspi QR Simulator Card */}
-          <div className="bg-gradient-to-br from-amber-500 to-orange-600 text-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center gap-3">
-            <QrCode className="w-20 h-20 text-white bg-white/20 p-2 rounded-2xl backdrop-blur-sm" />
-            <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-amber-100">{t.donationQrNote}</p>
-              <p className="text-lg font-extrabold text-white mt-0.5">{t.donationOrgName}</p>
-            </div>
-          </div>
-
           {/* Bank Details Table */}
           <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 flex flex-col gap-3 text-xs">
             <p className="font-bold text-slate-900 uppercase tracking-wider">{t.donationBankTitle}</p>
@@ -57,9 +48,9 @@ export const DonationModal: React.FC = () => {
             <div className="flex items-center justify-between py-1.5 border-b border-slate-200">
               <span className="text-slate-500 font-medium">БИН:</span>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-slate-900">210840012345</span>
+                <span className="font-bold text-slate-900">201140026437</span>
                 <button
-                  onClick={() => copyToClipboard('210840012345', 'bin')}
+                  onClick={() => copyToClipboard('201140026437', 'bin')}
                   className="p-1 rounded bg-white hover:bg-slate-200 text-slate-600 border border-slate-200"
                 >
                   {copiedField === 'bin' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
@@ -68,11 +59,11 @@ export const DonationModal: React.FC = () => {
             </div>
 
             <div className="flex items-center justify-between py-1.5 border-b border-slate-200">
-              <span className="text-slate-500 font-medium">IBAN (KZT):</span>
+              <span className="text-slate-500 font-medium">ИИК (KZT):</span>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-slate-900 font-mono text-[11px]">KZ889261801123456789</span>
+                <span className="font-bold text-slate-900 font-mono text-[11px]">KZ918562203127814849</span>
                 <button
-                  onClick={() => copyToClipboard('KZ889261801123456789', 'iban')}
+                  onClick={() => copyToClipboard('KZ918562203127814849', 'iban')}
                   className="p-1 rounded bg-white hover:bg-slate-200 text-slate-600 border border-slate-200"
                 >
                   {copiedField === 'iban' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
@@ -83,6 +74,11 @@ export const DonationModal: React.FC = () => {
             <div className="flex items-center justify-between py-1.5 border-b border-slate-200">
               <span className="text-slate-500 font-medium">Банк:</span>
               <span className="font-bold text-slate-900">{t.donationBankName}</span>
+            </div>
+
+            <div className="flex items-center justify-between py-1.5 border-b border-slate-200">
+              <span className="text-slate-500 font-medium">БИК:</span>
+              <span className="font-bold text-slate-900 font-mono text-[11px]">KCJBKZKX</span>
             </div>
 
             <div className="flex items-center justify-between py-1.5">

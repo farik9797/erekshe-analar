@@ -31,8 +31,8 @@ export const AboutPage: React.FC = () => {
               </h1>
               <p className="text-slate-200 text-base md:text-lg leading-relaxed mb-6">
                 {lang === 'ru'
-                  ? 'Мы объединяем заботу о детях с особыми образовательными потребностями и всестороннюю психологическую, социальную поддержку их матерей.'
-                  : 'Біз ерекше білім беру қажеттіліктері бар балаларға күтім жасауды және олардың аналарына жан-жақты психологиялық, әлеуметтік қолдауды біріктіреміз.'}
+                  ? 'Общественный фонд «Erekshe Analar» оказывает комплексную поддержку детям с особыми потребностями и их семьям. В центрах предоставляются специальные социальные и реабилитационные услуги, занятия со специалистами и другие виды поддержки.'
+                  : '«Erekshe Analar» қоғамдық қоры ерекше қажеттіліктері бар балаларға және олардың отбасыларына кешенді қолдау көрсетеді. Орталықтарда арнайы әлеуметтік және оңалту қызметтері, мамандармен сабақтар және басқа да қолдау түрлері ұсынылады.'}
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -42,7 +42,7 @@ export const AboutPage: React.FC = () => {
                   className="px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-emerald-500/30 flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
-                  <span>{t.btnEnroll}</span>
+                  <span>{lang === 'ru' ? 'Как попасть в центр?' : 'Орталыққа қалай түсуге болады?'}</span>
                 </a>
               </div>
             </div>
@@ -77,7 +77,7 @@ export const AboutPage: React.FC = () => {
                 </div>
                 <div className="text-3xl font-black text-emerald-900 mb-1">1 200+</div>
                 <div className="text-xs font-semibold text-emerald-800">
-                  {lang === 'ru' ? 'Детей прошли реабилитацию' : 'Бала оңалтудан өтті'}
+                  {lang === 'ru' ? 'Детей получили реабилитационные услуги' : 'Бала оңалту қызметтерін алды'}
                 </div>
               </div>
 
@@ -97,7 +97,7 @@ export const AboutPage: React.FC = () => {
                 </div>
                 <div className="text-3xl font-black text-blue-900 mb-1">32</div>
                 <div className="text-xs font-semibold text-blue-800">
-                  {lang === 'ru' ? 'Сертифицированных врачей и педагогов' : 'Сертификатталған дәрігерлер мен педагогтар'}
+                  {lang === 'ru' ? 'Сертифицированных специалиста' : 'Сертификатталған маман'}
                 </div>
               </div>
 

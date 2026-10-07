@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ServicesSection } from '../components/ServicesSection';
+import { InfoRequestModal } from '../components/InfoRequestModal';
 import { RehabProcess } from '../components/RehabProcess';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { FadeIn } from '../components/FadeIn';
 import { Sparkles, Activity, CheckCircle2, HeartHandshake } from 'lucide-react';
 
 export const ServicesPage: React.FC = () => {
-  const { lang, t, openEnrollModal } = useAccessibility();
+  const { lang, t } = useAccessibility();
+  const [infoOpen, setInfoOpen] = useState(false);
 
   return (
     <div className="bg-slate-50 min-h-screen py-10 space-y-12">
@@ -26,11 +28,11 @@ export const ServicesPage: React.FC = () => {
                 {t.servicesDesc}
               </p>
               <button
-                onClick={() => openEnrollModal()}
+                onClick={() => setInfoOpen(true)}
                 className="px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-emerald-500/30 flex items-center gap-2 cursor-pointer"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>{t.btnEnroll}</span>
+                <span>{lang === 'ru' ? 'Узнать об услугах' : 'Қызметтер туралы білу'}</span>
               </button>
             </div>
           </div>
@@ -46,6 +48,8 @@ export const ServicesPage: React.FC = () => {
       <FadeIn>
         <RehabProcess />
       </FadeIn>
+
+      <InfoRequestModal open={infoOpen} onClose={() => setInfoOpen(false)} />
     </div>
   );
 };

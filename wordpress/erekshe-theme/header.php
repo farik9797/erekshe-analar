@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) exit;
 $logo   = EREKSHE_URI . '/assets/images/regenerated_image_1785993330916.png';
 $phone  = erekshe_opt('phone', '+7 (7172) 70-80-90');
 $phone_tel = preg_replace('/[^0-9+]/', '', $phone);
-$wa     = erekshe_opt('whatsapp_url', 'https://wa.me/77084251212');
+$wa     = erekshe_opt('whatsapp_url', 'https://wa.me/77053089733');
 $insta  = erekshe_opt('instagram_url', 'https://instagram.com/erekshe_analar');
 $hours  = erekshe_opt('work_hours', erekshe_t('workingHours'));
 $city   = erekshe_opt('city', erekshe_t('astanaCity'));

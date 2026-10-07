@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
+import { UmayModal } from '../components/UmayModal';
 import { FadeIn } from '../components/FadeIn';
 import { Heart, Sparkles, Shield, Users, BookOpen, MessageSquare, Sun, CheckCircle2, PhoneCall } from 'lucide-react';
 
 export const UmayPage: React.FC = () => {
-  const { lang, t, openEnrollModal } = useAccessibility();
+  const { lang, t } = useAccessibility();
+  const [umayOpen, setUmayOpen] = useState(false);
 
   return (
     <div className="bg-slate-50 min-h-screen py-10 space-y-12">
@@ -25,7 +27,7 @@ export const UmayPage: React.FC = () => {
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <button
-                  onClick={() => openEnrollModal()}
+                  onClick={() => setUmayOpen(true)}
                   className="px-6 py-3 rounded-2xl bg-rose-500 hover:bg-rose-400 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-rose-500/30 flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
@@ -140,6 +142,8 @@ export const UmayPage: React.FC = () => {
           </div>
         </section>
       </FadeIn>
+
+      <UmayModal open={umayOpen} onClose={() => setUmayOpen(false)} />
     </div>
   );
 };

@@ -68,13 +68,9 @@ export interface NewsItem {
 export interface ReviewItem {
   id: string;
   parentName: { ru: string; kk: string };
-  childAgeDiagnosis: { ru: string; kk: string };
-  branchId: string;
   text: { ru: string; kk: string };
-  result: { ru: string; kk: string };
   date: string;
   rating: number;
-  avatar: string;
 }
 
 export interface FaqItem {

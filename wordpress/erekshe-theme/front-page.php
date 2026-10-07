@@ -282,7 +282,7 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
 </section>
 
 <!-- ==================== КОНТАКТЫ ==================== -->
-<?php $phone = erekshe_opt('phone', '+7 (7172) 70-80-90'); $email = erekshe_opt('email', 'info@ereksheanalar.kz'); $wa_num = erekshe_opt('whatsapp_num', '+7 (708) 425-12-12'); ?>
+<?php $phone = erekshe_opt('phone', '+7 (7172) 70-80-90'); $email = erekshe_opt('email', 'info@ereksheanalar.kz'); $wa_num = erekshe_opt('whatsapp_num', '+7 (705) 308-97-33'); ?>
 <section class="fade-in py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-16">

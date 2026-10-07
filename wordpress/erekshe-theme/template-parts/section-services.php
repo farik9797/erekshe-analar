@@ -7,7 +7,7 @@ $services = erekshe_get_rows('services', erekshe_services());
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Sparkles', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('b_ServicesCatalogBadge')); ?></span></div>
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('servicesTitle', 'Комплексный спектр реабилитационных и коррекционных услуг')); ?></h2>
-      <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('servicesDesc', 'Все занятия проводят сертифицированные специалисты.')); ?></p>
+      <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('servicesDesc', 'Получите информацию о программе реабилитации, услугах специалистов, расписании и динамике развития ребёнка.')); ?></p>
     </div>
     <div class="relative mb-8">
       <div class="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 -mx-4 px-4 sm:mx-0 sm:px-0" data-svc-filters>

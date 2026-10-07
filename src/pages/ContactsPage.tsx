@@ -33,13 +33,13 @@ export const ContactsPage: React.FC = () => {
                 <span>+7 (7172) 70-80-90</span>
               </a>
               <a
-                href="https://wa.me/77084251212"
+                href="https://wa.me/77053089733"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2.5 rounded-xl bg-emerald-500 text-slate-950 font-bold hover:bg-emerald-400 transition flex items-center gap-2"
               >
                 <MessageCircle className="w-4 h-4 fill-slate-950" />
-                <span>WhatsApp +7 (708) 425-12-12</span>
+                <span>WhatsApp +7 (705) 308-97-33</span>
               </a>
             </div>
           </div>
