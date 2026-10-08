@@ -1,0 +1,15 @@
+/*
+ * Исходник для сборки assets/css/tailwind.css.
+ *
+ * Пересборка (из корня проекта):
+ *   bunx @tailwindcss/cli@4 \
+ *     -i wordpress/erekshe-theme/assets/css/tailwind.src.css \
+ *     -o wordpress/erekshe-theme/assets/css/tailwind.css --minify
+ *
+ * Автоопределение источников отключено (source(none)) — сканируем ровно шаблоны
+ * и скрипты темы, иначе Tailwind пошёл бы от папки этого файла и пропустил PHP.
+ */
+@import "tailwindcss" source(none);
+
+@source "../../**/*.php";
+@source "../js/**/*.js";
