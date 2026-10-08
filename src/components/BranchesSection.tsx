@@ -208,10 +208,10 @@ export const BranchesSection: React.FC = () => {
                 <img
                   src={activeBranch.image}
                   alt={activeBranch.name[lang]}
-                  className="w-full h-[360px] object-cover"
+                  className="w-full aspect-[3/4] object-cover"
                 />
               ) : (
-                <div className="w-full h-[360px] bg-slate-800 text-slate-200 flex flex-col items-center justify-center p-6 text-center">
+                <div className="w-full aspect-[3/4] bg-slate-800 text-slate-200 flex flex-col items-center justify-center p-6 text-center">
                   <Building2 className="w-12 h-12 text-emerald-400 mb-2" />
                   <p className="font-bold text-base">{activeBranch.name[lang]}</p>
                 </div>

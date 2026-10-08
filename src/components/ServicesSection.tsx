@@ -116,7 +116,7 @@ export const ServicesSection: React.FC = () => {
                 {/* Image Banner */}
                 <div
                   onClick={() => openServiceModal(service)}
-                  className="relative h-48 overflow-hidden bg-slate-100 cursor-pointer"
+                  className="relative aspect-[3/4] overflow-hidden bg-slate-100 cursor-pointer"
                 >
                   {!hideImages ? (
                     <img

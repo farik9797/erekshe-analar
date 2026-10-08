@@ -59,7 +59,7 @@ export const GallerySection: React.FC = () => {
             <div
               key={item.id}
               onClick={() => setLightboxItem(item)}
-              className="group relative h-64 rounded-3xl overflow-hidden shadow-xs cursor-pointer bg-slate-100 border border-slate-200"
+              className="group relative aspect-[3/4] rounded-3xl overflow-hidden shadow-xs cursor-pointer bg-slate-100 border border-slate-200"
             >
               {!hideImages ? (
                 <img
