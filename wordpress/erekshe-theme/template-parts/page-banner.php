@@ -24,8 +24,15 @@ $cta      = $a['cta']      ?? true;
       <h1 class="text-[1.4rem] sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mb-4"><?php echo esc_html($title); ?></h1>
       <?php if ($desc): ?><p class="text-slate-200 text-base md:text-lg leading-relaxed max-w-2xl mb-6"><?php echo esc_html($desc); ?></p><?php endif; ?>
       <?php if ($cta): ?>
-        <button type="button" data-enroll-open class="px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-emerald-500/30 inline-flex items-center gap-2 cursor-pointer">
-          <?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('btnEnroll')); ?></span>
+        <?php
+          // какое действие у кнопки баннера: consult | inforequest | umay | enroll
+          $cta_action = isset($args['cta_action']) ? $args['cta_action'] : 'consult';
+          $cta_attr   = ['consult' => 'data-consult-open', 'inforequest' => 'data-inforequest-open', 'umay' => 'data-umay-open'];
+          $attr       = isset($cta_attr[$cta_action]) ? $cta_attr[$cta_action] : 'data-enroll-open';
+          $cta_label  = isset($args['cta_label']) ? $args['cta_label'] : erekshe_t('f_consultBtn');
+        ?>
+        <button type="button" <?php echo esc_attr($attr); ?> class="px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-emerald-500/30 inline-flex items-center gap-2 cursor-pointer">
+          <?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html($cta_label); ?></span>
         </button>
       <?php endif; ?>
     </div>

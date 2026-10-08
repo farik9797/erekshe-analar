@@ -84,9 +84,9 @@ $nav    = erekshe_nav_items();
         <span class="hidden md:inline"><?php echo esc_html(erekshe_t('btnSupport')); ?></span>
         <span class="md:hidden"><?php echo esc_html(erekshe_t('btnSupportShort')); ?></span>
       </button>
-      <button type="button" data-enroll-open class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-md shadow-emerald-600/20 transition hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
+      <button type="button" data-consult-open class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-md shadow-emerald-600/20 transition hover:scale-[1.02] active:scale-[0.98] cursor-pointer">
         <?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?>
-        <span><?php echo esc_html(erekshe_t('btnEnroll')); ?></span>
+        <span><?php echo esc_html(erekshe_t('f_consultBtn')); ?></span>
       </button>
     </div>
 
@@ -123,8 +123,8 @@ $nav    = erekshe_nav_items();
       <?php endforeach; ?>
     </div>
     <div class="flex flex-col gap-2 pt-3 border-t border-slate-100">
-      <button type="button" data-enroll-open class="w-full py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition cursor-pointer">
-        <?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('btnEnroll')); ?></span>
+      <button type="button" data-consult-open class="w-full py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition cursor-pointer">
+        <?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('f_consultBtn')); ?></span>
       </button>
       <button type="button" data-search-open class="w-full py-2.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-center gap-2 cursor-pointer transition">
         <?php echo erekshe_icon('Search', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('searchLabel')); ?></span>

@@ -70,6 +70,21 @@
     $$('[data-donation-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('donation'); }); });
     $$('[data-search-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('search'); }); });
     $$('[data-service-open]').forEach(function (b) { b.addEventListener('click', function () { closeModals(); openModal(b.getAttribute('data-service-open')); }); });
+    $$('[data-consult-open]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        openModal('consult');
+        // кнопка филиала подставляет свой филиал в селект
+        var pre = b.getAttribute('data-consult-open');
+        var sel = $('[data-modal="consult"] [data-wa-branch]');
+        if (pre && sel) {
+          Array.prototype.forEach.call(sel.options, function (o) {
+            if (o.value === pre) sel.value = o.value;
+          });
+        }
+      });
+    });
+    $$('[data-inforequest-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('inforequest'); }); });
+    $$('[data-umay-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('umay'); }); });
     $$('[data-modal-close]').forEach(function (b) { b.addEventListener('click', closeModals); });
     $$('[data-modal]').forEach(function (m) {
       m.addEventListener('click', function (e) { if (e.target === m) closeModals(); });
@@ -77,6 +92,51 @@
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeModals();
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openModal('search'); }
+    });
+
+
+    /* ---------- Заявки форм уходят в WhatsApp ---------- */
+    $$('[data-wa-form]').forEach(function (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // номер: либо фиксированный у формы, либо у выбранного филиала
+        var num = form.getAttribute('data-wa') || '';
+        if (form.getAttribute('data-wa-from') === 'branch') {
+          var bs = $('[data-wa-branch]', form);
+          var opt = bs && bs.options[bs.selectedIndex];
+          num = (opt && opt.getAttribute('data-wa')) || '';
+        }
+        if (!num) return;
+
+        var lines = [form.getAttribute('data-wa-title') || '', ''];
+        var groups = {}, order = [];
+
+        $$('[data-wa-field]', form).forEach(function (el) {
+          var label = el.getAttribute('data-wa-label') || '';
+          var val = '';
+          if (el.type === 'checkbox') {
+            if (!el.checked) return;
+            val = el.value && el.value !== 'on' ? el.value : 'да';
+          } else if (el.type === 'radio') {
+            if (!el.checked) return;
+            val = el.value;
+          } else {
+            val = (el.value || '').trim();
+          }
+          if (!val) return;
+          if (!groups[label]) { groups[label] = []; order.push(label); }
+          groups[label].push(val);
+        });
+
+        order.forEach(function (label) {
+          lines.push(label + ': ' + groups[label].join(', '));
+        });
+
+        window.open('https://wa.me/' + num + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener,noreferrer');
+        closeModals();
+        form.reset();
+      });
     });
 
     /* ---------- FAQ аккордеон ---------- */

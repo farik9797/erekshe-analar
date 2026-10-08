@@ -27,9 +27,5 @@ if (!$steps) {
         </div>
       <?php endforeach; ?>
     </div>
-    <div class="mt-12 text-center bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-4 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
-      <div class="text-left max-w-2xl"><h3 class="text-xl font-bold mb-1"><?php echo esc_html(erekshe_t('b_ProcessCtaTitle')); ?></h3><p class="text-emerald-50 text-sm"><?php echo esc_html(erekshe_t('b_ProcessCtaText')); ?></p></div>
-      <button type="button" data-enroll-open class="px-6 py-3 rounded-2xl bg-white text-emerald-700 font-extrabold text-sm transition shadow-lg inline-flex items-center gap-2 cursor-pointer whitespace-nowrap"><?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('btnEnroll')); ?></span></button>
-    </div>
   </div>
 </section>

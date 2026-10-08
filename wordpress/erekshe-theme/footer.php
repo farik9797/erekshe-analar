@@ -88,6 +88,9 @@ $services = [
 <?php
 get_template_part('template-parts/modal-enroll');
 get_template_part('template-parts/modal-donation');
+get_template_part('template-parts/modal-consult');
+get_template_part('template-parts/modal-inforequest');
+get_template_part('template-parts/modal-umay');
 get_template_part('template-parts/modal-search');
 wp_footer();
 ?>
