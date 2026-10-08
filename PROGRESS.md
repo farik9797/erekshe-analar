@@ -326,3 +326,35 @@ hover:bg-rose-400, border-rose-400, from-rose-900), а также `w-9`, `h-9`, 
 казахская локаль переводится. LocalWP не запущен, в браузере не проверял.
 
 Коммит: main `cce0459`.
+
+## WordPress: tailwind.css пересобран с полным сканом (готово)
+**Проблема:** CSS темы был собран Tailwind v4.3.3 без сканирования PHP-шаблонов —
+конфига сборки в теме не было вообще. ~40 используемых классов в CSS отсутствовали,
+поэтому часть вёрстки просто не применялась.
+
+**Что добавилось** (было невидимо): `h-9 w-9 h-11 w-11` (размеры иконок и кнопок закрытия),
+`h-32 h-40 sm:h-48 sm:h-52` (высоты картинок услуг), `lg:grid-cols-2` (двухколоночные секции
+about/contact/главная), `sm:p-8`, `pt-10`, `mt-8 mt-10 mt-1.5`, `aspect-[4/3]`,
+`bg-gradient-to-l from-slate-50 via-slate-50/95`, `hover:bg-emerald-50/40`, `hover:bg-white`,
+`hover:shadow-md`, `shadow`, `last:mb-0`, `min-w-0`, `max-w-none`, `h-px`, `static`,
+`text-amber-300/80`, `text-emerald-200/90`, `text-emerald-900/80`, `border-emerald-200/70` — всего 39.
+
+**Как пересобрать** (из корня проекта):
+```
+bunx @tailwindcss/cli@4 \
+  -i wordpress/erekshe-theme/assets/css/tailwind.src.css \
+  -o wordpress/erekshe-theme/assets/css/tailwind.css --minify
+```
+Исходник `assets/css/tailwind.src.css` лежит в теме: `@import "tailwindcss" source(none);`
+плюс `@source "../../**/*.php"` и `@source "../js/**/*.js"`. **Автоопределение отключено
+намеренно** — иначе Tailwind сканирует от папки самого CSS и PHP-шаблоны не видит.
+
+**Результат:** 73 КБ → 54 КБ (ушли классы React-проекта, которых в теме нет).
+Версия темы поднята 1.0.0 → 1.1.0 для сброса кеша стилей.
+Сверка: все классы всех 58 PHP-шаблонов есть в CSS; reset, `--tw-`-переменные,
+media-запросы и произвольные значения на месте.
+
+**Остаётся:** `prose` на `index.php` / `page.php` требует плагин `@tailwindcss/typography` —
+его не было и в старом CSS, поэтому контент обычных записей WP сейчас без типографики.
+
+Коммит: main `e484ad6`.
