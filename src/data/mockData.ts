@@ -6,6 +6,26 @@ import unicefLogo from '../assets/images/partners/unicef.png';
 import specialLogo from '../assets/images/partners/special.png';
 import akimatLogo from '../assets/images/partners/akimat.png';
 import qazaqstanLogo from '../assets/images/partners/qazaqstan.png';
+import phDefectolog from '../assets/images/photos/defectolog.webp';
+import phPsycholog from '../assets/images/photos/psycholog.webp';
+import phAfk from '../assets/images/photos/afk.webp';
+import phLfk from '../assets/images/photos/lfk.webp';
+import phMassage from '../assets/images/photos/massage.webp';
+import phSaltRoom from '../assets/images/photos/salt-room.webp';
+import phSocialAdapt from '../assets/images/photos/social-adapt.webp';
+import phGym from '../assets/images/photos/gym.webp';
+import phBranchAmanat from '../assets/images/photos/branch-amanat.webp';
+import phBranchSaryarka from '../assets/images/photos/branch-saryarka.webp';
+import phBranchAkynSara from '../assets/images/photos/branch-akyn-sara.webp';
+import phGalAutumn1 from '../assets/images/photos/gal-autumn-1.webp';
+import phGalAutumn2 from '../assets/images/photos/gal-autumn-2.webp';
+import phGalTeachersDay from '../assets/images/photos/gal-teachers-day.webp';
+import phGalEvent from '../assets/images/photos/gal-event.webp';
+import phGalCreative from '../assets/images/photos/gal-creative.webp';
+import phGalSensory from '../assets/images/photos/gal-sensory.webp';
+import phGalGroupBayterek from '../assets/images/photos/gal-group-bayterek.webp';
+import phGalGroupSunkar from '../assets/images/photos/gal-group-sunkar.webp';
+import phGalGroupOrken from '../assets/images/photos/gal-group-orken.webp';
 
 export const BRANCHES: Branch[] = [
   {
@@ -34,7 +54,7 @@ export const BRANCHES: Branch[] = [
       ru: ['Бассейн', 'Соляная комната (Галокамера)', 'Центр поддержки UMAY', 'Приемная руководства', 'Методический отдел'],
       kk: ['Бассейн', 'Тұз бөлмесі (Галокамера)', 'UMAY қолдау орталығы', 'Басшылық қабылдауы', 'Әдістемелік бөлім']
     },
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80',
+    image: phBranchAmanat,
     mapCoordinates: { lat: 51.1283, lng: 71.4305 },
     isHeadquarters: true
   },
@@ -64,7 +84,7 @@ export const BRANCHES: Branch[] = [
       ru: ['Залы АФК и ЛФК', 'Социально-бытовая адаптация (СБА)', 'Физиотерапевтический кабинет', 'Зал сенсорной интеграции'],
       kk: ['ЕАФК және ЕФК залдары', 'Тұрмыстық бейімдеу (ТББ)', 'Физиотерапия кабинеті', 'Сенсорлық интеграция залы']
     },
-    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80',
+    image: phBranchSaryarka,
     mapCoordinates: { lat: 51.1692, lng: 71.4184 }
   },
   {
@@ -93,7 +113,7 @@ export const BRANCHES: Branch[] = [
       ru: ['Гидрованны', 'Аквареабилитация', 'Психолого-педагогический блок', 'Кабинеты логомассажа'],
       kk: ['Гидрованналар', 'Акваоңалту', 'Психологиялық-педагогикалық блок', 'Логомассаж кабинеттері']
     },
-    image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80',
+    image: phBranchAkynSara,
     mapCoordinates: { lat: 51.1045, lng: 71.4121 }
   }
 ];
@@ -149,7 +169,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '20–25 минут', kk: '40 минут' },
     targetAge: { ru: 'От 2 до 18 лет', kk: '2-ден 18 жасқа дейін' },
     availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
-    image: familyPhotoImg
+    image: phDefectolog
   },
   {
     id: 'psycholog',
@@ -175,7 +195,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '20–25 минут', kk: '45 минут' },
     targetAge: { ru: 'От 2 до 18 лет', kk: '2-ден 18 жасқа дейін' },
     availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
-    image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'
+    image: phPsycholog
   },
   {
     id: 'afk',
@@ -201,7 +221,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '30–40 минут', kk: '45 минут' },
     targetAge: { ru: 'От 1.5 до 18 лет', kk: '1.5-тен 18 жасқа дейін' },
     availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
-    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80'
+    image: phAfk
   },
   {
     id: 'lfk',
@@ -227,7 +247,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '30–40 минут', kk: '45–60 минут' },
     targetAge: { ru: 'От 1.5 до 18 лет', kk: '1.5-тен 18 жасқа дейін' },
     availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80'
+    image: phLfk
   },
   {
     id: 'physiotherapy',
@@ -253,7 +273,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '15–20 минут', kk: '15–30 минут' },
     targetAge: { ru: 'От 2 до 18 лет', kk: '2-ден 18 жасқа дейін' },
     availableBranches: ['amanat', 'saryarka'],
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80'
+    image: phGym
   },
   {
     id: 'pool',
@@ -331,7 +351,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '20 минут', kk: '30 минут' },
     targetAge: { ru: 'От 1.5 до 18 лет', kk: '1.5-тен 18 жасқа дейін' },
     availableBranches: ['amanat'],
-    image: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80'
+    image: phSaltRoom
   },
   {
     id: 'massage',
@@ -357,7 +377,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '20–30 минут', kk: '20–30 минут' },
     targetAge: { ru: 'От 1.5 до 18 лет', kk: '1.5-тен 18 жасқа дейін' },
     availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
-    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80'
+    image: phMassage
   },
   {
     id: 'social_adapt',
@@ -383,7 +403,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '20 минут', kk: '60 минут' },
     targetAge: { ru: 'От 4 до 18 лет', kk: '4-тен 18 жасқа дейін' },
     availableBranches: ['saryarka', 'amanat'],
-    image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'
+    image: phSocialAdapt
   },
   {
     id: 'parent_counseling',
@@ -750,39 +770,57 @@ export const SOCIAL_PROJECTS: SocialProject[] = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'gal-1',
-    title: { ru: 'Занятия в бассейне', kk: 'Бассейндегі сабақтар' },
-    category: 'pool',
-    imageUrl: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80'
+    title: { ru: 'Праздник «Золотая осень»', kk: '«Алтын күз» мерекесі' },
+    category: 'events',
+    imageUrl: phGalAutumn1
   },
   {
     id: 'gal-2',
-    title: { ru: 'Галокамера (Соляная комната)', kk: 'Галокамера (Тұз бөлмесі)' },
-    category: 'salt_room',
-    imageUrl: 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80'
+    title: { ru: 'Утренник в центре', kk: 'Орталықтағы ертеңгілік' },
+    category: 'events',
+    imageUrl: phGalAutumn2
   },
   {
     id: 'gal-3',
-    title: { ru: 'Коррекция речи с логопедом', kk: 'Логопедпен сөйлеуді түзету' },
-    category: 'classes',
-    imageUrl: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'
+    title: { ru: 'День учителя', kk: 'Мұғалімдер күні' },
+    category: 'events',
+    imageUrl: phGalTeachersDay
   },
   {
     id: 'gal-4',
-    title: { ru: 'Ресурсная встреча матерей в UMAY', kk: 'UMAY аналардың ресурс кездесуі' },
-    category: 'umay',
-    imageUrl: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'
+    title: { ru: 'Праздничное мероприятие', kk: 'Мерекелік іс-шара' },
+    category: 'events',
+    imageUrl: phGalEvent
   },
   {
     id: 'gal-5',
-    title: { ru: 'Праздничное мероприятие для детей', kk: 'Балаларға арналған мерекелік іс-шара' },
-    category: 'events',
-    imageUrl: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80'
+    title: { ru: 'Творческие занятия', kk: 'Шығармашылық сабақтар' },
+    category: 'classes',
+    imageUrl: phGalCreative
   },
   {
     id: 'gal-6',
-    title: { ru: 'Занятие АФК на батутах и матах', kk: 'Батуттардағы ЕАФК сабағы' },
+    title: { ru: 'Сенсорная интеграция', kk: 'Сенсорлық интеграция' },
     category: 'classes',
-    imageUrl: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80'
+    imageUrl: phGalSensory
+  },
+  {
+    id: 'gal-7',
+    title: { ru: 'Группа «Бәйтерек»', kk: '«Бәйтерек» тобы' },
+    category: 'classes',
+    imageUrl: phGalGroupBayterek
+  },
+  {
+    id: 'gal-8',
+    title: { ru: 'Группа «Сұнқар»', kk: '«Сұнқар» тобы' },
+    category: 'classes',
+    imageUrl: phGalGroupSunkar
+  },
+  {
+    id: 'gal-9',
+    title: { ru: 'Группа «Өркен»', kk: '«Өркен» тобы' },
+    category: 'classes',
+    imageUrl: phGalGroupOrken
   }
 ];
 
