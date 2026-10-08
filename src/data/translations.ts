@@ -28,7 +28,7 @@ export const translations = {
     btnWhatsapp: 'Написать в WhatsApp',
     workingHours: 'Пн - Пт: 08:30 - 18:00',
     astanaCity: 'г. Астана',
-    branchesCountShort: '4 филиала',
+    branchesCountShort: '3 филиала',
     visuallyImpairedVersion: 'Версия для слабовидящих',
     normalVersion: 'Обычная версия',
     
@@ -48,10 +48,10 @@ export const translations = {
     // Hero Section
     heroBadge: 'Бесплатные специальные социальные услуги',
     heroTitle: 'Раскрываем потенциал каждого ребенка в окружении заботы и профессионализма',
-    heroDescription: 'Оказываем комплексную помощь детям в возрасте от 1,5 до 18 лет с особыми образовательными потребностями, ДЦП и другими особенностями развития в 4 центрах Астаны.',
+    heroDescription: 'Оказываем комплексную помощь детям в возрасте от 1,5 до 18 лет с особыми образовательными потребностями, ДЦП и другими особенностями развития в 3 центрах Астаны.',
     heroStatChildren: '1 200+',
     heroStatChildrenLabel: 'детей прошли реабилитацию',
-    heroStatBranches: '4 филиала',
+    heroStatBranches: '3 филиала',
     heroStatBranchesLabel: 'в удобных районах Астаны',
     heroStatTeam: '32',
     heroStatTeamLabel: 'квалифицированных специалистов',
@@ -144,7 +144,7 @@ export const translations = {
 
     // Branches Section
     branchesBadge: 'Сеть центров в г. Астана',
-    branchesTitle: '4 современных филиала для удобства семей',
+    branchesTitle: '3 современных филиала для удобства семей',
     branchesSubtitle: 'Все филиалы оборудованы с учетом требований доступной среды и безопасности.',
     headquartersTag: 'Головной центр',
     branchAddressLabel: 'Адрес:',
@@ -299,7 +299,7 @@ export const translations = {
     normalMode: 'Обычный режим',
     footerToTop: 'Наверх',
     heroImgAlt: 'Занятия в центре EREKSHE ANALAR',
-    heroBranchesSocial: '4 филиала социальной защиты',
+    heroBranchesSocial: '3 филиала социальной защиты',
     enrollValidation: 'Пожалуйста, укажите имя и номер телефона.',
     enrollModalTitle: 'Запись в центры EREKSHE ANALAR',
     enrollPhParentName: 'ФИО родителя',
@@ -370,7 +370,7 @@ export const translations = {
     btnWhatsapp: 'WhatsApp-қа жазу',
     workingHours: 'Дүйсенбі - Жұма: 08:30 - 18:00',
     astanaCity: 'Астана қ.',
-    branchesCountShort: '4 филиал',
+    branchesCountShort: '3 филиал',
     visuallyImpairedVersion: 'Нашар көретіндерге арналған нұсқа',
     normalVersion: 'Кәдімгі нұсқа',
 
@@ -390,10 +390,10 @@ export const translations = {
     // Hero Section
     heroBadge: 'Тегін арнайы әлеуметтік қызметтер',
     heroTitle: 'Әр баланың әлеуетін қамқорлық пен кәсібилік аясында ашамыз',
-    heroDescription: 'Астана қаласындағы 4 орталықта ерекше білім беру қажеттіліктері бар, БЦП және психоневрологиялық патологиялары бар 1,5-тен 18 жасқа дейінгі балаларға кешенді көмек көрсетеміз.',
+    heroDescription: 'Астана қаласындағы 3 орталықта ерекше білім беру қажеттіліктері бар, БЦП және психоневрологиялық патологиялары бар 1,5-тен 18 жасқа дейінгі балаларға кешенді көмек көрсетеміз.',
     heroStatChildren: '1 200+',
     heroStatChildrenLabel: 'бала оңалтудан өтті',
-    heroStatBranches: '4 филиал',
+    heroStatBranches: '3 филиал',
     heroStatBranchesLabel: 'Астананың ыңғайлы аудандарында',
     heroStatTeam: '32',
     heroStatTeamLabel: 'білікті мамандар',
@@ -485,7 +485,7 @@ export const translations = {
 
     // Branches
     branchesBadge: 'Астана қаласындағы орталықтар желісі',
-    branchesTitle: 'Ата-аналарға ыңғайлы 4 заманауи филиал',
+    branchesTitle: 'Ата-аналарға ыңғайлы 3 заманауи филиал',
     branchesSubtitle: 'Барлық филиалдар қолжетімді орта мен қауіпсіздік талаптарына сай жабдықталған.',
     headquartersTag: 'Бас орталық',
     branchAddressLabel: 'Мекенжайы:',

@@ -15,8 +15,10 @@ function erekshe_branches() {
                 'name' => 'Головной центр «EREKSHE ANALAR» (Аманат)',
                 'address' => 'г. Астана, ул. Аманат, 12/1',
                 'district' => 'Район Алматы / Левый берег',
-                'phone' => '+7 (7172) 70-80-90',
                 'whatsapp' => '+7 (705) 308-97-33',
+                'contactName' => 'Сезим, консультант центра',
+                'methodistName' => 'Методист центра',
+                'methodistPhone' => '+7 (776) 163-95-21',
                 'workHours' => 'Пн - Пт: 08:30 - 18:00',
                 'features' => [
                     'Бассейн',
@@ -38,8 +40,10 @@ function erekshe_branches() {
                 'name' => 'Филиал «Сарыарка»',
                 'address' => 'г. Астана, пр. Сарыарка, 48',
                 'district' => 'Правый берег, район Сарыарка',
-                'phone' => '+7 (7172) 70-80-91',
-                'whatsapp' => '+7 (705) 308-97-33',
+                'whatsapp' => '+7 (701) 607-57-25',
+                'contactName' => 'Айнур К., руководитель филиала',
+                'methodistName' => 'Карлыгаш, методист',
+                'methodistPhone' => '+7 (705) 140-31-34',
                 'workHours' => 'Пн - Пт: 08:30 - 18:00',
                 'features' => [
                     'Залы АФК и ЛФК',
@@ -59,8 +63,10 @@ function erekshe_branches() {
                 'name' => 'Филиал «Акын Сара»',
                 'address' => 'г. Астана, ул. Акын Сара, 37',
                 'district' => 'Район Есиль / Заречный',
-                'phone' => '+7 (7172) 70-80-92',
-                'whatsapp' => '+7 (705) 308-97-33',
+                'whatsapp' => '+7 (705) 239-59-86',
+                'contactName' => 'Гульжанат С., руководитель филиала',
+                'methodistName' => 'Фарида, методист',
+                'methodistPhone' => '+7 (707) 754-55-52',
                 'workHours' => 'Пн - Пт: 08:30 - 18:00',
                 'features' => [
                     'Гидрованны',
@@ -74,27 +80,6 @@ function erekshe_branches() {
                     'lng' => 71.4121
                 ]
             ],
-            [
-                'id' => 'tulebaeva',
-                'map2gis' => 'https://2gis.kz/astana/search/%D0%A2%D1%83%D0%BB%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%205',
-                'name' => 'Филиал «Тулебаева»',
-                'address' => 'г. Астана, ул. Тулебаева, 5',
-                'district' => 'Район Байконур',
-                'phone' => '+7 (7172) 70-80-93',
-                'whatsapp' => '+7 (705) 308-97-33',
-                'workHours' => 'Пн - Пт: 08:30 - 18:00',
-                'features' => [
-                    'Центр раннего вмешательства (1.5–5 лет)',
-                    'Игровая дефектология',
-                    'Арт-терапия',
-                    'Группы социализации'
-                ],
-                'image' => 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80',
-                'mapCoordinates' => [
-                    'lat' => 51.1512,
-                    'lng' => 71.4623
-                ]
-            ]
         ],
         'kk' => [
             [
@@ -103,8 +88,10 @@ function erekshe_branches() {
                 'name' => '«EREKSHE ANALAR» Бас орталығы (Аманат)',
                 'address' => 'Астана қ., Аманат көш., 12/1',
                 'district' => 'Алматы ауданы / Сол жағалау',
-                'phone' => '+7 (7172) 70-80-90',
                 'whatsapp' => '+7 (705) 308-97-33',
+                'contactName' => 'Сезім, орталық кеңесшісі',
+                'methodistName' => 'Орталық әдіскері',
+                'methodistPhone' => '+7 (776) 163-95-21',
                 'workHours' => 'Дс - Жм: 08:30 - 18:00',
                 'features' => [
                     'Бассейн',
@@ -126,8 +113,10 @@ function erekshe_branches() {
                 'name' => '«Сарыарқа» филиалы',
                 'address' => 'Астана қ., Сарыарқа даңғылы, 48',
                 'district' => 'Оң жағалау, Сарыарқа ауданы',
-                'phone' => '+7 (7172) 70-80-91',
-                'whatsapp' => '+7 (705) 308-97-33',
+                'whatsapp' => '+7 (701) 607-57-25',
+                'contactName' => 'Айнұр Қ., филиал жетекшісі',
+                'methodistName' => 'Қарлығаш, әдіскер',
+                'methodistPhone' => '+7 (705) 140-31-34',
                 'workHours' => 'Дс - Жм: 08:30 - 18:00',
                 'features' => [
                     'ЕАФК және ЕФК залдары',
@@ -147,8 +136,10 @@ function erekshe_branches() {
                 'name' => '«Ақын Сара» филиалы',
                 'address' => 'Астана қ., Ақын Сара көш., 37',
                 'district' => 'Есіл ауданы / Заречный',
-                'phone' => '+7 (7172) 70-80-92',
-                'whatsapp' => '+7 (705) 308-97-33',
+                'whatsapp' => '+7 (705) 239-59-86',
+                'contactName' => 'Гүлжанат С., филиал жетекшісі',
+                'methodistName' => 'Фарида, әдіскер',
+                'methodistPhone' => '+7 (707) 754-55-52',
                 'workHours' => 'Дс - Жм: 08:30 - 18:00',
                 'features' => [
                     'Гидрованналар',
@@ -162,27 +153,6 @@ function erekshe_branches() {
                     'lng' => 71.4121
                 ]
             ],
-            [
-                'id' => 'tulebaeva',
-                'map2gis' => 'https://2gis.kz/astana/search/%D0%A2%D1%83%D0%BB%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%205',
-                'name' => '«Төлебаев» филиалы',
-                'address' => 'Астана қ., Төлебаев көш., 5',
-                'district' => 'Байқоңыр ауданы',
-                'phone' => '+7 (7172) 70-80-93',
-                'whatsapp' => '+7 (705) 308-97-33',
-                'workHours' => 'Дс - Жм: 08:30 - 18:00',
-                'features' => [
-                    'Ерте араласу орталығы (1.5–5 жас)',
-                    'Ойын дефектологиясы',
-                    'Арт-терапия',
-                    'Әлеуметтену топтары'
-                ],
-                'image' => 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80',
-                'mapCoordinates' => [
-                    'lat' => 51.1512,
-                    'lng' => 71.4623
-                ]
-            ]
         ],
     ];
     return isset($d[$L]) ? $d[$L] : $d['ru'];
@@ -218,8 +188,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat',
                     'saryarka',
-                    'akyn_sara',
-                    'tulebaeva'
+                    'akyn_sara'
                 ],
                 'image' => 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'
             ],
@@ -248,8 +217,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat',
                     'saryarka',
-                    'akyn_sara',
-                    'tulebaeva'
+                    'akyn_sara'
                 ],
                 'image' => 'regenerated_image_1785993681411.webp'
             ],
@@ -278,8 +246,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat',
                     'saryarka',
-                    'akyn_sara',
-                    'tulebaeva'
+                    'akyn_sara'
                 ],
                 'image' => 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'
             ],
@@ -530,8 +497,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat',
                     'saryarka',
-                    'akyn_sara',
-                    'tulebaeva'
+                    'akyn_sara'
                 ],
                 'image' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'
             ]
@@ -563,8 +529,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat',
                     'saryarka',
-                    'akyn_sara',
-                    'tulebaeva'
+                    'akyn_sara'
                 ],
                 'image' => 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'
             ],
@@ -592,8 +557,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat',
                     'saryarka',
-                    'akyn_sara',
-                    'tulebaeva'
+                    'akyn_sara'
                 ],
                 'image' => 'regenerated_image_1785993681411.webp'
             ],
@@ -622,8 +586,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat',
                     'saryarka',
-                    'akyn_sara',
-                    'tulebaeva'
+                    'akyn_sara'
                 ],
                 'image' => 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'
             ],
@@ -865,8 +828,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat',
                     'saryarka',
-                    'akyn_sara',
-                    'tulebaeva'
+                    'akyn_sara'
                 ],
                 'image' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'
             ]
@@ -1222,7 +1184,7 @@ function erekshe_news() {
             [
                 'id' => 'news-1',
                 'title' => 'Көктемгі кезеңге кешенді оңалту курсына балаларды жаңа қабылдау ашылды',
-                'summary' => 'EREKSHE ANALAR қоғамдық қоры Астананың барлық 4 филиалына өтінімдер қабылдауда. Бағдарламаға ЕФК, бассейн, логопед кіреді.',
+                'summary' => 'EREKSHE ANALAR қоғамдық қоры Астананың барлық 3 филиалына өтінімдер қабылдауда. Бағдарламаға ЕФК, бассейн, логопед кіреді.',
                 'content' => '1,5-тен 18 жасқа дейінгі балалардың ата-аналарын тегін арнайы әлеуметтік қызметтерді алуға құжат тапсыруға шақырамыз.',
                 'date' => '01.02.2026',
                 'category' => 'announcement',
@@ -1287,7 +1249,7 @@ function erekshe_projects() {
         'ru' => [
             [
                 'id' => 'proj-1',
-                'title' => 'Оснащение сенсорных комнат во всех 4 филиалах Астаны',
+                'title' => 'Оснащение сенсорных комнат во всех 3 филиалах Астаны',
                 'description' => 'Закупка интерактивных воздушно-пузырьковых колонн, фибероптического волокна и профессионального оборудования сенсорной интеграции.',
                 'targetAmount' => 5000000,
                 'currentAmount' => 4200000,
@@ -1309,7 +1271,7 @@ function erekshe_projects() {
         'kk' => [
             [
                 'id' => 'proj-1',
-                'title' => 'Астананың барлық 4 филиалында сенсорлық бөлмелерді жабдықтау',
+                'title' => 'Астананың барлық 3 филиалында сенсорлық бөлмелерді жабдықтау',
                 'description' => 'Интерактивті ауа-көпіршікті бағандарды, фибероптикалық талшықтарды және сенсорлық интеграцияның кәсіби жабдықтарын сатып алу.',
                 'targetAmount' => 5000000,
                 'currentAmount' => 4200000,

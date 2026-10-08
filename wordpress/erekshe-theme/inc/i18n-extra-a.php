@@ -8,7 +8,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'a_featIpr'             => 'Индивидуальная ИПР',
             'a_featMothers'         => 'Поддержка матерей',
             'a_heroImgAlt'          => 'Занятия в центре EREKSHE ANALAR',
-            'a_branches4Social'     => '4 филиала социальной защиты',
+            'a_branches4Social'     => '3 филиала социальной защиты',
             'a_statChildrenRehab'   => 'Детей на реабилитации',
             'a_statBranchesAstana'  => 'Филиала в Астане',
             'a_statSpecialists'     => 'Специалистов',

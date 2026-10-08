@@ -1,7 +1,6 @@
 <?php
 if (!defined('ABSPATH')) exit;
 $logo   = EREKSHE_URI . '/assets/images/regenerated_image_1785993330916.png';
-$phone  = erekshe_opt('phone', '+7 (7172) 70-80-90');
 $email  = erekshe_opt('email', 'info@ereksheanalar.kz');
 $nav    = erekshe_nav_items();
 $services = [

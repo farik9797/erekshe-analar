@@ -16,8 +16,10 @@ export interface Branch {
   name: { ru: string; kk: string };
   address: { ru: string; kk: string };
   district: { ru: string; kk: string };
-  phone: string;
+  /** WhatsApp консультанта / руководителя филиала — сюда уходит заявка */
   whatsapp: string;
+  contactName: { ru: string; kk: string };
+  methodist: { name: { ru: string; kk: string }; phone: string };
   workHours: { ru: string; kk: string };
   features: { ru: string[]; kk: string[] };
   image: string;

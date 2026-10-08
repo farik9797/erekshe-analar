@@ -23,8 +23,9 @@ export const BRANCHES: Branch[] = [
       ru: 'Район Алматы / Левый берег',
       kk: 'Алматы ауданы / Сол жағалау'
     },
-    phone: '+7 (7172) 70-80-90',
     whatsapp: '+7 (705) 308-97-33',
+    contactName: { ru: 'Сезим, консультант центра', kk: 'Сезім, орталық кеңесшісі' },
+    methodist: { name: { ru: 'Методист центра', kk: 'Орталық әдіскері' }, phone: '+7 (776) 163-95-21' },
     workHours: {
       ru: 'Пн - Пт: 08:30 - 18:00',
       kk: 'Дс - Жм: 08:30 - 18:00'
@@ -52,8 +53,9 @@ export const BRANCHES: Branch[] = [
       ru: 'Правый берег, район Сарыарка',
       kk: 'Оң жағалау, Сарыарқа ауданы'
     },
-    phone: '+7 (7172) 70-80-91',
-    whatsapp: '+7 (705) 308-97-33',
+    whatsapp: '+7 (701) 607-57-25',
+    contactName: { ru: 'Айнур К., руководитель филиала', kk: 'Айнұр Қ., филиал жетекшісі' },
+    methodist: { name: { ru: 'Карлыгаш, методист', kk: 'Қарлығаш, әдіскер' }, phone: '+7 (705) 140-31-34' },
     workHours: {
       ru: 'Пн - Пт: 08:30 - 18:00',
       kk: 'Дс - Жм: 08:30 - 18:00'
@@ -80,8 +82,9 @@ export const BRANCHES: Branch[] = [
       ru: 'Район Есиль / Заречный',
       kk: 'Есіл ауданы / Заречный'
     },
-    phone: '+7 (7172) 70-80-92',
-    whatsapp: '+7 (705) 308-97-33',
+    whatsapp: '+7 (705) 239-59-86',
+    contactName: { ru: 'Гульжанат С., руководитель филиала', kk: 'Гүлжанат С., филиал жетекшісі' },
+    methodist: { name: { ru: 'Фарида, методист', kk: 'Фарида, әдіскер' }, phone: '+7 (707) 754-55-52' },
     workHours: {
       ru: 'Пн - Пт: 08:30 - 18:00',
       kk: 'Дс - Жм: 08:30 - 18:00'
@@ -92,34 +95,6 @@ export const BRANCHES: Branch[] = [
     },
     image: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80',
     mapCoordinates: { lat: 51.1045, lng: 71.4121 }
-  },
-  {
-    id: 'tulebaeva',
-    map2gis: 'https://2gis.kz/astana/search/%D0%A2%D1%83%D0%BB%D0%B5%D0%B1%D0%B0%D0%B5%D0%B2%D0%B0%205',
-    name: {
-      ru: 'Филиал «Тулебаева»',
-      kk: '«Төлебаев» филиалы'
-    },
-    address: {
-      ru: 'г. Астана, ул. Тулебаева, 5',
-      kk: 'Астана қ., Төлебаев көш., 5'
-    },
-    district: {
-      ru: 'Район Байконур',
-      kk: 'Байқоңыр ауданы'
-    },
-    phone: '+7 (7172) 70-80-93',
-    whatsapp: '+7 (705) 308-97-33',
-    workHours: {
-      ru: 'Пн - Пт: 08:30 - 18:00',
-      kk: 'Дс - Жм: 08:30 - 18:00'
-    },
-    features: {
-      ru: ['Центр раннего вмешательства (1.5–5 лет)', 'Игровая дефектология', 'Арт-терапия', 'Группы социализации'],
-      kk: ['Ерте араласу орталығы (1.5–5 жас)', 'Ойын дефектологиясы', 'Арт-терапия', 'Әлеуметтену топтары']
-    },
-    image: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&w=1000&q=80',
-    mapCoordinates: { lat: 51.1512, lng: 71.4623 }
   }
 ];
 
@@ -147,7 +122,7 @@ export const SERVICES: ServiceItem[] = [
     },
     duration: { ru: '20 минут', kk: '20 минут' },
     targetAge: { ru: 'От 1.5 до 18 лет', kk: '1.5-тен 18 жасқа дейін' },
-    availableBranches: ['amanat', 'saryarka', 'akyn_sara', 'tulebaeva'],
+    availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
     image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'
   },
   {
@@ -173,7 +148,7 @@ export const SERVICES: ServiceItem[] = [
     },
     duration: { ru: '20–25 минут', kk: '40 минут' },
     targetAge: { ru: 'От 2 до 18 лет', kk: '2-ден 18 жасқа дейін' },
-    availableBranches: ['amanat', 'saryarka', 'akyn_sara', 'tulebaeva'],
+    availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
     image: familyPhotoImg
   },
   {
@@ -199,7 +174,7 @@ export const SERVICES: ServiceItem[] = [
     },
     duration: { ru: '20–25 минут', kk: '45 минут' },
     targetAge: { ru: 'От 2 до 18 лет', kk: '2-ден 18 жасқа дейін' },
-    availableBranches: ['amanat', 'saryarka', 'akyn_sara', 'tulebaeva'],
+    availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
     image: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'
   },
   {
@@ -433,7 +408,7 @@ export const SERVICES: ServiceItem[] = [
     },
     duration: { ru: '60 минут', kk: '60 минут' },
     targetAge: { ru: 'Для родителей детей любого возраста', kk: 'Кез келген жастағы балалардың ата-аналары үшін' },
-    availableBranches: ['amanat', 'saryarka', 'akyn_sara', 'tulebaeva'],
+    availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'
   }
 ];
@@ -672,7 +647,7 @@ export const NEWS: NewsItem[] = [
     },
     summary: {
       ru: 'Приглашаем родителей детей в возрасте от 1,5 до 18 лет подать документы для получения комплекса бесплатных специальных социальных услуг. Реабилитационные и коррекционно-развивающие занятия проводятся междисциплинарной командой квалифицированных специалистов с учётом индивидуальных потребностей, возможностей и особенностей каждого ребёнка.',
-      kk: 'EREKSHE ANALAR қоғамдық қоры Астананың барлық 4 филиалына өтінімдер қабылдауда. Бағдарламаға ЕФК, бассейн, логопед кіреді.'
+      kk: 'EREKSHE ANALAR қоғамдық қоры Астананың барлық 3 филиалына өтінімдер қабылдауда. Бағдарламаға ЕФК, бассейн, логопед кіреді.'
     },
     content: {
       ru: 'Приглашаем родителей детей в возрасте от 1,5 до 18 лет подать документы для получения комплекса бесплатных специальных социальных услуг. Реабилитационные и коррекционно-развивающие занятия проводятся междисциплинарной командой квалифицированных специалистов с учётом индивидуальных потребностей, возможностей и особенностей каждого ребёнка.',
@@ -741,8 +716,8 @@ export const SOCIAL_PROJECTS: SocialProject[] = [
   {
     id: 'proj-1',
     title: {
-      ru: 'Оснащение сенсорных комнат во всех 4 филиалах Астаны',
-      kk: 'Астананың барлық 4 филиалында сенсорлық бөлмелерді жабдықтау'
+      ru: 'Оснащение сенсорных комнат во всех 3 филиалах Астаны',
+      kk: 'Астананың барлық 3 филиалында сенсорлық бөлмелерді жабдықтау'
     },
     description: {
       ru: 'Закупка интерактивных воздушно-пузырьковых колонн, фибероптического волокна и профессионального оборудования сенсорной интеграции.',

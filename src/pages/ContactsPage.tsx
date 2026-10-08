@@ -26,13 +26,6 @@ export const ContactsPage: React.FC = () => {
 
             <div className="flex flex-wrap items-center gap-4 text-xs font-semibold">
               <a
-                href="tel:+77172708090"
-                className="px-4 py-2.5 rounded-xl bg-white text-slate-900 hover:bg-emerald-50 transition flex items-center gap-2"
-              >
-                <Phone className="w-4 h-4 text-emerald-600" />
-                <span>+7 (7172) 70-80-90</span>
-              </a>
-              <a
                 href="https://wa.me/77053089733"
                 target="_blank"
                 rel="noopener noreferrer"

@@ -1,8 +1,6 @@
 <?php
 if (!defined('ABSPATH')) exit;
 $logo   = EREKSHE_URI . '/assets/images/regenerated_image_1785993330916.png';
-$phone  = erekshe_opt('phone', '+7 (7172) 70-80-90');
-$phone_tel = preg_replace('/[^0-9+]/', '', $phone);
 $wa     = erekshe_opt('whatsapp_url', 'https://wa.me/77053089733');
 $insta  = erekshe_opt('instagram_url', 'https://instagram.com/erekshe_analar');
 $hours  = erekshe_opt('work_hours', erekshe_t('workingHours'));
@@ -33,10 +31,6 @@ $nav    = erekshe_nav_items();
           <?php echo erekshe_icon('Clock', 'w-3.5 h-3.5 text-slate-400'); ?>
           <?php echo esc_html($hours); ?>
         </span>
-        <a href="tel:<?php echo esc_attr($phone_tel); ?>" class="flex items-center gap-1 text-slate-200 hover:text-emerald-400 font-semibold transition">
-          <?php echo erekshe_icon('Phone', 'w-3.5 h-3.5 text-emerald-400'); ?>
-          <?php echo esc_html($phone); ?>
-        </a>
       </div>
 
       <!-- Right actions -->
@@ -132,9 +126,6 @@ $nav    = erekshe_nav_items();
       <button type="button" data-enroll-open class="w-full py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition cursor-pointer">
         <?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('btnEnroll')); ?></span>
       </button>
-      <a href="tel:<?php echo esc_attr($phone_tel); ?>" class="w-full py-2.5 px-3 rounded-xl text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center gap-2 transition">
-        <?php echo erekshe_icon('Phone', 'w-3.5 h-3.5 text-emerald-600'); ?><span><?php echo esc_html($phone); ?></span>
-      </a>
       <button type="button" data-search-open class="w-full py-2.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-center gap-2 cursor-pointer transition">
         <?php echo erekshe_icon('Search', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('searchLabel')); ?></span>
       </button>

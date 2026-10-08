@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ConsultModal } from './ConsultModal';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { BRANCHES } from '../data/mockData';
 import {
@@ -14,7 +15,8 @@ import {
 } from 'lucide-react';
 
 export const BranchesSection: React.FC = () => {
-  const { lang, t, openEnrollModal, hideImages } = useAccessibility();
+  const { lang, t, hideImages } = useAccessibility();
+  const [consultOpen, setConsultOpen] = useState(false);
   const [selectedBranchId, setSelectedBranchId] = useState<string>(BRANCHES[0].id);
 
   const activeBranch = BRANCHES.find((b) => b.id === selectedBranchId) || BRANCHES[0];
@@ -125,13 +127,15 @@ export const BranchesSection: React.FC = () => {
                 <Phone className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                    {t.branchPhoneLabel}
+                    {activeBranch.methodist.name[lang]}
                   </p>
                   <a
-                    href={`tel:${activeBranch.phone}`}
+                    href={`https://wa.me/${activeBranch.methodist.phone.replace(/\D/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs sm:text-sm font-bold text-emerald-700 hover:underline mt-0.5 block"
                   >
-                    {activeBranch.phone}
+                    {activeBranch.methodist.phone}
                   </a>
                 </div>
               </div>
@@ -140,7 +144,7 @@ export const BranchesSection: React.FC = () => {
                 <MessageCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                    WhatsApp:
+                    {activeBranch.contactName[lang]}
                   </p>
                   <a
                     href={`https://wa.me/${activeBranch.whatsapp.replace(/\D/g, '')}`}
@@ -175,7 +179,7 @@ export const BranchesSection: React.FC = () => {
             {/* CTAs */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <button
-                onClick={() => openEnrollModal(activeBranch.id)}
+                onClick={() => setConsultOpen(true)}
                 className="flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-md shadow-emerald-600/20"
               >
                 <Sparkles className="w-4 h-4" />
@@ -229,6 +233,8 @@ export const BranchesSection: React.FC = () => {
           </div>
         </div>
       </div>
+      <ConsultModal open={consultOpen} onClose={() => setConsultOpen(false)} presetBranchId={activeBranch.id} />
+
     </section>
   );
 };

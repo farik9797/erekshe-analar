@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { ConsultModal } from './ConsultModal';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { SearchModal } from './SearchModal';
 import logoImg from '../assets/images/regenerated_image_1785993330916.png';
@@ -25,11 +26,12 @@ export const Header: React.FC = () => {
     t,
     isImpairedMode,
     setIsImpairedMode,
-    openEnrollModal,
     openDonationModal
   } = useAccessibility();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [consultOpen, setConsultOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   // Global Ctrl+K / Cmd+K listener
@@ -74,13 +76,6 @@ export const Header: React.FC = () => {
               <Clock className="w-3.5 h-3.5 text-slate-400" />
               {t.workingHours}
             </span>
-            <a
-              href="tel:+77172708090"
-              className="flex items-center gap-1 text-slate-200 hover:text-emerald-400 font-semibold transition"
-            >
-              <Phone className="w-3.5 h-3.5 text-emerald-400" />
-              +7 (7172) 70-80-90
-            </a>
           </div>
 
           {/* Right actions — на мобильном во всю ширину: АА слева, соцсети по центру, язык справа */}
@@ -196,11 +191,11 @@ export const Header: React.FC = () => {
           </button>
 
           <button
-            onClick={() => openEnrollModal()}
+            onClick={() => setConsultOpen(true)}
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-md shadow-emerald-600/20 transition hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
           >
             <Sparkles className="w-4 h-4" />
-            <span>{t.btnEnroll}</span>
+            <span>{lang === 'ru' ? 'Как попасть в центр?' : 'Орталыққа қалай түсуге болады?'}</span>
           </button>
         </div>
 
@@ -264,21 +259,13 @@ export const Header: React.FC = () => {
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
-                openEnrollModal();
+                setConsultOpen(true);
               }}
               className="w-full py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 active:scale-[0.98] transition cursor-pointer"
             >
               <Sparkles className="w-4 h-4" />
-              <span>{t.btnEnroll}</span>
+              <span>{lang === 'ru' ? 'Как попасть в центр?' : 'Орталыққа қалай түсуге болады?'}</span>
             </button>
-
-            <a
-              href="tel:+77172708090"
-              className="w-full py-2.5 px-3 rounded-xl text-xs font-bold text-slate-800 bg-slate-100 hover:bg-slate-200 border border-slate-200 flex items-center justify-center gap-2 transition"
-            >
-              <Phone className="w-3.5 h-3.5 text-emerald-600" />
-              <span>+7 (7172) 70-80-90</span>
-            </a>
 
             <button
               onClick={() => {
@@ -306,6 +293,8 @@ export const Header: React.FC = () => {
       )}
 
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+      <ConsultModal open={consultOpen} onClose={() => setConsultOpen(false)} />
+
     </header>
   );
 };

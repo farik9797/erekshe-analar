@@ -36,7 +36,6 @@ function erekshe_register_acf() {
         acf_add_options_page(['page_title' => 'Настройки сайта', 'menu_title' => 'Настройки сайта', 'menu_slug' => 'erekshe-settings', 'icon_url' => 'dashicons-admin-generic']);
     }
     acf_add_local_field_group(['key' => 'group_erekshe_options', 'title' => 'Глобальные настройки', 'fields' => [
-        ef_text('opt_phone', 'phone', 'Телефон', '+7 (7172) 70-80-90'),
         ef_text('opt_email', 'email', 'Email', 'info@ereksheanalar.kz'),
         ef_text('opt_city', 'city', 'Город', 'г. Астана'),
         ef_text('opt_hours', 'work_hours', 'Часы работы', 'Пн - Пт: 08:30 - 18:00'),
@@ -49,7 +48,7 @@ function erekshe_register_acf() {
     acf_add_local_field_group(['key' => 'group_erekshe_home', 'title' => 'Главная страница', 'fields' => [
         ef_text('hero_badge', 'hero_badge', 'Hero: бейдж', 'Бесплатные специальные социальные услуги'),
         ef_text('hero_title', 'hero_title', 'Hero: заголовок', 'Раскрываем потенциал каждого ребенка в окружении заботы и профессионализма'),
-        ef_textarea('hero_desc', 'hero_desc', 'Hero: описание', 'Оказываем комплексную помощь детям от 1,5 до 18 лет с особыми образовательными потребностями, ДЦП и психоневрологическими патологиями в 4 центрах г. Астана.'),
+        ef_textarea('hero_desc', 'hero_desc', 'Hero: описание', 'Оказываем комплексную помощь детям от 1,5 до 18 лет с особыми образовательными потребностями, ДЦП и психоневрологическими патологиями в 3 центрах г. Астана.'),
         ef_image('hero_image', 'hero_image', 'Hero: фото'),
         ef_repeater('home_stats', 'home_stats', 'Статистика (4 карточки)', [
             ef_text('stat_val', 'value', 'Значение', ''),
@@ -95,7 +94,7 @@ function erekshe_register_acf() {
 
     /* ===== Филиалы ===== */
     acf_add_local_field_group(['key' => 'group_erekshe_branches', 'title' => 'Страница «Филиалы»', 'fields' => array_merge(
-        ef_banner('br', '4 современных филиала для удобства семей', 'Все филиалы оборудованы с учётом требований доступной среды.', 'Наша сеть в Астане'),
+        ef_banner('br', '3 современных филиала для удобства семей', 'Все филиалы оборудованы с учётом требований доступной среды.', 'Наша сеть в Астане'),
         [ ef_repeater('br_items', 'branches', 'Филиалы', [
             ef_text('br_name', 'name', 'Название', ''),
             ef_text('br_addr', 'address', 'Адрес', ''),
@@ -190,7 +189,7 @@ function erekshe_register_acf() {
 
     /* ===== Контакты ===== */
     acf_add_local_field_group(['key' => 'group_erekshe_contacts', 'title' => 'Страница «Контакты»', 'fields' => array_merge(
-        ef_banner('cnt', 'Свяжитесь с нами или запишитесь на прием', '4 филиала в Астане. Головной офис принимает документы и заявки.', 'Контакты и запись'),
+        ef_banner('cnt', 'Свяжитесь с нами или запишитесь на прием', '3 филиала в Астане. Головной офис принимает документы и заявки.', 'Контакты и запись'),
         [
             ef_text('cnt_org', 'contact_org', 'Организация', 'ОФ «EREKSHE ANALAR»'),
             ef_text('cnt_addr', 'contact_address', 'Адрес головного центра', 'г. Астана, ул. Аманат, 12/1'),

@@ -14,7 +14,7 @@ unset($_b);
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('MapPin', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('b_BranchesNetworkBadge')); ?></span></div>
-      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('branchesTitle', '4 современных филиала для удобства семей')); ?></h2>
+      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('branchesTitle', '3 современных филиала для удобства семей')); ?></h2>
       <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('branchesDesc', 'Все филиалы оборудованы с учётом требований доступной среды и безопасности.')); ?></p>
     </div>
 
@@ -41,7 +41,7 @@ unset($_b);
         <h3 class="text-[1.4rem] sm:text-3xl font-extrabold text-slate-900 mb-6"><?php echo esc_html($b['name']); ?></h3>
         <div class="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
           <?php
-          $info = [['MapPin',erekshe_t('branchAddressLabel'),$b['address']],['Clock',erekshe_t('branchHoursLabel'),$b['workHours']],['Phone',erekshe_t('branchPhoneLabel'),$b['phone']],['MessageCircle',erekshe_t('b_BranchWhatsappLabel'),$b['whatsapp']]];
+          $info = [['MapPin',erekshe_t('branchAddressLabel'),$b['address']],['Clock',erekshe_t('branchHoursLabel'),$b['workHours']],['Phone',$b['methodistName'],$b['methodistPhone']],['MessageCircle',$b['contactName'],$b['whatsapp']]];
           foreach ($info as $c): ?>
             <div class="flex items-start gap-2 sm:gap-3 bg-slate-50 py-5 px-2.5 rounded-2xl border border-slate-100"><?php echo erekshe_icon($c[0], 'w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5'); ?><div><p class="text-xs font-bold text-slate-500 uppercase tracking-wider"><?php echo esc_html($c[1]); ?></p><p class="text-xs sm:text-sm font-bold text-slate-900 mt-0.5"><?php echo esc_html($c[2]); ?></p></div></div>
           <?php endforeach; ?>

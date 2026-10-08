@@ -282,7 +282,7 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
 </section>
 
 <!-- ==================== КОНТАКТЫ ==================== -->
-<?php $phone = erekshe_opt('phone', '+7 (7172) 70-80-90'); $email = erekshe_opt('email', 'info@ereksheanalar.kz'); $wa_num = erekshe_opt('whatsapp_num', '+7 (705) 308-97-33'); ?>
+<?php $email = erekshe_opt('email', 'info@ereksheanalar.kz'); $wa_num = erekshe_opt('whatsapp_num', '+7 (705) 308-97-33'); ?>
 <section class="fade-in py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-16">
@@ -298,7 +298,6 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
           $contacts = [
             ['MapPin', erekshe_t('a_addressHqLabel'), erekshe_t('a_hqAddress')],
             ['Clock', erekshe_t('a_scheduleLabel'), erekshe_t('workingHours')],
-            ['Phone', erekshe_t('contactPhoneTitle'), $phone],
             ['MessageCircle', erekshe_t('a_whatsappBranchesLabel'), $wa_num],
             ['Mail', erekshe_t('contactEmailTitle'), $email],
             ['Instagram', 'Instagram:', '@erekshe_analar_astana'],

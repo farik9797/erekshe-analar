@@ -59,16 +59,6 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Phone className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-xs text-slate-400 uppercase font-bold">{t.contactPhoneTitle}</p>
-                    <a href="tel:+77172708090" className="text-emerald-300 font-bold hover:underline block mt-0.5">
-                      +7 (7172) 70-80-90
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
                   <MessageCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-xs text-slate-400 uppercase font-bold">{t.contactWhatsappLabel}</p>

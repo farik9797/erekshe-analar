@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 export const RehabProcess: React.FC = () => {
-  const { t, openEnrollModal } = useAccessibility();
+  const { t } = useAccessibility();
 
   const steps = [
     { num: t.step1Num, title: t.step1Title, desc: t.step1Desc, icon: PhoneCall },
@@ -76,21 +76,6 @@ export const RehabProcess: React.FC = () => {
           })}
         </div>
 
-        {/* Bottom CTA Banner */}
-        <div className="mt-12 text-center bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-4 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="text-left max-w-2xl">
-            <h3 className="text-xl font-bold">{t.rehabCtaTitle}</h3>
-            <p className="text-xs sm:text-sm text-emerald-100 mt-1">
-              {t.rehabCtaDesc}
-            </p>
-          </div>
-          <button
-            onClick={() => openEnrollModal()}
-            className="px-6 py-3.5 rounded-xl text-xs font-bold text-emerald-950 bg-white hover:bg-emerald-50 transition shadow-md whitespace-nowrap"
-          >
-            {t.btnEnroll}
-          </button>
-        </div>
       </div>
     </section>
   );

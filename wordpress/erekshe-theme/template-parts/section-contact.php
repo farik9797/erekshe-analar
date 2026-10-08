@@ -1,5 +1,4 @@
 <?php if (!defined('ABSPATH')) exit;
-$phone = erekshe_opt('phone', '+7 (7172) 70-80-90');
 $email = erekshe_opt('email', 'info@ereksheanalar.kz');
 $wa_num = erekshe_opt('whatsapp_num', '+7 (705) 308-97-33');
 $org = erekshe_field('contact_org', erekshe_t('donationOrgName'));
@@ -18,7 +17,7 @@ $hours = erekshe_field('contact_hours', erekshe_t('workingHours'));
         <h3 class="text-2xl font-extrabold mb-6"><?php echo esc_html($org); ?></h3>
         <div class="flex flex-col gap-4">
           <?php
-          $contacts = [['MapPin',erekshe_t('c_ContactAddressLabel'),$addr],['Clock',erekshe_t('c_ContactScheduleLabel'),$hours],['Phone',erekshe_t('contactPhoneTitle'),$phone],['MessageCircle',erekshe_t('c_ContactWhatsappLabel'),$wa_num],['Mail',erekshe_t('contactEmailTitle'),$email],['Instagram','Instagram:','@erekshe_analar_astana']];
+          $contacts = [['MapPin',erekshe_t('c_ContactAddressLabel'),$addr],['Clock',erekshe_t('c_ContactScheduleLabel'),$hours],['MessageCircle',erekshe_t('c_ContactWhatsappLabel'),$wa_num],['Mail',erekshe_t('contactEmailTitle'),$email],['Instagram','Instagram:','@erekshe_analar_astana']];
           foreach ($contacts as $c): ?>
             <div class="flex items-start gap-3"><?php echo erekshe_icon($c[0], 'w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5'); ?><div><p class="text-xs font-bold text-slate-400 uppercase tracking-wider"><?php echo esc_html($c[1]); ?></p><p class="text-sm font-bold text-white mt-0.5"><?php echo esc_html($c[2]); ?></p></div></div>
           <?php endforeach; ?>
