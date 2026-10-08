@@ -296,3 +296,33 @@
 Данные, тексты, контакты и реквизиты в WP синхронизированы полностью.
 
 Коммиты: main `d957fa0`, gh-pages `4bebc99`, бандл `index-Kd_ZB1Z7.js`.
+
+## WordPress: три формы заявок перенесены из React (готово)
+**Новые файлы темы:**
+- `inc/forms-data.php` — `erekshe_form_list($which)`: списки вариантов RU/KK
+  (consult_topics 20, info_interests 10, umay_who/support/format)
+- `inc/i18n-extra-forms.php` — подписи форм RU/KK (подхватывается автоглобом `i18n-extra-*`)
+- `template-parts/modal-consult.php` / `modal-inforequest.php` / `modal-umay.php`
+
+**Механика отправки (main.js):** универсальный обработчик `[data-wa-form]` — собирает все
+`[data-wa-field]` по их `data-wa-label` (чекбоксы/радио группируются в одну строку через запятую),
+склеивает сообщение и открывает `wa.me`. Номер берётся либо из `data-wa` формы, либо —
+при `data-wa-from="branch"` — из `data-wa` выбранного `<option>` филиала.
+
+**Привязка кнопок:** header.php (обе) → consult; `page-banner.php` получил аргументы
+`cta_action` (consult|inforequest|umay|enroll) и `cta_label`; page-services → inforequest;
+page-umay → umay; section-branches — добавлены «Записаться в этот филиал» + «Построить маршрут»;
+section-process — убран нижний CTA.
+
+**Важно про CSS темы:** прособранный `assets/css/tailwind.css` — урезанный. Отсутствуют
+`accent-emerald-600/rose-600`, почти все `rose`-варианты (кроме bg-rose-100/500, text-rose-600/700,
+hover:bg-rose-400, border-rose-400, from-rose-900), а также `w-9`, `h-9`, `sm:p-8`.
+Заменены на доступные либо заданы инлайн-стилем. **Все классы трёх модалок сверены с CSS —
+отсутствующих нет.** (Существующая `modal-enroll.php` использует w-9/h-9/sm:p-8 и accent-* —
+они там не работают, это давняя мелкая косметика, не трогал.)
+
+**Проверка:** шаблоны отрендерены PHP со стабами WP — 3 модалки, 45 полей, 5 номеров,
+маршрутизация Аманат→77053089733 / Сарыарка→77016075725 / Акын Сара→77052395986,
+казахская локаль переводится. LocalWP не запущен, в браузере не проверял.
+
+Коммит: main `cce0459`.
