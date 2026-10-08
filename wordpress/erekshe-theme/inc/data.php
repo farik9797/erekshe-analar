@@ -1157,7 +1157,7 @@ function erekshe_news() {
                 'date' => '01.02.2026',
                 'category' => 'announcement',
                 'badge' => 'Набор детей',
-                'image' => 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/news-afk.webp'
             ],
             [
                 'id' => 'news-2',
@@ -1167,7 +1167,7 @@ function erekshe_news() {
                 'date' => '28.01.2026',
                 'category' => 'news',
                 'badge' => 'Центр UMAY',
-                'image' => 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/news-sbo.webp'
             ],
             [
                 'id' => 'news-3',
@@ -1177,7 +1177,7 @@ function erekshe_news() {
                 'date' => '15.01.2026',
                 'category' => 'charity',
                 'badge' => 'Благотворительность',
-                'image' => 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/news-group.webp'
             ]
         ],
         'kk' => [
@@ -1189,7 +1189,7 @@ function erekshe_news() {
                 'date' => '01.02.2026',
                 'category' => 'announcement',
                 'badge' => 'Балаларды қабылдау',
-                'image' => 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/news-afk.webp'
             ],
             [
                 'id' => 'news-2',
@@ -1199,7 +1199,7 @@ function erekshe_news() {
                 'date' => '28.01.2026',
                 'category' => 'news',
                 'badge' => 'UMAY орталығы',
-                'image' => 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/news-sbo.webp'
             ],
             [
                 'id' => 'news-3',
@@ -1209,7 +1209,7 @@ function erekshe_news() {
                 'date' => '15.01.2026',
                 'category' => 'charity',
                 'badge' => 'Қайырымдылық',
-                'image' => 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/news-group.webp'
             ]
         ],
     ];
@@ -1255,7 +1255,7 @@ function erekshe_projects() {
                 'currentAmount' => 4200000,
                 'beneficiariesCount' => 450,
                 'status' => 'active',
-                'image' => 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/gal-sensory.webp'
             ],
             [
                 'id' => 'proj-2',
@@ -1265,7 +1265,7 @@ function erekshe_projects() {
                 'currentAmount' => 3000000,
                 'beneficiariesCount' => 300,
                 'status' => 'completed',
-                'image' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/proj-sbo.webp'
             ]
         ],
         'kk' => [
@@ -1277,7 +1277,7 @@ function erekshe_projects() {
                 'currentAmount' => 4200000,
                 'beneficiariesCount' => 450,
                 'status' => 'active',
-                'image' => 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/gal-sensory.webp'
             ],
             [
                 'id' => 'proj-2',
@@ -1287,7 +1287,7 @@ function erekshe_projects() {
                 'currentAmount' => 3000000,
                 'beneficiariesCount' => 300,
                 'status' => 'completed',
-                'image' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/proj-sbo.webp'
             ]
         ],
     ];

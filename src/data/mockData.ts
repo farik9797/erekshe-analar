@@ -26,6 +26,10 @@ import phGalSensory from '../assets/images/photos/gal-sensory.webp';
 import phGalGroupBayterek from '../assets/images/photos/gal-group-bayterek.webp';
 import phGalGroupSunkar from '../assets/images/photos/gal-group-sunkar.webp';
 import phGalGroupOrken from '../assets/images/photos/gal-group-orken.webp';
+import phNewsAfk from '../assets/images/photos/news-afk.webp';
+import phNewsSbo from '../assets/images/photos/news-sbo.webp';
+import phNewsGroup from '../assets/images/photos/news-group.webp';
+import phProjSbo from '../assets/images/photos/proj-sbo.webp';
 
 export const BRANCHES: Branch[] = [
   {
@@ -676,7 +680,7 @@ export const NEWS: NewsItem[] = [
     date: '01.02.2026',
     category: 'announcement',
     badge: { ru: 'Набор детей', kk: 'Балаларды қабылдау' },
-    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80'
+    image: phNewsAfk
   },
   {
     id: 'news-2',
@@ -695,7 +699,7 @@ export const NEWS: NewsItem[] = [
     date: '28.01.2026',
     category: 'news',
     badge: { ru: 'Центр UMAY', kk: 'UMAY орталығы' },
-    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'
+    image: phNewsSbo
   },
   {
     id: 'news-3',
@@ -714,7 +718,7 @@ export const NEWS: NewsItem[] = [
     date: '15.01.2026',
     category: 'charity',
     badge: { ru: 'Благотворительность', kk: 'Қайырымдылық' },
-    image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80'
+    image: phNewsGroup
   }
 ];
 
@@ -747,7 +751,7 @@ export const SOCIAL_PROJECTS: SocialProject[] = [
     currentAmount: 4200000,
     beneficiariesCount: 450,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80'
+    image: phGalSensory
   },
   {
     id: 'proj-2',
@@ -763,7 +767,7 @@ export const SOCIAL_PROJECTS: SocialProject[] = [
     currentAmount: 3000000,
     beneficiariesCount: 300,
     status: 'completed',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'
+    image: phProjSbo
   }
 ];
 

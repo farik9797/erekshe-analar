@@ -50,7 +50,7 @@ export const CharitySection: React.FC = () => {
                     <img
                       src={project.image}
                       alt={project.title[lang]}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-top"
                     />
                   ) : (
                     <div className="w-full h-full bg-emerald-800 text-white flex items-center justify-center p-4">
