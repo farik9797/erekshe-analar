@@ -27,7 +27,7 @@ function erekshe_branches() {
                     'Приемная руководства',
                     'Методический отдел'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80',
+                'image' => 'photos/branch-amanat.webp',
                 'mapCoordinates' => [
                     'lat' => 51.1283,
                     'lng' => 71.4305
@@ -51,7 +51,7 @@ function erekshe_branches() {
                     'Физиотерапевтический кабинет',
                     'Зал сенсорной интеграции'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80',
+                'image' => 'photos/branch-saryarka.webp',
                 'mapCoordinates' => [
                     'lat' => 51.1692,
                     'lng' => 71.4184
@@ -74,7 +74,7 @@ function erekshe_branches() {
                     'Психолого-педагогический блок',
                     'Кабинеты логомассажа'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80',
+                'image' => 'photos/branch-akyn-sara.webp',
                 'mapCoordinates' => [
                     'lat' => 51.1045,
                     'lng' => 71.4121
@@ -100,7 +100,7 @@ function erekshe_branches() {
                     'Басшылық қабылдауы',
                     'Әдістемелік бөлім'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=80',
+                'image' => 'photos/branch-amanat.webp',
                 'mapCoordinates' => [
                     'lat' => 51.1283,
                     'lng' => 71.4305
@@ -124,7 +124,7 @@ function erekshe_branches() {
                     'Физиотерапия кабинеті',
                     'Сенсорлық интеграция залы'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80',
+                'image' => 'photos/branch-saryarka.webp',
                 'mapCoordinates' => [
                     'lat' => 51.1692,
                     'lng' => 71.4184
@@ -147,7 +147,7 @@ function erekshe_branches() {
                     'Психологиялық-педагогикалық блок',
                     'Логомассаж кабинеттері'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80',
+                'image' => 'photos/branch-akyn-sara.webp',
                 'mapCoordinates' => [
                     'lat' => 51.1045,
                     'lng' => 71.4121
@@ -219,7 +219,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'regenerated_image_1785993681411.webp'
+                'image' => 'photos/defectolog.webp'
             ],
             [
                 'id' => 'psycholog',
@@ -248,7 +248,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/psycholog.webp'
             ],
             [
                 'id' => 'afk',
@@ -277,7 +277,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/afk.webp'
             ],
             [
                 'id' => 'lfk',
@@ -306,7 +306,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/lfk.webp'
             ],
             [
                 'id' => 'physiotherapy',
@@ -335,7 +335,7 @@ function erekshe_services() {
                     'amanat',
                     'saryarka'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/gym.webp'
             ],
             [
                 'id' => 'pool',
@@ -416,7 +416,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/salt-room.webp'
             ],
             [
                 'id' => 'massage',
@@ -444,7 +444,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/massage.webp'
             ],
             [
                 'id' => 'social_adapt',
@@ -472,7 +472,7 @@ function erekshe_services() {
                     'saryarka',
                     'amanat'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/social-adapt.webp'
             ],
             [
                 'id' => 'parent_counseling',
@@ -559,7 +559,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'regenerated_image_1785993681411.webp'
+                'image' => 'photos/defectolog.webp'
             ],
             [
                 'id' => 'psycholog',
@@ -588,7 +588,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/psycholog.webp'
             ],
             [
                 'id' => 'afk',
@@ -617,7 +617,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/afk.webp'
             ],
             [
                 'id' => 'lfk',
@@ -645,7 +645,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/lfk.webp'
             ],
             [
                 'id' => 'physiotherapy',
@@ -671,7 +671,7 @@ function erekshe_services() {
                     'amanat',
                     'saryarka'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/gym.webp'
             ],
             [
                 'id' => 'pool',
@@ -750,7 +750,7 @@ function erekshe_services() {
                 'availableBranches' => [
                     'amanat'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/salt-room.webp'
             ],
             [
                 'id' => 'massage',
@@ -778,7 +778,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/massage.webp'
             ],
             [
                 'id' => 'social_adapt',
@@ -804,7 +804,7 @@ function erekshe_services() {
                     'saryarka',
                     'amanat'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/social-adapt.webp'
             ],
             [
                 'id' => 'parent_counseling',
@@ -1300,77 +1300,113 @@ function erekshe_gallery() {
         'ru' => [
             [
                 'id' => 'gal-1',
-                'title' => 'Занятия в бассейне',
-                'category' => 'pool',
-                'imageUrl' => 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80'
+                'title' => 'Праздник «Золотая осень»',
+                'category' => 'events',
+                'imageUrl' => 'photos/gal-autumn-1.webp'
             ],
             [
                 'id' => 'gal-2',
-                'title' => 'Галокамера (Соляная комната)',
-                'category' => 'salt_room',
-                'imageUrl' => 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80'
+                'title' => 'Утренник в центре',
+                'category' => 'events',
+                'imageUrl' => 'photos/gal-autumn-2.webp'
             ],
             [
                 'id' => 'gal-3',
-                'title' => 'Коррекция речи с логопедом',
-                'category' => 'classes',
-                'imageUrl' => 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'
+                'title' => 'День учителя',
+                'category' => 'events',
+                'imageUrl' => 'photos/gal-teachers-day.webp'
             ],
             [
                 'id' => 'gal-4',
-                'title' => 'Ресурсная встреча матерей в UMAY',
-                'category' => 'umay',
-                'imageUrl' => 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'
+                'title' => 'Праздничное мероприятие',
+                'category' => 'events',
+                'imageUrl' => 'photos/gal-event.webp'
             ],
             [
                 'id' => 'gal-5',
-                'title' => 'Праздничное мероприятие для детей',
-                'category' => 'events',
-                'imageUrl' => 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80'
+                'title' => 'Творческие занятия',
+                'category' => 'classes',
+                'imageUrl' => 'photos/gal-creative.webp'
             ],
             [
                 'id' => 'gal-6',
-                'title' => 'Занятие АФК на батутах и матах',
+                'title' => 'Сенсорная интеграция',
                 'category' => 'classes',
-                'imageUrl' => 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80'
+                'imageUrl' => 'photos/gal-sensory.webp'
+            ],
+            [
+                'id' => 'gal-7',
+                'title' => 'Группа «Бәйтерек»',
+                'category' => 'classes',
+                'imageUrl' => 'photos/gal-group-bayterek.webp'
+            ],
+            [
+                'id' => 'gal-8',
+                'title' => 'Группа «Сұнқар»',
+                'category' => 'classes',
+                'imageUrl' => 'photos/gal-group-sunkar.webp'
+            ],
+            [
+                'id' => 'gal-9',
+                'title' => 'Группа «Өркен»',
+                'category' => 'classes',
+                'imageUrl' => 'photos/gal-group-orken.webp'
             ]
         ],
         'kk' => [
             [
                 'id' => 'gal-1',
-                'title' => 'Бассейндегі сабақтар',
-                'category' => 'pool',
-                'imageUrl' => 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80'
+                'title' => '«Алтын күз» мерекесі',
+                'category' => 'events',
+                'imageUrl' => 'photos/gal-autumn-1.webp'
             ],
             [
                 'id' => 'gal-2',
-                'title' => 'Галокамера (Тұз бөлмесі)',
-                'category' => 'salt_room',
-                'imageUrl' => 'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80'
+                'title' => 'Орталықтағы ертеңгілік',
+                'category' => 'events',
+                'imageUrl' => 'photos/gal-autumn-2.webp'
             ],
             [
                 'id' => 'gal-3',
-                'title' => 'Логопедпен сөйлеуді түзету',
-                'category' => 'classes',
-                'imageUrl' => 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80'
+                'title' => 'Мұғалімдер күні',
+                'category' => 'events',
+                'imageUrl' => 'photos/gal-teachers-day.webp'
             ],
             [
                 'id' => 'gal-4',
-                'title' => 'UMAY аналардың ресурс кездесуі',
-                'category' => 'umay',
-                'imageUrl' => 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'
+                'title' => 'Мерекелік іс-шара',
+                'category' => 'events',
+                'imageUrl' => 'photos/gal-event.webp'
             ],
             [
                 'id' => 'gal-5',
-                'title' => 'Балаларға арналған мерекелік іс-шара',
-                'category' => 'events',
-                'imageUrl' => 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80'
+                'title' => 'Шығармашылық сабақтар',
+                'category' => 'classes',
+                'imageUrl' => 'photos/gal-creative.webp'
             ],
             [
                 'id' => 'gal-6',
-                'title' => 'Батуттардағы ЕАФК сабағы',
+                'title' => 'Сенсорлық интеграция',
                 'category' => 'classes',
-                'imageUrl' => 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80'
+                'imageUrl' => 'photos/gal-sensory.webp'
+            ],
+            [
+                'id' => 'gal-7',
+                'title' => '«Бәйтерек» тобы',
+                'category' => 'classes',
+                'imageUrl' => 'photos/gal-group-bayterek.webp'
+            ],
+            [
+                'id' => 'gal-8',
+                'title' => '«Сұнқар» тобы',
+                'category' => 'classes',
+                'imageUrl' => 'photos/gal-group-sunkar.webp'
+            ],
+            [
+                'id' => 'gal-9',
+                'title' => '«Өркен» тобы',
+                'category' => 'classes',
+                'imageUrl' => 'photos/gal-group-orken.webp'
             ]
         ],
     ];
