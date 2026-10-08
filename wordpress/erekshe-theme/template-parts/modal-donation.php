@@ -1,10 +1,10 @@
 <?php if (!defined('ABSPATH')) exit; ?>
 <div data-modal="donation" class="hidden fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 flex items-start justify-center overflow-y-auto p-4 sm:p-6">
   <div class="bg-white rounded-3xl w-full max-w-2xl my-8 shadow-2xl">
-    <div class="p-6 sm:p-8">
+    <div class="p-6">
       <div class="flex items-start justify-between gap-4 mb-2">
         <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100 text-amber-900 text-xs font-bold"><?php echo erekshe_icon('HeartHandshake', 'w-4 h-4'); ?><?php echo esc_html(erekshe_t('d_donationBadge')); ?></span>
-        <button type="button" data-modal-close class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition"><?php echo erekshe_icon('X', 'w-5 h-5'); ?></button>
+        <button type="button" data-modal-close style="width:2.25rem;height:2.25rem" class="rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition flex-shrink-0"><?php echo erekshe_icon('X', 'w-5 h-5'); ?></button>
       </div>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1"><?php echo esc_html(erekshe_t('d_donationBadge')); ?></h2>
       <p class="text-sm text-slate-600 mb-6"><?php echo esc_html(erekshe_t('donationSubtitle')); ?></p>

@@ -52,8 +52,8 @@ unset($_b);
             <?php foreach ($b['features'] as $f): ?><span class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-200 text-xs font-bold"><?php echo erekshe_icon('CheckCircle', 'w-3.5 h-3.5 text-emerald-600'); ?><?php echo esc_html($f); ?></span><?php endforeach; ?>
           </div>
         </div>
-        <div class="flex flex-wrap items-center gap-3 mt-6">
-          <button type="button" data-consult-open="<?php echo esc_attr($b['name']); ?>" class="px-6 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm transition shadow-lg inline-flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-3 mt-4">
+          <button type="button" data-consult-open="<?php echo esc_attr($b['name']); ?>" class="px-6 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm transition shadow-lg inline-flex items-center gap-2">
             <?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('b_BranchEnrollBtn', 'Записаться в этот филиал')); ?></span>
           </button>
           <?php if (!empty($b['map2gis'])): ?>
