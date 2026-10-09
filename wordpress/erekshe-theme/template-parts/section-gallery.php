@@ -8,7 +8,7 @@
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
       <?php foreach (erekshe_gallery() as $g): ?>
         <div class="relative rounded-2xl overflow-hidden group aspect-[3/4] bg-slate-200">
-          <img src="<?php echo esc_url($g['imageUrl']); ?>" alt="<?php echo esc_attr($g['title']); ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <img src="<?php echo esc_url($g['imageUrl']); ?>" alt="<?php echo esc_attr($g['title']); ?>" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
             <p class="text-white text-sm font-bold"><?php echo esc_html($g['title']); ?></p>
           </div>

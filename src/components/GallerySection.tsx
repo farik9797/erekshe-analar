@@ -65,7 +65,7 @@ export const GallerySection: React.FC = () => {
                 <img
                   src={item.imageUrl}
                   alt={item.title[lang]}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               ) : (
                 <div className="w-full h-full bg-emerald-800 text-white flex items-center justify-center p-4">

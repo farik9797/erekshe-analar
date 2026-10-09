@@ -59,7 +59,7 @@ export const CharitySection: React.FC<CharitySectionProps> = ({ hideHeader = fal
                     <img
                       src={project.image}
                       alt={project.title[lang]}
-                      className="w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   ) : (
                     <div className="w-full h-full bg-emerald-800 text-white flex items-center justify-center p-4">

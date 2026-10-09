@@ -63,7 +63,7 @@ export const NewsSection: React.FC = () => {
                   <img
                     src={news.image}
                     alt={news.title[lang]}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 ) : (
                   <div className="w-full h-full bg-emerald-800 text-white flex items-center justify-center p-4">
@@ -129,11 +129,11 @@ export const NewsSection: React.FC = () => {
             </h3>
 
             {!hideImages && (
-              <div className="rounded-2xl overflow-hidden mb-4 h-64 bg-slate-100">
+              <div className="relative rounded-2xl overflow-hidden mb-4 h-64 bg-slate-100">
                 <img
                   src={selectedNewsModal.image}
                   alt={selectedNewsModal.title[lang]}
-                  className="w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             )}

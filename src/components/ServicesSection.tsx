@@ -122,7 +122,7 @@ export const ServicesSection: React.FC = () => {
                     <img
                       src={service.image}
                       alt={service.title[lang]}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (
                     <div className="w-full h-full bg-emerald-800 text-white flex items-center justify-center p-4">
