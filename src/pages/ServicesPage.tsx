@@ -41,7 +41,7 @@ export const ServicesPage: React.FC = () => {
 
       {/* Main Interactive Services Catalogue Component */}
       <FadeIn>
-        <ServicesSection />
+        <ServicesSection hideHeader />
       </FadeIn>
 
       {/* Process / Step-by-Step Route */}

@@ -1,5 +1,7 @@
 <?php
 if (!defined('ABSPATH')) exit;
+// На своей странице тот же заголовок уже выводит баннер — шапку секции скрываем.
+$hide_header = !empty($args['hide_header']);
 $branches = erekshe_get_rows('branches', erekshe_branches());
 // нормализуем: у ACF-строк нет id, features могут прийти строкой (features_text)
 foreach ($branches as $i => &$_b) {
@@ -10,13 +12,15 @@ foreach ($branches as $i => &$_b) {
 }
 unset($_b);
 ?>
-<section id="branches" class="fade-in py-16 md:py-24 bg-white border-b border-slate-100">
+<section id="branches" class="fade-in <?php echo $hide_header ? 'pt-8 pb-16 md:pb-24' : 'py-16 md:py-24'; ?> bg-white border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4">
+    <?php if (!$hide_header): ?>
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('MapPin', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('b_BranchesNetworkBadge')); ?></span></div>
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('branchesTitle', '3 современных филиала для удобства семей')); ?></h2>
       <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('branchesDesc', 'Все филиалы оборудованы с учётом требований доступной среды и безопасности.')); ?></p>
     </div>
+    <?php endif; ?>
 
     <!-- Селектор -->
     <div class="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 md:grid-cols-4 sm:overflow-visible sm:pb-0 scrollbar-none mb-8">

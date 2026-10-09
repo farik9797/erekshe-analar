@@ -14,7 +14,12 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-export const BranchesSection: React.FC = () => {
+interface BranchesSectionProps {
+  /** Скрыть шапку секции — на своей странице тот же заголовок уже выводит баннер */
+  hideHeader?: boolean;
+}
+
+export const BranchesSection: React.FC<BranchesSectionProps> = ({ hideHeader = false }) => {
   const { lang, t, hideImages } = useAccessibility();
   const [consultOpen, setConsultOpen] = useState(false);
   const [selectedBranchId, setSelectedBranchId] = useState<string>(BRANCHES[0].id);
@@ -22,9 +27,13 @@ export const BranchesSection: React.FC = () => {
   const activeBranch = BRANCHES.find((b) => b.id === selectedBranchId) || BRANCHES[0];
 
   return (
-    <section id="branches" className="py-16 md:py-24 bg-slate-50 border-b border-slate-100">
+    <section
+      id="branches"
+      className={`${hideHeader ? 'pt-8 pb-16 md:pt-10 md:pb-24' : 'py-16 md:py-24'} bg-slate-50 border-b border-slate-100`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
+        {!hideHeader && (
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
             <Building2 className="w-4 h-4 text-emerald-600" />
@@ -37,6 +46,7 @@ export const BranchesSection: React.FC = () => {
             {t.branchesSubtitle}
           </p>
         </div>
+        )}
 
         {/* Branch Selector Tabs */}
         <div className="flex overflow-x-auto snap-x snap-mandatory gap-3 pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 md:grid-cols-4 sm:overflow-visible sm:pb-0 scrollbar-none mb-8">

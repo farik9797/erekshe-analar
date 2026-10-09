@@ -1,10 +1,15 @@
-<?php if (!defined('ABSPATH')) exit; ?>
-<section class="fade-in py-16 md:py-24 bg-white border-b border-slate-100">
+<?php if (!defined('ABSPATH')) exit;
+// На своей странице тот же заголовок уже выводит баннер — шапку секции скрываем.
+$hide_header = !empty($args['hide_header']);
+?>
+<section class="fade-in <?php echo $hide_header ? 'pt-8 pb-16 md:pb-24' : 'py-16 md:py-24'; ?> bg-white border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4">
+    <?php if (!$hide_header): ?>
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Newspaper', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('newsBadge')); ?></span></div>
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('newsTitle', 'Новости, акции и полезные статьи')); ?></h2>
     </div>
+    <?php endif; ?>
     <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-6 sm:overflow-visible sm:pb-0 scrollbar-none">
       <?php foreach (erekshe_get_rows('news', erekshe_news()) as $n): ?>
         <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between group flex-shrink-0 w-[85vw] max-w-[340px] sm:w-auto sm:max-w-none snap-center sm:snap-none">

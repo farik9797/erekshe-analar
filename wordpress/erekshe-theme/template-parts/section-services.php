@@ -1,14 +1,18 @@
 <?php if (!defined('ABSPATH')) exit;
-$cats = [['all',erekshe_t('filterAll')],['correction',erekshe_t('filterCorrection')],['physical',erekshe_t('filterPhysical')],['water',erekshe_t('filterWater')],['medical',erekshe_t('filterMedical')],['social',erekshe_t('filterSocial')],['parents',erekshe_t('filterParents')]];
+// На своей странице тот же заголовок уже выводит баннер — шапку секции скрываем.
+$hide_header = !empty($args['hide_header']);
+?>$cats = [['all',erekshe_t('filterAll')],['correction',erekshe_t('filterCorrection')],['physical',erekshe_t('filterPhysical')],['water',erekshe_t('filterWater')],['medical',erekshe_t('filterMedical')],['social',erekshe_t('filterSocial')],['parents',erekshe_t('filterParents')]];
 $services = erekshe_get_rows('services', erekshe_services());
 ?>
-<section id="services" class="fade-in py-16 md:py-24 bg-slate-50 border-b border-slate-100">
+<section id="services" class="fade-in <?php echo $hide_header ? 'pt-8 pb-16 md:pb-24' : 'py-16 md:py-24'; ?> bg-slate-50 border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4">
+    <?php if (!$hide_header): ?>
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Sparkles', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('b_ServicesCatalogBadge')); ?></span></div>
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('servicesTitle', 'Комплексный спектр реабилитационных и коррекционных услуг')); ?></h2>
       <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('servicesDesc', 'Получите информацию о программе реабилитации, услугах специалистов, расписании и динамике развития ребёнка.')); ?></p>
     </div>
+    <?php endif; ?>
     <div class="relative mb-8">
       <div class="flex items-center gap-2 overflow-x-auto scrollbar-none pb-2 -mx-4 px-4 sm:mx-0 sm:px-0" data-svc-filters>
         <?php foreach ($cats as $i => $c): ?>

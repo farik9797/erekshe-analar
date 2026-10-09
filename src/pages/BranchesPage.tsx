@@ -34,7 +34,7 @@ export const BranchesPage: React.FC = () => {
       </FadeIn>
 
       <FadeIn>
-        <BranchesSection />
+        <BranchesSection hideHeader />
       </FadeIn>
     </div>
   );

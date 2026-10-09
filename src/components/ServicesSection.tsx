@@ -22,7 +22,12 @@ import {
   MapPin
 } from 'lucide-react';
 
-export const ServicesSection: React.FC = () => {
+interface ServicesSectionProps {
+  /** Скрыть шапку секции — на своей странице тот же заголовок уже выводит баннер */
+  hideHeader?: boolean;
+}
+
+export const ServicesSection: React.FC<ServicesSectionProps> = ({ hideHeader = false }) => {
   const { lang, t, openServiceModal, openEnrollModal, hideImages } = useAccessibility();
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
@@ -58,9 +63,13 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-16 md:py-24 bg-slate-50 border-b border-slate-100">
+    <section
+      id="services"
+      className={`${hideHeader ? 'pt-8 pb-16 md:pt-10 md:pb-24' : 'py-16 md:py-24'} bg-slate-50 border-b border-slate-100`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
+        {!hideHeader && (
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
             <Sparkles className="w-4 h-4 text-emerald-600" />
@@ -73,6 +82,7 @@ export const ServicesSection: React.FC = () => {
             {t.servicesDesc}
           </p>
         </div>
+        )}
 
         {/* Category Filters */}
         <div className="relative mb-8">

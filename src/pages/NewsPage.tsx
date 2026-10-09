@@ -28,7 +28,7 @@ export const NewsPage: React.FC = () => {
       </FadeIn>
 
       <FadeIn>
-        <NewsSection />
+        <NewsSection hideHeader />
       </FadeIn>
       <FadeIn>
         <GallerySection />

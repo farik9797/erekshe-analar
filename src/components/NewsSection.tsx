@@ -4,7 +4,12 @@ import { NEWS } from '../data/mockData';
 import { NewsItem } from '../types';
 import { Newspaper, Calendar, ArrowRight, X, Sparkles } from 'lucide-react';
 
-export const NewsSection: React.FC = () => {
+interface NewsSectionProps {
+  /** Скрыть шапку секции — на своей странице тот же заголовок уже выводит баннер */
+  hideHeader?: boolean;
+}
+
+export const NewsSection: React.FC<NewsSectionProps> = ({ hideHeader = false }) => {
   const { lang, t, hideImages } = useAccessibility();
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [selectedNewsModal, setSelectedNewsModal] = useState<NewsItem | null>(null);
@@ -21,9 +26,13 @@ export const NewsSection: React.FC = () => {
     : NEWS.filter((n) => n.category === activeCategory);
 
   return (
-    <section id="news" className="py-16 md:py-24 bg-slate-50 border-b border-slate-100">
+    <section
+      id="news"
+      className={`${hideHeader ? 'pt-8 pb-16 md:pt-10 md:pb-24' : 'py-16 md:py-24'} bg-slate-50 border-b border-slate-100`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
+        {!hideHeader && (
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
             <Newspaper className="w-4 h-4 text-emerald-600" />
@@ -33,6 +42,7 @@ export const NewsSection: React.FC = () => {
             {t.newsTitle}
           </h2>
         </div>
+        )}
 
         {/* Category Filters */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
