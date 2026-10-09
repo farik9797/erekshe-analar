@@ -95,6 +95,18 @@
     });
 
 
+    /* ---------- Список WhatsApp методистов в баннере ---------- */
+    $$('[data-wa-list-toggle]').forEach(function (btn) {
+      var menu = $('[data-wa-list-menu]', btn.parentElement);
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (menu) menu.classList.toggle('hidden');
+      });
+    });
+    document.addEventListener('click', function () {
+      $$('[data-wa-list-menu]').forEach(function (m) { m.classList.add('hidden'); });
+    });
+
     /* ---------- Заявки форм уходят в WhatsApp ---------- */
     $$('[data-wa-form]').forEach(function (form) {
       form.addEventListener('submit', function (e) {

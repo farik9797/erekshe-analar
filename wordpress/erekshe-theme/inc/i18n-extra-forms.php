@@ -24,6 +24,10 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'f_consultCommentPh' => 'Напишите подробнее, что вас интересует',
             'f_consultSubmit'    => 'Отправить заявку',
             'f_consultBtn'       => 'Консультация по центру',
+            'b_MethodistsLabel'  => 'Методисты филиалов',
+            'b_MethAmanat'       => 'Аманат, 12/1',
+            'b_MethSaryarka'     => 'Сарыарка, 48',
+            'b_MethAkynSara'     => 'Акын Сара, 37',
 
             // Запрос на информацию и помощь
             'f_infoBadge'        => 'Центры EREKSHE ANALAR',
@@ -82,6 +86,10 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'f_consultCommentPh' => 'Сізді не қызықтыратынын толығырақ жазыңыз',
             'f_consultSubmit'    => 'Өтінім жіберу',
             'f_consultBtn'       => 'Орталық бойынша кеңес',
+            'b_MethodistsLabel'  => 'Филиал әдіскерлері',
+            'b_MethAmanat'       => 'Аманат, 12/1',
+            'b_MethSaryarka'     => 'Сарыарқа, 48',
+            'b_MethAkynSara'     => 'Ақын Сара, 37',
 
             'f_infoBadge'        => 'EREKSHE ANALAR орталықтары',
             'f_infoTitle'        => 'Ақпарат пен көмекке сұраныс',

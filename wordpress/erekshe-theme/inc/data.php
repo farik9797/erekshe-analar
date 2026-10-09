@@ -1167,7 +1167,7 @@ function erekshe_news() {
                 'date' => '28.01.2026',
                 'category' => 'news',
                 'badge' => 'Центр UMAY',
-                'image' => 'photos/news-sbo.webp'
+                'image' => 'photos/news-sbo2.webp'
             ],
             [
                 'id' => 'news-3',
@@ -1199,7 +1199,7 @@ function erekshe_news() {
                 'date' => '28.01.2026',
                 'category' => 'news',
                 'badge' => 'UMAY орталығы',
-                'image' => 'photos/news-sbo.webp'
+                'image' => 'photos/news-sbo2.webp'
             ],
             [
                 'id' => 'news-3',
