@@ -8,7 +8,7 @@
     <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-6 sm:overflow-visible sm:pb-0 scrollbar-none">
       <?php foreach (erekshe_get_rows('news', erekshe_news()) as $n): ?>
         <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between group flex-shrink-0 w-[85vw] max-w-[340px] sm:w-auto sm:max-w-none snap-center sm:snap-none">
-          <div class="relative aspect-[3/4] bg-slate-100"><img src="<?php echo esc_url(erekshe_img($n['image'])); ?>" alt="<?php echo esc_attr($n['title']); ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" /><div class="absolute top-4 left-4"><span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-600 text-white"><?php echo esc_html($n['badge']); ?></span></div></div>
+          <div class="relative aspect-square bg-slate-100"><img src="<?php echo esc_url(erekshe_img($n['image'])); ?>" alt="<?php echo esc_attr($n['title']); ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" /><div class="absolute top-4 left-4"><span class="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-emerald-600 text-white"><?php echo esc_html($n['badge']); ?></span></div></div>
           <div class="p-6 flex-1 flex flex-col justify-between gap-4">
             <div>
               <div class="flex items-center gap-1.5 text-slate-400 text-xs font-semibold mb-2"><?php echo erekshe_icon('Calendar', 'w-3.5 h-3.5'); ?><?php echo esc_html($n['date']); ?></div>

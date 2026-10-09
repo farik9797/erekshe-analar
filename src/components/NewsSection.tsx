@@ -58,7 +58,7 @@ export const NewsSection: React.FC = () => {
               key={news.id}
               className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between group flex-shrink-0 w-[85vw] max-w-[340px] sm:w-auto sm:max-w-none snap-center sm:snap-none"
             >
-              <div className="relative aspect-[3/4] bg-slate-100">
+              <div className="relative aspect-square bg-slate-100">
                 {!hideImages ? (
                   <img
                     src={news.image}

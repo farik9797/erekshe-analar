@@ -10,13 +10,22 @@ import {
   ShieldCheck
 } from 'lucide-react';
 
-export const CharitySection: React.FC = () => {
+interface CharitySectionProps {
+  /** Скрыть шапку секции — на /charity тот же заголовок уже выводит баннер страницы */
+  hideHeader?: boolean;
+}
+
+export const CharitySection: React.FC<CharitySectionProps> = ({ hideHeader = false }) => {
   const { lang, t, openDonationModal, hideImages } = useAccessibility();
 
   return (
-    <section id="charity" className="py-16 md:py-24 bg-slate-50 border-b border-slate-100">
+    <section
+      id="charity"
+      className={`${hideHeader ? 'pt-8 pb-16 md:pt-10 md:pb-24' : 'py-16 md:py-24'} bg-slate-50 border-b border-slate-100`}
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
+        {!hideHeader && (
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
             <Heart className="w-4 h-4 text-emerald-600 fill-emerald-500" />
@@ -29,6 +38,7 @@ export const CharitySection: React.FC = () => {
             {t.charityDesc}
           </p>
         </div>
+        )}
 
         {/* Projects Grid */}
         <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none mb-16">
@@ -44,7 +54,7 @@ export const CharitySection: React.FC = () => {
                 className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between flex-shrink-0 w-[85vw] max-w-[400px] sm:w-auto sm:max-w-none snap-center sm:snap-none"
               >
                 {/* Project Image */}
-                <div className="relative aspect-[3/4] bg-slate-100">
+                <div className="relative aspect-square bg-slate-100">
                   {!hideImages ? (
                     <img
                       src={project.image}

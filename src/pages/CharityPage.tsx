@@ -35,7 +35,7 @@ export const CharityPage: React.FC = () => {
       </FadeIn>
 
       <FadeIn>
-        <CharitySection />
+        <CharitySection hideHeader />
       </FadeIn>
       <FadeIn>
         <DocumentsSection />
