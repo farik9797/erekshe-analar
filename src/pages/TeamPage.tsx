@@ -6,7 +6,7 @@ import { FadeIn } from '../components/FadeIn';
 import { Users, Award, Sparkles } from 'lucide-react';
 
 export const TeamPage: React.FC = () => {
-  const { lang, t, openEnrollModal } = useAccessibility();
+  const { lang, t } = useAccessibility();
 
   return (
     <div className="bg-slate-50 min-h-screen py-10 space-y-12">
@@ -23,13 +23,6 @@ export const TeamPage: React.FC = () => {
             <p className="text-slate-200 text-base md:text-lg leading-relaxed max-w-2xl mb-6">
               {t.teamDesc}
             </p>
-            <button
-              onClick={() => openEnrollModal()}
-              className="px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-sm transition shadow-lg shadow-emerald-500/30 flex items-center gap-2 cursor-pointer"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>{t.btnEnroll}</span>
-            </button>
           </div>
         </div>
       </FadeIn>

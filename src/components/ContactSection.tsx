@@ -11,7 +11,12 @@ import {
   Send
 } from 'lucide-react';
 
-export const ContactSection: React.FC = () => {
+interface ContactSectionProps {
+  /** Скрыть CTA-карточку записи — на странице «Контакты» она не нужна */
+  hideCta?: boolean;
+}
+
+export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false }) => {
   const { lang, t, openEnrollModal } = useAccessibility();
 
   return (
@@ -115,6 +120,7 @@ export const ContactSection: React.FC = () => {
               </p>
             </div>
 
+            {!hideCta && (
             <div className="bg-white p-6 rounded-2xl border border-slate-200 flex flex-col items-center text-center gap-4">
               <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
                 <Sparkles className="w-6 h-6" />
@@ -135,6 +141,7 @@ export const ContactSection: React.FC = () => {
                 <span>{t.contactFillForm}</span>
               </button>
             </div>
+            )}
           </div>
         </div>
       </div>
