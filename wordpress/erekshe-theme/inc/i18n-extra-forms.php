@@ -23,7 +23,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'f_consultComment'   => 'Ваш вопрос / комментарий',
             'f_consultCommentPh' => 'Напишите подробнее, что вас интересует',
             'f_consultSubmit'    => 'Отправить заявку',
-            'f_consultBtn'       => 'Как попасть в центр?',
+            'f_consultBtn'       => 'Консультация по центру',
 
             // Запрос на информацию и помощь
             'f_infoBadge'        => 'Центры EREKSHE ANALAR',
@@ -81,7 +81,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'f_consultComment'   => 'Сұрағыңыз / пікіріңіз',
             'f_consultCommentPh' => 'Сізді не қызықтыратынын толығырақ жазыңыз',
             'f_consultSubmit'    => 'Өтінім жіберу',
-            'f_consultBtn'       => 'Орталыққа қалай түсуге болады?',
+            'f_consultBtn'       => 'Орталық бойынша кеңес',
 
             'f_infoBadge'        => 'EREKSHE ANALAR орталықтары',
             'f_infoTitle'        => 'Ақпарат пен көмекке сұраныс',

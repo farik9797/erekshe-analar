@@ -195,7 +195,7 @@ export const Header: React.FC = () => {
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-md shadow-emerald-600/20 transition hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
           >
             <Sparkles className="w-4 h-4" />
-            <span>{lang === 'ru' ? 'Как попасть в центр?' : 'Орталыққа қалай түсуге болады?'}</span>
+            <span>{lang === 'ru' ? 'Консультация по центру' : 'Орталық бойынша кеңес'}</span>
           </button>
         </div>
 
@@ -264,7 +264,7 @@ export const Header: React.FC = () => {
               className="w-full py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 active:scale-[0.98] transition cursor-pointer"
             >
               <Sparkles className="w-4 h-4" />
-              <span>{lang === 'ru' ? 'Как попасть в центр?' : 'Орталыққа қалай түсуге болады?'}</span>
+              <span>{lang === 'ru' ? 'Консультация по центру' : 'Орталық бойынша кеңес'}</span>
             </button>
 
             <button

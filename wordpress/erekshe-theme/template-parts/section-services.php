@@ -92,8 +92,6 @@ $services = erekshe_get_rows('services', erekshe_services());
             </ul>
           </div>
           <?php endif; ?>
-
-          <button type="button" data-enroll-open class="w-full py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg transition flex items-center justify-center gap-2"><?php echo erekshe_icon('Sparkles', 'w-5 h-5'); ?><span><?php echo esc_html(erekshe_t('btnEnroll')); ?></span></button>
         </div>
       </div>
     </div>

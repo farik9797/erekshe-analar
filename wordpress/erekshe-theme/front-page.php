@@ -29,8 +29,8 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
           <?php echo esc_html(erekshe_field('hero_desc', erekshe_t('heroDescription'))); ?>
         </p>
         <div class="flex flex-col items-center sm:flex-row sm:flex-wrap sm:items-center gap-3.5 pt-2">
-          <button type="button" data-enroll-open class="w-full justify-center text-center sm:w-auto flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg shadow-emerald-600/25 transition cursor-pointer">
-            <?php echo erekshe_icon('Sparkles', 'w-5 h-5'); ?><span><?php echo esc_html(erekshe_t('heroCtaEnroll')); ?></span>
+          <button type="button" data-consult-open class="w-full justify-center text-center sm:w-auto flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg shadow-emerald-600/25 transition cursor-pointer">
+            <?php echo erekshe_icon('Sparkles', 'w-5 h-5'); ?><span><?php echo esc_html(erekshe_t('f_consultBtn')); ?></span>
           </button>
           <a href="<?php echo esc_url(erekshe_nav_url('branches')); ?>" class="w-full justify-center text-center sm:w-auto flex items-center gap-2 px-5 py-3.5 rounded-xl text-sm font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 transition shadow-xs">
             <?php echo erekshe_icon('MapPin', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('heroCtaBranches')); ?></span>

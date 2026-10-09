@@ -101,15 +101,6 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ hideHeader = false }) 
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100">
-                  <button
-                    onClick={() => setSelectedNewsModal(news)}
-                    className="flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800 transition"
-                  >
-                    <span>{t.btnReadMore}</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-                </div>
               </div>
             </div>
           ))}

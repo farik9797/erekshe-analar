@@ -8,7 +8,6 @@ export const ServiceDetailModal: React.FC = () => {
     t,
     selectedServiceForModal,
     closeServiceModal,
-    openEnrollModal,
     hideImages
   } = useAccessibility();
 
@@ -103,15 +102,6 @@ export const ServiceDetailModal: React.FC = () => {
               {t.btnClose}
             </button>
 
-            <button
-              onClick={() => {
-                closeServiceModal();
-                openEnrollModal('', service.id);
-              }}
-              className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-md shadow-emerald-600/20"
-            >
-              {t.svcModalEnroll}
-            </button>
           </div>
         </div>
       </div>

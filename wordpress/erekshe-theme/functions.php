@@ -5,7 +5,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('EREKSHE_VER', '1.3.1');
+define('EREKSHE_VER', '1.4.0');
 define('EREKSHE_DIR', get_template_directory());
 define('EREKSHE_URI', get_template_directory_uri());
 

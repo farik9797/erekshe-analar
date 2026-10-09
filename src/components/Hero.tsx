@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ConsultModal } from './ConsultModal';
 import { useAccessibility } from '../context/AccessibilityContext';
 import heroImg from '../assets/images/regenerated_image_1785993681411.webp';
 import {
@@ -13,7 +14,8 @@ import {
 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
-  const { t, openEnrollModal, hideImages } = useAccessibility();
+  const { lang, t, hideImages } = useAccessibility();
+  const [consultOpen, setConsultOpen] = useState(false);
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-emerald-50/70 via-white to-slate-50 py-5 md:py-20 border-b border-slate-100">
@@ -45,11 +47,11 @@ export const Hero: React.FC = () => {
             {/* Action Buttons — на мобильном во всю ширину (макс. 390px), по центру; на десктопе в ряд по контенту */}
             <div className="flex flex-col items-center sm:flex-row sm:flex-wrap sm:items-center gap-3.5 pt-2">
               <button
-                onClick={() => openEnrollModal()}
+                onClick={() => setConsultOpen(true)}
                 className="w-full justify-center text-center sm:w-auto flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg shadow-emerald-600/25 transition hover:scale-[1.02] active:scale-[0.98]"
               >
                 <Sparkles className="w-5 h-5" />
-                <span>{t.heroCtaEnroll}</span>
+                <span>{lang === 'ru' ? 'Консультация по центру' : 'Орталық бойынша кеңес'}</span>
               </button>
 
               <a
@@ -156,6 +158,8 @@ export const Hero: React.FC = () => {
           </div>
         </div>
       </div>
+      <ConsultModal open={consultOpen} onClose={() => setConsultOpen(false)} />
+
     </section>
   );
 };
