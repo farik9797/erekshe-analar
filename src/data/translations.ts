@@ -287,7 +287,6 @@ export const translations = {
     donationIban: 'ИИК (KZT): KZ918562203127814849',
     donationBankName: 'АО «Банк ЦентрКредит»',
     donationKbe: 'КБЕ: 18 (Некоммерческая организация)',
-    donationQrNote: 'Отсканируйте QR-код в приложении Kaspi.kz для быстрого взноса:',
 
     // Footer
     footerDesc: 'Общественный фонд комплексной реабилитации и социальной адаптации детей с особыми образовательными потребностями в городе Астана.',
@@ -327,7 +326,7 @@ export const translations = {
     charityRaised: 'Собрано:',
     charityGoal: 'Цель:',
     charityTransparency: 'Прозрачность и отчётность',
-    charityRequisites: 'Реквизиты и QR-код',
+    charityRequisites: 'Реквизиты фонда',
     branchEnroll: 'Записаться в этот филиал',
     rehabCtaTitle: 'Готовы сделать первый шаг к реабилитации?',
     rehabCtaDesc: 'Оставьте заявку, и наш экспертный методист свяжется с вами для первичной бесплатной консультации.',
@@ -627,7 +626,6 @@ export const translations = {
     donationIban: 'ИИК (KZT): KZ918562203127814849',
     donationBankName: '«Банк ЦентрКредит» АҚ',
     donationKbe: 'КБЕ: 18 (Коммерциялық емес ұйым)',
-    donationQrNote: 'Жылдам аударым үшін Kaspi.kz қосымшасында QR-кодты сканерлеңіз:',
 
     // Footer
     footerDesc: 'Астана қаласындағы ерекше білім беру қажеттіліктері бар балаларды кешенді оңалту және әлеуметтік бейімдеу қоғамдық қоры.',
@@ -667,7 +665,7 @@ export const translations = {
     charityRaised: 'Жиналды:',
     charityGoal: 'Мақсат:',
     charityTransparency: 'Ашықтық пен есептілік',
-    charityRequisites: 'Деректемелер мен QR-код',
+    charityRequisites: 'Қордың деректемелері',
     branchEnroll: 'Осы филиалға жазылу',
     rehabCtaTitle: 'Оңалтуға алғашқы қадам жасауға дайынсыз ба?',
     rehabCtaDesc: 'Өтінім қалдырыңыз, біздің әдіскер-маман сізбен алғашқы тегін кеңес беру үшін хабарласады.',

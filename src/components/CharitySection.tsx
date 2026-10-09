@@ -7,8 +7,7 @@ import {
   CheckCircle2,
   Sparkles,
   Users,
-  ShieldCheck,
-  QrCode
+  ShieldCheck
 } from 'lucide-react';
 
 export const CharitySection: React.FC = () => {
@@ -139,7 +138,7 @@ export const CharitySection: React.FC = () => {
               onClick={openDonationModal}
               className="px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-950 bg-amber-400 hover:bg-amber-300 transition shadow-lg flex items-center gap-2"
             >
-              <QrCode className="w-4 h-4" />
+              <HeartHandshake className="w-4 h-4" />
               <span>{t.charityRequisites}</span>
             </button>
           </div>

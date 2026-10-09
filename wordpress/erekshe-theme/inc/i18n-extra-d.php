@@ -47,7 +47,6 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'd_enrollSubmit'       => 'Отправить заявку',
             // modal donation
             'd_donationBadge'    => 'Поддержать фонд «EREKSHE ANALAR»',
-            'd_donationQr'       => 'Отсканируйте QR-код в приложении Kaspi.kz для быстрого взноса:',
             'd_donationDetails'  => 'Реквизиты фонда:',
             'd_donationOrg'      => 'Организация:',
             'd_donationBin'      => 'БИН:',
@@ -102,7 +101,6 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'd_enrollSubmit'       => 'Өтінім жіберу',
             // modal donation
             'd_donationBadge'    => '«EREKSHE ANALAR» қорын қолдау',
-            'd_donationQr'       => 'Жылдам жарна үшін Kaspi.kz қосымшасында QR-кодты сканерлеңіз:',
             'd_donationDetails'  => 'Қордың деректемелері:',
             'd_donationOrg'      => 'Ұйым:',
             'd_donationBin'      => 'БСН:',
