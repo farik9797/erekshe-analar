@@ -28,7 +28,7 @@ $services = erekshe_get_rows('services', erekshe_services());
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6" data-svc-grid>
       <?php foreach ($services as $i => $s): ?>
         <div data-svc-cat="<?php echo esc_attr($s['category']); ?>" data-service-open="svc-<?php echo $i; ?>" class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all flex flex-col overflow-hidden group cursor-pointer">
-          <div class="relative aspect-[3/4] overflow-hidden bg-slate-100">
+          <div class="relative aspect-square overflow-hidden bg-slate-100">
             <img src="<?php echo esc_url(erekshe_img($s['image'])); ?>" alt="<?php echo esc_attr($s['title']); ?>" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
             <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl flex items-center gap-2 shadow-xs"><?php echo erekshe_icon($s['iconName'], 'w-6 h-6 text-emerald-600'); ?><span class="text-xs font-bold text-slate-900"><?php echo esc_html($s['targetAge']); ?></span></div>
           </div>

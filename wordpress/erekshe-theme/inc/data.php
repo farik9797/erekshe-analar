@@ -552,7 +552,7 @@ function erekshe_services() {
                     'Мектепке және оқуға дайындық',
                     'Негізгі тұрмыстық білімді меңгеру'
                 ],
-                'duration' => '40 минут',
+                'duration' => '20–25 минут',
                 'targetAge' => '2-ден 18 жасқа дейін',
                 'availableBranches' => [
                     'amanat',
@@ -581,7 +581,7 @@ function erekshe_services() {
                     'Эмоцияларды білдіру және қарым-қатынас жасау білігі',
                     'Бұлшықет пен жүйке кернеуін басу'
                 ],
-                'duration' => '45 минут',
+                'duration' => '20–25 минут',
                 'targetAge' => '2-ден 18 жасқа дейін',
                 'availableBranches' => [
                     'amanat',
@@ -610,7 +610,7 @@ function erekshe_services() {
                     'Жалпы төзімділікті арттыру',
                     'Жаңа моторлық дағдыларды меңгеру'
                 ],
-                'duration' => '45 минут',
+                'duration' => '30–40 минут',
                 'targetAge' => '1.5-тен 18 жасқа дейін',
                 'availableBranches' => [
                     'amanat',
@@ -638,7 +638,7 @@ function erekshe_services() {
                     'Контрактуралардың алдын алу',
                     'Өздігінен қозғалу дағдыларын қалыптастыру'
                 ],
-                'duration' => '45–60 минут',
+                'duration' => '30–40 минут',
                 'targetAge' => '1.5-тен 18 жасқа дейін',
                 'availableBranches' => [
                     'amanat',
@@ -665,7 +665,7 @@ function erekshe_services() {
                     'Микроциркуляцияны жақсарту',
                     'Жергілікті иммунитетті нығайту'
                 ],
-                'duration' => '15–30 минут',
+                'duration' => '15–20 минут',
                 'targetAge' => '2-ден 18 жасқа дейін',
                 'availableBranches' => [
                     'amanat',
@@ -693,7 +693,7 @@ function erekshe_services() {
                     'Судағы координацияны жақсарту',
                     'Оң эмоционалдық әсер мен стрессті басу'
                 ],
-                'duration' => '30–45 минут',
+                'duration' => '20–25 минут',
                 'targetAge' => '1.5-тен 18 жасқа дейін',
                 'availableBranches' => [
                     'amanat',
@@ -745,7 +745,7 @@ function erekshe_services() {
                     'Тыныс алу жолдарын тазарту',
                     'Психоэмоционалдық фонды жақсарту'
                 ],
-                'duration' => '30 минут',
+                'duration' => '20 минут',
                 'targetAge' => '1.5-тен 18 жасқа дейін',
                 'availableBranches' => [
                     'amanat'
@@ -798,7 +798,7 @@ function erekshe_services() {
                     'Ата-анаға тәуелділікті азайту',
                     'Үйде қауіпсіз мінез-құлық дағдыларын қалыптастыру'
                 ],
-                'duration' => '60 минут',
+                'duration' => '20 минут',
                 'targetAge' => '4-тен 18 жасқа дейін',
                 'availableBranches' => [
                     'saryarka',
