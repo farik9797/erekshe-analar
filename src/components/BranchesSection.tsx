@@ -215,11 +215,20 @@ export const BranchesSection: React.FC<BranchesSectionProps> = ({ hideHeader = f
           <div className="lg:col-span-5">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100">
               {!hideImages ? (
-                <img
-                  src={activeBranch.image}
-                  alt={activeBranch.name[lang]}
-                  className="w-full aspect-[3/4] object-cover"
-                />
+                <div className="relative w-full aspect-[3/4]">
+                  {/* Размытая подложка — фото филиалов разных пропорций, снимок не обрезаем */}
+                  <img
+                    src={activeBranch.image}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50"
+                  />
+                  <img
+                    src={activeBranch.image}
+                    alt={activeBranch.name[lang]}
+                    className="absolute inset-0 w-full h-full object-contain"
+                  />
+                </div>
               ) : (
                 <div className="w-full aspect-[3/4] bg-slate-800 text-slate-200 flex flex-col items-center justify-center p-6 text-center">
                   <Building2 className="w-12 h-12 text-emerald-400 mb-2" />
