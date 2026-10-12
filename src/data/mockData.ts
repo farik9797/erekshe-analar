@@ -14,6 +14,7 @@ import phMassage from '../assets/images/photos/massage.webp';
 import phSaltRoom from '../assets/images/photos/salt-room.webp';
 import phSocialAdapt from '../assets/images/photos/social-adapt.webp';
 import phGym from '../assets/images/photos/gym.webp';
+import phPool from '../assets/images/photos/pool.webp';
 import phBranchAmanat from '../assets/images/photos/branch-amanat.webp';
 import phBranchSaryarka from '../assets/images/photos/branch-saryarka.webp';
 import phBranchAkynSara from '../assets/images/photos/branch-akyn-sara.webp';
@@ -304,7 +305,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '20–25 минут', kk: '20–25 минут' },
     targetAge: { ru: 'От 1.5 до 18 лет', kk: '1.5-тен 18 жасқа дейін' },
     availableBranches: ['amanat', 'akyn_sara'],
-    image: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80'
+    image: phPool
   },
   {
     id: 'hydrobath',

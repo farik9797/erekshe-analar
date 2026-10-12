@@ -364,7 +364,7 @@ function erekshe_services() {
                     'amanat',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/pool.webp'
             ],
             [
                 'id' => 'hydrobath',
@@ -699,7 +699,7 @@ function erekshe_services() {
                     'amanat',
                     'akyn_sara'
                 ],
-                'image' => 'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=800&q=80'
+                'image' => 'photos/pool.webp'
             ],
             [
                 'id' => 'hydrobath',
