@@ -15,7 +15,7 @@ $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1"><?php echo esc_html(erekshe_t('f_infoTitle')); ?></h2>
       <p class="text-sm text-slate-600 mb-6"><?php echo esc_html(erekshe_t('f_infoSubtitle')); ?></p>
 
-      <form class="flex flex-col gap-4" data-wa-form data-wa="77761639521" data-wa-title="<?php echo esc_attr(erekshe_t('f_infoTitle')); ?>">
+      <form class="flex flex-col gap-4" data-wa-form data-wa-from="branch" data-wa-title="<?php echo esc_attr(erekshe_t('f_infoTitle')); ?>">
         <div>
           <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoParent')); ?> *</label>
           <input type="text" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoParent')); ?>"
@@ -47,9 +47,11 @@ $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
 
         <div>
           <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoBranch')); ?> *</label>
-          <select required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoBranch')); ?>" class="<?php echo $fieldCls; ?>">
+          <select required data-wa-branch data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoBranch')); ?>" class="<?php echo $fieldCls; ?>">
             <?php foreach ($branches as $b): ?>
-              <option value="<?php echo esc_attr($b['name'] . ' — ' . $b['address']); ?>"><?php echo esc_html($b['name'] . ' — ' . $b['address']); ?></option>
+              <option value="<?php echo esc_attr($b['name']); ?>" data-wa="<?php echo esc_attr(preg_replace('/\D/', '', $b['methodistPhone'])); ?>">
+                <?php echo esc_html($b['name'] . ' — ' . $b['address']); ?>
+              </option>
             <?php endforeach; ?>
           </select>
         </div>

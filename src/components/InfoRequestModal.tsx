@@ -4,8 +4,7 @@ import { useAccessibility } from '../context/AccessibilityContext';
 import { BRANCHES } from '../data/mockData';
 import { X, Send, Info } from 'lucide-react';
 
-// Заявка уходит в WhatsApp методиста
-const WA_NUMBER = '77761639521';
+// Заявка уходит методисту ВЫБРАННОГО филиала — иначе всё валится на один номер
 
 const INTERESTS = [
   { ru: 'Расписание занятий ребёнка', kk: 'Баланың сабақ кестесі' },
@@ -34,9 +33,7 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
   const [useWhatsapp, setUseWhatsapp] = useState(true);
   const [childName, setChildName] = useState('');
   const [childAge, setChildAge] = useState('');
-  const [branch, setBranch] = useState(
-    BRANCHES[0] ? `${BRANCHES[0].name[lang]} — ${BRANCHES[0].address[lang]}` : ''
-  );
+  const [branchId, setBranchId] = useState(BRANCHES[0]?.id ?? '');
   const [interests, setInterests] = useState<string[]>([]);
   const [diagnosis, setDiagnosis] = useState('');
   const [comment, setComment] = useState('');
@@ -53,6 +50,8 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const branch = BRANCHES.find((b) => b.id === branchId);
+    if (!branch) return;
     const L = (r: string, k: string) => (ru ? r : k);
     const lines = [
       L('Запрос на информацию и помощь', 'Ақпарат пен көмекке сұраныс'),
@@ -62,12 +61,13 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
       `${L('Связь по WhatsApp', 'WhatsApp арқылы байланыс')}: ${useWhatsapp ? L('да', 'иә') : L('нет', 'жоқ')}`,
       `${L('Имя ребёнка', 'Баланың аты')}: ${childName}`,
       `${L('Возраст ребёнка', 'Баланың жасы')}: ${childAge}`,
-      `${L('Филиал', 'Филиал')}: ${branch}`,
+      `${L('Филиал', 'Филиал')}: ${branch ? branch.name[lang] : ''}`,
       interests.length ? `${L('Интересует', 'Қызықтырады')}: ${interests.join(', ')}` : '',
       diagnosis ? `${L('Диагноз / особенности', 'Диагноз / ерекшеліктері')}: ${diagnosis}` : '',
       comment ? `${L('Вопрос', 'Сұрақ')}: ${comment}` : '',
     ].filter(Boolean);
-    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener,noreferrer');
+    const wa = branch.methodist.phone.replace(/\D/g, '');
+    window.open(`https://wa.me/${wa}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener,noreferrer');
     onClose();
   };
 
@@ -142,9 +142,9 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
               <label className={labelCls} htmlFor="ir-branch">
                 {ru ? 'Предпочтительный филиал в Астане' : 'Астанадағы қалаулы филиал'} *
               </label>
-              <select id="ir-branch" required value={branch} onChange={(e) => setBranch(e.target.value)} className={inputCls}>
+              <select id="ir-branch" required value={branchId} onChange={(e) => setBranchId(e.target.value)} className={inputCls}>
                 {BRANCHES.map((b) => (
-                  <option key={b.id} value={`${b.name[lang]} — ${b.address[lang]}`}>
+                  <option key={b.id} value={b.id}>
                     {b.name[lang]} — {b.address[lang]}
                   </option>
                 ))}
