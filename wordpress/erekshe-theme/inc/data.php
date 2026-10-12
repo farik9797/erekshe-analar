@@ -1499,14 +1499,14 @@ function erekshe_team_roster() {
             [
                 'group' => 'logoped',
                 'name' => 'Тенилбаева Галия Кенжеевна',
-                'education' => 'Высшее / Магистр',
+                'education' => 'Высшее / магистр',
                 'branch' => 'Акын Сара 37',
                 'note' => ''
             ],
             [
                 'group' => 'logoped',
                 'name' => 'Баенова Айгуль Мусаевна',
-                'education' => 'Высшее / Магистр',
+                'education' => 'Высшее / магистр',
                 'branch' => 'Сарыарка 48',
                 'note' => ''
             ],
@@ -1520,49 +1520,49 @@ function erekshe_team_roster() {
             [
                 'group' => 'defectolog',
                 'name' => 'Еркін Ақерке Мұхитдінқызы',
-                'education' => 'Высшее / Магистр',
+                'education' => 'Высшее / магистр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'defectolog',
                 'name' => 'Төлеген Айдана Дәрісқызы',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Сарыарка 48',
                 'note' => ''
             ],
             [
                 'group' => 'defectolog',
                 'name' => 'Мадени Алмагул',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'psycholog',
                 'name' => 'Махметова Қарлығаш Аманкуловна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'psycholog',
                 'name' => 'Мұсылмаңқұлова Сезім Қуатқызы',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'psycholog',
                 'name' => 'Куспекова Алия Какеновна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Сарыарка 48',
                 'note' => ''
             ],
             [
                 'group' => 'psycholog',
                 'name' => 'Айтжанова Фарида Женисовна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Акын Сара 37',
                 'note' => ''
             ],
@@ -1611,14 +1611,14 @@ function erekshe_team_roster() {
             [
                 'group' => 'social',
                 'name' => 'Баяндинова Алия Жетписбаевна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'social',
                 'name' => 'Каймолдина Арайлым Кажимуратовна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Сарыарка 48',
                 'note' => ''
             ],
@@ -2019,14 +2019,14 @@ function erekshe_team_roster() {
             [
                 'group' => 'logoped',
                 'name' => 'Тенилбаева Галия Кенжеевна',
-                'education' => 'Высшее / Магистр',
+                'education' => 'Высшее / магистр',
                 'branch' => 'Акын Сара 37',
                 'note' => ''
             ],
             [
                 'group' => 'logoped',
                 'name' => 'Баенова Айгуль Мусаевна',
-                'education' => 'Высшее / Магистр',
+                'education' => 'Высшее / магистр',
                 'branch' => 'Сарыарка 48',
                 'note' => ''
             ],
@@ -2040,49 +2040,49 @@ function erekshe_team_roster() {
             [
                 'group' => 'defectolog',
                 'name' => 'Еркін Ақерке Мұхитдінқызы',
-                'education' => 'Высшее / Магистр',
+                'education' => 'Высшее / магистр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'defectolog',
                 'name' => 'Төлеген Айдана Дәрісқызы',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Сарыарка 48',
                 'note' => ''
             ],
             [
                 'group' => 'defectolog',
                 'name' => 'Мадени Алмагул',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'psycholog',
                 'name' => 'Махметова Қарлығаш Аманкуловна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'psycholog',
                 'name' => 'Мұсылмаңқұлова Сезім Қуатқызы',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'psycholog',
                 'name' => 'Куспекова Алия Какеновна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Сарыарка 48',
                 'note' => ''
             ],
             [
                 'group' => 'psycholog',
                 'name' => 'Айтжанова Фарида Женисовна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Акын Сара 37',
                 'note' => ''
             ],
@@ -2131,14 +2131,14 @@ function erekshe_team_roster() {
             [
                 'group' => 'social',
                 'name' => 'Баяндинова Алия Жетписбаевна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Аманат 12/1',
                 'note' => ''
             ],
             [
                 'group' => 'social',
                 'name' => 'Каймолдина Арайлым Кажимуратовна',
-                'education' => 'Высшее / Бакалавр',
+                'education' => 'Высшее / бакалавр',
                 'branch' => 'Сарыарка 48',
                 'note' => ''
             ],
@@ -2515,4 +2515,19 @@ function erekshe_img($src) {
     if (!$src) return '';
     if (strpos($src, 'http') === 0) return $src;
     return EREKSHE_URI . '/assets/images/' . $src;
+}
+
+// Образование в ростере хранится одной строкой по-русски — переводим при выводе.
+function erekshe_edu($value) {
+    if (!$value) return '';
+    $L = function_exists('erekshe_lang') ? erekshe_lang() : 'ru';
+    if ($L !== 'kk') return $value;
+    $map = [
+        'Среднее'              => 'Орта',
+        'Среднее специальное'  => 'Орта арнаулы',
+        'Высшее'               => 'Жоғары',
+        'Высшее / бакалавр'    => 'Жоғары / бакалавр',
+        'Высшее / магистр'     => 'Жоғары / магистр',
+    ];
+    return isset($map[$value]) ? $map[$value] : $value;
 }

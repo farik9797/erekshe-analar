@@ -29,6 +29,16 @@ export const pluralRu = (n: number, one: string, few: string, many: string): str
   return many;
 };
 
+// Образование хранится одной строкой по-русски — переводим при выводе,
+// чтобы не дублировать поле у всех записей ростера.
+const EDU_MAP: Record<string, { ru: string; kk: string }> = {
+  'Среднее': { ru: 'Среднее', kk: 'Орта' },
+  'Среднее специальное': { ru: 'Среднее специальное', kk: 'Орта арнаулы' },
+  'Высшее': { ru: 'Высшее', kk: 'Жоғары' },
+  'Высшее / бакалавр': { ru: 'Высшее / бакалавр', kk: 'Жоғары / бакалавр' },
+  'Высшее / магистр': { ru: 'Высшее / магистр', kk: 'Жоғары / магистр' },
+};
+
 export const TeamRoster: React.FC<{ withHeading?: boolean }> = ({ withHeading = false }) => {
   const { lang, t } = useAccessibility();
   const L: 'ru' | 'kk' = lang === 'ru' ? 'ru' : 'kk';
@@ -56,7 +66,7 @@ export const TeamRoster: React.FC<{ withHeading?: boolean }> = ({ withHeading = 
                 <div className="min-w-0">
                   <p className="font-bold text-slate-900 text-sm leading-snug">{p.name}</p>
                   {p.note && <p className="text-[11px] text-emerald-700 font-semibold mt-0.5">{typeof p.note === 'string' ? p.note : p.note[L]}</p>}
-                  {p.education && <p className="text-xs text-slate-500 mt-1">{EDU[L]}: {p.education}</p>}
+                  {p.education && <p className="text-xs text-slate-500 mt-1">{EDU[L]}: {EDU_MAP[p.education]?.[L] ?? p.education}</p>}
                   {p.branch && (
                     <p className="text-[11px] text-slate-500 mt-1 flex items-center gap-1">
                       <MapPin className="w-3 h-3 text-emerald-600 flex-shrink-0" />
