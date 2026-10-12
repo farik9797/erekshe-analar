@@ -129,11 +129,20 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ hideHeader = f
                   className="relative aspect-square overflow-hidden bg-slate-100 cursor-pointer"
                 >
                   {!hideImages ? (
-                    <img
-                      src={service.image}
-                      alt={service.title[lang]}
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    <>
+                      {/* Размытая подложка — фото разных пропорций, чтобы не обрезать снимок */}
+                      <img
+                        src={service.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50"
+                      />
+                      <img
+                        src={service.image}
+                        alt={service.title[lang]}
+                        className="absolute inset-0 w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </>
                   ) : (
                     <div className="w-full h-full bg-emerald-800 text-white flex items-center justify-center p-4">
                       <span className="font-bold text-center">{service.title[lang]}</span>
