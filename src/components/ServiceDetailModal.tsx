@@ -28,11 +28,18 @@ export const ServiceDetailModal: React.FC = () => {
         <div className="flex flex-col gap-6">
           {/* Top Banner */}
           {!hideImages && (
-            <div className="h-56 rounded-2xl overflow-hidden bg-slate-100">
+            <div className="relative h-72 sm:h-80 rounded-2xl overflow-hidden bg-slate-100">
+              {/* Размытая подложка — фото разных пропорций, снимок не обрезаем */}
+              <img
+                src={service.image}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50"
+              />
               <img
                 src={service.image}
                 alt={service.title[lang]}
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain"
               />
             </div>
           )}

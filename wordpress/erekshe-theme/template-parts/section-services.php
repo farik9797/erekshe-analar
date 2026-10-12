@@ -60,8 +60,10 @@ $services = erekshe_get_rows('services', erekshe_services());
   <?php foreach ($services as $i => $s): ?>
     <div data-modal="svc-<?php echo $i; ?>" class="hidden fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 flex items-start justify-center overflow-y-auto p-4 sm:p-6">
       <div class="bg-white rounded-3xl w-full max-w-2xl my-8 shadow-2xl overflow-hidden">
-        <div class="relative h-40 sm:h-52 bg-slate-100">
-          <img src="<?php echo esc_url(erekshe_img($s['image'])); ?>" alt="<?php echo esc_attr($s['title']); ?>" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="relative h-72 sm:h-80 bg-slate-100">
+          <!-- размытая подложка: фото разных пропорций, снимок не обрезаем -->
+          <img src="<?php echo esc_url(erekshe_img($s['image'])); ?>" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50" />
+          <img src="<?php echo esc_url(erekshe_img($s['image'])); ?>" alt="<?php echo esc_attr($s['title']); ?>" class="absolute inset-0 w-full h-full object-contain" />
           <button type="button" data-modal-close class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-slate-600 flex items-center justify-center shadow transition"><?php echo erekshe_icon('X', 'w-5 h-5'); ?></button>
         </div>
         <div class="p-6 sm:p-8">
