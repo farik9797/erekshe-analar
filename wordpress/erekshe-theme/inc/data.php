@@ -306,7 +306,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'photos/lfk.webp'
+                'image' => 'photos/ball.webp'
             ],
             [
                 'id' => 'physiotherapy',
@@ -645,7 +645,7 @@ function erekshe_services() {
                     'saryarka',
                     'akyn_sara'
                 ],
-                'image' => 'photos/lfk.webp'
+                'image' => 'photos/ball.webp'
             ],
             [
                 'id' => 'physiotherapy',

@@ -9,12 +9,12 @@ import qazaqstanLogo from '../assets/images/partners/qazaqstan.png';
 import phDefectolog from '../assets/images/photos/defectolog.webp';
 import phPsycholog from '../assets/images/photos/psycholog.webp';
 import phAfk from '../assets/images/photos/afk.webp';
-import phLfk from '../assets/images/photos/lfk.webp';
 import phMassage from '../assets/images/photos/massage.webp';
 import phSaltRoom from '../assets/images/photos/salt-room.webp';
 import phSocialAdapt from '../assets/images/photos/social-adapt.webp';
 import phGym from '../assets/images/photos/gym.webp';
 import phPool from '../assets/images/photos/pool.webp';
+import phBall from '../assets/images/photos/ball.webp';
 import phBranchAmanat from '../assets/images/photos/branch-amanat.webp';
 import phBranchSaryarka from '../assets/images/photos/branch-saryarka.webp';
 import phBranchAkynSara from '../assets/images/photos/branch-akyn-sara.webp';
@@ -253,7 +253,7 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '30–40 минут', kk: '30–40 минут' },
     targetAge: { ru: 'От 1.5 до 18 лет', kk: '1.5-тен 18 жасқа дейін' },
     availableBranches: ['amanat', 'saryarka', 'akyn_sara'],
-    image: phLfk
+    image: phBall
   },
   {
     id: 'physiotherapy',
