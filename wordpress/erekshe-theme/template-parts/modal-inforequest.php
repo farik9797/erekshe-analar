@@ -15,7 +15,7 @@ $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1"><?php echo esc_html(erekshe_t('f_infoTitle')); ?></h2>
       <p class="text-sm text-slate-600 mb-6"><?php echo esc_html(erekshe_t('f_infoSubtitle')); ?></p>
 
-      <form class="flex flex-col gap-4" data-wa-form data-wa-from="branch" data-wa-title="<?php echo esc_attr(erekshe_t('f_infoTitle')); ?>">
+      <form class="flex flex-col gap-3" data-wa-form data-wa-from="branch" data-wa-title="<?php echo esc_attr(erekshe_t('f_infoTitle')); ?>">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoParent')); ?> *</label>

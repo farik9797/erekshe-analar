@@ -95,13 +95,13 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
           <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 leading-tight">
             {ru ? 'Запрос на информацию и помощь' : 'Ақпарат пен көмекке сұраныс'}
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-5">
+          <p className="text-xs sm:text-sm text-slate-500 mt-1 mb-4">
             {ru
               ? 'Заполните форму, и наш методист свяжется с вами в течение 1 рабочего дня.'
               : 'Нысанды толтырыңыз, әдіскеріміз 1 жұмыс күні ішінде сізбен хабарласады.'}
           </p>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className={labelCls} htmlFor="ir-parent">
