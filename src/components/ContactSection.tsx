@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
+import { ConsultModal } from './ConsultModal';
 import {
   MapPin,
   Phone,
@@ -17,7 +18,10 @@ interface ContactSectionProps {
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false }) => {
-  const { lang, t, openEnrollModal } = useAccessibility();
+  const { lang, t } = useAccessibility();
+  // Форма записи ничего никуда не отправляла — ведём на «Консультацию по центру»,
+  // она уходит консультанту выбранного филиала
+  const [consultOpen, setConsultOpen] = useState(false);
 
   return (
     <section id="contacts" className="py-16 md:py-24 bg-white border-b border-slate-100">
@@ -134,17 +138,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
                 </p>
               </div>
               <button
-                onClick={() => openEnrollModal()}
+                onClick={() => setConsultOpen(true)}
                 className="w-full py-3.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-md shadow-emerald-600/20 flex items-center justify-center gap-2"
               >
                 <Send className="w-4 h-4" />
-                <span>{t.contactFillForm}</span>
+                <span>{lang === 'ru' ? 'Консультация по центру' : 'Орталық бойынша кеңес'}</span>
               </button>
             </div>
             )}
           </div>
         </div>
       </div>
+
+      <ConsultModal open={consultOpen} onClose={() => setConsultOpen(false)} />
     </section>
   );
 };

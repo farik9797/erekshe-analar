@@ -28,7 +28,7 @@ $cta      = $a['cta']      ?? true;
           // какое действие у кнопки баннера: consult | inforequest | umay | wa-list | enroll
           $cta_action = isset($args['cta_action']) ? $args['cta_action'] : 'consult';
           $cta_attr   = ['consult' => 'data-consult-open', 'inforequest' => 'data-inforequest-open', 'umay' => 'data-umay-open'];
-          $attr       = isset($cta_attr[$cta_action]) ? $cta_attr[$cta_action] : 'data-enroll-open';
+          $attr       = isset($cta_attr[$cta_action]) ? $cta_attr[$cta_action] : 'data-consult-open';
           $cta_label  = isset($args['cta_label']) ? $args['cta_label'] : erekshe_t('f_consultBtn');
         ?>
         <?php if ($cta_action === 'wa-list'):

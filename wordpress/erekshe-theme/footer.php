@@ -86,7 +86,6 @@ $services = [
 </footer>
 
 <?php
-get_template_part('template-parts/modal-enroll');
 get_template_part('template-parts/modal-donation');
 get_template_part('template-parts/modal-consult');
 get_template_part('template-parts/modal-inforequest');

@@ -66,7 +66,6 @@
       $$('[data-modal]').forEach(function (m) { m.classList.add('hidden'); });
       document.body.style.overflow = '';
     }
-    $$('[data-enroll-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('enroll'); }); });
     $$('[data-donation-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('donation'); }); });
     $$('[data-search-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('search'); }); });
     $$('[data-service-open]').forEach(function (b) { b.addEventListener('click', function () { closeModals(); openModal(b.getAttribute('data-service-open')); }); });

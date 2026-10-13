@@ -311,7 +311,7 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold"><?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('a_appointmentBadge')); ?></span></div>
         <h3 class="text-2xl font-extrabold text-slate-900"><?php echo esc_html(erekshe_t('formTitle')); ?></h3>
         <p class="text-sm text-slate-600"><?php echo esc_html(erekshe_t('formSubtitle')); ?></p>
-        <button type="button" data-enroll-open class="w-full py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg transition flex items-center justify-center gap-2"><?php echo erekshe_icon('Send', 'w-5 h-5'); ?><span><?php echo esc_html(erekshe_t('btnEnroll')); ?></span></button>
+        <button type="button" data-consult-open class="w-full py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg transition flex items-center justify-center gap-2 cursor-pointer"><?php echo erekshe_icon('Send', 'w-5 h-5'); ?><span><?php echo esc_html(erekshe_t('f_consultBtn')); ?></span></button>
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useAccessibility } from '../context/AccessibilityContext';
 import aboutPhotoImg from '../assets/images/regenerated_image_1785993218212.webp';
 import {
@@ -15,7 +16,7 @@ import {
 } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
-  const { lang, t, hideImages, openEnrollModal } = useAccessibility();
+  const { lang, t, hideImages } = useAccessibility();
 
   const valuesList = [
     t.value1,
@@ -159,13 +160,13 @@ export const AboutSection: React.FC = () => {
             </div>
 
             <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-center">
-              <button
-                onClick={() => openEnrollModal('', 'umay')}
-                className="flex items-center gap-2 px-6 py-4 rounded-2xl text-sm font-bold text-white bg-amber-800 hover:bg-amber-900 shadow-lg shadow-amber-900/20 transition hover:scale-[1.02] active:scale-[0.98]"
+              <Link
+                to="/umay"
+                className="flex items-center gap-2 px-6 py-4 rounded-2xl text-sm font-bold text-white bg-amber-800 hover:bg-amber-900 shadow-lg shadow-amber-900/20 transition hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
               >
                 <span>{t.umayCta}</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>
