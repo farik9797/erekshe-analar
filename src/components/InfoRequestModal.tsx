@@ -114,16 +114,15 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
                 <label className={labelCls} htmlFor="ir-phone">{ru ? 'Номер телефона' : 'Телефон нөмірі'} *</label>
                 <input id="ir-phone" required type="tel" value={phone} onChange={(e) => setPhone(e.target.value)}
                   placeholder="+7 (700) 000-00-00" className={inputCls} />
+                <label className="flex items-center gap-2 cursor-pointer mt-2">
+                  <input type="checkbox" checked={useWhatsapp} onChange={(e) => setUseWhatsapp(e.target.checked)}
+                    className="w-4 h-4 accent-emerald-600 cursor-pointer" />
+                  <span className="text-xs font-medium text-slate-700">
+                    {ru ? 'Связаться со мной по WhatsApp' : 'Менімен WhatsApp арқылы байланысыңыз'}
+                  </span>
+                </label>
               </div>
             </div>
-
-            <label className="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" checked={useWhatsapp} onChange={(e) => setUseWhatsapp(e.target.checked)}
-                className="w-4 h-4 accent-emerald-600 cursor-pointer" />
-              <span className="text-xs font-medium text-slate-700">
-                {ru ? 'Связаться со мной по WhatsApp' : 'Менімен WhatsApp арқылы байланысыңыз'}
-              </span>
-            </label>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -153,11 +152,11 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
 
             <div>
               <span className={labelCls}>{ru ? 'Что вас интересует?' : 'Сізді не қызықтырады?'}</span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2">
                 {INTERESTS.map((o) => {
                   const v = o[lang];
                   return (
-                    <label key={o.ru} className="flex items-start gap-2 p-2 rounded-xl hover:bg-emerald-50/60 transition cursor-pointer">
+                    <label key={o.ru} className="flex items-start gap-2 px-2 py-1.5 rounded-xl hover:bg-emerald-50/60 transition cursor-pointer">
                       <input type="checkbox" checked={interests.includes(v)} onChange={() => toggleInterest(v)}
                         className="w-4 h-4 mt-0.5 accent-emerald-600 cursor-pointer flex-shrink-0" />
                       <span className="text-xs text-slate-700 leading-snug">{v}</span>
@@ -167,22 +166,24 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
               </div>
             </div>
 
-            <div>
-              <label className={labelCls} htmlFor="ir-diag">
-                {ru ? 'Диагноз или особенности развития ребёнка (кратко)' : 'Диагноз немесе баланың даму ерекшеліктері (қысқаша)'}
-              </label>
-              <textarea id="ir-diag" rows={2} value={diagnosis} onChange={(e) => setDiagnosis(e.target.value)}
-                placeholder={ru ? 'Кратко опишите особенности развития ребёнка' : 'Баланың даму ерекшеліктерін қысқаша жазыңыз'}
-                className={`${inputCls} resize-none`} />
-            </div>
-
-            <div>
-              <label className={labelCls} htmlFor="ir-comment">
-                {ru ? 'Ваш вопрос или комментарий' : 'Сұрағыңыз немесе пікіріңіз'}
-              </label>
-              <textarea id="ir-comment" rows={2} value={comment} onChange={(e) => setComment(e.target.value)}
-                placeholder={ru ? 'Напишите, какая информация вам необходима' : 'Қандай ақпарат қажет екенін жазыңыз'}
-                className={`${inputCls} resize-none`} />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div>
+                <label className={labelCls} htmlFor="ir-diag">
+                  {ru ? 'Диагноз или особенности развития ребёнка (кратко)' : 'Диагноз немесе баланың даму ерекшеліктері (қысқаша)'}
+                </label>
+                <textarea id="ir-diag" rows={2} value={diagnosis} onChange={(e) => setDiagnosis(e.target.value)}
+                  placeholder={ru ? 'Кратко опишите особенности развития ребёнка' : 'Баланың даму ерекшеліктерін қысқаша жазыңыз'}
+                  className={`${inputCls} resize-none`} />
+              </div>
+  
+              <div>
+                <label className={labelCls} htmlFor="ir-comment">
+                  {ru ? 'Ваш вопрос или комментарий' : 'Сұрағыңыз немесе пікіріңіз'}
+                </label>
+                <textarea id="ir-comment" rows={2} value={comment} onChange={(e) => setComment(e.target.value)}
+                  placeholder={ru ? 'Напишите, какая информация вам необходима' : 'Қандай ақпарат қажет екенін жазыңыз'}
+                  className={`${inputCls} resize-none`} />
+              </div>
             </div>
 
             <button type="submit"

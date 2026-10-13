@@ -16,33 +16,36 @@ $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
       <p class="text-sm text-slate-600 mb-6"><?php echo esc_html(erekshe_t('f_infoSubtitle')); ?></p>
 
       <form class="flex flex-col gap-4" data-wa-form data-wa-from="branch" data-wa-title="<?php echo esc_attr(erekshe_t('f_infoTitle')); ?>">
-        <div>
-          <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoParent')); ?> *</label>
-          <input type="text" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoParent')); ?>"
-                 placeholder="<?php echo esc_attr(erekshe_t('f_infoParentPh')); ?>" class="<?php echo $fieldCls; ?>" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoParent')); ?> *</label>
+            <input type="text" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoParent')); ?>"
+                   placeholder="<?php echo esc_attr(erekshe_t('f_infoParentPh')); ?>" class="<?php echo $fieldCls; ?>" />
+          </div>
+
+          <div>
+            <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_phone')); ?> *</label>
+            <input type="tel" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_phone')); ?>"
+                   placeholder="<?php echo esc_attr(erekshe_t('f_phonePh')); ?>" class="<?php echo $fieldCls; ?>" />
+            <label class="flex items-center gap-2 mt-2 text-xs font-medium text-slate-700">
+              <input type="checkbox" checked data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_whatsapp')); ?>" style="accent-color:#059669" class="w-4 h-4" />
+              <?php echo esc_html(erekshe_t('f_whatsapp')); ?>
+            </label>
+          </div>
         </div>
 
-        <div>
-          <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_phone')); ?> *</label>
-          <input type="tel" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_phone')); ?>"
-                 placeholder="<?php echo esc_attr(erekshe_t('f_phonePh')); ?>" class="<?php echo $fieldCls; ?>" />
-        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoChild')); ?> *</label>
+            <input type="text" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoChild')); ?>"
+                   placeholder="<?php echo esc_attr(erekshe_t('f_infoChildPh')); ?>" class="<?php echo $fieldCls; ?>" />
+          </div>
 
-        <label class="flex items-center gap-2 text-sm text-slate-700">
-          <input type="checkbox" checked data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_whatsapp')); ?>" style="accent-color:#059669" class="w-4 h-4" />
-          <?php echo esc_html(erekshe_t('f_whatsapp')); ?>
-        </label>
-
-        <div>
-          <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoChild')); ?> *</label>
-          <input type="text" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoChild')); ?>"
-                 placeholder="<?php echo esc_attr(erekshe_t('f_infoChildPh')); ?>" class="<?php echo $fieldCls; ?>" />
-        </div>
-
-        <div>
-          <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoAge')); ?> *</label>
-          <input type="text" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoAge')); ?>"
-                 placeholder="<?php echo esc_attr(erekshe_t('f_infoAgePh')); ?>" class="<?php echo $fieldCls; ?>" />
+          <div>
+            <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoAge')); ?> *</label>
+            <input type="text" required data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoAge')); ?>"
+                   placeholder="<?php echo esc_attr(erekshe_t('f_infoAgePh')); ?>" class="<?php echo $fieldCls; ?>" />
+          </div>
         </div>
 
         <div>
@@ -58,9 +61,9 @@ $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
 
         <div>
           <span class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoInterests')); ?></span>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2">
             <?php foreach ($interests as $it): ?>
-              <label class="flex items-start gap-2 p-2 rounded-xl hover:bg-emerald-50 transition">
+              <label class="flex items-start gap-2 px-2 py-1.5 rounded-xl hover:bg-emerald-50 transition">
                 <input type="checkbox" value="<?php echo esc_attr($it); ?>" data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoInterests')); ?>" style="accent-color:#059669" class="w-4 h-4 mt-0.5" />
                 <span class="text-xs text-slate-700"><?php echo esc_html($it); ?></span>
               </label>
@@ -68,16 +71,18 @@ $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
           </div>
         </div>
 
-        <div>
-          <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoDiag')); ?></label>
-          <textarea rows="2" data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoDiag')); ?>"
-                    placeholder="<?php echo esc_attr(erekshe_t('f_infoDiagPh')); ?>" class="<?php echo $fieldCls; ?>"></textarea>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div>
+            <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoDiag')); ?></label>
+            <textarea rows="2" data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoDiag')); ?>"
+                      placeholder="<?php echo esc_attr(erekshe_t('f_infoDiagPh')); ?>" class="<?php echo $fieldCls; ?>"></textarea>
+          </div>
 
-        <div>
-          <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoComment')); ?></label>
-          <textarea rows="2" data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoComment')); ?>"
-                    placeholder="<?php echo esc_attr(erekshe_t('f_infoCommentPh')); ?>" class="<?php echo $fieldCls; ?>"></textarea>
+          <div>
+            <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoComment')); ?></label>
+            <textarea rows="2" data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoComment')); ?>"
+                      placeholder="<?php echo esc_attr(erekshe_t('f_infoCommentPh')); ?>" class="<?php echo $fieldCls; ?>"></textarea>
+          </div>
         </div>
 
         <button type="submit" class="w-full py-3.5 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 shadow-lg transition flex items-center justify-center gap-2">
