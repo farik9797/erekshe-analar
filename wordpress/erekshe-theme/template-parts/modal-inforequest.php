@@ -6,7 +6,7 @@ $fieldCls  = 'w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 te
 $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
 ?>
 <div data-modal="inforequest" class="hidden fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 flex items-start justify-center overflow-y-auto p-4 sm:p-6">
-  <div class="bg-white rounded-3xl w-full max-w-2xl my-8 shadow-2xl">
+  <div class="bg-white rounded-3xl w-full max-w-4xl my-8 shadow-2xl">
     <div class="p-6">
       <div class="flex items-start justify-between gap-4 mb-2">
         <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold"><?php echo erekshe_icon('HelpCircle', 'w-4 h-4'); ?><?php echo esc_html(erekshe_t('f_infoBadge')); ?></span>
@@ -58,7 +58,7 @@ $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
 
         <div>
           <span class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoInterests')); ?></span>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5">
             <?php foreach ($interests as $it): ?>
               <label class="flex items-start gap-2 p-2 rounded-xl hover:bg-emerald-50 transition">
                 <input type="checkbox" value="<?php echo esc_attr($it); ?>" data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoInterests')); ?>" style="accent-color:#059669" class="w-4 h-4 mt-0.5" />

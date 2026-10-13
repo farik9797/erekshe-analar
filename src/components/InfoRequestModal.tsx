@@ -77,7 +77,7 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
 
   return createPortal(
     <div className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-0 sm:p-4 bg-slate-950/60 backdrop-blur-sm overflow-y-auto">
-      <div className="bg-white w-full sm:max-w-2xl sm:rounded-3xl shadow-2xl my-0 sm:my-8 relative">
+      <div className="bg-white w-full sm:max-w-4xl sm:rounded-3xl shadow-2xl my-0 sm:my-8 relative">
         <button
           type="button"
           onClick={onClose}
@@ -153,7 +153,7 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
 
             <div>
               <span className={labelCls}>{ru ? 'Что вас интересует?' : 'Сізді не қызықтырады?'}</span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1.5">
                 {INTERESTS.map((o) => {
                   const v = o[lang];
                   return (
