@@ -33,7 +33,8 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
   const [useWhatsapp, setUseWhatsapp] = useState(true);
   const [childName, setChildName] = useState('');
   const [childAge, setChildAge] = useState('');
-  const [branchId, setBranchId] = useState(BRANCHES[0]?.id ?? '');
+  // Филиал не выбран заранее — иначе без выбора всё уходит методисту Аманата
+  const [branchId, setBranchId] = useState('');
   const [interests, setInterests] = useState<string[]>([]);
   const [diagnosis, setDiagnosis] = useState('');
   const [comment, setComment] = useState('');
@@ -142,6 +143,7 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
                 {ru ? 'Предпочтительный филиал в Астане' : 'Астанадағы қалаулы филиал'} *
               </label>
               <select id="ir-branch" required value={branchId} onChange={(e) => setBranchId(e.target.value)} className={inputCls}>
+                <option value="" disabled>{ru ? 'Выберите филиал' : 'Филиалды таңдаңыз'}</option>
                 {BRANCHES.map((b) => (
                   <option key={b.id} value={b.id}>
                     {b.name[lang]} — {b.address[lang]}

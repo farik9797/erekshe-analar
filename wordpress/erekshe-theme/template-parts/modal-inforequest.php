@@ -51,6 +51,7 @@ $labelCls  = 'text-sm font-bold text-slate-900 block mb-1';
         <div>
           <label class="<?php echo $labelCls; ?>"><?php echo esc_html(erekshe_t('f_infoBranch')); ?> *</label>
           <select required data-wa-branch data-wa-field data-wa-label="<?php echo esc_attr(erekshe_t('f_infoBranch')); ?>" class="<?php echo $fieldCls; ?>">
+            <option value="" disabled selected><?php echo esc_html(erekshe_t('f_consultBranch')); ?></option>
             <?php foreach ($branches as $b): ?>
               <option value="<?php echo esc_attr($b['name']); ?>" data-wa="<?php echo esc_attr(preg_replace('/\D/', '', $b['methodistPhone'])); ?>">
                 <?php echo esc_html($b['name'] . ' — ' . $b['address']); ?>
