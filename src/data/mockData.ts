@@ -12,7 +12,6 @@ import phAfk from '../assets/images/photos/afk.webp';
 import phMassage from '../assets/images/photos/massage.webp';
 import phSaltRoom from '../assets/images/photos/salt-room.webp';
 import phSocialAdapt from '../assets/images/photos/social-adapt.webp';
-import phGym from '../assets/images/photos/gym.webp';
 import phPool from '../assets/images/photos/pool.webp';
 import phBall from '../assets/images/photos/ball.webp';
 import phBranchAmanat from '../assets/images/photos/branch-amanat.webp';
@@ -279,7 +278,8 @@ export const SERVICES: ServiceItem[] = [
     duration: { ru: '15–20 минут', kk: '15–20 минут' },
     targetAge: { ru: 'От 2 до 18 лет', kk: '2-ден 18 жасқа дейін' },
     availableBranches: ['amanat', 'saryarka'],
-    image: phGym
+    // Ингаляция (Pexels, свободная лицензия) — пока центр не прислал своё фото
+    image: 'https://images.pexels.com/photos/7447010/pexels-photo-7447010.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'pool',

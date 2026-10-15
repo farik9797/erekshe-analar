@@ -335,7 +335,7 @@ function erekshe_services() {
                     'amanat',
                     'saryarka'
                 ],
-                'image' => 'photos/gym.webp'
+                'image' => 'https://images.pexels.com/photos/7447010/pexels-photo-7447010.jpeg?auto=compress&cs=tinysrgb&w=800'
             ],
             [
                 'id' => 'pool',
@@ -671,7 +671,7 @@ function erekshe_services() {
                     'amanat',
                     'saryarka'
                 ],
-                'image' => 'photos/gym.webp'
+                'image' => 'https://images.pexels.com/photos/7447010/pexels-photo-7447010.jpeg?auto=compress&cs=tinysrgb&w=800'
             ],
             [
                 'id' => 'pool',
