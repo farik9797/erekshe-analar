@@ -77,8 +77,8 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
   const labelCls = 'text-xs font-bold text-slate-700 mb-1.5 block';
 
   return createPortal(
-    <div className="fixed inset-0 z-[100] flex items-start sm:items-center justify-center p-0 sm:p-4 bg-slate-950/60 backdrop-blur-sm overflow-y-auto">
-      <div className="bg-white w-full sm:max-w-4xl sm:rounded-3xl shadow-2xl my-0 sm:my-8 relative">
+    <div className="fixed inset-0 z-[100] flex items-start justify-center p-0 sm:p-4 bg-slate-950/60 backdrop-blur-sm overflow-y-auto">
+      <div className="bg-white w-full sm:max-w-4xl sm:rounded-3xl shadow-2xl my-0 sm:my-auto relative">
         <button
           type="button"
           onClick={onClose}
