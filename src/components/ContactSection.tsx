@@ -97,12 +97,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
                   <div>
                     <p className="text-xs text-slate-400 uppercase font-bold">Instagram:</p>
                     <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/erekshe.analar"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-emerald-300 font-bold hover:underline block mt-0.5"
                     >
-                      @erekshe_analar_astana
+                      @erekshe.analar
                     </a>
                   </div>
                 </div>

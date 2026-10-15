@@ -300,7 +300,7 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
             ['Clock', erekshe_t('a_scheduleLabel'), erekshe_t('workingHours')],
             ['MessageCircle', erekshe_t('a_whatsappBranchesLabel'), $wa_num],
             ['Mail', erekshe_t('contactEmailTitle'), $email],
-            ['Instagram', 'Instagram:', '@erekshe_analar_astana'],
+            ['Instagram', 'Instagram:', '@erekshe.analar'],
           ];
           foreach ($contacts as $c): ?>
             <div class="flex items-start gap-3"><?php echo erekshe_icon($c[0], 'w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5'); ?><div><p class="text-xs font-bold text-slate-400 uppercase tracking-wider"><?php echo esc_html($c[1]); ?></p><p class="text-sm font-bold text-white mt-0.5"><?php echo esc_html($c[2]); ?></p></div></div>

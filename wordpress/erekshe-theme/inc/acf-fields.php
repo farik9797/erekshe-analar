@@ -41,7 +41,7 @@ function erekshe_register_acf() {
         ef_text('opt_hours', 'work_hours', 'Часы работы', 'Пн - Пт: 08:30 - 18:00'),
         ef_url('opt_wa', 'whatsapp_url', 'WhatsApp URL', 'https://wa.me/77053089733'),
         ef_text('opt_wanum', 'whatsapp_num', 'WhatsApp номер', '+7 (705) 308-97-33'),
-        ef_url('opt_insta', 'instagram_url', 'Instagram URL', 'https://instagram.com/erekshe_analar'),
+        ef_url('opt_insta', 'instagram_url', 'Instagram URL', 'https://www.instagram.com/erekshe.analar'),
     ], 'location' => [[['param' => 'options_page', 'operator' => '==', 'value' => 'erekshe-settings']]]]);
 
     /* ===== Главная — Hero + статистика + преимущества ===== */

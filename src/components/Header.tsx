@@ -133,7 +133,7 @@ export const Header: React.FC = () => {
                 />
               </a>
               <a
-                href="https://instagram.com/erekshe_analar"
+                href="https://www.instagram.com/erekshe.analar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-6 h-6 rounded-lg bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white hover:opacity-90 transition-all duration-200 flex items-center justify-center shadow-xs hover:scale-105 cursor-pointer"

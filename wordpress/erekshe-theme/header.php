@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) exit;
 $logo   = EREKSHE_URI . '/assets/images/regenerated_image_1785993330916.png';
 $wa     = erekshe_opt('whatsapp_url', 'https://wa.me/77053089733');
-$insta  = erekshe_opt('instagram_url', 'https://instagram.com/erekshe_analar');
+$insta  = erekshe_opt('instagram_url', 'https://www.instagram.com/erekshe.analar');
 $hours  = erekshe_opt('work_hours', erekshe_t('workingHours'));
 $city   = erekshe_opt('city', erekshe_t('astanaCity'));
 $nav    = erekshe_nav_items();
