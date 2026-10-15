@@ -407,7 +407,7 @@ export const SERVICES: ServiceItem[] = [
       kk: ['Тұрмыстағы дербестік', 'Ата-анаға тәуелділікті азайту', 'Үйде қауіпсіз мінез-құлық дағдыларын қалыптастыру']
     },
     duration: { ru: '20 минут', kk: '20 минут' },
-    targetAge: { ru: 'От 4 до 18 лет', kk: '4-тен 18 жасқа дейін' },
+    targetAge: { ru: 'От 1.5 до 18 лет', kk: '1.5-тен 18 жасқа дейін' },
     availableBranches: ['saryarka', 'amanat'],
     image: phSocialAdapt
   },

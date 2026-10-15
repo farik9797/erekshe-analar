@@ -467,7 +467,7 @@ function erekshe_services() {
                     'Формирование навыков безопасного поведения в быту'
                 ],
                 'duration' => '20 минут',
-                'targetAge' => 'От 4 до 18 лет',
+                'targetAge' => 'От 1.5 до 18 лет',
                 'availableBranches' => [
                     'saryarka',
                     'amanat'
@@ -799,7 +799,7 @@ function erekshe_services() {
                     'Үйде қауіпсіз мінез-құлық дағдыларын қалыптастыру'
                 ],
                 'duration' => '20 минут',
-                'targetAge' => '4-тен 18 жасқа дейін',
+                'targetAge' => '1.5-тен 18 жасқа дейін',
                 'availableBranches' => [
                     'saryarka',
                     'amanat'
