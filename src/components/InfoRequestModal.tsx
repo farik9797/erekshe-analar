@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { BRANCHES } from '../data/mockData';
@@ -44,6 +44,18 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
+  // Закрытие по Esc
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+
+  // Клик по фону закрывает — только если и нажали на фоне
+  // (выделение текста в поле, отпущенное за карточкой, форму не закроет)
+  const downOnBackdrop = useRef(false);
+
   if (!open) return null;
 
   const toggleInterest = (v: string) =>
@@ -77,7 +89,11 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
   const labelCls = 'text-xs font-bold text-slate-700 mb-1.5 block';
 
   return createPortal(
-    <div className="fixed inset-0 z-[100] flex items-start justify-center p-0 sm:p-4 bg-slate-950/60 backdrop-blur-sm overflow-y-auto">
+    <div
+      className="fixed inset-0 z-[100] flex items-start justify-center p-0 sm:p-4 bg-slate-950/60 backdrop-blur-sm overflow-y-auto"
+      onMouseDown={(e) => { downOnBackdrop.current = e.target === e.currentTarget; }}
+      onClick={(e) => { if (downOnBackdrop.current && e.target === e.currentTarget) onClose(); }}
+    >
       <div className="bg-white w-full sm:max-w-4xl sm:rounded-3xl shadow-2xl my-0 sm:my-auto relative">
         <button
           type="button"
