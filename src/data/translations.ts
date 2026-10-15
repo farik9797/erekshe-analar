@@ -444,7 +444,7 @@ export const translations = {
     filterSocial: 'Әлеуметтік-тұрмыстық бейімделу',
     filterParents: 'Ата-аналармен жұмыс',
     filterMedical: 'Медициналық қызметтер',
-    btnServiceDetails: 'Қызмет туралы толығырақ',
+    btnServiceDetails: 'Толығырақ',
     serviceIndications: 'Көрсетілімдер:',
     serviceResults: 'Күтілетін нәтиже:',
     serviceDuration: 'Сабақтың ұзақтығы:',

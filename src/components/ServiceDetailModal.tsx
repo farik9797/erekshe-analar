@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { X, Sparkles, CheckCircle2, Clock, Users, MapPin, Award } from 'lucide-react';
 
@@ -11,16 +11,32 @@ export const ServiceDetailModal: React.FC = () => {
     hideImages
   } = useAccessibility();
 
+  // Закрытие по Esc
+  useEffect(() => {
+    if (!selectedServiceForModal) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') closeServiceModal(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [selectedServiceForModal, closeServiceModal]);
+
+  // Клик по фону закрывает — только если и нажали на фоне
+  const downOnBackdrop = useRef(false);
+
   if (!selectedServiceForModal) return null;
 
   const service = selectedServiceForModal;
 
   return (
-    <div className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 animate-fadeIn">
+    <div
+      className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 animate-fadeIn"
+      onMouseDown={(e) => { downOnBackdrop.current = e.target === e.currentTarget; }}
+      onClick={(e) => { if (downOnBackdrop.current && e.target === e.currentTarget) closeServiceModal(); }}
+    >
       <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] overflow-y-auto p-5 sm:p-4 shadow-2xl relative border border-slate-100">
         <button
           onClick={closeServiceModal}
-          className="absolute top-4 right-4 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition"
+          aria-label={lang === 'ru' ? 'Закрыть' : 'Жабу'}
+          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
