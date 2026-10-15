@@ -2,7 +2,7 @@
 // «Консультация по центру» — заявка уходит в WhatsApp выбранного филиала.
 $branches = function_exists('erekshe_get_rows') ? erekshe_get_rows('branches', erekshe_branches()) : erekshe_branches();
 $topics   = erekshe_form_list('consult_topics');
-$fieldCls = 'w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500';
+$fieldCls = 'w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500';
 $labelCls = 'text-sm font-bold text-slate-900 block mb-1';
 ?>
 <div data-modal="consult" class="hidden fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 flex items-start justify-center overflow-y-auto p-4 sm:p-6">

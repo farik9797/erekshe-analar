@@ -73,7 +73,7 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
   };
 
   const inputCls =
-    'w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition';
+    'w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition';
   const labelCls = 'text-xs font-bold text-slate-700 mb-1.5 block';
 
   return createPortal(
@@ -89,7 +89,7 @@ export const InfoRequestModal: React.FC<Props> = ({ open, onClose }) => {
         </button>
 
         <div className="p-5 sm:p-8">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3 mr-10">
             <Info className="w-3.5 h-3.5" />
             {ru ? 'Центры EREKSHE ANALAR' : 'EREKSHE ANALAR орталықтары'}
           </span>

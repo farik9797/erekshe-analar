@@ -80,7 +80,7 @@ export const UmayModal: React.FC<Props> = ({ open, onClose }) => {
   };
 
   const inputCls =
-    'w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-rose-400 transition';
+    'w-full px-4 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-rose-400 transition';
   const labelCls = 'text-xs font-bold text-slate-700 mb-1.5 block';
 
   return createPortal(
@@ -96,7 +96,7 @@ export const UmayModal: React.FC<Props> = ({ open, onClose }) => {
         </button>
 
         <div className="p-5 sm:p-8">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-bold mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 text-rose-800 text-xs font-bold mb-3 mr-10">
             <HeartHandshake className="w-3.5 h-3.5" />
             {ru ? 'Центр поддержки родителей UMAY' : 'Ата-аналарды қолдау орталығы UMAY'}
           </span>
@@ -148,7 +148,7 @@ export const UmayModal: React.FC<Props> = ({ open, onClose }) => {
             </div>
 
             <div>
-              <span className={labelCls}>{ru ? 'Какая поддержка вас интересует?' : 'Сізді қандай қолдау қызықтырады?'} *</span>
+              <span className={labelCls}>{ru ? 'Какая поддержка вас интересует?' : 'Сізді қандай қолдау қызықтырады?'}</span>
               <p className="text-[11px] text-slate-400 mb-1.5">
                 {ru ? 'Можно выбрать несколько вариантов.' : 'Бірнеше нұсқаны таңдауға болады.'}
               </p>
