@@ -54,13 +54,22 @@ export const CharitySection: React.FC<CharitySectionProps> = ({ hideHeader = fal
                 className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between flex-shrink-0 w-[85vw] max-w-[400px] sm:w-auto sm:max-w-none snap-center sm:snap-none"
               >
                 {/* Project Image */}
-                <div className="relative aspect-square bg-slate-100">
+                <div className="relative aspect-square lg:aspect-[4/3] overflow-hidden bg-slate-100">
                   {!hideImages ? (
-                    <img
-                      src={project.image}
-                      alt={project.title[lang]}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
+                    <>
+                      {/* На компьютере — фото целиком, по бокам размытая подложка (фото вертикальные) */}
+                      <img
+                        src={project.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="hidden lg:block absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50"
+                      />
+                      <img
+                        src={project.image}
+                        alt={project.title[lang]}
+                        className="absolute inset-0 w-full h-full object-cover lg:object-contain"
+                      />
+                    </>
                   ) : (
                     <div className="w-full h-full bg-emerald-800 text-white flex items-center justify-center p-4">
                       <span className="font-bold text-center">{project.title[lang]}</span>
