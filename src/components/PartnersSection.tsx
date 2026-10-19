@@ -30,7 +30,7 @@ export const PartnersSection: React.FC = () => {
               <div className="h-24 flex items-center justify-center">
                 <img
                   src={partner.logo}
-                  alt={partner.name}
+                  alt={partner.name[lang]}
                   loading="lazy"
                   className="max-h-24 max-w-[90%] w-auto object-contain"
                 />

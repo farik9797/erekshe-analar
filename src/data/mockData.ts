@@ -833,22 +833,22 @@ export const GALLERY_ITEMS: GalleryItem[] = [
 
 export const PARTNERS = [
   {
-    name: 'UNICEF Kazakhstan',
+    name: { ru: 'UNICEF Kazakhstan', kk: 'UNICEF Kazakhstan' },
     logo: unicefLogo,
     desc: { ru: 'Детский фонд ООН в Казахстане', kk: 'Қазақстандағы БҰҰ Балалар қоры' }
   },
   {
-    name: 'Фонд «Қазақстан халқына»',
+    name: { ru: 'Фонд «Қазақстан халқына»', kk: '«Қазақстан халқына» қоры' },
     logo: qazaqstanLogo,
     desc: { ru: 'Общественный социальный фонд РК', kk: 'ҚР Қоғамдық әлеуметтік қоры' }
   },
   {
-    name: 'Акимат города Астана',
+    name: { ru: 'Акимат города Астана', kk: 'Астана қаласының әкімдігі' },
     logo: akimatLogo,
     desc: { ru: 'Управление занятости и соц. защиты', kk: 'Жұмыспен қамту және әлеуметтік қорғау басқармасы' }
   },
   {
-    name: 'Special Olympics Kazakhstan',
+    name: { ru: 'Special Olympics Kazakhstan', kk: 'Special Olympics Kazakhstan' },
     logo: specialLogo,
     desc: { ru: 'Инклюзивный спорт и адаптация', kk: 'Инклюзивті спорт және бейімдеу' }
   }
