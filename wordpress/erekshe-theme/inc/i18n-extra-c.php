@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) exit;
 add_filter('erekshe_tr_extra', function ($arr, $L) {
     $m = [
         'ru' => [
-            'c_TeamBadgeSpecialists' => '45+ квалифицированных специалистов',
+            'c_TeamBadgeSpecialists' => '32 квалифицированных специалиста',
             'c_CharityBadgeProjects' => 'Социальные проекты',
             'c_StatusCompleted'      => 'Завершён',
             'c_Collected'            => 'Собрано:',
@@ -20,7 +20,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'c_ContactAddress'       => 'г. Астана, ул. Аманат, 12/1',
         ],
         'kk' => [
-            'c_TeamBadgeSpecialists' => '45+ білікті маман',
+            'c_TeamBadgeSpecialists' => '32 білікті маман',
             'c_CharityBadgeProjects' => 'Әлеуметтік жобалар',
             'c_StatusCompleted'      => 'Аяқталды',
             'c_Collected'            => 'Жиналды:',

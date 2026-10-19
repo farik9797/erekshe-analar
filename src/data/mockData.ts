@@ -14,6 +14,11 @@ import phSaltRoom from '../assets/images/photos/salt-room.webp';
 import phSocialAdapt from '../assets/images/photos/social-adapt.webp';
 import phInhalation from '../assets/images/photos/inhalation.webp';
 import phPool from '../assets/images/photos/pool.webp';
+import phTeamKaleeva from '../assets/images/photos/team-kaleeva.webp';
+import phTeamShalieva from '../assets/images/photos/team-shalieva.webp';
+import phTeamMoldabekova from '../assets/images/photos/team-moldabekova.webp';
+import phTeamShaymardanova from '../assets/images/photos/team-shaymardanova.webp';
+import phTeamZhaksymbetova from '../assets/images/photos/team-zhaksymbetova.webp';
 import phBall from '../assets/images/photos/ball.webp';
 import phBranchAmanat from '../assets/images/photos/branch-amanat.webp';
 import phBranchSaryarka from '../assets/images/photos/branch-saryarka.webp';
@@ -749,8 +754,6 @@ export const SOCIAL_PROJECTS: SocialProject[] = [
       ru: 'Закупка интерактивных воздушно-пузырьковых колонн, фибероптического волокна и профессионального оборудования сенсорной интеграции.',
       kk: 'Интерактивті ауа-көпіршікті бағандарды, фибероптикалық талшықтарды және сенсорлық интеграцияның кәсіби жабдықтарын сатып алу.'
     },
-    targetAmount: 5000000,
-    currentAmount: 4200000,
     beneficiariesCount: 450,
     status: 'active',
     image: phGalSensory
@@ -765,8 +768,6 @@ export const SOCIAL_PROJECTS: SocialProject[] = [
       ru: 'Обеспечение регулярных бесплатных консультаций квалифицированных психотерапевтов и арт-терапевтов для 300 матерей детей с инвалидностью.',
       kk: 'Мүгедектігі бар балалардың 300 анасы үшін білікті психотерапевтер мен арт-терапевтердің тұрақты тегін кеңестерін қамтамасыз ету.'
     },
-    targetAmount: 3000000,
-    currentAmount: 3000000,
     beneficiariesCount: 300,
     status: 'completed',
     image: phProjSbo
@@ -854,78 +855,10 @@ export const PARTNERS = [
 ];
 
 export const TEAM_ROSTER = [
-  { group: 'admin', name: 'Калеева Салтанат Ануарбековна', education: 'Высшее / бакалавр', branch: '', note: { ru: 'Директор', kk: 'Директор' } },
-  { group: 'admin', name: 'Шалиева Маржан Каппасовна', education: 'Высшее / бакалавр', branch: '', note: { ru: 'Заместитель директора', kk: 'Директордың орынбасары' } },
-  { group: 'admin', name: 'Молдабекова Айгуль Сагиндыковна', education: 'Высшее / бакалавр', branch: '', note: { ru: 'Методист', kk: 'Әдіскер' } },
-  { group: 'admin', name: 'Куттыбекова Сезим Жұманқызы', education: 'Высшее / бакалавр', branch: '', note: { ru: 'Менеджер', kk: 'Менеджер' } },
-  { group: 'logoped', name: 'Тенилбаева Галия Кенжеевна', education: 'Высшее / магистр', branch: 'Акын Сара 37', note: '' },
-  { group: 'logoped', name: 'Баенова Айгуль Мусаевна', education: 'Высшее / магистр', branch: 'Сарыарка 48', note: '' },
-  { group: 'logoped', name: 'Сейдахметова Рабига Абдрахимовна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: '' },
-  { group: 'defectolog', name: 'Еркін Ақерке Мұхитдінқызы', education: 'Высшее / магистр', branch: 'Аманат 12/1', note: '' },
-  { group: 'defectolog', name: 'Төлеген Айдана Дәрісқызы', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: '' },
-  { group: 'defectolog', name: 'Мадени Алмагул', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: '' },
-  { group: 'psycholog', name: 'Махметова Қарлығаш Аманкуловна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: '' },
-  { group: 'psycholog', name: 'Мұсылмаңқұлова Сезім Қуатқызы', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: '' },
-  { group: 'psycholog', name: 'Куспекова Алия Какеновна', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: '' },
-  { group: 'psycholog', name: 'Айтжанова Фарида Женисовна', education: 'Высшее / бакалавр', branch: 'Акын Сара 37', note: '' },
-  { group: 'afk', name: 'Тоқтарханов Асылан Бауыржанұлы', education: 'Среднее', branch: 'Сарыарка 48', note: '' },
-  { group: 'afk', name: 'Наурызова Жансая Болатбекқызы', education: 'Среднее', branch: 'Аманат 12/1', note: '' },
-  { group: 'afk', name: 'Уалиханова Жансая Оразәліқызы', education: 'Среднее', branch: 'Аманат 12/1', note: '' },
-  { group: 'afk', name: 'Әбілқайыров Ернар Нұрболатұлы', education: 'Среднее', branch: 'Сарыарка 48', note: '' },
-  { group: 'afk', name: 'Байсалдина Самал Абаевна', education: 'Среднее', branch: 'Акын Сара 37', note: '' },
-  { group: 'pool', name: 'Қажығали Ақжол', education: 'Среднее', branch: 'Аманат 12/1', note: '' },
-  { group: 'social', name: 'Баяндинова Алия Жетписбаевна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: '' },
-  { group: 'social', name: 'Каймолдина Арайлым Кажимуратовна', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: '' },
-  { group: 'social', name: 'Бейсенгалиева Агнат Бухарбаевна', education: 'Среднее', branch: 'Акын Сара 37', note: '' },
-  { group: 'nurse', name: 'Копбосын Дана Копбосынқызы', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Общий массаж, соляная комната', kk: 'Жалпы массаж, тұзды бөлме' } },
-  { group: 'nurse', name: 'Жуматова Гульзипа Шохановна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Общий массаж, соляная комната', kk: 'Жалпы массаж, тұзды бөлме' } },
-  { group: 'vospitatel_asst', name: 'Альжанова Рауза Ериковна', education: 'Среднее специальное', branch: 'Сарыарка 48', note: { ru: 'Группа «Батыр»', kk: '«Батыр» тобы' } },
-  { group: 'vospitatel', name: 'Қинаят Айтолқын Бауыржанқызы', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: { ru: 'Группа «Батыр»', kk: '«Батыр» тобы' } },
-  { group: 'vospitatel', name: 'Ешенханова Ұлдана Исағалиқызы', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: { ru: 'Группа «Қыран»', kk: '«Қыран» тобы' } },
-  { group: 'vospitatel_asst', name: 'Ахметова Каламкас Талгатбековна', education: 'Среднее', branch: 'Сарыарка 48', note: { ru: 'Группа «Қыран»', kk: '«Қыран» тобы' } },
-  { group: 'vospitatel', name: 'Нұрманғали Ләззат Қадырқызы', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: { ru: 'Группа «Ботақан»', kk: '«Ботақан» тобы' } },
-  { group: 'vospitatel_asst', name: 'Сандыкбаева Эльмира Наримановна', education: 'Среднее', branch: 'Сарыарка 48', note: { ru: 'Группа «Ботақан»', kk: '«Ботақан» тобы' } },
-  { group: 'vospitatel_asst', name: 'Селимшаева Нина Васильевна', education: 'Среднее', branch: 'Сарыарка 48', note: { ru: 'Группа «Әлем»', kk: '«Әлем» тобы' } },
-  { group: 'vospitatel', name: 'Төлеутай Мадина Қанатқызы', education: 'Среднее', branch: 'Сарыарка 48', note: { ru: 'Группа «Әлем»', kk: '«Әлем» тобы' } },
-  { group: 'vospitatel_asst', name: 'Ускембаева Алтынай Жанбиршиновна', education: 'Среднее', branch: 'Сарыарка 48', note: { ru: 'Группа «Жалын»', kk: '«Жалын» тобы' } },
-  { group: 'vospitatel', name: 'Иманбекова Кунимжан Кахубаевна', education: 'Среднее', branch: 'Сарыарка 48', note: { ru: 'Группа «Жалын»', kk: '«Жалын» тобы' } },
-  { group: 'vospitatel', name: 'Успанова Мейрамгуль Ахатовна', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: { ru: 'Группа «Күншуақ»', kk: '«Күншуақ» тобы' } },
-  { group: 'vospitatel_asst', name: 'Серкебаева Айтжамал Каижигалаевна', education: 'Среднее', branch: 'Сарыарка 48', note: { ru: 'Группа «Күншуақ»', kk: '«Күншуақ» тобы' } },
-  { group: 'vospitatel', name: 'Ускенбаева Айнур Батырбековна', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: { ru: 'Группа «Үміт»', kk: '«Үміт» тобы' } },
-  { group: 'vospitatel_asst', name: 'Жанибекова Райхан Досжановна', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: { ru: 'Группа «Үміт»', kk: '«Үміт» тобы' } },
-  { group: 'nurse', name: 'Баенова Айгуль Мусаевна', education: 'Высшее / бакалавр', branch: 'Сарыарка 48', note: '' },
-  { group: 'vospitatel', name: 'Сулейменова Алтынгул', education: 'Среднее специальное', branch: 'Аманат 12/1', note: { ru: 'Группа «Еркем-ай»', kk: '«Еркем-ай» тобы' } },
-  { group: 'vospitatel_asst', name: 'Орак Айжамал', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Еркем-ай»', kk: '«Еркем-ай» тобы' } },
-  { group: 'vospitatel', name: 'Жумабекова Толкын Жиенбаевна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Бәйтерек»', kk: '«Бәйтерек» тобы' } },
-  { group: 'vospitatel_asst', name: 'Байдилдаева Гулбану Жолдасовна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Бәйтерек»', kk: '«Бәйтерек» тобы' } },
-  { group: 'vospitatel', name: 'Койшманова Меруерт Рысбековна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Өркен»', kk: '«Өркен» тобы' } },
-  { group: 'vospitatel_asst', name: 'Задорожко Татьяна Владимировна', education: 'Среднее специальное', branch: 'Аманат 12/1', note: { ru: 'Группа «Өркен»', kk: '«Өркен» тобы' } },
-  { group: 'vospitatel', name: 'Жиенкулова Эльмира Калдарбековна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Сұнқар»', kk: '«Сұнқар» тобы' } },
-  { group: 'vospitatel_asst', name: 'Бектасбаева Гулим Кушимбековна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Сұнқар»', kk: '«Сұнқар» тобы' } },
-  { group: 'vospitatel', name: 'Асанова Мөлдір Ғалымқызы', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Балапан»', kk: '«Балапан» тобы' } },
-  { group: 'vospitatel_asst', name: 'Тансыкбаева Айгерим Советхановна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Таңшуақ»', kk: '«Таңшуақ» тобы' } },
-  { group: 'vospitatel_asst', name: 'Мырзаханова Айнур Маликовна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Балапан»', kk: '«Балапан» тобы' } },
-  { group: 'vospitatel', name: 'Муханбетжанова Алуа Жолмановна', education: 'Среднее специальное', branch: 'Аманат 12/1', note: { ru: 'Группа «Айгөлек»', kk: '«Айгөлек» тобы' } },
-  { group: 'vospitatel_asst', name: 'Ахметжанова Гульнара Нурахметовна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Айгөлек»', kk: '«Айгөлек» тобы' } },
-  { group: 'vospitatel', name: 'Курбекова Куралай Амирхановна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Әдем-ай»', kk: '«Әдем-ай» тобы' } },
-  { group: 'vospitatel_asst', name: 'Жумабаева Куралай Толеубаевна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Әдем-ай»', kk: '«Әдем-ай» тобы' } },
-  { group: 'vospitatel_asst', name: 'Карсыбекова Сауле Калимжановна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Ақжол»', kk: '«Ақжол» тобы' } },
-  { group: 'vospitatel_asst', name: 'Мырзагулова Гульдана Ералықызы', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Ақжол»', kk: '«Ақжол» тобы' } },
-  { group: 'vospitatel_asst', name: 'Джакупова Роза Маратовна', education: 'Среднее специальное', branch: 'Аманат 12/1', note: { ru: 'Группа «Ұлан»', kk: '«Ұлан» тобы' } },
-  { group: 'vospitatel_asst', name: 'Нурпиисова Сауле Мамасериковна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Ұлан»', kk: '«Ұлан» тобы' } },
-  { group: 'vospitatel_asst', name: 'Ашимова Карлыгаш Айтмагамбетовна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Құлыншақ»', kk: '«Құлыншақ» тобы' } },
-  { group: 'vospitatel', name: 'Айдарханова Айжан Сериковна', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Балбөбек»', kk: '«Балбөбек» тобы' } },
-  { group: 'vospitatel_asst', name: 'Шакиева Жанара Муратбековна', education: 'Среднее специальное', branch: 'Аманат 12/1', note: { ru: 'Группа «Балбөбек»', kk: '«Балбөбек» тобы' } },
-  { group: 'vospitatel', name: 'Шымырбаева Фарида', education: 'Высшее / бакалавр', branch: 'Аманат 12/1', note: { ru: 'Группа «Арай»', kk: '«Арай» тобы' } },
-  { group: 'vospitatel_asst', name: 'Тохтиева Эльмира Абдирахмановна', education: 'Среднее', branch: 'Аманат 12/1', note: { ru: 'Группа «Арай»', kk: '«Арай» тобы' } },
-  { group: 'social', name: 'Кипшакбаева Айслу Жумабаевна', education: 'Среднее специальное', branch: 'Аманат 12/1', note: '' },
-  { group: 'vospitatel', name: 'Касымова Айгуль Амантаевна', education: 'Среднее специальное', branch: 'Акын Сара 37', note: { ru: 'Группа «Батыр»', kk: '«Батыр» тобы' } },
-  { group: 'nanny', name: 'Шариязданова Гульдана Максутовна', education: 'Среднее специальное', branch: 'Акын Сара 37', note: { ru: 'Группа «Батыр»', kk: '«Батыр» тобы' } },
-  { group: 'vospitatel', name: 'Дуйсенбаева Улпан Сейлхановна', education: 'Среднее специальное', branch: 'Акын Сара 37', note: { ru: 'Группа «Арлан»', kk: '«Арлан» тобы' } },
-  { group: 'nanny', name: 'Муканова Гульбаршин Сансызбаевна', education: 'Высшее', branch: 'Акын Сара 37', note: { ru: 'Группа «Арлан»', kk: '«Арлан» тобы' } },
-  { group: 'vospitatel', name: 'Калиева Айсулу Айчановна', education: 'Высшее', branch: 'Акын Сара 37', note: { ru: 'Группа «Бобек»', kk: '«Бобек» тобы' } },
-  { group: 'nanny', name: 'Аханова Гульбахыт Жумашева', education: 'Среднее специальное', branch: 'Акын Сара 37', note: { ru: 'Группа «Бобек»', kk: '«Бобек» тобы' } },
-  { group: 'vospitatel', name: 'Игреева Баршая', education: 'Среднее специальное', branch: 'Акын Сара 37', note: { ru: 'Группа «Акбота»', kk: '«Акбота» тобы' } },
-  { group: 'nanny', name: 'Тулеуова Назгуль Далабаевна', education: 'Высшее', branch: 'Акын Сара 37', note: { ru: 'Группа «Акбота»', kk: '«Акбота» тобы' } },
-  { group: 'nanny', name: 'Нурбекова-Сагитова Алтынай Мейрамбековна', education: 'Высшее', branch: 'Акын Сара 37', note: { ru: 'Группа «Акбота»', kk: '«Акбота» тобы' } },
+  { group: 'admin', name: 'Калеева Салтанат Ануарбековна', photo: phTeamKaleeva, note: { ru: 'Директор', kk: 'Директор' } },
+  { group: 'admin', name: 'Шалиева Маржан Каппасовна', photo: phTeamShalieva, note: { ru: 'Заместитель директора', kk: 'Директордың орынбасары' } },
+  { group: 'admin', name: 'Молдабекова Айгуль Сагиндыковна', photo: phTeamMoldabekova, note: { ru: 'Методист', kk: 'Әдіскер' } },
+  { group: 'admin', name: 'Шаймарданова Айнур Калеловна', photo: phTeamShaymardanova, note: { ru: 'Заведующая филиала Сарыарка 48', kk: 'Сарыарқа 48 филиалының меңгерушісі' } },
+  { group: 'admin', name: 'Жаксымбетова Гульжанат Саматовна', photo: phTeamZhaksymbetova, note: { ru: 'Заведующая филиала Акын Сара 37', kk: 'Ақын Сара 37 филиалының меңгерушісі' } },
+  { group: 'admin', name: 'Куттыбекова Сезим Жұманқызы', photo: '', note: { ru: 'Менеджер', kk: 'Менеджер' } },
 ];
