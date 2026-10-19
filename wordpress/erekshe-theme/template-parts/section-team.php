@@ -19,7 +19,6 @@ if (erekshe_lang() === 'ru') {
     <div class="text-center max-w-3xl mx-auto mb-14">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Users', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html($roster_n); ?> <?php echo esc_html($spec_word); ?></span></div>
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('teamTitle', 'Руководство и междисциплинарная команда фонда')); ?></h2>
-      <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('teamDesc', 'Логопеды, дефектологи, психологи, инструкторы АФК/ЛФК, педагоги и заботливый младший персонал.')); ?></p>
     </div>
 
     <?php foreach ($order as $g): if (empty($grouped[$g])) continue; $people = $grouped[$g]; ?>

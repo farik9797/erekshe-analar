@@ -108,7 +108,7 @@ function erekshe_register_acf() {
 
     /* ===== Команда ===== */
     acf_add_local_field_group(['key' => 'group_erekshe_team', 'title' => 'Страница «Команда»', 'fields' => array_merge(
-        ef_banner('team', 'Руководство и междисциплинарная команда фонда', 'Логопеды, дефектологи, психологи, инструкторы АФК/ЛФК и педагоги.', '32 специалиста'),
+        ef_banner('team', 'Руководство и междисциплинарная команда фонда', '', '32 специалиста'),
         [ ef_repeater('team_items', 'specialists', 'Специалисты', [
             ef_text('sp_name', 'name', 'ФИО', ''),
             ef_text('sp_role', 'role', 'Должность', ''),

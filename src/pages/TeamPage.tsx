@@ -16,12 +16,9 @@ export const TeamPage: React.FC = () => {
               <Users className="w-4 h-4" />
               {lang === 'ru' ? `${t.heroStatTeam} ${pluralRu(Number(t.heroStatTeam), 'специалист', 'специалиста', 'специалистов')}` : `${t.heroStatTeam} маман`}
             </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white">
               {t.teamTitle}
             </h1>
-            <p className="text-slate-200 text-base md:text-lg leading-relaxed max-w-2xl mb-6">
-              {t.teamDesc}
-            </p>
           </div>
         </div>
       </FadeIn>

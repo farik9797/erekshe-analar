@@ -82,7 +82,6 @@ export const TeamRoster: React.FC<{ withHeading?: boolean }> = ({ withHeading = 
             <span>{t.heroStatTeam} {L === 'ru' ? pluralRu(Number(t.heroStatTeam), 'специалист', 'специалиста', 'специалистов') : 'маман'}</span>
           </div>
           <h2 className="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight">{t.teamTitle}</h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-3">{t.teamDesc}</p>
         </div>
       </div>
       {groups}
