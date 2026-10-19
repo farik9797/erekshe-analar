@@ -52,7 +52,9 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'd_donationBin'      => 'БИН:',
             'd_donationBank'     => 'Банк:',
             'd_donationKbe'      => 'КБЕ:',
-            'd_donationKbeValue' => 'КБЕ: 18 (Некоммерческая организация)',
+            'd_donationKbeValue' => '18 (Некоммерческая организация)',
+            'd_donationIik'      => 'ИИК (KZT):',
+            'd_donationBik'      => 'БИК:',
             // modal search
             'd_searchHint'       => 'Введите запрос и нажмите Enter для поиска по сайту.',
             'd_searchQuickLinks' => 'Быстрые ссылки:',
@@ -105,8 +107,10 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'd_donationOrg'      => 'Ұйым:',
             'd_donationBin'      => 'БСН:',
             'd_donationBank'     => 'Банк:',
-            'd_donationKbe'      => 'КБЕ:',
-            'd_donationKbeValue' => 'КБЕ: 18 (Коммерциялық емес ұйым)',
+            'd_donationKbe'      => 'Кбе:',
+            'd_donationKbeValue' => '18 (Коммерциялық емес ұйым)',
+            'd_donationIik'      => 'ЖСК (KZT):',
+            'd_donationBik'      => 'БСК:',
             // modal search
             'd_searchHint'       => 'Сұрауды енгізіп, сайттан іздеу үшін Enter басыңыз.',
             'd_searchQuickLinks' => 'Жылдам сілтемелер:',

@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { X, HeartHandshake, ShieldCheck, Copy, Check } from 'lucide-react';
 
 export const DonationModal: React.FC = () => {
   const { lang, t, isDonationModalOpen, closeDonationModal } = useAccessibility();
   const [copiedField, setCopiedField] = React.useState<string | null>(null);
+
+  // Закрытие по Esc
+  useEffect(() => {
+    if (!isDonationModalOpen) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') closeDonationModal(); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [isDonationModalOpen, closeDonationModal]);
+
+  // Клик по фону закрывает — только если и нажали на фоне
+  const downOnBackdrop = useRef(false);
 
   if (!isDonationModalOpen) return null;
 
@@ -15,11 +26,16 @@ export const DonationModal: React.FC = () => {
   };
 
   return (
-    <div className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 animate-fadeIn">
+    <div
+      className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 animate-fadeIn"
+      onMouseDown={(e) => { downOnBackdrop.current = e.target === e.currentTarget; }}
+      onClick={(e) => { if (downOnBackdrop.current && e.target === e.currentTarget) closeDonationModal(); }}
+    >
       <div className="bg-white rounded-3xl max-w-xl w-full max-h-[92vh] overflow-y-auto p-5 sm:p-4 shadow-2xl relative border border-slate-100">
         <button
           onClick={closeDonationModal}
-          className="absolute top-4 right-4 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition"
+          aria-label={lang === 'ru' ? 'Закрыть' : 'Жабу'}
+          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
@@ -46,7 +62,7 @@ export const DonationModal: React.FC = () => {
             </div>
 
             <div className="flex items-center justify-between py-1.5 border-b border-slate-200">
-              <span className="text-slate-500 font-medium">БИН:</span>
+              <span className="text-slate-500 font-medium">{lang === 'ru' ? 'БИН:' : 'БСН:'}</span>
               <div className="flex items-center gap-2">
                 <span className="font-bold text-slate-900">201140026437</span>
                 <button
@@ -59,7 +75,7 @@ export const DonationModal: React.FC = () => {
             </div>
 
             <div className="flex items-center justify-between py-1.5 border-b border-slate-200">
-              <span className="text-slate-500 font-medium">ИИК (KZT):</span>
+              <span className="text-slate-500 font-medium">{lang === 'ru' ? 'ИИК (KZT):' : 'ЖСК (KZT):'}</span>
               <div className="flex items-center gap-2">
                 <span className="font-bold text-slate-900 font-mono text-[11px]">KZ918562203127814849</span>
                 <button
@@ -77,12 +93,12 @@ export const DonationModal: React.FC = () => {
             </div>
 
             <div className="flex items-center justify-between py-1.5 border-b border-slate-200">
-              <span className="text-slate-500 font-medium">БИК:</span>
+              <span className="text-slate-500 font-medium">{lang === 'ru' ? 'БИК:' : 'БСК:'}</span>
               <span className="font-bold text-slate-900 font-mono text-[11px]">KCJBKZKX</span>
             </div>
 
             <div className="flex items-center justify-between py-1.5">
-              <span className="text-slate-500 font-medium">КБЕ:</span>
+              <span className="text-slate-500 font-medium">{lang === 'ru' ? 'КБЕ:' : 'Кбе:'}</span>
               <span className="font-bold text-slate-900">{t.donationKbe}</span>
             </div>
           </div>
