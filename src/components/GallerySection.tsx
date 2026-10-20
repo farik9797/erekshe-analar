@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { GALLERY_ITEMS } from '../data/mockData';
 import { GalleryItem } from '../types';
@@ -16,7 +16,19 @@ export const GallerySection: React.FC = () => {
     { id: 'salt_room', label: t.filterGallerySalt },
     { id: 'umay', label: t.filterGalleryUmay },
     { id: 'events', label: t.filterGalleryEvents }
-  ];
+  ].filter((c) => c.id === 'all' || GALLERY_ITEMS.some((g) => g.category === c.id)); // пустые вкладки не показываем
+
+  // Закрытие просмотра по Esc
+  useEffect(() => {
+    if (!lightboxItem) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setLightboxItem(null); };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [lightboxItem]);
+
+  // Клик по фону закрывает — только если и нажали на фоне (фон — оверлей и пустое место вокруг фото)
+  const downOnBackdrop = useRef(false);
+  const isBackdrop = (e: React.MouseEvent) => e.target === e.currentTarget || (e.target as HTMLElement).dataset.backdrop !== undefined;
 
   const filteredItems = activeCategory === 'all'
     ? GALLERY_ITEMS
@@ -89,13 +101,15 @@ export const GallerySection: React.FC = () => {
       {/* Lightbox Modal */}
       {lightboxItem && (
         <div
-          onClick={() => setLightboxItem(null)}
+          onMouseDown={(e) => { downOnBackdrop.current = isBackdrop(e); }}
+          onClick={(e) => { if (downOnBackdrop.current && isBackdrop(e)) setLightboxItem(null); }}
           className="fixed inset-0 bg-slate-950/90 z-50 flex items-center justify-center p-4 animate-fadeIn"
         >
-          <div className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
+          <div data-backdrop className="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
             <button
               onClick={() => setLightboxItem(null)}
-              className="absolute -top-12 right-0 p-2 rounded-full bg-white/20 text-white hover:bg-white/40 transition"
+              aria-label={lang === 'ru' ? 'Закрыть' : 'Жабу'}
+              className="absolute -top-12 right-0 p-2 rounded-full bg-white/20 text-white hover:bg-white/40 transition cursor-pointer"
             >
               <X className="w-6 h-6" />
             </button>

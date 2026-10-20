@@ -19,7 +19,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ hideHeader = false }) 
     { id: 'announcement', label: t.filterNewsAnnounce },
     { id: 'charity', label: t.filterNewsCharity },
     { id: 'holiday', label: t.filterNewsHolidays }
-  ];
+  ].filter((c) => c.id === 'all' || NEWS.some((n) => n.category === c.id)); // пустые вкладки не показываем
 
   const filteredNews = activeCategory === 'all'
     ? NEWS

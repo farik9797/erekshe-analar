@@ -214,6 +214,7 @@ export const translations = {
     // News Section
     newsBadge: 'События фонда',
     newsTitle: 'Новости, акции и полезные статьи',
+    newsDesc: 'Свежие события, наборы на курсы и фоторепортажи из наших центров.',
     filterNewsAll: 'Все публикации',
     filterNewsAnnounce: 'Набор детей',
     filterNewsCharity: 'Акции',
@@ -556,6 +557,7 @@ export const translations = {
     // News
     newsBadge: 'Қор оқиғалары',
     newsTitle: 'Жаңалықтар, акциялар және пайдалы мақалалар',
+    newsDesc: 'Соңғы оқиғалар, курстарға қабылдау және орталықтарымыздан фоторепортаждар.',
     filterNewsAll: 'Барлық жарияланымдар',
     filterNewsAnnounce: 'Балаларды қабылдау',
     filterNewsCharity: 'Акциялар',
