@@ -20,6 +20,7 @@ import phTeamMoldabekova from '../assets/images/photos/team-moldabekova.webp';
 import phTeamShaymardanova from '../assets/images/photos/team-shaymardanova.webp';
 import phTeamZhaksymbetova from '../assets/images/photos/team-zhaksymbetova.webp';
 import phTeamKuttybekova from '../assets/images/photos/team-kuttybekova.webp';
+import phTeamNauryzbekova from '../assets/images/photos/team-nauryzbekova.webp';
 import phBall from '../assets/images/photos/ball.webp';
 import phBranchAmanat from '../assets/images/photos/branch-amanat.webp';
 import phBranchSaryarka from '../assets/images/photos/branch-saryarka.webp';
@@ -829,5 +830,6 @@ export const TEAM_ROSTER = [
   { group: 'admin', name: 'Молдабекова Айгуль Сагиндыковна', photo: phTeamMoldabekova, note: { ru: 'Методист', kk: 'Әдіскер' } },
   { group: 'admin', name: 'Шаймарданова Айнур Калеловна', photo: phTeamShaymardanova, note: { ru: 'Заведующая филиала Сарыарка 48', kk: 'Сарыарқа 48 филиалының меңгерушісі' } },
   { group: 'admin', name: 'Жаксымбетова Гульжанат Саматовна', photo: phTeamZhaksymbetova, note: { ru: 'Заведующая филиала Акын Сара 37', kk: 'Ақын Сара 37 филиалының меңгерушісі' } },
-  { group: 'admin', name: 'Куттыбекова Сезим Жұманқызы', photo: phTeamKuttybekova, note: { ru: 'Менеджер', kk: 'Менеджер' } },
+  { group: 'admin', name: 'Наурызбекова Маржан Сериковна', photo: phTeamNauryzbekova, note: { ru: 'Заведующая социально-ресурсным центром «Ұмай»', kk: '«Ұмай» әлеуметтік-ресурстық орталығының меңгерушісі' } },
+  { group: 'admin', name: 'Құттыбекова Сезім Жұманқызы', photo: phTeamKuttybekova, note: { ru: 'Менеджер', kk: 'Менеджер' } },
 ];

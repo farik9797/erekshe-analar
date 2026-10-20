@@ -26,7 +26,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
   return (
     <section id="contacts" className="py-16 md:py-24 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Section Header */}
+        {/* Section Header — на «Контактах» его роль выполняет баннер страницы */}
+        {!hideCta && (
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
             <Phone className="w-4 h-4 text-emerald-600" />
@@ -36,6 +37,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
             {t.contactTitle}
           </h2>
         </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Headquarters Contact Cards */}

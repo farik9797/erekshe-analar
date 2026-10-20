@@ -189,7 +189,7 @@ function erekshe_register_acf() {
 
     /* ===== Контакты ===== */
     acf_add_local_field_group(['key' => 'group_erekshe_contacts', 'title' => 'Страница «Контакты»', 'fields' => array_merge(
-        ef_banner('cnt', 'Свяжитесь с нами или запишитесь на прием', '3 филиала в Астане. Головной офис принимает документы и заявки.', 'Контакты и запись'),
+        ef_banner('cnt', 'Свяжитесь с нами', '3 филиала в Астане. Головной офис принимает документы.', 'Контакты'),
         [
             ef_text('cnt_org', 'contact_org', 'Организация', 'ОФ «EREKSHE ANALAR»'),
             ef_text('cnt_addr', 'contact_address', 'Адрес головного центра', 'г. Астана, ул. Аманат, 12/1'),

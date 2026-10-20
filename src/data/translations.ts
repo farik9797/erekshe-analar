@@ -254,6 +254,9 @@ export const translations = {
     // Contact & Form Section
     contactBadge: 'Контакты и запись',
     contactTitle: 'Свяжитесь с нами или запишитесь на прием',
+    contactsBadge: 'Контакты',
+    contactsTitle: 'Свяжитесь с нами',
+    contactsDesc: '3 филиала в Астане. Головной офис принимает документы.',
     contactHeadquarters: 'Головной офис и центр приема документов:',
     contactPhoneTitle: 'Телефоны:',
     contactEmailTitle: 'Электронная почта:',
@@ -593,6 +596,9 @@ export const translations = {
     // Contact
     contactBadge: 'Байланыс және жазылу',
     contactTitle: 'Бізбен байланысыңыз немесе қабылдауға жазылыңыз',
+    contactsBadge: 'Байланыс',
+    contactsTitle: 'Бізбен байланысыңыз',
+    contactsDesc: 'Астанада 3 филиал. Бас кеңсе құжаттарды қабылдайды.',
     contactHeadquarters: 'Бас кеңсе және құжаттарды қабылдау орталығы:',
     contactPhoneTitle: 'Телефондар:',
     contactEmailTitle: 'Электрондық пошта:',

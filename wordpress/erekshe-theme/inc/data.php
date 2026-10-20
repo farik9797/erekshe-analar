@@ -1473,7 +1473,13 @@ function erekshe_team_roster() {
             ],
             [
                 'group' => 'admin',
-                'name' => 'Куттыбекова Сезим Жұманқызы',
+                'name' => 'Наурызбекова Маржан Сериковна',
+                'photo' => 'photos/team-nauryzbekova.webp',
+                'note' => 'Заведующая социально-ресурсным центром «Ұмай»'
+            ],
+            [
+                'group' => 'admin',
+                'name' => 'Құттыбекова Сезім Жұманқызы',
                 'photo' => 'photos/team-kuttybekova.webp',
                 'note' => 'Менеджер'
             ],
@@ -1511,7 +1517,13 @@ function erekshe_team_roster() {
             ],
             [
                 'group' => 'admin',
-                'name' => 'Куттыбекова Сезим Жұманқызы',
+                'name' => 'Наурызбекова Маржан Сериковна',
+                'photo' => 'photos/team-nauryzbekova.webp',
+                'note' => '«Ұмай» әлеуметтік-ресурстық орталығының меңгерушісі'
+            ],
+            [
+                'group' => 'admin',
+                'name' => 'Құттыбекова Сезім Жұманқызы',
                 'photo' => 'photos/team-kuttybekova.webp',
                 'note' => 'Менеджер'
             ],

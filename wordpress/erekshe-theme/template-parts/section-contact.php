@@ -7,10 +7,6 @@ $hours = erekshe_field('contact_hours', erekshe_t('workingHours'));
 ?>
 <section class="fade-in py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('PhoneCall', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('contactBadge')); ?></span></div>
-      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('contactTitle', 'Свяжитесь с нами или запишитесь на прием')); ?></h2>
-    </div>
     <div class="grid grid-cols-1  gap-8">
       <div class="bg-slate-900 text-white p-4 sm:p-8 rounded-3xl shadow-xl">
         <p class="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2"><?php echo esc_html(erekshe_t('contactHeadquarters')); ?></p>
