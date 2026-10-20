@@ -167,27 +167,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ hideHeader = f
                       {service.shortDesc[lang]}
                     </p>
 
-                    {/* Indications list preview */}
-                    <div className="mt-4 pt-3 border-t border-slate-100 flex flex-col gap-1.5">
-                      <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                        {t.serviceIndications}
-                      </p>
-                      <div className="flex flex-wrap gap-1.5">
-                        {service.indications[lang].slice(0, 3).map((ind, i) => (
-                          <span
-                            key={i}
-                            className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[11px] font-medium"
-                          >
-                            {ind}
-                          </span>
-                        ))}
-                        {service.indications[lang].length > 3 && (
-                          <span className="text-[11px] font-bold text-emerald-600 py-0.5">
-                            +{service.indications[lang].length - 3}
-                          </span>
-                        )}
-                      </div>
-                    </div>
                   </div>
 
                   {/* Footer details */}

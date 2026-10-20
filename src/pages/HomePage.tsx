@@ -9,7 +9,6 @@ import { CharitySection } from '../components/CharitySection';
 import { NewsSection } from '../components/NewsSection';
 import { ReviewsSection } from '../components/ReviewsSection';
 import { FaqSection } from '../components/FaqSection';
-import { PartnersSection } from '../components/PartnersSection';
 import { ContactSection } from '../components/ContactSection';
 import { FadeIn } from '../components/FadeIn';
 
@@ -45,7 +44,6 @@ export const HomePage: React.FC = () => {
         <FaqSection />
       </FadeIn>
       <FadeIn>
-        <PartnersSection />
       </FadeIn>
       <FadeIn>
         <ContactSection />

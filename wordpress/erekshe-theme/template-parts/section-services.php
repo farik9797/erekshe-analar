@@ -38,13 +38,6 @@ $services = erekshe_get_rows('services', erekshe_services());
             <div>
               <h3 class="text-base sm:text-xl font-bold text-slate-900 group-hover:text-emerald-700 transition-colors"><?php echo esc_html($s['title']); ?></h3>
               <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed line-clamp-3"><?php echo esc_html($s['shortDesc']); ?></p>
-              <div class="mt-4 pt-3 border-t border-slate-100 flex flex-col gap-1.5">
-                <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500"><?php echo esc_html(erekshe_t('serviceIndications')); ?></p>
-                <div class="flex flex-wrap gap-1.5">
-                  <?php foreach (array_slice($s['indications'], 0, 3) as $ind): ?><span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[11px] font-medium"><?php echo esc_html($ind); ?></span><?php endforeach; ?>
-                  <?php if (count($s['indications']) > 3): ?><span class="text-[11px] font-bold text-emerald-600 py-0.5">+<?php echo count($s['indications']) - 3; ?></span><?php endif; ?>
-                </div>
-              </div>
             </div>
             <div class="flex items-center justify-between pt-3 border-t border-slate-100">
               <span class="flex items-center gap-1.5 text-xs font-semibold text-slate-500"><?php echo erekshe_icon('Clock', 'w-4 h-4'); ?><?php echo esc_html($s['duration']); ?></span>
@@ -77,25 +70,6 @@ $services = erekshe_get_rows('services', erekshe_services());
           </div>
           <p class="text-sm text-slate-600 leading-relaxed mb-6"><?php echo esc_html($s['fullDesc'] ?? $s['shortDesc']); ?></p>
 
-          <?php if (!empty($s['indications'])): ?>
-          <div class="mb-6">
-            <p class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2"><?php echo esc_html(erekshe_t('svc_indications')); ?></p>
-            <div class="flex flex-wrap gap-2">
-              <?php foreach ($s['indications'] as $ind): ?><span class="px-3 py-1 rounded-lg bg-emerald-50 text-emerald-900 border border-emerald-200 text-xs font-semibold"><?php echo esc_html($ind); ?></span><?php endforeach; ?>
-            </div>
-          </div>
-          <?php endif; ?>
-
-          <?php if (!empty($s['results'])): ?>
-          <div class="mb-6">
-            <p class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2"><?php echo esc_html(erekshe_t('svc_results')); ?></p>
-            <ul class="flex flex-col gap-2">
-              <?php foreach ($s['results'] as $res): ?>
-                <li class="flex items-start gap-2 text-sm text-slate-700"><?php echo erekshe_icon('CheckCircle', 'w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5'); ?><span><?php echo esc_html($res); ?></span></li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-          <?php endif; ?>
         </div>
       </div>
     </div>

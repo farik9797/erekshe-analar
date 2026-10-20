@@ -1,7 +1,6 @@
 import React from 'react';
 import { AboutSection } from '../components/AboutSection';
 import { DocumentsSection } from '../components/DocumentsSection';
-import { PartnersSection } from '../components/PartnersSection';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { FadeIn } from '../components/FadeIn';
 import { ShieldCheck, Target, Heart, Award, Users, Building2, Sparkles, CheckCircle2 } from 'lucide-react';
@@ -122,7 +121,6 @@ export const AboutPage: React.FC = () => {
 
       {/* Partners Section */}
       <FadeIn>
-        <PartnersSection />
       </FadeIn>
     </div>
   );

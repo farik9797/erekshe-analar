@@ -1,6 +1,5 @@
 import React from 'react';
 import { DocumentsSection } from '../components/DocumentsSection';
-import { PartnersSection } from '../components/PartnersSection';
 import { useAccessibility } from '../context/AccessibilityContext';
 import { FadeIn } from '../components/FadeIn';
 import { FileCheck, ShieldCheck } from 'lucide-react';
@@ -31,7 +30,6 @@ export const DocumentsPage: React.FC = () => {
         <DocumentsSection hideHeader />
       </FadeIn>
       <FadeIn>
-        <PartnersSection />
       </FadeIn>
     </div>
   );

@@ -5,7 +5,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
         'ru' => [
             'b_AboutSectionBadge'   => 'О нашем фонде',
             'b_AboutImageAlt'       => 'О фонде EREKSHE ANALAR',
-            'b_ServicesCatalogBadge'=> 'Каталог коррекционных и медицинских услуг',
+            'b_ServicesCatalogBadge'=> 'Каталог оздоровительных и коррекционных услуг',
             'b_BranchesNetworkBadge'=> 'Наша сеть в Астане',
             'b_BranchWhatsappLabel' => 'WhatsApp:',
             'b_ProcessCtaTitle'     => 'Готовы начать путь реабилитации?',
@@ -28,7 +28,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
         'kk' => [
             'b_AboutSectionBadge'   => 'Қорымыз туралы',
             'b_AboutImageAlt'       => 'EREKSHE ANALAR қоры туралы',
-            'b_ServicesCatalogBadge'=> 'Түзету және медициналық қызметтер каталогы',
+            'b_ServicesCatalogBadge'=> 'Сауықтыру және түзету қызметтерінің каталогы',
             'b_BranchesNetworkBadge'=> 'Астанадағы желіміз',
             'b_BranchWhatsappLabel' => 'WhatsApp:',
             'b_ProcessCtaTitle'     => 'Оңалту жолын бастауға дайынсыз ба?',

@@ -39,13 +39,6 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
             <?php echo erekshe_icon('Heart', 'w-4 h-4 text-amber-600'); ?><span><?php echo esc_html(erekshe_t('heroCtaUmay')); ?></span>
           </a>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200/60 justify-items-center lg:justify-items-start">
-          <?php foreach ([erekshe_t('a_featFree'), erekshe_t('a_featIpr'), erekshe_t('a_featMothers')] as $b): ?>
-            <div class="flex items-center gap-2 text-xs font-semibold text-slate-700">
-              <?php echo erekshe_icon('CheckCircle2', 'w-4 h-4 text-emerald-600 flex-shrink-0'); ?><span><?php echo esc_html($b); ?></span>
-            </div>
-          <?php endforeach; ?>
-        </div>
       </div>
       <div class="lg:col-span-5 relative">
         <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
@@ -59,14 +52,6 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
           </div>
         </div>
       </div>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-      <?php foreach ([['1200+',erekshe_t('a_statChildrenRehab')],['4',erekshe_t('a_statBranchesAstana')],['20',erekshe_t('a_statSpecialists')],['100%',erekshe_t('a_statFree')]] as $s): ?>
-        <div class="bg-white p-5 rounded-2xl border border-slate-100 shadow-xs hover:border-emerald-200 transition">
-          <p class="text-2xl sm:text-3xl font-extrabold text-emerald-700 tracking-tight"><?php echo esc_html($s[0]); ?></p>
-          <p class="text-xs text-slate-600 font-medium mt-1"><?php echo esc_html($s[1]); ?></p>
-        </div>
-      <?php endforeach; ?>
     </div>
   </div>
 </section>
@@ -183,8 +168,7 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
               <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden border border-slate-200"><div class="h-full bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full" style="width: <?php echo esc_attr($prog); ?>%"></div></div>
             </div>
             <?php endif; ?>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-              <div class="flex items-center gap-1.5 text-xs font-bold text-slate-600"><?php echo erekshe_icon('Users', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('projectBeneficiaries')); ?> <?php echo esc_html($p['beneficiariesCount']); ?></span></div>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-end">
               <button type="button" data-donation-open class="px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition flex items-center gap-1.5 shadow-md"><?php echo erekshe_icon('HeartHandshake', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('btnSupportProject')); ?></span></button>
             </div>
           </div>
@@ -261,24 +245,6 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
             <div class="p-1.5 rounded-xl transition shrink-0 <?php echo $i === 0 ? 'bg-emerald-600 text-white' : 'bg-white text-slate-500'; ?>"><?php echo erekshe_icon('ChevronDown', 'w-4 h-4'); ?></div>
           </button>
           <div data-faq-body class="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-emerald-100/60 font-medium <?php echo $i === 0 ? '' : 'hidden'; ?>"><?php echo esc_html($f['answer']); ?></div>
-        </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ПАРТНЁРЫ ==================== -->
-<section class="fade-in py-16 md:py-24 bg-slate-50 border-b border-slate-100">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center max-w-2xl mx-auto mb-12">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('HeartHandshake', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('a_partnersBadge')); ?></span></div>
-      <h2 class="text-[1.2rem] sm:text-3xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('partnersTitle')); ?></h2>
-    </div>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <?php foreach (erekshe_partners() as $p): ?>
-        <div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs hover:border-emerald-300 transition flex flex-col items-center text-center justify-center gap-2">
-          <p class="font-extrabold text-emerald-800 text-sm"><?php echo esc_html($p['logoText']); ?></p>
-          <p class="text-[11px] text-slate-500"><?php echo esc_html($p['desc']); ?></p>
         </div>
       <?php endforeach; ?>
     </div>

@@ -19,7 +19,7 @@ export const ServicesPage: React.FC = () => {
             <div className="relative z-10 max-w-3xl">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-400/30 mb-4">
                 <Activity className="w-4 h-4" />
-                {lang === 'ru' ? 'Каталог коррекционных и медицинских услуг' : 'Түзету және медициналық қызметтер каталогы'}
+                {lang === 'ru' ? 'Каталог оздоровительных и коррекционных услуг' : 'Сауықтыру және түзету қызметтерінің каталогы'}
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mb-4">
                 {t.servicesTitle}

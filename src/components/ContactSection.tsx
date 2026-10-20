@@ -39,7 +39,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Headquarters Contact Cards */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className={`${hideCta ? 'lg:col-span-12' : 'lg:col-span-5'} flex flex-col gap-6`}>
             <div className="bg-slate-900 text-white p-4 rounded-3xl shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none" />
 
@@ -50,7 +50,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
                 {t.donationOrgName}
               </h3>
 
-              <div className="flex flex-col gap-5 text-sm font-medium">
+              <div className={`${hideCta ? 'grid sm:grid-cols-2 lg:grid-cols-3' : 'flex flex-col'} gap-5 text-sm font-medium`}>
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                   <div>
@@ -110,7 +110,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
             </div>
           </div>
 
-          {/* Right Column: Interactive Consultation Card */}
+          {/* Right Column: Interactive Consultation Card — на «Контактах» не показываем */}
+          {!hideCta && (
           <div className="lg:col-span-7 bg-slate-50 p-4 rounded-3xl border border-slate-200/80 shadow-sm flex flex-col justify-between gap-6">
             <div>
               <span className="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase">
@@ -124,7 +125,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
               </p>
             </div>
 
-            {!hideCta && (
             <div className="bg-white p-6 rounded-2xl border border-slate-200 flex flex-col items-center text-center gap-4">
               <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
                 <Sparkles className="w-6 h-6" />
@@ -145,8 +145,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ hideCta = false 
                 <span>{lang === 'ru' ? 'Консультация по центру' : 'Орталық бойынша кеңес'}</span>
               </button>
             </div>
-            )}
           </div>
+          )}
         </div>
       </div>
 

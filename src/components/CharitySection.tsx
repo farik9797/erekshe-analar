@@ -6,7 +6,6 @@ import {
   Heart,
   CheckCircle2,
   Sparkles,
-  Users,
   ShieldCheck
 } from 'lucide-react';
 
@@ -115,11 +114,7 @@ export const CharitySection: React.FC<CharitySectionProps> = ({ hideHeader = fal
                     </div>
                   )}
 
-                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-slate-600">
-                      <Users className="w-4 h-4 text-emerald-600" />
-                      <span>{t.projectBeneficiaries} {project.beneficiariesCount}</span>
-                    </div>
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-end">
 
                     <button
                       onClick={openDonationModal}

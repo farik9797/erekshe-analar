@@ -7,7 +7,6 @@ import {
   MapPin,
   Heart,
   ShieldCheck,
-  CheckCircle2,
   Users,
   Award,
   ArrowRight
@@ -71,21 +70,6 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
-            {/* Quick Benefits Pills */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-200/60 justify-items-center lg:justify-items-start">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>{t.heroPillFree}</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>{t.heroPillIpar}</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-700">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>{t.heroPillMothers}</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Hero Visual Image & Stats Card */}
@@ -127,36 +111,6 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        {/* 4 Trust Metrics Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-          <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-xs hover:border-emerald-200 transition">
-            <p className="text-2xl sm:text-3xl font-extrabold text-emerald-700 tracking-tight">
-              {t.heroStatChildren}
-            </p>
-            <p className="text-xs text-slate-600 font-medium mt-1">{t.heroStatChildrenLabel}</p>
-          </div>
-
-          <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-xs hover:border-emerald-200 transition">
-            <p className="text-2xl sm:text-3xl font-extrabold text-emerald-700 tracking-tight">
-              {t.heroStatBranches}
-            </p>
-            <p className="text-xs text-slate-600 font-medium mt-1">{t.heroStatBranchesLabel}</p>
-          </div>
-
-          <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-xs hover:border-emerald-200 transition">
-            <p className="text-2xl sm:text-3xl font-extrabold text-emerald-700 tracking-tight">
-              {t.heroStatTeam}
-            </p>
-            <p className="text-xs text-slate-600 font-medium mt-1">{t.heroStatTeamLabel}</p>
-          </div>
-
-          <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-xs hover:border-emerald-200 transition">
-            <p className="text-2xl sm:text-3xl font-extrabold text-emerald-700 tracking-tight">
-              {t.heroStatFree}
-            </p>
-            <p className="text-xs text-slate-600 font-medium mt-1">{t.heroStatFreeLabel}</p>
-          </div>
-        </div>
       </div>
       <ConsultModal open={consultOpen} onClose={() => setConsultOpen(false)} />
 

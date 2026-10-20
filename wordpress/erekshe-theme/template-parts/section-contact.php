@@ -15,7 +15,7 @@ $hours = erekshe_field('contact_hours', erekshe_t('workingHours'));
       <div class="bg-slate-900 text-white p-4 sm:p-8 rounded-3xl shadow-xl">
         <p class="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2"><?php echo esc_html(erekshe_t('contactHeadquarters')); ?></p>
         <h3 class="text-2xl font-extrabold mb-6"><?php echo esc_html($org); ?></h3>
-        <div class="flex flex-col gap-4">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <?php
           $contacts = [['MapPin',erekshe_t('c_ContactAddressLabel'),$addr],['Clock',erekshe_t('c_ContactScheduleLabel'),$hours],['MessageCircle',erekshe_t('c_ContactWhatsappLabel'),$wa_num],['Mail',erekshe_t('contactEmailTitle'),$email],['Instagram','Instagram:','@erekshe.analar']];
           foreach ($contacts as $c): ?>

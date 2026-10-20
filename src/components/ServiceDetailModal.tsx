@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
-import { X, Sparkles, CheckCircle2, Clock, Users, MapPin, Award } from 'lucide-react';
+import { X, Clock, Users, MapPin, Award } from 'lucide-react';
 
 export const ServiceDetailModal: React.FC = () => {
   const {
@@ -72,36 +72,6 @@ export const ServiceDetailModal: React.FC = () => {
             </div>
             <h3 className="text-2xl font-extrabold text-slate-900">{service.title[lang]}</h3>
             <p className="text-sm text-slate-600 mt-2 leading-relaxed">{service.fullDesc[lang]}</p>
-          </div>
-
-          {/* Indications List */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
-              {t.serviceIndications}
-            </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {service.indications[lang].map((ind, idx) => (
-                <div key={idx} className="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100 text-xs font-semibold text-slate-800">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                  <span>{ind}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Results Expected */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
-              {t.serviceResults}
-            </h4>
-            <div className="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-100 flex flex-col gap-2">
-              {service.results[lang].map((res, idx) => (
-                <div key={idx} className="flex items-start gap-2 text-xs font-bold text-emerald-950">
-                  <Sparkles className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
-                  <span>{res}</span>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Equipment */}
