@@ -36,7 +36,7 @@ import phGalGroupSunkar from '../assets/images/photos/gal-group-sunkar.webp';
 import phGalGroupOrken from '../assets/images/photos/gal-group-orken.webp';
 import phNewsAfk from '../assets/images/photos/news-afk.webp';
 import phNewsSbo from '../assets/images/photos/news-sbo.webp';
-import phNewsSbo2 from '../assets/images/photos/news-sbo2.webp';
+import phNewsUmaySeminar from '../assets/images/photos/news-umay-seminar.webp';
 import phProjSbo from '../assets/images/photos/proj-sbo.webp';
 
 export const BRANCHES: Branch[] = [
@@ -695,7 +695,7 @@ export const NEWS: NewsItem[] = [
     date: '28.01.2026',
     category: 'news',
     badge: { ru: 'Центр UMAY', kk: 'UMAY орталығы' },
-    image: phNewsSbo2
+    image: phNewsUmaySeminar
   }
 ];
 
