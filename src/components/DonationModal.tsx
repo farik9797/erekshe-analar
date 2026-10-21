@@ -44,7 +44,7 @@ export const DonationModal: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-[11px] font-bold mb-2">
               <HeartHandshake className="w-3.5 h-3.5 text-amber-600" />
-              <span>{t.donationTitle}</span>
+              <span>{t.charityBadge}</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
               {t.donationTitle}
@@ -67,7 +67,8 @@ export const DonationModal: React.FC = () => {
                 <span className="font-bold text-slate-900">201140026437</span>
                 <button
                   onClick={() => copyToClipboard('201140026437', 'bin')}
-                  className="p-1 rounded bg-white hover:bg-slate-200 text-slate-600 border border-slate-200"
+                  aria-label={lang === 'ru' ? 'Копировать БИН' : 'БСН көшіру'}
+                  className="p-1 rounded bg-white hover:bg-slate-200 text-slate-600 border border-slate-200 cursor-pointer"
                 >
                   {copiedField === 'bin' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
@@ -80,7 +81,8 @@ export const DonationModal: React.FC = () => {
                 <span className="font-bold text-slate-900 font-mono text-[11px]">KZ918562203127814849</span>
                 <button
                   onClick={() => copyToClipboard('KZ918562203127814849', 'iban')}
-                  className="p-1 rounded bg-white hover:bg-slate-200 text-slate-600 border border-slate-200"
+                  aria-label={lang === 'ru' ? 'Копировать ИИК' : 'ЖСК көшіру'}
+                  className="p-1 rounded bg-white hover:bg-slate-200 text-slate-600 border border-slate-200 cursor-pointer"
                 >
                   {copiedField === 'iban' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>

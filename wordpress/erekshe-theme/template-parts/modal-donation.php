@@ -3,7 +3,7 @@
   <div class="bg-white rounded-3xl w-full max-w-2xl my-8 shadow-2xl">
     <div class="p-6">
       <div class="flex items-start justify-between gap-4 mb-2">
-        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100 text-amber-900 text-xs font-bold"><?php echo erekshe_icon('HeartHandshake', 'w-4 h-4'); ?><?php echo esc_html(erekshe_t('d_donationBadge')); ?></span>
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-100 text-amber-900 text-xs font-bold"><?php echo erekshe_icon('HeartHandshake', 'w-4 h-4'); ?><?php echo esc_html(erekshe_t('charityBadge')); ?></span>
         <button type="button" data-modal-close aria-label="<?php echo esc_attr(erekshe_t('f_close')); ?>" style="width:2.25rem;height:2.25rem" class="rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition flex-shrink-0"><?php echo erekshe_icon('X', 'w-5 h-5'); ?></button>
       </div>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1"><?php echo esc_html(erekshe_t('d_donationBadge')); ?></h2>
@@ -14,9 +14,9 @@
           <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationOrg')); ?></span><span class="font-bold text-slate-900"><?php echo esc_html(erekshe_t('donationOrgName')); ?></span></div>
           <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationBin')); ?></span><span class="font-bold text-slate-900">201140026437</span></div>
           <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationIik')); ?></span><span class="font-bold text-slate-900">KZ918562203127814849</span></div>
-          <div class="flex items-center gap-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationBank')); ?></span><span class="font-bold text-slate-900"><?php echo esc_html(erekshe_t('donationBankName')); ?></span></div>
+          <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationBank')); ?></span><span class="font-bold text-slate-900"><?php echo esc_html(erekshe_t('donationBankName')); ?></span></div>
           <div class="flex items-center justify-between gap-3 border-b border-slate-100 pb-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationBik')); ?></span><span class="font-bold text-slate-900">KCJBKZKX</span></div>
-          <div class="flex items-start gap-2"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationKbe')); ?></span><span class="font-bold text-slate-900"><?php echo esc_html(erekshe_t('d_donationKbeValue')); ?></span></div>
+          <div class="flex items-start justify-between gap-3"><span class="text-slate-500"><?php echo esc_html(erekshe_t('d_donationKbe')); ?></span><span class="font-bold text-slate-900 text-right"><?php echo esc_html(erekshe_t('d_donationKbeValue')); ?></span></div>
         </div>
       </div>
     </div>

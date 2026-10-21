@@ -1204,7 +1204,7 @@ function erekshe_documents() {
                 'id' => 'doc-3',
                 'title' => 'Правила внутреннего распорядка и посещения центров EREKSHE ANALAR',
                 'category' => 'Информация для родителей',
-                'fileSize' => '950 KB',
+                'fileSize' => '950 КБ',
                 'date' => '2026',
                 'fileUrl' => '#'
             ],
@@ -1214,7 +1214,7 @@ function erekshe_documents() {
                 'id' => 'doc-3',
                 'title' => 'EREKSHE ANALAR орталықтарының ішкі тәртібі мен келу ережелері',
                 'category' => 'Ата-аналарға арналған ақпарат',
-                'fileSize' => '950 KB',
+                'fileSize' => '950 КБ',
                 'date' => '2026',
                 'fileUrl' => '#'
             ],

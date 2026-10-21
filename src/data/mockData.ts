@@ -709,7 +709,7 @@ export const DOCUMENTS: DocumentItem[] = [
       kk: 'EREKSHE ANALAR орталықтарының ішкі тәртібі мен келу ережелері'
     },
     category: { ru: 'Информация для родителей', kk: 'Ата-аналарға арналған ақпарат' },
-    fileSize: '950 KB',
+    fileSize: '950 КБ',
     date: '2026',
     fileUrl: '#'
   }
