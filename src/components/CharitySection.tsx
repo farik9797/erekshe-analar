@@ -40,7 +40,7 @@ export const CharitySection: React.FC<CharitySectionProps> = ({ hideHeader = fal
         )}
 
         {/* Projects Grid */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none mb-16">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none mb-16">
           {SOCIAL_PROJECTS.map((project) => {
             const isCompleted = project.status === 'completed';
             const progress = project.targetAmount

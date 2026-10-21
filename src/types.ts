@@ -97,7 +97,7 @@ export interface SocialProject {
   description: { ru: string; kk: string };
   targetAmount?: number;
   currentAmount?: number;
-  beneficiariesCount: number;
+  beneficiariesCount?: number;
   status: 'active' | 'completed';
   image: string;
 }

@@ -151,7 +151,7 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Heart', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('a_charityBadge')); ?></span></div>
       <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('charityTitle')); ?></h2>
     </div>
-    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none">
+    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none">
       <?php foreach (erekshe_projects() as $p): $prog = !empty($p['targetAmount']) ? min(100, round(($p['currentAmount'] ?? 0) / $p['targetAmount'] * 100)) : 0; ?>
         <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between flex-shrink-0 w-[85vw] max-w-[400px] sm:w-auto sm:max-w-none snap-center sm:snap-none">
           <div class="relative aspect-square lg:aspect-[4/3] overflow-hidden bg-slate-100">
