@@ -567,7 +567,7 @@ export const translations = {
 
     // Gallery
     galleryBadge: 'Орталықтар өмірі',
-    galleryTitle: 'Коррекциялық сабақтар мен іс-шаралардың фотогалереясы',
+    galleryTitle: 'Коррекциялық сабақтар мен іс‑шаралардың фотогалереясы',
     filterGalleryAll: 'Барлық фото',
     filterGalleryClasses: 'Сабақтар',
     filterGalleryPool: 'Бассейн және су',

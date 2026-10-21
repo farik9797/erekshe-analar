@@ -417,7 +417,7 @@ function erekshe_tr() {
             'filterNewsVacancies' => 'Бос орындар',
             'btnReadMore' => 'Толық оқу',
             'galleryBadge' => 'Орталықтар өмірі',
-            'galleryTitle' => 'Коррекциялық сабақтар мен іс-шаралардың фотогалереясы',
+            'galleryTitle' => 'Коррекциялық сабақтар мен іс‑шаралардың фотогалереясы',
             'filterGalleryAll' => 'Барлық фото',
             'filterGalleryClasses' => 'Сабақтар',
             'filterGalleryPool' => 'Бассейн және су',

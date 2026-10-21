@@ -62,11 +62,11 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ hideHeader = false }) 
         </div>
 
         {/* News Grid */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 md:grid-cols-3 sm:gap-6 sm:overflow-visible sm:pb-0 scrollbar-none">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center sm:gap-6 sm:overflow-visible sm:pb-0 scrollbar-none">
           {filteredNews.map((news) => (
             <div
               key={news.id}
-              className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between group flex-shrink-0 w-[85vw] max-w-[340px] sm:w-auto sm:max-w-none snap-center sm:snap-none"
+              className="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between group flex-shrink-0 w-[85vw] max-w-[340px] sm:w-[calc(50%_-_0.75rem)] md:w-[calc((100%_-_3rem)/3)] sm:max-w-none snap-center sm:snap-none"
             >
               <div className="relative aspect-square bg-slate-100">
                 {!hideImages ? (
@@ -96,7 +96,7 @@ export const NewsSection: React.FC<NewsSectionProps> = ({ hideHeader = false }) 
                   <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug">
                     {news.title[lang]}
                   </h3>
-                  <p className="text-xs text-slate-600 mt-2 line-clamp-3 leading-relaxed">
+                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
                     {news.summary[lang]}
                   </p>
                 </div>
