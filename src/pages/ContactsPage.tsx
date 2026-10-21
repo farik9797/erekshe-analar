@@ -40,7 +40,7 @@ export const ContactsPage: React.FC = () => {
       </FadeIn>
 
       <FadeIn>
-        <ContactSection hideCta />
+        <ContactSection hideHeader />
       </FadeIn>
       <FadeIn>
         <BranchesSection />

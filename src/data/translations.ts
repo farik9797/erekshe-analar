@@ -253,8 +253,8 @@ export const translations = {
     partnersTitle: 'Сотрудничество ради будущего детей',
 
     // Contact & Form Section
-    contactBadge: 'Контакты и запись',
-    contactTitle: 'Свяжитесь с нами или запишитесь на прием',
+    contactBadge: 'Контакты',
+    contactTitle: 'Свяжитесь с нами',
     contactsBadge: 'Контакты',
     contactsTitle: 'Свяжитесь с нами',
     contactsDesc: '3 филиала в Астане. Головной офис принимает документы.',
@@ -596,8 +596,8 @@ export const translations = {
     partnersTitle: 'Балалардың болашағы үшін ынтымақтастық',
 
     // Contact
-    contactBadge: 'Байланыс және жазылу',
-    contactTitle: 'Бізбен байланысыңыз немесе қабылдауға жазылыңыз',
+    contactBadge: 'Байланыс',
+    contactTitle: 'Бізбен байланысыңыз',
     contactsBadge: 'Байланыс',
     contactsTitle: 'Бізбен байланысыңыз',
     contactsDesc: 'Астанада 3 филиал. Бас кеңсе құжаттарды қабылдайды.',
