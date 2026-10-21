@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useAccessibility } from '../context/AccessibilityContext';
-import { X, HeartHandshake, ShieldCheck, Copy, Check } from 'lucide-react';
+import { X, HeartHandshake, Copy, Check } from 'lucide-react';
 
 export const DonationModal: React.FC = () => {
   const { lang, t, isDonationModalOpen, closeDonationModal } = useAccessibility();
@@ -103,11 +103,6 @@ export const DonationModal: React.FC = () => {
               <span className="text-slate-500 font-medium">{lang === 'ru' ? 'КБЕ:' : 'Кбе:'}</span>
               <span className="font-bold text-slate-900">{t.donationKbe}</span>
             </div>
-          </div>
-
-          <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
-            <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-            <span>{t.donationReports}</span>
           </div>
 
           <button
