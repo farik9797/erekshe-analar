@@ -45,11 +45,12 @@ export const DocumentsSection: React.FC<DocumentsSectionProps> = ({ hideHeader =
         )}
 
         {/* Documents Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* flex + justify-center: одиночный документ стоит по центру, а не в левой половине */}
+        <div className="flex flex-wrap justify-center gap-6">
           {DOCUMENTS.map((doc) => (
             <div
               key={doc.id}
-              className="bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-3xl border border-slate-200/80 hover:border-emerald-300 transition-all flex items-start gap-4 group"
+              className="w-full md:w-[calc(50%_-_0.75rem)] bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-3xl border border-slate-200/80 hover:border-emerald-300 transition-all flex items-start gap-4 group"
             >
               <div className="w-12 h-12 rounded-2xl bg-white text-emerald-600 flex items-center justify-center flex-shrink-0 shadow-xs group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                 <FileText className="w-6 h-6" />

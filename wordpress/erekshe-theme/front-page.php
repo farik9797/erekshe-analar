@@ -154,7 +154,7 @@ $about_img = erekshe_img('regenerated_image_1785993218212.webp');
     <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none">
       <?php foreach (erekshe_projects() as $p): $prog = !empty($p['targetAmount']) ? min(100, round(($p['currentAmount'] ?? 0) / $p['targetAmount'] * 100)) : 0; ?>
         <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between flex-shrink-0 w-[85vw] max-w-[400px] sm:w-auto sm:max-w-none snap-center sm:snap-none">
-          <div class="relative aspect-square lg:aspect-[4/3] overflow-hidden bg-slate-100">
+          <div class="relative aspect-square overflow-hidden bg-slate-100">
             <!-- на компьютере фото целиком, по бокам размытая подложка -->
             <img src="<?php echo esc_url(erekshe_img($p['image'])); ?>" alt="" aria-hidden="true" class="hidden lg:block absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50" />
             <img src="<?php echo esc_url(erekshe_img($p['image'])); ?>" alt="<?php echo esc_attr($p['title']); ?>" class="absolute inset-0 w-full h-full object-cover lg:object-contain" />

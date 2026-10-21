@@ -196,7 +196,7 @@ export const translations = {
 
     // Documents Section
     documentsBadge: 'Открытость и прозрачность',
-    documentsTitle: 'Официальные документы и отчеты',
+    documentsTitle: 'Официальные документы',
     documentsDesc: 'Мы работаем строго в соответствии с законодательством Республики Казахстан и государственными стандартами.',
     btnDownloadDoc: 'Скачать (PDF)',
     btnViewDoc: 'Просмотреть',
@@ -538,7 +538,7 @@ export const translations = {
 
     // Documents
     documentsBadge: 'Ашықтық пен айқындық',
-    documentsTitle: 'Ресми құжаттар мен есептер',
+    documentsTitle: 'Ресми құжаттар',
     documentsDesc: 'Біз Қазақстан Республикасының заңнамасына және мемлекеттік стандарттарға қатаң сәйкестікте жұмыс істейміз.',
     btnDownloadDoc: 'Жүктеп алу (PDF)',
     btnViewDoc: 'Қарау',

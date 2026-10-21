@@ -8,17 +8,17 @@ $hide_header = !empty($args['hide_header']);
     <?php if (!$hide_header): ?>
     <div class="text-center max-w-3xl mx-auto mb-12">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('FileText', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('c_DocumentsBadge')); ?></span></div>
-      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('documentsTitle', 'Уставные документы и прозрачная отчётность')); ?></h2>
+      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('documentsTitle', 'Официальные документы')); ?></h2>
     </div>
     <?php endif; ?>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="flex flex-wrap justify-center gap-4"><?php /* одиночный документ — по центру */ ?>
       <?php
       $doc_pages = ['doc-3' => 'rules'];
       foreach (erekshe_get_rows('documents', erekshe_documents()) as $d):
         $slug = $doc_pages[$d['id'] ?? ''] ?? '';
         $doc_href = $slug ? erekshe_nav_url($slug) : $d['fileUrl'];
       ?>
-        <a href="<?php echo esc_url($doc_href); ?>" class="bg-slate-50 rounded-2xl p-5 border border-slate-200/70 hover:border-emerald-300 hover:bg-emerald-50/40 transition flex items-center justify-between gap-4 group">
+        <a href="<?php echo esc_url($doc_href); ?>" class="w-full md:w-[calc(50%_-_0.5rem)] bg-slate-50 rounded-2xl p-5 border border-slate-200/70 hover:border-emerald-300 hover:bg-emerald-50/40 transition flex items-center justify-between gap-4 group">
           <div class="flex items-center gap-4">
             <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0"><?php echo erekshe_icon('FileText', 'w-6 h-6'); ?></div>
             <div>

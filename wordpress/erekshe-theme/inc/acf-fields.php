@@ -145,7 +145,7 @@ function erekshe_register_acf() {
 
     /* ===== Документы ===== */
     acf_add_local_field_group(['key' => 'group_erekshe_documents', 'title' => 'Страница «Документы»', 'fields' => array_merge(
-        ef_banner('doc', 'Уставные документы и прозрачная отчётность', 'Учредительные документы, стандарты, правила и годовые отчёты.', 'Документы'),
+        ef_banner('doc', 'Официальные документы', 'Учредительные документы, стандарты и правила.', 'Документы'),
         [ ef_repeater('doc_items', 'documents', 'Документы', [
             ef_text('doc_title', 'title', 'Название', ''),
             ef_text('doc_cat', 'category', 'Категория', ''),
