@@ -6,7 +6,7 @@ import { FadeIn } from '../components/FadeIn';
 import { MessageSquare, HelpCircle, Sparkles } from 'lucide-react';
 
 export const FaqReviewsPage: React.FC = () => {
-  const { lang, t } = useAccessibility();
+  const { lang } = useAccessibility();
 
   return (
     <div className="bg-slate-50 min-h-screen py-10 space-y-12">
@@ -15,13 +15,15 @@ export const FaqReviewsPage: React.FC = () => {
           <div className="bg-gradient-to-r from-teal-900 via-emerald-900 to-slate-900 text-white rounded-3xl p-4 md:p-12 shadow-xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-400/30 mb-4">
               <MessageSquare className="w-4 h-4" />
-              {lang === 'ru' ? 'Отзывы родителей и частые вопросы' : 'Ата-аналар пікірлері мен жиі қойылатын сұрақтар'}
+              {lang === 'ru' ? 'Истории семей' : 'Отбасылар тарихы'}
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mb-4">
-              {t.reviewsTitle} & {t.faqTitle}
+              {lang === 'ru' ? 'Отзывы родителей и ответы на вопросы' : 'Ата-аналардың пікірлері және сұрақтарға жауаптар'}
             </h1>
             <p className="text-slate-200 text-base md:text-lg leading-relaxed max-w-2xl mb-6">
-              {t.reviewsDesc}
+              {lang === 'ru'
+                ? 'Реальные результаты реабилитации и ответы на частые вопросы родителей.'
+                : 'Оңалтудың нақты нәтижелері және ата-аналардың жиі қойылатын сұрақтарына жауаптары.'}
             </p>
           </div>
         </div>
