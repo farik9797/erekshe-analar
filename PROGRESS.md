@@ -794,4 +794,10 @@ media-запросы и произвольные значения на мест�
 - Инструкция: `wordpress/MIGRATION.md` (+ копия `deploy/ИНСТРУКЦИЯ-ПЕРЕНОС.md`).
 - Делает пользователь на хостинге: БД и её пароль, смена пароля/логина `admin`, e-mail администратора (сейчас служебный @wpengine.local), лицензии ACF Pro/Polylang Pro. Открыто: SEO-мета в WP (нет плагина), дубль на GitHub Pages после запуска.
 
+### Хостинг: Hoster.KZ (Plesk), ereksheanalar.kz — загрузка (23.10)
+- Доступ FTP — в password.md. Сервер pkz14.hoster.kz (185.98.5.127), NS hoster.kz, домен уже указывает на сервер, SSL валидный, http→https. Корень сайта `httpdocs/` (`/var/www/vhosts/ereksheanalar.kz/httpdocs`), nginx → Apache (.htaccess работает).
+- PHP 8.2.34, ZipArchive и mysqli есть, **mbstring нет** (WP и тема обходятся полифиллами mb_substr/mb_strlen; при желании включить в Plesk → PHP Settings), memory 512M, max_execution_time 180, exec/shell_exec отключены.
+- Файлы залиты: `ereksheanalar-site.zip` по FTPS → распакован одноразовым PHP-скриптом со случайным именем и токеном (5751 файл) → скрипт и архив удалены. В `httpdocs` оставлена заглушка Hoster.KZ `index.html` — Apache отдаёт её на «/» раньше index.php, пока нет базы; подстраницы сейчас дают «Database Error» (500).
+- **Ждём от пользователя:** база MySQL в Plesk (имя, пользователь, пароль). Дальше: вписать в `wp-config.php`, импорт `deploy/ereksheanalar-db.sql`, удалить `index.html`, проверить 26 страниц, сменить пароль `admin` и e-mail администратора (делает пользователь).
+
 Урок: при удалении элемента массива в mockData граница искалась по первому `\n  },` после маркера — для последнего элемента это захватило следующий массив. Удалять только по проверенным границам (элемент закрывается `  }` + `];`).
