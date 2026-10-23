@@ -644,7 +644,7 @@ export const translations = {
     normalMode: 'Қалыпты режим',
     footerToTop: 'Жоғарыға',
     heroImgAlt: 'EREKSHE ANALAR орталығындағы сабақтар',
-    heroBranchesSocial: '4 әлеуметтік қорғау филиалы',
+    heroBranchesSocial: '3 әлеуметтік қорғау филиалы',
     enrollValidation: 'Атыңыз бен телефон нөміріңізді көрсетіңіз.',
     enrollModalTitle: 'EREKSHE ANALAR орталықтарына жазылу',
     enrollPhParentName: 'Ата-ананың Т.А.Ә.',

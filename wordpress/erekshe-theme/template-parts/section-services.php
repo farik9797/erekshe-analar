@@ -1,7 +1,7 @@
 <?php if (!defined('ABSPATH')) exit;
 // На своей странице тот же заголовок уже выводит баннер — шапку секции скрываем.
 $hide_header = !empty($args['hide_header']);
-?>$cats = [['all',erekshe_t('filterAll')],['correction',erekshe_t('filterCorrection')],['physical',erekshe_t('filterPhysical')],['water',erekshe_t('filterWater')],['medical',erekshe_t('filterMedical')],['social',erekshe_t('filterSocial')],['parents',erekshe_t('filterParents')]];
+$cats = [['all',erekshe_t('filterAll')],['correction',erekshe_t('filterCorrection')],['physical',erekshe_t('filterPhysical')],['water',erekshe_t('filterWater')],['medical',erekshe_t('filterMedical')],['social',erekshe_t('filterSocial')],['parents',erekshe_t('filterParents')]];
 $services = erekshe_get_rows('services', erekshe_services());
 ?>
 <section id="services" class="fade-in <?php echo $hide_header ? 'pt-8 pb-16 md:pb-24' : 'py-16 md:py-24'; ?> bg-slate-50 border-b border-slate-100">

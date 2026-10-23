@@ -36,7 +36,7 @@ add_filter('erekshe_tr_extra', function ($arr, $L) {
             'a_featIpr'             => 'Жеке оңалту бағдарламасы',
             'a_featMothers'         => 'Аналарды қолдау',
             'a_heroImgAlt'          => 'EREKSHE ANALAR орталығындағы сабақтар',
-            'a_branches4Social'     => '4 әлеуметтік қорғау филиалы',
+            'a_branches4Social'     => '3 әлеуметтік қорғау филиалы',
             'a_statChildrenRehab'   => 'Оңалтудан өткен балалар',
             'a_statBranchesAstana'  => 'Астанадағы филиал',
             'a_statSpecialists'     => 'Маман',
