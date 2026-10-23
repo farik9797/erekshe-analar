@@ -5,7 +5,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('EREKSHE_VER', '1.8.0');
+define('EREKSHE_VER', '1.8.1');
 define('EREKSHE_DIR', get_template_directory());
 define('EREKSHE_URI', get_template_directory_uri());
 
@@ -17,6 +17,7 @@ require_once EREKSHE_DIR . '/inc/rules-data.php';
 require_once EREKSHE_DIR . '/inc/strings.php';
 require_once EREKSHE_DIR . '/inc/acf-fields.php';
 require_once EREKSHE_DIR . '/inc/seo.php';
+require_once EREKSHE_DIR . '/inc/analytics.php';
 
 // Доп. переводы строк шаблонов (регистрируют фильтр erekshe_tr_extra)
 foreach (glob(EREKSHE_DIR . '/inc/i18n-extra-*.php') as $__f) require_once $__f;
