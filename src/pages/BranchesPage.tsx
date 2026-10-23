@@ -22,7 +22,7 @@ export const BranchesPage: React.FC = () => {
           <div className="bg-gradient-to-r from-emerald-800 via-teal-800 to-slate-900 text-white rounded-3xl p-4 md:p-12 shadow-xl">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-400/30 mb-4">
               <MapPin className="w-4 h-4" />
-              {t.astanaCity} (4 {lang === 'ru' ? 'филиала' : 'филиал'})
+              {t.astanaCity} (3 {lang === 'ru' ? 'филиала' : 'филиал'})
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight text-white mb-4">
               {t.branchesTitle}
