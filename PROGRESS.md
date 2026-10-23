@@ -784,4 +784,14 @@ media-запросы и произвольные значения на мест�
 - Все правки data.php продублированы в WP. KK-переводы — наши, показать клиенту.
 - Замечено попутно: на «Маршруте» KK-описания шагов (step5Desc и др.) не совпадают с обновлёнными RU — проверить.
 
+### Подготовка к переносу на хостинг (23.10) — домен ereksheanalar.kz, хостинг не выбран
+- LocalWP запущен (Local → Start site). wp-cli: обёртка `scratchpad/wpl.sh` (bundled PHP 8.2 + сокет MySQL + PATH к mysqldump из `lightning-services/mysql-8.4.0`).
+- Бэкап БД до правок: `backups/db-before-migration-prep-20261023-0908.sql` (`backups/`, `deploy/` в .gitignore — дампы с хэшами паролей).
+- **Найдено и исправлено в WP** (коммит `88ff2b2`): (1) `section-services.php` — лишний `?>` выводил код `$cats = …` на страницу, услуги на /services/ не показывались (с коммита c1a19a9); (2) главная — отзывы обращались к удалённым полям avatar/childAgeDiagnosis/result (15 PHP Warning, горизонтальный скролл) → общая `section-reviews`; (3) KK «4 әлеуметтік қорғау филиалы» → «3» (React + WP); (4) страницы `/rules/` не было (шаблон есть, страница нет → 404 по кнопке «Қарау») → созданы RU 43 / KK 44, slug `rules`, связаны в Polylang; (5) название сайта было «erekshe-analar» → «EREKSHE ANALAR», описание «Общественный фонд и реабилитационные центры» (KK через строки Polylang); Sample Page — в корзину; Theme URI → ereksheanalar.kz, тема 1.6.9; og:description SPA — «3 центра».
+- Проверка LocalWP: 26 страниц × (1440, 375) — 200, без PHP-ошибок и горизонтального скролла; ключевые правки последних дней на месте.
+- **Пакет** `deploy/`: `ereksheanalar-site.zip` (40 МБ: core 7.0.3 + тема + ACF Pro 6.3.6 + Polylang Pro 3.5.1 + .htaccess + hosting-wp-config с новыми ключами, без Free-плагинов/старых тем/local-xdebuginfo.php) и `ereksheanalar-db.sql` (URL → https://ereksheanalar.kz regex-заменой с учётом сериализации; добавлен `SET SQL_MODE='NO_AUTO_VALUE_ON_ZERO'` — без него импорт падал на строгом режиме «Invalid default value for comment_date»). Коллация utf8mb4_unicode_520_ci — совместима с MariaDB.
+- Пакет проверен: распакован отдельно, тестовая БД, php -S с роутером, имитация Host ereksheanalar.kz + HTTPS → 26 страниц 200, 0 ошибок, 22 ассета на месте, wp-login 200. Тестовая БД и копия удалены.
+- Инструкция: `wordpress/MIGRATION.md` (+ копия `deploy/ИНСТРУКЦИЯ-ПЕРЕНОС.md`).
+- Делает пользователь на хостинге: БД и её пароль, смена пароля/логина `admin`, e-mail администратора (сейчас служебный @wpengine.local), лицензии ACF Pro/Polylang Pro. Открыто: SEO-мета в WP (нет плагина), дубль на GitHub Pages после запуска.
+
 Урок: при удалении элемента массива в mockData граница искалась по первому `\n  },` после маркера — для последнего элемента это захватило следующий массив. Удалять только по проверенным границам (элемент закрывается `  }` + `];`).
