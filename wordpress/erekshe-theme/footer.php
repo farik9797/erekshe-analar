@@ -59,7 +59,7 @@ $services = [
 
       <!-- Col 4: Branches -->
       <div class="w-full xl:w-[400px] xl:max-w-[400px] flex flex-col gap-3 flex-shrink-0">
-        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-1"><?php echo esc_html(erekshe_t('d_footerBranches')); ?></h4>
+        <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-1"><?php echo esc_html(erekshe_t('branchesTitle') . ' (Астана)'); ?></h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
           <?php foreach (erekshe_branches() as $b): ?>
             <a href="<?php echo esc_url($b['map2gis']); ?>" target="_blank" rel="noopener noreferrer" class="bg-emerald-900/60 p-3 rounded-xl border border-emerald-800/80 hover:border-amber-400 transition group">

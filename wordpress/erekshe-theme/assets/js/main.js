@@ -20,6 +20,14 @@
         if (io && ic) { io.classList.toggle('hidden', open); ic.classList.toggle('hidden', !open); }
       });
     });
+    // кнопки в меню (консультация, поиск, поддержка) закрывают его, как в React
+    if (menu) $$('button', menu).forEach(function (b) {
+      b.addEventListener('click', function () {
+        menu.classList.add('hidden');
+        $$('[data-menu-icon-open]').forEach(function (i) { i.classList.remove('hidden'); });
+        $$('[data-menu-icon-close]').forEach(function (i) { i.classList.add('hidden'); });
+      });
+    });
 
     /* ---------- Панель доступности ---------- */
     var bar = $('[data-a11y-bar]');
@@ -67,7 +75,7 @@
       document.body.style.overflow = '';
     }
     $$('[data-donation-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('donation'); }); });
-    $$('[data-search-open]').forEach(function (b) { b.addEventListener('click', function () { openModal('search'); }); });
+    $$('[data-search-open]').forEach(function (b) { b.addEventListener('click', function () { openSearch(); }); });
     $$('[data-service-open]').forEach(function (b) { b.addEventListener('click', function () { closeModals(); openModal(b.getAttribute('data-service-open')); }); });
     $$('[data-consult-open]').forEach(function (b) {
       b.addEventListener('click', function () {
@@ -90,8 +98,78 @@
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeModals();
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openModal('search'); }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openSearch(); }
     });
+
+    /* ---------- Поиск (как SearchModal.tsx): ищем по ru и kk, выводим на языке страницы ---------- */
+    var sm = $('[data-modal="search"]');
+    var sIndex = [], sQuery = '', sCat = 'all';
+    if (sm) {
+      try { sIndex = JSON.parse($('[data-search-index]', sm).textContent) || []; } catch (err) { sIndex = []; }
+      sIndex.forEach(function (it) { it.f = it.f.map(function (s) { return String(s || '').toLowerCase(); }); });
+    }
+    var sInput = sm && $('[data-search-input]', sm);
+    var sBody = sm && $('[data-search-body]', sm);
+    var sBlocks = sm ? {
+      empty: $('[data-search-empty]', sm), count: $('[data-search-count]', sm),
+      results: $('[data-search-results]', sm), none: $('[data-search-none]', sm)
+    } : {};
+    // ссылки заранее: блоки, снятые из тела, в DOM модалки уже не ищутся
+    var sNum = sm && $('[data-search-num]', sm), sNone = sm && $('[data-search-none-text]', sm);
+    function renderSearch() {
+      if (!sm) return;
+      var q = sQuery.trim().toLowerCase();
+      $('[data-search-clear]', sm).classList.toggle('hidden', !sQuery);
+      $('[data-search-cats]', sm).classList.toggle('hidden', !q);
+      $$('[data-search-cat]', sm).forEach(function (b) {
+        b.className = b.getAttribute('data-cls-base') + (b.getAttribute('data-search-cat') === sCat ? b.getAttribute('data-cls-on') : b.getAttribute('data-cls-off'));
+      });
+      if (!q) { sBody.replaceChildren(sBlocks.empty); return; }
+      var hits = sIndex.filter(function (it) {
+        return (sCat === 'all' || sCat === it.c) && it.f.some(function (s) { return s.indexOf(q) !== -1; });
+      });
+      sNum.textContent = hits.length;
+      var tpl = $('[data-search-row]', sm);
+      sBlocks.results.replaceChildren.apply(sBlocks.results, hits.map(function (it) {
+        var row = tpl.content.firstElementChild.cloneNode(true);
+        row.setAttribute('href', it.u);
+        if (it.svc) row.setAttribute('data-search-svc', it.svc);
+        $('[data-row-icon]', row).appendChild($('[data-search-icon="' + it.t + '"]', sm).content.cloneNode(true));
+        $('[data-row-badge]', row).textContent = it.b;
+        $('[data-row-title]', row).textContent = it.h;
+        $('[data-row-desc]', row).textContent = it.d;
+        return row;
+      }));
+      sNone.textContent = sNone.getAttribute('data-pre') + sQuery + sNone.getAttribute('data-post');
+      sBody.replaceChildren(sBlocks.count, hits.length ? sBlocks.results : sBlocks.none);
+    }
+    function openSearch() {
+      if (!sm) return;
+      sQuery = ''; sCat = 'all'; sInput.value = '';
+      renderSearch();
+      openModal('search');
+      setTimeout(function () { sInput.focus(); }, 100);
+    }
+    if (sm) {
+      sInput.addEventListener('input', function () { sQuery = sInput.value; renderSearch(); });
+      $('[data-search-clear]', sm).addEventListener('click', function () { sQuery = ''; sInput.value = ''; renderSearch(); });
+      $$('[data-search-chip]', sm).forEach(function (b) {
+        b.addEventListener('click', function () { sQuery = b.getAttribute('data-search-chip'); sInput.value = sQuery; renderSearch(); });
+      });
+      $$('[data-search-cat]', sm).forEach(function (b) {
+        b.addEventListener('click', function () { sCat = b.getAttribute('data-search-cat'); renderSearch(); });
+      });
+      // Услуга: карточка открывается на месте, если секция услуг есть на странице, иначе — переход на «Услуги»
+      sBlocks.results.addEventListener('click', function (e) {
+        var row = e.target.closest('[data-search-svc]');
+        if (!row) return;
+        var id = row.getAttribute('data-search-svc');
+        if ($('[data-modal="' + id + '"]')) { e.preventDefault(); closeModals(); openModal(id); }
+      });
+      renderSearch();
+    }
+    var svcHash = location.hash.match(/^#(svc-\d+)$/);
+    if (svcHash && $('[data-modal="' + svcHash[1] + '"]')) openModal(svcHash[1]);
 
 
     /* ---------- Список WhatsApp методистов в баннере ---------- */
@@ -126,7 +204,9 @@
         $$('[data-wa-field]', form).forEach(function (el) {
           var label = el.getAttribute('data-wa-label') || '';
           var val = '';
-          if (el.type === 'checkbox') {
+          if (el.type === 'checkbox' && el.hasAttribute('data-wa-yes')) {
+            val = el.checked ? el.getAttribute('data-wa-yes') : el.getAttribute('data-wa-no'); // как в React: «да / нет»
+          } else if (el.type === 'checkbox') {
             if (!el.checked) return;
             val = el.value && el.value !== 'on' ? el.value : 'да';
           } else if (el.type === 'radio') {
@@ -150,53 +230,66 @@
       });
     });
 
-    /* ---------- FAQ аккордеон ---------- */
+    /* ---------- FAQ (как FaqSection.tsx): открыт только один вопрос + поиск ---------- */
+    var setFaq = function (item, open) {
+      [item].concat($$('[data-cls-base]', item)).forEach(function (el) {
+        el.className = el.getAttribute('data-cls-base') + (open ? el.getAttribute('data-cls-on') : el.getAttribute('data-cls-off'));
+      });
+      $('[data-faq-body]', item).classList.toggle('hidden', !open);
+      $('[data-faq-up]', item).classList.toggle('hidden', !open);
+      $('[data-faq-down]', item).classList.toggle('hidden', open);
+    };
     $$('[data-faq-toggle]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var item = btn.closest('[data-faq]');
-        var body = $('[data-faq-body]', item);
-        if (body) body.classList.toggle('hidden');
-        item.classList.toggle('bg-emerald-50/50');
-        item.classList.toggle('border-emerald-300');
-        item.classList.toggle('bg-slate-50/80');
-        item.classList.toggle('border-slate-200');
+        var wasOpen = !$('[data-faq-body]', item).classList.contains('hidden');
+        $$('[data-faq]').forEach(function (it) { setFaq(it, false); });
+        if (!wasOpen) setFaq(item, true);
+      });
+    });
+    $$('[data-faq-search]').forEach(function (input) {
+      input.addEventListener('input', function () {
+        var q = input.value.toLowerCase();
+        var sec = input.closest('section'); var shown = 0;
+        $$('[data-faq]', sec).forEach(function (it) {
+          var hit = it.textContent.toLowerCase().indexOf(q) !== -1;
+          it.style.display = hit ? '' : 'none'; if (hit) shown++;
+        });
+        var empty = $('[data-faq-empty]', sec); if (empty) empty.classList.toggle('hidden', shown > 0);
       });
     });
 
     /* ---------- Правила: аккордеон разделов ---------- */
+    // как RulesPage.tsx: стрелка раздела — класс rotate-180; кнопка «Развернуть/Свернуть всё» зависит от того, открыты ли все разделы
+    var rulesWrap = $('[data-rules]');
+    var setRule = function (item, open) {
+      var body = $('[data-rule-body]', item), chev = $('[data-rule-toggle] svg', item);
+      body.classList.toggle('hidden', !open); body.classList.toggle('flex', open);
+      if (chev) chev.classList.toggle('rotate-180', open);
+    };
+    var syncRulesBtn = function () {
+      var btn = $('[data-rules-expand]'); if (!btn || !rulesWrap) return;
+      var allOpen = $$('[data-rule-body]', rulesWrap).every(function (b) { return !b.classList.contains('hidden'); });
+      $('[data-rules-expand-label]', btn).textContent = allOpen ? rulesWrap.getAttribute('data-label-collapse') : rulesWrap.getAttribute('data-label-expand');
+      $('[data-rules-icon-expand]', btn).classList.toggle('hidden', allOpen);
+      $('[data-rules-icon-collapse]', btn).classList.toggle('hidden', !allOpen);
+      btn.setAttribute('data-all-open', allOpen ? '1' : '');
+    };
     $$('[data-rule-toggle]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var item = btn.closest('[data-rule]');
-        var body = $('[data-rule-body]', item);
-        var chev = btn.querySelector('svg');
-        if (!body) return;
-        var willOpen = body.classList.contains('hidden');
-        body.classList.toggle('hidden', !willOpen);
-        body.classList.toggle('flex', willOpen);
-        if (chev) chev.style.transform = willOpen ? 'rotate(180deg)' : '';
+        setRule(item, $('[data-rule-body]', item).classList.contains('hidden'));
+        syncRulesBtn();
       });
     });
 
     /* ---------- Правила: развернуть/свернуть всё ---------- */
     $$('[data-rules-expand]').forEach(function (btn) {
-      var wrap = $('[data-rules]');
-      if (!wrap) return;
+      if (!rulesWrap) return;
       btn.addEventListener('click', function () {
-        var bodies = $$('[data-rule-body]', wrap);
-        var anyClosed = bodies.some(function (b) { return b.classList.contains('hidden'); });
-        bodies.forEach(function (b) {
-          b.classList.toggle('hidden', !anyClosed);
-          b.classList.toggle('flex', anyClosed);
-        });
-        $$('[data-rule-toggle] svg', wrap).forEach(function (sv) {
-          sv.style.transform = anyClosed ? 'rotate(180deg)' : '';
-        });
-        var label = $('[data-rules-expand-label]', btn);
-        if (label) label.textContent = anyClosed
-          ? wrap.getAttribute('data-label-collapse')
-          : wrap.getAttribute('data-label-expand');
-        var icon = btn.querySelector('svg');
-        if (icon) icon.style.transform = anyClosed ? 'rotate(180deg)' : '';
+        var open = btn.getAttribute('data-all-open') !== '1';
+        $$('[data-rule]', rulesWrap).forEach(function (it) { setRule(it, open); });
+        syncRulesBtn();
       });
     });
 
@@ -204,14 +297,12 @@
     $$('[data-branch-btn]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var id = btn.getAttribute('data-branch-btn');
+        // как в React: у кнопки и её значков меняется набор классов (выбран / не выбран)
         $$('[data-branch-btn]').forEach(function (b) {
           var active = b === btn;
-          b.classList.toggle('bg-emerald-700', active);
-          b.classList.toggle('text-white', active);
-          b.classList.toggle('border-emerald-600', active);
-          b.classList.toggle('bg-white', !active);
-          b.classList.toggle('text-slate-800', !active);
-          b.classList.toggle('border-slate-200', !active);
+          [b].concat($$('[data-cls-base]', b)).forEach(function (el) {
+            el.className = el.getAttribute('data-cls-base') + (active ? el.getAttribute('data-cls-on') : el.getAttribute('data-cls-off'));
+          });
         });
         $$('[data-branch-detail]').forEach(function (d) {
           d.classList.toggle('hidden', d.getAttribute('data-branch-detail') !== id);
@@ -219,23 +310,45 @@
       });
     });
 
-    /* ---------- Фильтр услуг ---------- */
-    $$('[data-svc-filter]').forEach(function (btn) {
+    /* ---------- Фильтры (услуги, новости, галерея): как в React — набор классов on/off ---------- */
+    $$('[data-filter-group]').forEach(function (btn) {
       btn.addEventListener('click', function () {
-        var cat = btn.getAttribute('data-svc-filter');
-        $$('[data-svc-filter]').forEach(function (b) {
-          var active = b === btn;
-          b.classList.toggle('bg-emerald-600', active);
-          b.classList.toggle('text-white', active);
-          b.classList.toggle('shadow-md', active);
-          b.classList.toggle('bg-white', !active);
-          b.classList.toggle('text-slate-700', !active);
-          b.classList.toggle('border', !active);
-          b.classList.toggle('border-slate-200', !active);
+        var group = btn.getAttribute('data-filter-group');
+        var cat = btn.getAttribute('data-filter');
+        $$('[data-filter-group="' + group + '"]').forEach(function (b) {
+          b.className = b.getAttribute('data-cls-base') + (b === btn ? b.getAttribute('data-cls-on') : b.getAttribute('data-cls-off'));
         });
-        $$('[data-svc-cat]').forEach(function (card) {
-          card.style.display = (cat === 'all' || card.getAttribute('data-svc-cat') === cat) ? '' : 'none';
+        $$('[data-filter-item="' + group + '"]').forEach(function (item) {
+          item.style.display = (cat === 'all' || item.getAttribute('data-cat') === cat) ? '' : 'none';
         });
+      });
+    });
+
+    /* ---------- Просмотр фото галереи (как GallerySection.tsx) ---------- */
+    var lb = $('[data-lightbox]');
+    if (lb) {
+      $$('[data-lightbox-src]').forEach(function (item) {
+        item.addEventListener('click', function () {
+          var img = $('[data-lightbox-img]', lb);
+          img.src = item.getAttribute('data-lightbox-src');
+          img.alt = item.getAttribute('data-lightbox-title') || '';
+          $('[data-lightbox-caption]', lb).textContent = item.getAttribute('data-lightbox-title') || '';
+          openModal('lightbox');
+        });
+      });
+      // пустое место вокруг фото (контейнер data-backdrop) тоже считается фоном
+      var downOnBackdrop = false;
+      var isBackdrop = function (e) { return e.target === lb || (e.target.hasAttribute && e.target.hasAttribute('data-backdrop')); };
+      lb.addEventListener('mousedown', function (e) { downOnBackdrop = isBackdrop(e); });
+      lb.addEventListener('click', function (e) { if (downOnBackdrop && isBackdrop(e)) closeModals(); });
+    }
+
+    /* ---------- Копирование реквизитов (как DonationModal.tsx: галочка на 2 секунды) ---------- */
+    $$('[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (navigator.clipboard) navigator.clipboard.writeText(btn.getAttribute('data-copy'));
+        $('[data-copy-icon]', btn).classList.add('hidden'); $('[data-copy-done]', btn).classList.remove('hidden');
+        setTimeout(function () { $('[data-copy-icon]', btn).classList.remove('hidden'); $('[data-copy-done]', btn).classList.add('hidden'); }, 2000);
       });
     });
 

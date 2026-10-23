@@ -18,10 +18,12 @@ function ef_repeater($key, $name, $label, $subfields, $button = 'Добавит�
 }
 /** Три стандартных поля баннера страницы */
 function ef_banner($prefix, $default_title = '', $default_desc = '', $default_badge = '') {
+    // Пустое поле = текст баннера из шаблона (1:1 с React-версией); заполненное — заменяет его.
+    $hint = 'Оставьте пустым, чтобы показывался текст по умолчанию.';
     return [
-        ef_text($prefix . '_btitle', 'banner_title', 'Баннер: заголовок', $default_title),
-        ef_textarea($prefix . '_bdesc', 'banner_desc', 'Баннер: описание', $default_desc),
-        ef_text($prefix . '_bbadge', 'banner_badge', 'Баннер: бейдж', $default_badge),
+        ef_text($prefix . '_btitle', 'banner_title', 'Баннер: заголовок') + ['instructions' => $hint],
+        ef_textarea($prefix . '_bdesc', 'banner_desc', 'Баннер: описание') + ['instructions' => $hint],
+        ef_text($prefix . '_bbadge', 'banner_badge', 'Баннер: бейдж') + ['instructions' => $hint],
     ];
 }
 /** Локация по шаблону страницы */

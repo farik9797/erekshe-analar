@@ -7,6 +7,10 @@ if (!defined("ABSPATH")) exit;
 
 function erekshe_icon_map() {
     return [
+        "ChevronsUpDown" => "<path d=\"m7 15 5 5 5-5\" /><path d=\"m7 9 5-5 5 5\" />",
+        "ChevronsDownUp" => "<path d=\"m7 20 5-5 5 5\" /><path d=\"m7 4 5 5 5-5\" />",
+        "ScrollText" => "<path d=\"M15 12h-5\" /><path d=\"M15 8h-5\" /><path d=\"M19 17V5a2 2 0 0 0-2-2H4\" /><path d=\"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3\" />",
+        "Info" => "<circle cx=\"12\" cy=\"12\" r=\"10\" /><path d=\"M12 16v-4\" /><path d=\"M12 8h.01\" />",
         "Activity" => "<path d=\"M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2\" />",
         "ArrowRight" => "<path d=\"M5 12h14\" /><path d=\"m12 5 7 7-7 7\" />",
         "ArrowLeft" => "<path d=\"m12 19-7-7 7-7\" /><path d=\"M19 12H5\" />",

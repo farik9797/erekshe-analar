@@ -1,12 +1,13 @@
 <?php
 if (!defined('ABSPATH')) exit;
+// 1:1 с src/components/RehabProcess.tsx
 $icons = ['PhoneCall','UserCheck','FileText','Stethoscope','ClipboardList','CalendarCheck','Sparkles','TrendingUp','Home'];
 $steps = erekshe_get_rows('steps', []);
 if (!$steps) {
     for ($i = 1; $i <= 9; $i++) $steps[] = ['num' => erekshe_t("step{$i}Num", sprintf('%02d', $i)), 'title' => erekshe_t("step{$i}Title", 'Этап ' . $i), 'desc' => erekshe_t("step{$i}Desc", ''), 'icon' => $icons[$i - 1]];
 }
 ?>
-<section id="process" class="fade-in py-16 md:py-24 bg-white border-b border-slate-100">
+<section id="process" class="py-16 md:py-24 bg-white border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto mb-16">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('CheckCircle2', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('stepsBadge', 'Как проходит реабилитация')); ?></span></div>
@@ -15,7 +16,7 @@ if (!$steps) {
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <?php foreach ($steps as $st): ?>
-        <div class="bg-slate-50 hover:bg-emerald-50/50 p-4 rounded-3xl border border-slate-200/70 hover:border-emerald-300 transition-all flex flex-col justify-between group shadow-2xs">
+        <div class="bg-slate-50 hover:bg-emerald-50/50 p-6 rounded-3xl border border-slate-200/70 hover:border-emerald-300 transition-all duration-200 flex flex-col justify-between group shadow-2xs">
           <div>
             <div class="flex items-center justify-between mb-4">
               <span class="text-xs font-black tracking-widest text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full uppercase"><?php echo esc_html($st['num']); ?></span>

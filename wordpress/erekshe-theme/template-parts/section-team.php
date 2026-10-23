@@ -1,4 +1,6 @@
 <?php if (!defined('ABSPATH')) exit;
+// 1:1 с src/components/TeamRoster.tsx: на /team без шапки (with_heading=false), на главной — с шапкой
+$with_heading = !isset($args['with_heading']) || !empty($args['with_heading']);
 $roster = erekshe_get_rows('team_roster', erekshe_team_roster());
 $order  = ['admin','logoped','defectolog','psycholog','afk','pool','vospitatel','vospitatel_asst','nanny','social','nurse'];
 $grouped = [];
@@ -14,15 +16,10 @@ if (erekshe_lang() === 'ru') {
   $spec_word = 'маман';
 }
 ?>
-<section class="fade-in py-16 md:py-24 bg-slate-50 border-b border-slate-100">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="text-center max-w-3xl mx-auto mb-14">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Users', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html($roster_n); ?> <?php echo esc_html($spec_word); ?></span></div>
-      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('teamTitle', 'Руководство и междисциплинарная команда фонда')); ?></h2>
-    </div>
-
+<?php ob_start(); ?>
+<div class="max-w-5xl mx-auto px-4 space-y-10">
     <?php foreach ($order as $g): if (empty($grouped[$g])) continue; $people = $grouped[$g]; ?>
-      <div class="mb-10 last:mb-0">
+      <div>
         <div class="flex items-center gap-3 mb-4">
           <h3 class="text-lg sm:text-xl font-extrabold text-slate-900"><?php echo esc_html(erekshe_t('team_grp_' . $g)); ?></h3>
           <span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full"><?php echo esc_html(count($people)); ?></span>
@@ -48,5 +45,15 @@ if (erekshe_lang() === 'ru') {
         </div>
       </div>
     <?php endforeach; ?>
+</div>
+<?php $groups_html = ob_get_clean();
+if (!$with_heading) { echo $groups_html; return; } ?>
+<section class="py-16 md:py-24 bg-slate-50 border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Users', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html($roster_n); ?> <?php echo esc_html($spec_word); ?></span></div>
+      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('teamTitle')); ?></h2>
+    </div>
   </div>
+  <?php echo $groups_html; ?>
 </section>

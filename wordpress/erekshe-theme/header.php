@@ -44,8 +44,8 @@ $nav    = erekshe_nav_items();
         <?php erekshe_language_switcher(); ?>
 
         <div class="order-2 sm:order-3 flex items-center gap-1.5 sm:ml-1">
-          <a href="<?php echo esc_url($wa); ?>" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-lg bg-emerald-500 text-white flex items-center justify-center hover:scale-110 transition cursor-pointer" title="WhatsApp" aria-label="WhatsApp">
-            <?php echo erekshe_icon('MessageCircle', 'w-3.5 h-3.5'); ?>
+          <a href="<?php echo esc_url($wa); ?>" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-lg bg-transparent hover:opacity-90 transition-all duration-200 flex items-center justify-center hover:scale-110 cursor-pointer overflow-hidden" title="WhatsApp" aria-label="WhatsApp">
+            <img src="<?php echo esc_url(erekshe_img('whatsapp-logo.png')); ?>" alt="WhatsApp" class="w-full h-full object-contain" />
           </a>
           <a href="<?php echo esc_url($insta); ?>" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-lg bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-xs hover:scale-105 transition cursor-pointer" title="Instagram" aria-label="Instagram">
             <?php echo erekshe_icon('Instagram', 'w-3.5 h-3.5'); ?>
@@ -112,7 +112,7 @@ $nav    = erekshe_nav_items();
   </div>
 
   <!-- Mobile Drawer -->
-  <div data-mobile-menu class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl px-4 pt-3 pb-6">
+  <div data-mobile-menu class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl px-4 pt-3 pb-6 animate-fadeIn">
     <div class="grid grid-cols-2 gap-2 mb-4">
       <?php foreach ($nav as $item):
         $active = erekshe_nav_is_active($item['slug']); ?>
@@ -123,7 +123,7 @@ $nav    = erekshe_nav_items();
       <?php endforeach; ?>
     </div>
     <div class="flex flex-col gap-2 pt-3 border-t border-slate-100">
-      <button type="button" data-consult-open class="w-full py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition cursor-pointer">
+      <button type="button" data-consult-open class="w-full py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 active:scale-[0.98] transition cursor-pointer">
         <?php echo erekshe_icon('Sparkles', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('f_consultBtn')); ?></span>
       </button>
       <button type="button" data-search-open class="w-full py-2.5 rounded-xl text-xs font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 flex items-center justify-center gap-2 cursor-pointer transition">

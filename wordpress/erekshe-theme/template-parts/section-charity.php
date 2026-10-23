@@ -1,26 +1,79 @@
 <?php if (!defined('ABSPATH')) exit;
+// 1:1 с src/components/CharitySection.tsx
 // На странице «Благотворительность» тот же заголовок уже выводит баннер — шапку скрываем.
 $hide_header = !empty($args['hide_header']);
+$is_kk = erekshe_lang() === 'kk';
 ?>
-<section id="charity" class="fade-in <?php echo $hide_header ? 'pb-16 md:pb-24' : 'py-16 md:py-24'; ?> bg-slate-50 border-b border-slate-100">
+<section id="charity" class="<?php echo $hide_header ? 'pt-8 pb-16 md:pt-10 md:pb-24' : 'py-16 md:py-24'; ?> bg-slate-50 border-b border-slate-100">
   <div class="max-w-7xl mx-auto px-4">
     <?php if (!$hide_header): ?>
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3"><?php echo erekshe_icon('Heart', 'w-4 h-4 text-emerald-600'); ?><span><?php echo esc_html(erekshe_t('c_CharityBadgeProjects')); ?></span></div>
-      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('charityTitle', 'Социальные проекты и инициативы фонда')); ?></h2>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
+        <?php echo erekshe_icon('Heart', 'w-4 h-4 text-emerald-600 fill-emerald-500'); ?>
+        <span><?php echo esc_html(erekshe_t('charityBadge')); ?></span>
+      </div>
+      <h2 class="text-[1.2rem] sm:text-4xl font-extrabold text-slate-900 tracking-tight"><?php echo esc_html(erekshe_t('charityTitle')); ?></h2>
+      <p class="text-slate-600 text-sm sm:text-base mt-3"><?php echo esc_html(erekshe_t('charityDesc')); ?></p>
     </div>
     <?php endif; ?>
-    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none">
-      <?php foreach (erekshe_get_rows('projects', erekshe_projects()) as $p): $prog = !empty($p['targetAmount']) ? min(100, round(($p['currentAmount'] ?? 0) / $p['targetAmount'] * 100)) : 0; ?>
+
+    <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-8 sm:overflow-visible sm:pb-0 scrollbar-none mb-16">
+      <?php foreach (erekshe_get_rows('projects', erekshe_projects()) as $p):
+        $done = ($p['status'] ?? '') === 'completed';
+        $prog = !empty($p['targetAmount']) ? min(100, round(($p['currentAmount'] ?? 0) / $p['targetAmount'] * 100)) : 100; ?>
         <div class="bg-white rounded-3xl border border-slate-200/80 shadow-xs hover:shadow-xl transition-all overflow-hidden flex flex-col justify-between flex-shrink-0 w-[85vw] max-w-[400px] sm:w-auto sm:max-w-none snap-center sm:snap-none">
-          <div class="relative aspect-square overflow-hidden bg-slate-100"><img src="<?php echo esc_url(erekshe_img($p['image'])); ?>" alt="" aria-hidden="true" class="hidden lg:block absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50" /><img src="<?php echo esc_url(erekshe_img($p['image'])); ?>" alt="<?php echo esc_attr($p['title']); ?>" class="absolute inset-0 w-full h-full object-cover lg:object-contain" /><div class="absolute top-4 left-4"><span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider <?php echo $p['status'] === 'completed' ? 'bg-emerald-600 text-white' : 'bg-amber-500 text-slate-950 font-extrabold'; ?>"><?php echo $p['status'] === 'completed' ? esc_html(erekshe_t('c_StatusCompleted')) : esc_html(erekshe_t('projectStatusActive')); ?></span></div></div>
+          <div class="relative aspect-square overflow-hidden bg-slate-100">
+            <!-- На компьютере — фото целиком, по бокам размытая подложка (фото вертикальные) -->
+            <img src="<?php echo esc_url(erekshe_img($p['image'])); ?>" alt="" aria-hidden="true" class="hidden lg:block absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-50" />
+            <img src="<?php echo esc_url(erekshe_img($p['image'])); ?>" alt="<?php echo esc_attr($p['title']); ?>" class="absolute inset-0 w-full h-full object-cover lg:object-contain" />
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider <?php echo $done ? 'bg-emerald-600 text-white' : 'bg-amber-500 text-slate-950 font-extrabold'; ?>"><?php echo esc_html($done ? erekshe_t('projectStatusCompleted') : erekshe_t('projectStatusActive')); ?></span>
+            </div>
+          </div>
           <div class="p-6 flex-1 flex flex-col justify-between gap-6">
-            <div><h3 class="text-xl font-bold text-slate-900 leading-snug"><?php echo esc_html($p['title']); ?></h3><p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed"><?php echo esc_html($p['description']); ?></p></div>
-            <?php if (!empty($p['targetAmount'])): ?><div class="flex flex-col gap-2"><div class="flex items-center justify-between text-xs font-bold text-slate-700"><span><?php echo esc_html(erekshe_t('c_Collected')); ?> <?php echo number_format($p['currentAmount'], 0, '', ' '); ?> &#8376;</span><span><?php echo esc_html(erekshe_t('c_Goal')); ?> <?php echo number_format($p['targetAmount'], 0, '', ' '); ?> &#8376;</span></div><div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden border border-slate-200"><div class="h-full bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full" style="width: <?php echo esc_attr($prog); ?>%"></div></div></div><?php endif; ?>
-            <div class="pt-4 border-t border-slate-100 flex items-center justify-end"><button type="button" data-donation-open class="px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition flex items-center gap-1.5 shadow-md"><?php echo erekshe_icon('HeartHandshake', 'w-4 h-4'); ?><span><?php echo esc_html(erekshe_t('btnSupportProject')); ?></span></button></div>
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 leading-snug"><?php echo esc_html($p['title']); ?></h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed"><?php echo esc_html($p['description']); ?></p>
+            </div>
+            <?php if (!empty($p['targetAmount'])): ?>
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between text-xs font-bold text-slate-700">
+                <span><?php echo esc_html(erekshe_t('charityRaised')); ?> <?php echo esc_html(number_format((float) ($p['currentAmount'] ?? 0), 0, '', ',')); ?> ₸</span>
+                <span><?php echo esc_html(erekshe_t('charityGoal')); ?> <?php echo esc_html(number_format((float) $p['targetAmount'], 0, '', ',')); ?> ₸</span>
+              </div>
+              <div class="w-full h-3 bg-slate-100 rounded-full overflow-hidden border border-slate-200">
+                <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-600 transition-all duration-500 rounded-full" style="width: <?php echo esc_attr($prog); ?>%"></div>
+              </div>
+            </div>
+            <?php endif; ?>
+            <div class="pt-4 border-t border-slate-100 flex items-center justify-end">
+              <button type="button" data-donation-open class="px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 transition flex items-center gap-1.5 shadow-md shadow-emerald-600/20 cursor-pointer">
+                <?php echo erekshe_icon('HeartHandshake', 'w-4 h-4'); ?>
+                <span><?php echo esc_html(erekshe_t('btnSupportProject')); ?></span>
+              </button>
+            </div>
           </div>
         </div>
       <?php endforeach; ?>
+    </div>
+
+    <div class="bg-white rounded-3xl border border-slate-200 p-4 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-8 flex flex-col gap-3">
+        <div class="flex items-center gap-2 text-emerald-700 font-bold text-xs uppercase tracking-wider">
+          <?php echo erekshe_icon('ShieldCheck', 'w-4 h-4'); ?>
+          <span><?php echo esc_html(erekshe_t('charityTransparency')); ?></span>
+        </div>
+        <h3 class="text-2xl font-extrabold text-slate-900"><?php echo esc_html($is_kk ? 'Қорға қалай көмектесе аласыз?' : 'Как вы можете помочь фонду?'); ?></h3>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed"><?php echo esc_html($is_kk
+          ? 'Барлық қайырымдылық қаражаты тек түзету жабдықтарын сатып алуға, спорттық мерекелер ұйымдастыруға және UMAY отбасыларды қолдау орталығын қаржыландыруға жұмсалады.'
+          : 'Все пожертвования направляются строго на закупку коррекционного оборудования, организацию спортивных праздников и финансирование центра поддержки семей UMAY.'); ?></p>
+      </div>
+      <div class="md:col-span-4 flex justify-start md:justify-end">
+        <button type="button" data-donation-open class="px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-950 bg-amber-400 hover:bg-amber-300 transition shadow-lg flex items-center gap-2 cursor-pointer">
+          <?php echo erekshe_icon('HeartHandshake', 'w-4 h-4'); ?>
+          <span><?php echo esc_html(erekshe_t('charityRequisites')); ?></span>
+        </button>
+      </div>
     </div>
   </div>
 </section>

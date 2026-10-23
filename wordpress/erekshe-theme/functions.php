@@ -5,7 +5,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('EREKSHE_VER', '1.7.1');
+define('EREKSHE_VER', '1.8.0');
 define('EREKSHE_DIR', get_template_directory());
 define('EREKSHE_URI', get_template_directory_uri());
 
@@ -25,6 +25,8 @@ foreach (glob(EREKSHE_DIR . '/inc/i18n-extra-*.php') as $__f) require_once $__f;
    Текущий язык интерфейса: 'ru' (по умолчанию) или 'kk'.
    Используется в data.php / strings.php для выбора локализованного контента. */
 function erekshe_lang() {
+    // временная подмена языка (например, русский адрес для ссылки на карту, как в React)
+    if (!empty($GLOBALS['__erekshe_lang_override'])) return $GLOBALS['__erekshe_lang_override'];
     if (function_exists('pll_current_language')) {
         $l = pll_current_language('slug');
         // Нормализуем любой казахский слаг (kz/kaz) к 'kk' — под ключи контента
